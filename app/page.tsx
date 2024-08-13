@@ -6,7 +6,7 @@ import About from "./components/major/About";
 
 export default function Home() {
   return (
-    <Box>
+    <Box bgColor="#F1F1FF">
       <Hero />
       <About />
       <Services />
