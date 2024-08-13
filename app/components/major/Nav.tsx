@@ -1,9 +1,10 @@
-import { Box, Flex, Link, Button, HStack } from "@chakra-ui/react";
+import { Box, Flex, Button, HStack } from "@chakra-ui/react";
 import logo from "../../../public/logo.png";
 import { Image } from "@chakra-ui/next-js";
+import Link from "next/link";
 const Header = () => {
   return (
-    <Box padding="2rem 8rem">
+    <Box>
       <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
         <Box>
           <Link href="/">
@@ -12,10 +13,18 @@ const Header = () => {
         </Box>
 
         <HStack as={"nav"} spacing={20} display={{ base: "none", md: "flex" }}>
-          <Link href="#">About Us</Link>
-          <Link href="#">Business</Link>
-          <Link href="#">Investor Relations</Link>
-          <Link href="#">e-Solution</Link>
+          <Link className="scaler" href="#">
+            About Us
+          </Link>
+          <Link className="scaler" href="#">
+            Business
+          </Link>
+          <Link className="scaler" href="#">
+            Investor Relations
+          </Link>
+          <Link className="scaler" href="#">
+            e-Solution
+          </Link>
         </HStack>
         <HStack>
           <Button
@@ -28,7 +37,16 @@ const Header = () => {
             borderRadius={0}>
             Contact Us
           </Button>
-          <Button padding="1rem 2rem" bgColor="primaryOrange" borderRadius={0}>
+          <Button
+            padding="1rem 2rem"
+            bgColor="primaryOrange"
+            _hover={{
+              bgColor: "#961615",
+            }}
+            _active={{
+              bgColor: "#bf1e1d",
+            }}
+            borderRadius={0}>
             Social
           </Button>
         </HStack>

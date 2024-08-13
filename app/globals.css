@@ -1,0 +1,5 @@
+.scaler:hover {
+  scale: 1.07;
+  transition: all 0.1s linear;
+  text-decoration: none;
+}
