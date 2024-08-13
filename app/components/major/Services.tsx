@@ -1,5 +1,5 @@
 import { Image, Link } from "@chakra-ui/next-js";
-import { Box, Flex, SimpleGrid, Text, VStack } from "@chakra-ui/react";
+import { Box, Flex, HStack, SimpleGrid, Text, VStack } from "@chakra-ui/react";
 import autoland from "../../../public/autoland.png";
 import media from "../../../public/media.png";
 import petrol from "../../../public/petrol.png";
@@ -10,6 +10,11 @@ import service2 from "../../../public/service2.jpg";
 import service3 from "../../../public/service3.jpg";
 import service4 from "../../../public/service4.png";
 import bg3 from "../../../public/bg3.png";
+import oilandGas from "../../../public/oil-gas.png";
+import banking from "../../../public/banking.png";
+import health from "../../../public/health.png";
+import mediapg from "../../../public/mediapg.png";
+
 import { BsArrowRight } from "react-icons/bs";
 const services = [
   { icon: autoland, title: "Autoland" },
@@ -25,6 +30,33 @@ const images = [
   { image: service3, title: "fixes" },
   { image: service4, title: "media" },
   // { image: "", title: "" },
+];
+
+const industries = [
+  {
+    image: oilandGas,
+    title: "oil and gas",
+    description:
+      "Lorem ipsum dolor sit amet consectetur. Tortor accumsan duis faucibus mauris vitae leo duis",
+  },
+  {
+    image: banking,
+    title: "Banking",
+    description:
+      "Lorem ipsum dolor sit amet consectetur. Tortor accumsan duis faucibus mauris vitae leo duis",
+  },
+  {
+    image: health,
+    title: "Health Care",
+    description:
+      "Lorem ipsum dolor sit amet consectetur. Tortor accumsan duis faucibus mauris vitae leo duis",
+  },
+  {
+    image: health,
+    title: "Media",
+    description:
+      "Lorem ipsum dolor sit amet consectetur. Tortor accumsan duis faucibus mauris vitae leo duis",
+  },
 ];
 
 const Services = () => {
@@ -170,6 +202,87 @@ const Services = () => {
           <br /> Media, Auto-part, Autoland.
         </Text>
       </VStack>
+      <HStack>
+        {industries.map((industry) => (
+          <Flex
+            flexDirection="column"
+            bgColor="rgba(241, 241, 248, .4)"
+            outline="1px solid rgba(141, 139, 139, .4)"
+            key={industry.title}>
+            <Flex flexDirection="column" padding="1rem 1.5rem">
+              <Text color="#171717">{industry.title}</Text>
+              <Text color="textGrey">{industry.description}</Text>
+            </Flex>
+            <Box>
+              <Image
+                width="100%"
+                src={industry.image}
+                alt={industry.title}></Image>
+            </Box>
+          </Flex>
+        ))}
+      </HStack>
+      <VStack align="left" my="4rem">
+        <Text color="primaryOrange">Testimonial</Text>
+        <Text color="#171717">
+          {" "}
+          Trusted by Multiple <br /> organisations!
+        </Text>
+        <Text color="textGrey">
+          With over 100 businesses experiencing our <br /> impact, this is what
+          a few had to say.
+        </Text>
+      </VStack>
+      <Flex gap={10} justifyContent="center">
+        <Box
+          bgColor="#B8B8C1"
+          padding="2rem 1rem"
+          width="18rem"
+          color="textGrey"
+          textAlign="center">
+          <Text>
+            Lorem ipsum dolor sit amet consectetur. Etiam velit enim semper eget
+            elit pretium egestas. Vel molestie mauris ornare tincidunt nibh id
+            metus. Scelerisque donec sed vel amet tincidunt aliquet in
+          </Text>
+        </Box>
+        <Box
+          bgColor="#B8B8C1"
+          padding="2rem 1rem"
+          color="textGrey"
+          width="18rem"
+          textAlign="center">
+          <Text>
+            Lorem ipsum dolor sit amet consectetur. Etiam velit enim semper eget
+            elit pretium egestas. Vel molestie mauris ornare tincidunt nibh id
+            metus. Scelerisque donec sed vel amet tincidunt aliquet in
+          </Text>
+        </Box>
+        <Box
+          bgColor="#B8B8C1"
+          padding="2rem 1rem"
+          color="textGrey"
+          width="18rem"
+          textAlign="center">
+          <Text>
+            Lorem ipsum dolor sit amet consectetur. Etiam velit enim semper eget
+            elit pretium egestas. Vel molestie mauris ornare tincidunt nibh id
+            metus. Scelerisque donec sed vel amet tincidunt aliquet in
+          </Text>
+        </Box>
+        <Box
+          bgColor="#B8B8C1"
+          padding="2rem 1rem"
+          color="textGrey"
+          width="18rem"
+          textAlign="center">
+          <Text>
+            Lorem ipsum dolor sit amet consectetur. Etiam velit enim semper eget
+            elit pretium egestas. Vel molestie mauris ornare tincidunt nibh id
+            metus. Scelerisque donec sed vel amet tincidunt aliquet in
+          </Text>
+        </Box>
+      </Flex>
     </Box>
   );
 };
