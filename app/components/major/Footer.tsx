@@ -21,31 +21,42 @@ import {
 } from "react-icons/fa";
 import logo from "../../../public/logo.png";
 import { IoCall } from "react-icons/io5";
-// import { GrAppleAppStore } from "react-icons/gr";
+import { GrApple, GrAppleAppStore } from "react-icons/gr";
 import phone from "../../../public/phone.png";
 import { Image, Link } from "@chakra-ui/next-js";
+import theme from "@/app/theme";
 const Footer = () => {
   return (
-    <Box>
-      <Box bgColor="#e0344c">
-        <SimpleGrid columns={2}>
+    <Box mt="6rem">
+      <Box bgColor="primaryOrange">
+        <SimpleGrid placeItems="center" columns={2}>
           <Box>
-            <Flex direction="column" height="100%" justifyContent="center">
-              <Text>Download Now</Text>
-              <Text> Start Tracking Your Business Expenses TOday</Text>
-              <Text>
+            <Flex
+              direction="column"
+              height="100%"
+              justifyContent="center"
+              gap="2rem">
+              <Text fontWeight={700} fontSize="1.5rem">
+                DOWNLOAD NOW!
+              </Text>
+              <Text fontSize="2.5rem" fontWeight={700} width="80%">
+                {" "}
+                Start Tracking Your Business Expenses Today
+              </Text>
+              <Text fontSize="1.2rem" width="70%">
                 Download the app now and take control of your fuel purchasing
                 decisions
               </Text>
               <Flex gap="1rem">
                 <Button
                   bgColor="#0e0e0e"
-                  leftIcon={<BiLogoPlayStore />}
+                  colorScheme="gray"
+                  leftIcon={<BiLogoPlayStore fontSize="1.5rem" />}
                   variant="solid">
                   Google Play
                 </Button>
                 <Button
-                  leftIcon={<FaAppStore />}
+                  leftIcon={<GrApple fontSize="1.5rem" />}
                   bgColor="#0e0e0e"
                   variant="solid">
                   App Store{" "}
@@ -58,27 +69,34 @@ const Footer = () => {
           </Flex>
         </SimpleGrid>
       </Box>
-      <Box bg="gray.900" color="white">
-        <Flex align="center" justifyContent="space-between">
+      <Box color="#F7F7F7" bgColor="#040A22" padding="2rem 8rem">
+        <Flex align="center" justifyContent="space-between" bgColor="#010619">
           <Box>
-            <Text fontSize="2xl" fontWeight="bold">
+            <Text fontSize="3rem" fontWeight={700}>
               Ready to connect with us?
             </Text>
-            <Text fontSize="lg">Reach out to us now.</Text>
+            <Text fontSize="1rem" fontWeight={300}>
+              Reach out to us now.
+            </Text>
           </Box>
 
           <Button
-            bgColor="#FCFCFF"
-            color="#171717"
+            width="fit-content"
+            padding={theme.buttonPadding}
+            bgColor="primaryOrange"
             _hover={{
-              bgColor: "#e8e6e6",
+              bgColor: "#961615",
             }}
-            fontSize="md">
-            Talk to us
+            _active={{
+              bgColor: "#bf1e1d",
+            }}
+            borderRadius={theme.buttonRadius.radius}>
+            Talk to Us{" "}
           </Button>
         </Flex>
 
         <Flex
+          bgColor="#040A22"
           justify="space-between"
           mt={10}
           flexDir={{ base: "column", md: "row" }}>
@@ -90,27 +108,44 @@ const Footer = () => {
             </Box>
           </VStack>
 
-          <Flex gap="2rem">
-            <Flex flexDirection="column" justifyContent="start">
-              <Text fontSize="lg" fontWeight="bold">
+          <Flex gap="3rem">
+            <Flex flexDirection="column" justifyContent="start" gap="1rem">
+              <Text fontSize="1.2rem" fontWeight={400}>
                 Quick link
               </Text>
-              <Link href="#">About us</Link>
-              <Link href="#">Contact us</Link>
-              <Link href="#">Sustainability</Link>
-              <Link href="#">Investor relations</Link>
-              <Link href="#">e-solution</Link>
+
+              <Link fontWeight={300} href="#">
+                About us
+              </Link>
+              <Link fontWeight={300} href="#">
+                Contact us
+              </Link>
+              <Link fontWeight={300} href="#">
+                Sustainability
+              </Link>
+              <Link fontWeight={300} href="#">
+                Investor relations
+              </Link>
+              <Link fontWeight={300} href="#">
+                e-solution
+              </Link>
             </Flex>
-            <Flex flexDirection="column" justifyContent="start">
-              <Text fontSize="lg" fontWeight="bold">
+            <Flex flexDirection="column" justifyContent="start" gap="1rem">
+              <Text fontSize="1.2rem" fontWeight={400}>
                 Legal
               </Text>
-              <Link href="#">Privacy</Link>
-              <Link href="#">Glossary</Link>
-              <Link href="#">Cookie policy</Link>
+              <Link fontWeight={300} href="#">
+                Privacy
+              </Link>
+              <Link fontWeight={300} href="#">
+                Glossary
+              </Link>
+              <Link fontWeight={300} href="#">
+                Cookie policy
+              </Link>
             </Flex>
-            <Flex flexDirection="column" justifyContent="start">
-              <Text fontSize="lg" fontWeight="bold">
+            <Flex flexDirection="column" justifyContent="start" gap="1rem">
+              <Text fontSize="1.2rem" fontWeight={400}>
                 Address
               </Text>
               <Text>
@@ -129,62 +164,66 @@ const Footer = () => {
                   as="a"
                   href="#"
                   aria-label="Facebook"
-                  icon={<FaFacebook />}
-                  bg="gray.800"
-                  color="white"
-                  rounded="full"
-                  _hover={{ bg: "gray.700" }}
+                  icon={<FaFacebook fontSize="1.5rem" />}
+                  bg="gray.100"
+                  color="black"
+                  rounded="5px"
+                  _hover={{ bg: "gray.300" }}
                 />
                 <IconButton
                   as="a"
                   href="#"
                   aria-label="Instagram"
-                  icon={<FaInstagram />}
-                  bg="gray.800"
-                  color="white"
-                  rounded="full"
-                  _hover={{ bg: "gray.700" }}
+                  icon={<FaInstagram fontSize="1.5rem" />}
+                  bg="gray.100"
+                  color="black"
+                  rounded="5px"
+                  _hover={{ bg: "gray.300" }}
                 />
                 <IconButton
                   as="a"
                   href="#"
                   aria-label="LinkedIn"
-                  icon={<FaLinkedin />}
-                  bg="gray.800"
-                  color="white"
-                  rounded="full"
-                  _hover={{ bg: "gray.700" }}
+                  icon={<FaLinkedin fontSize="1.5rem" />}
+                  bg="gray.100"
+                  color="black"
+                  rounded="5px"
+                  _hover={{ bg: "gray.300" }}
                 />
                 <IconButton
                   as="a"
                   href="#"
                   aria-label="Twitter"
-                  icon={<FaTwitter />}
-                  bg="gray.800"
-                  color="white"
-                  rounded="full"
-                  _hover={{ bg: "gray.700" }}
+                  icon={<FaTwitter fontSize="1.5rem" />}
+                  bg="gray.100"
+                  color="black"
+                  rounded="5px"
+                  _hover={{ bg: "gray.300" }}
                 />
                 <IconButton
                   as="a"
                   href="#"
                   aria-label="YouTube"
-                  icon={<FaYoutube />}
-                  bg="gray.800"
-                  color="white"
-                  rounded="full"
-                  _hover={{ bg: "gray.700" }}
+                  icon={<FaYoutube fontSize="1.5rem" />}
+                  bg="gray.100"
+                  color="black"
+                  rounded="5px"
+                  _hover={{ bg: "gray.300" }}
                 />
               </Flex>
             </Flex>
           </Flex>
         </Flex>
-        <Box>
+        <Flex
+          mt="2rem"
+          flexDirection="column"
+          justifyContent="center"
+          gap="1rem">
           <Box my="1rem" bgColor=" #fff" height="1px" opacity=".6" />
-          <Text fontSize="sm" textAlign="center">
+          <Text fontWeight={300} fontSize="1rem" mb="-1rem" textAlign="center">
             Copyright © 2024 Pamtechgroup. All rights reserved.
           </Text>
-        </Box>
+        </Flex>
       </Box>
     </Box>
   );

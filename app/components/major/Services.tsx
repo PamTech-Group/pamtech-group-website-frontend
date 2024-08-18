@@ -1,5 +1,13 @@
 import { Image, Link } from "@chakra-ui/next-js";
-import { Box, Flex, HStack, SimpleGrid, Text, VStack } from "@chakra-ui/react";
+import {
+  Box,
+  Button,
+  Flex,
+  HStack,
+  SimpleGrid,
+  Text,
+  VStack,
+} from "@chakra-ui/react";
 import autoland from "../../../public/autoland.png";
 import media from "../../../public/media.png";
 import petrol from "../../../public/petrol.png";
@@ -16,6 +24,8 @@ import health from "../../../public/health.png";
 import mediapg from "../../../public/mediapg.png";
 
 import { BsArrowRight } from "react-icons/bs";
+import theme from "@/app/theme";
+import { BiChevronRight } from "react-icons/bi";
 const services = [
   { icon: autoland, title: "Autoland" },
   { icon: petrol, title: "Oil and Gas" },
@@ -61,8 +71,8 @@ const industries = [
 
 const Services = () => {
   return (
-    <Box marginTop="10rem">
-      <Flex gap={10} justifyContent="center">
+    <Box marginTop="10rem" mb="4rem">
+      <Flex gap={10} justifyContent="center" padding="2rem 8rem">
         {services.map((service) => (
           <VStack
             flexDir="column"
@@ -78,43 +88,20 @@ const Services = () => {
           </VStack>
         ))}
       </Flex>
-      <VStack align="left" my="4rem">
-        <Text color="primaryOrange">Our Services</Text>
-        <Text color="#171717">Explore Our Services</Text>
-        <Text color="textGrey">
+      <VStack align="left" my="4rem" padding="2rem 8rem">
+        <Text fontWeight={500} fontSize="2rem" color="primaryOrange">
+          Our Services
+        </Text>
+        <Text color="#171717" fontSize="2.5rem" fontWeight={500}>
+          Explore Our Services
+        </Text>
+        <Text color="textGrey" fontSize="1.2rem">
           Lorem ipsum dolor sit amet consectetur. Fringilla sagittis justo{" "}
           <br />
           nulla a. Morbi sed consectetur porta vitae ullamcorper. Odio at.
         </Text>
       </VStack>
-      {/* <Flex gap={10} justifyContent="center" my="3rem">
-        {images.map((image) => (
-          <Box
-            key={image.title}
-            position="relative"
-            overflow="hidden"
-            width="260px"
-            height="320px">
-            <Image src={image.image} alt={image.title} />
-            <Box
-              position="absolute"
-              bottom="0"
-              left="0"
-              right="0"
-              p="4"
-              bg="rgba(0, 0, 0, 0.2)"
-              color="white">
-              <Text fontSize="sm">
-                Lorem ipsum dolor sit amet consectetur. Blandit arcu
-                pellentesque adipiscing.
-              </Text>
-              <Text mt="2rem" fontSize="sm" fontWeight="bold">
-                Read more →
-              </Text>
-            </Box>
-          </Box>
-        ))}
-      </Flex> */}
+
       <SimpleGrid columns={[1, 2, 4]} spacing={5} padding="2rem">
         {images.map((image) => (
           <Box
@@ -152,31 +139,38 @@ const Services = () => {
       </SimpleGrid>
       <Flex
         justifyContent="center"
-        padding="3rem 2rem"
+        padding="3rem 0rem"
         gap="2rem"
         bgImage={`url(${bg3.src})`}
         bgSize="cover"
         bgPosition="center"
-        width="100%">
+        width="100%"
+        color="#F7F7F7">
         <Flex width="49%" alignItems="center">
           <Flex flexDirection="column" gap="2rem">
-            <Text>Sustainability</Text>
-            <Text>
+            <Text fontWeight={100}> Sustainability</Text>
+            <Text fontWeight={500} fontSize="2rem">
               Building Prosperity <br /> and Self-Sufficiency
             </Text>
-            <Text>
+            <Text fontWeight={300}>
               Lorem ipsum dolor sit amet consectetur. Blandit <br /> arcu
               pellentesque adipiscing adipiscing feugiat <br /> nunc varius sed
               tincidunt. Ultricies dign
             </Text>
-            <Link
-              href="#"
-              color="primaryOrange"
-              display="flex"
-              alignItems="center"
-              gap=".5rem">
-              Read More <BsArrowRight color="#F7F7F7" fontSize="1.5rem" />
-            </Link>
+            <Button
+              width="fit-content"
+              padding={theme.buttonPadding}
+              bgColor="primaryOrange"
+              _hover={{
+                bgColor: "#961615",
+              }}
+              _active={{
+                bgColor: "#bf1e1d",
+              }}
+              borderRadius={theme.buttonRadius.radius}
+              rightIcon={<BiChevronRight fontSize="2rem" />}>
+              Read More
+            </Button>
           </Flex>
           <Box height="150px" width="0.5px" mx="3rem" bgColor="#F7F7F7" />
           <Flex width="49%" flexDirection="column" gap="2rem">
@@ -193,10 +187,14 @@ const Services = () => {
           </Flex>
         </Flex>
       </Flex>
-      <VStack align="left" my="4rem">
-        <Text color="primaryOrange">Our Services</Text>
-        <Text color="#171717">Explore Our Services</Text>
-        <Text color="textGrey">
+      <VStack align="left" my="4rem" padding="2rem 8rem">
+        <Text fontWeight={500} fontSize="2rem" color="primaryOrange">
+          Industrial we services
+        </Text>
+        <Text color="#171717" fontSize="2.5rem" fontWeight={500}>
+          Industries that trust <br /> our services 
+        </Text>
+        <Text color="textGrey" fontSize="1.2rem">
           Pamtech group tailored registrar services,enhancing efficiency <br />{" "}
           and compliance across various industries, including Oil and gas,
           <br /> Media, Auto-part, Autoland.
@@ -222,20 +220,21 @@ const Services = () => {
           </Flex>
         ))}
       </HStack>
-      <VStack align="left" my="4rem">
-        <Text color="primaryOrange">Testimonial</Text>
-        <Text color="#171717">
-          {" "}
-          Trusted by Multiple <br /> organisations!
+      <VStack align="left" my="4rem" padding="2rem 8rem">
+        <Text fontWeight={500} fontSize="2rem" color="primaryOrange">
+          Testimonial
         </Text>
-        <Text color="textGrey">
+        <Text color="#171717" fontSize="2.5rem" fontWeight={500}>
+          Trusted by multiple <br /> organisations!
+        </Text>
+        <Text color="textGrey" fontSize="1.2rem">
           With over 100 businesses experiencing our <br /> impact, this is what
           a few had to say.
         </Text>
       </VStack>
-      <Flex gap={10} justifyContent="center">
+      <Flex gap={10} justifyContent="center" my="4rem">
         <Box
-          bgColor="#B8B8C1"
+          bgColor="#E3E3E8"
           padding="2rem 1rem"
           width="18rem"
           color="textGrey"
@@ -247,7 +246,7 @@ const Services = () => {
           </Text>
         </Box>
         <Box
-          bgColor="#B8B8C1"
+          bgColor="#E3E3E8"
           padding="2rem 1rem"
           color="textGrey"
           width="18rem"
@@ -259,7 +258,7 @@ const Services = () => {
           </Text>
         </Box>
         <Box
-          bgColor="#B8B8C1"
+          bgColor="#E3E3E8"
           padding="2rem 1rem"
           color="textGrey"
           width="18rem"
@@ -271,7 +270,7 @@ const Services = () => {
           </Text>
         </Box>
         <Box
-          bgColor="#B8B8C1"
+          bgColor="#E3E3E8"
           padding="2rem 1rem"
           color="textGrey"
           width="18rem"
