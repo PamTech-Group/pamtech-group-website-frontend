@@ -1,8 +1,7 @@
 import { Box, Button, Flex, Heading, Text, VStack } from "@chakra-ui/react";
 import bg from "../../../public/bg1.jpg";
 import Header from "./Nav";
-import { Link } from "@chakra-ui/next-js";
-import { BsArrowRight } from "react-icons/bs";
+
 import theme from "@/app/theme";
 import { BiChevronRight } from "react-icons/bi";
 const Hero = () => {

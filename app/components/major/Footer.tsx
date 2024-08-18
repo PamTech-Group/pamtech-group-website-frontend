@@ -6,13 +6,10 @@ import {
   SimpleGrid,
   Text,
   VStack,
-  HStack,
   Icon,
-  Divider,
 } from "@chakra-ui/react";
 import { BiLogoPlayStore } from "react-icons/bi";
 import {
-  FaAppStore,
   FaFacebook,
   FaInstagram,
   FaLinkedin,
@@ -21,7 +18,7 @@ import {
 } from "react-icons/fa";
 import logo from "../../../public/logo.png";
 import { IoCall } from "react-icons/io5";
-import { GrApple, GrAppleAppStore } from "react-icons/gr";
+import { GrApple } from "react-icons/gr";
 import phone from "../../../public/phone.png";
 import { Image, Link } from "@chakra-ui/next-js";
 import theme from "@/app/theme";
