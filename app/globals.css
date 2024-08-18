@@ -3,3 +3,6 @@
   transition: all 0.1s linear;
   text-decoration: none;
 }
+.scaler {
+  font-size: 1.2rem;
+}

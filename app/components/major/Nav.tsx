@@ -34,9 +34,17 @@ const Header = () => {
         <HStack spacing={4}>
           <Button
             as="a"
-            href="#"
+            href="/contact-us"
             colorScheme="transparent"
             color="text"
+            _hover={{
+              bgColor: "primaryOrange",
+              color: "#F7F7F7",
+            }}
+            _active={{
+              bgColor: "#bf1e1d",
+              color: "#F7F7F7",
+            }}
             outline="1px solid #E52321"
             padding={theme.buttonPadding}
             borderRadius={theme.buttonRadius.radius}>

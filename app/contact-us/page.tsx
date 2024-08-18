@@ -1,5 +1,5 @@
 "use client";
-import { Image, Link } from "@chakra-ui/next-js";
+import { Image } from "@chakra-ui/next-js";
 import {
   Box,
   Button,
@@ -9,6 +9,7 @@ import {
   FormLabel,
   HStack,
   Input,
+  SimpleGrid,
   Text,
   Textarea,
   VStack,
@@ -16,6 +17,10 @@ import {
 import { useState } from "react";
 import logo from "../../public/logoBlue.png";
 import theme from "../theme";
+import { BiChevronRight } from "react-icons/bi";
+import bg3 from "../../public/bg3.png";
+import Footer from "../components/major/Footer";
+import Link from "next/link";
 const ContactPage = () => {
   // State to handle form inputs
   const [formData, setFormData] = useState({
@@ -49,7 +54,7 @@ const ContactPage = () => {
   // Handle form submission
 
   return (
-    <>
+    <Box bgColor="#040A22">
       <Box padding="2rem 8rem" bgColor="#F7F7F7" color="textGrey">
         <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
           <Box>
@@ -63,7 +68,7 @@ const ContactPage = () => {
             spacing={20}
             display={{ base: "none", md: "flex" }}
             fontWeight={400}>
-            <Link className="scaler" href="#">
+            <Link className="scaler" href="/about">
               About Us
             </Link>
             <Link className="scaler" href="#">
@@ -79,10 +84,17 @@ const ContactPage = () => {
           <HStack spacing={4}>
             <Button
               as="a"
-              href="#"
+              href="/contact-us"
               colorScheme="transparent"
-              color="#33333380
-"
+              color="#33333380"
+              _hover={{
+                bgColor: "primaryOrange",
+                color: "#F7F7F7",
+              }}
+              _active={{
+                bgColor: "#bf1e1d",
+                color: "#F7F7F7",
+              }}
               outline="1px solid #E52321"
               padding={theme.buttonPadding}
               borderRadius={theme.buttonRadius.radius}>
@@ -103,20 +115,35 @@ const ContactPage = () => {
           </HStack>
         </Flex>
       </Box>
-      <Box bgColor="#040A22">
+      <Box padding="2rem 8rem">
+        <VStack align="left" my="4rem">
+          <Text fontWeight={500} fontSize="2rem" color="primaryOrange">
+            Contact Us{" "}
+          </Text>
+          <Text color="#F7F7F7" fontSize="2.5rem" fontWeight={500}>
+            How can we help you?
+          </Text>
+          <Text color="#F7F7F7" fontSize="1.2rem">
+            Lorem ipsum dolor sit amet consectetur. Fringilla sagittis justo{" "}
+            <br />
+            nulla a. Morbi sed consectetur porta vitae ullamcorper. Odio at.
+          </Text>
+        </VStack>
         <Flex
           bgColor="#F7F7F7"
           color="#333333"
           gap="2rem"
           height="100%"
-          width="100%">
+          width="100%"
+          justifyContent="space-between">
           <Flex
             flexDirection="column"
             bgColor="#F1F1F1"
             minHeight="100%"
             padding="4rem 2rem"
             border="1px solid #33333326"
-            width="40%">
+            width="40%"
+            fontSize="1rem">
             <Flex flexDirection="column" gap=".4rem">
               <Text>Contact</Text>
               <Link href="#">+2348115004000</Link>
@@ -195,7 +222,7 @@ const ContactPage = () => {
                 focusBorderColor="#33333326"
                 _placeholder={{
                   color: "#33333340",
-                  fontWeight: 200,
+                  fontWeight: 300,
                 }}
                 value={formData.email}
                 onChange={handleInputChange}
@@ -215,7 +242,7 @@ const ContactPage = () => {
                 focusBorderColor="#33333326"
                 _placeholder={{
                   color: "#33333340",
-                  fontWeight: 200,
+                  fontWeight: 300,
                 }}
                 value={formData.phoneNumber}
                 onChange={handleInputChange}
@@ -235,7 +262,7 @@ const ContactPage = () => {
                 focusBorderColor="#33333326"
                 _placeholder={{
                   color: "#33333340",
-                  fontWeight: 200,
+                  fontWeight: 300,
                 }}
                 value={formData.message}
                 onChange={handleInputChange}
@@ -254,7 +281,58 @@ const ContactPage = () => {
           </Flex>
         </Flex>
       </Box>
-    </>
+      <Flex
+        justifyContent="center"
+        padding="3rem 0rem"
+        gap="2rem"
+        bgImage={`url(${bg3.src})`}
+        bgSize="cover"
+        bgPosition="center"
+        width="100%"
+        color="#F7F7F7">
+        <Flex width="49%" alignItems="center">
+          <Flex flexDirection="column" gap="2rem">
+            <Text fontWeight={100}> Sustainability</Text>
+            <Text fontWeight={500} fontSize="2rem">
+              Building Prosperity <br /> and Self-Sufficiency
+            </Text>
+            <Text fontWeight={300}>
+              Lorem ipsum dolor sit amet consectetur. Blandit <br /> arcu
+              pellentesque adipiscing adipiscing feugiat <br /> nunc varius sed
+              tincidunt. Ultricies dign
+            </Text>
+            <Button
+              width="fit-content"
+              padding={theme.buttonPadding}
+              bgColor="primaryOrange"
+              _hover={{
+                bgColor: "#961615",
+              }}
+              _active={{
+                bgColor: "#bf1e1d",
+              }}
+              borderRadius={theme.buttonRadius.radius}
+              rightIcon={<BiChevronRight fontSize="2rem" />}>
+              Read More
+            </Button>
+          </Flex>
+          <Box height="150px" width="0.5px" mx="3rem" bgColor="#F7F7F7" />
+          <Flex width="49%" flexDirection="column" gap="2rem">
+            <Text>7 Sustainabilty Pillers</Text>
+            <SimpleGrid columns={4} rowGap="5" columnGap={8}>
+              <Box width="50px" outline="1px solid #F7F7F7" height="45px" />
+              <Box width="50px" outline="1px solid #F7F7F7" height="45px" />
+              <Box width="50px" outline="1px solid #F7F7F7" height="45px" />
+              <Box width="50px" outline="1px solid #F7F7F7" height="45px" />
+              <Box width="50px" outline="1px solid #F7F7F7" height="45px" />
+              <Box width="50px" outline="1px solid #F7F7F7" height="45px" />
+              <Box width="50px" outline="1px solid #F7F7F7" height="45px" />
+            </SimpleGrid>
+          </Flex>
+        </Flex>
+      </Flex>
+      <Footer />
+    </Box>
   );
 };
 
