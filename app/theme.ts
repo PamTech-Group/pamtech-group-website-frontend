@@ -38,10 +38,10 @@ const theme = extendTheme({
     xxxxl: "3rem",
   },
   fontWeights: {
-    light: 300,
-    normal: 400,
-    medium: 500,
-    bold: 600,
+    light: 100,
+    normal: 300,
+    medium: 400,
+    bold: 500,
     thick: 700,
   },
 
@@ -70,7 +70,10 @@ const theme = extendTheme({
     bgGradient:
       "linear-gradient(90deg, rgba(57,255,20,1) 20%, rgba(138,43,226,1) 73%)",
   },
-  radius: "25px",
+  buttonRadius: {
+    radius: "15px",
+  },
+  buttonPadding: "2rem 2rem",
   boxShadow: `0px 4px 6px 2px rgba(11, 1, 45, 0.5)`,
   customBoxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)", // Added custom box shadow
   customBorderRadius: "0.5rem", // Added custom border radius

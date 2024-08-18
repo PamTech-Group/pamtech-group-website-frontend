@@ -187,7 +187,10 @@ const ContactPage = () => {
           />
         </FormControl>
         <Box textAlign="center" width="70%">
-          <Button width="fit-content" bgColor="primaryOrange">
+          <Button
+            padding="1rem 1.5rem"
+            width="fit-content"
+            bgColor="primaryOrange">
             Submit
           </Button>
         </Box>
