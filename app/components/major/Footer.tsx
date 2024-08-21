@@ -8,7 +8,7 @@ import {
   VStack,
   Icon,
 } from "@chakra-ui/react";
-import { BiLogoPlayStore } from "react-icons/bi";
+import { BiChevronRight, BiLogoPlayStore } from "react-icons/bi";
 import {
   FaFacebook,
   FaInstagram,
@@ -25,7 +25,7 @@ import theme from "@/app/theme";
 const Footer = () => {
   return (
     <Box mt="6rem">
-      <Box bgColor="primaryOrange">
+      <Box bgColor="primaryOrange" padding="2rem 8rem" paddingBottom="0">
         <SimpleGrid placeItems="center" columns={2}>
           <Box>
             <Flex
@@ -66,32 +66,37 @@ const Footer = () => {
           </Flex>
         </SimpleGrid>
       </Box>
+      <Box></Box>
+      <Flex
+        padding="2rem 8rem"
+        align="center"
+        justifyContent="space-between"
+        bgColor="#010619">
+        <Box>
+          <Text fontSize="3rem" fontWeight={700}>
+            Connect with us
+          </Text>
+        </Box>
+
+        <Button
+          width="fit-content"
+          padding={theme.buttonPadding}
+          bgColor="#FCFCFF"
+          color="primaryOrange"
+          _hover={{
+            bgColor: "#dbdbd9",
+            color: "primaryOrange",
+          }}
+          _active={{
+            bgColor: "#e8e6e1",
+            color: "primaryOrange",
+          }}
+          rightIcon={<BiChevronRight fontSize="2rem" />}
+          borderRadius={theme.buttonRadius.radius}>
+          Talk to Us{" "}
+        </Button>
+      </Flex>
       <Box color="#F7F7F7" bgColor="#040A22" padding="2rem 8rem">
-        <Flex align="center" justifyContent="space-between" bgColor="#010619">
-          <Box>
-            <Text fontSize="3rem" fontWeight={700}>
-              Ready to connect with us?
-            </Text>
-            <Text fontSize="1rem" fontWeight={300}>
-              Reach out to us now.
-            </Text>
-          </Box>
-
-          <Button
-            width="fit-content"
-            padding={theme.buttonPadding}
-            bgColor="primaryOrange"
-            _hover={{
-              bgColor: "#961615",
-            }}
-            _active={{
-              bgColor: "#bf1e1d",
-            }}
-            borderRadius={theme.buttonRadius.radius}>
-            Talk to Us{" "}
-          </Button>
-        </Flex>
-
         <Flex
           bgColor="#040A22"
           justify="space-between"

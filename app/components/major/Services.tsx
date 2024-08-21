@@ -102,7 +102,7 @@ const Services = () => {
         </Text>
       </VStack>
 
-      <SimpleGrid columns={[1, 2, 4]} spacing={5} padding="2rem">
+      <SimpleGrid my="4rem" columns={[1, 2, 4]} spacing={5} padding="2rem 8rem">
         {images.map((image) => (
           <Box
             key={image.title}
@@ -138,24 +138,24 @@ const Services = () => {
         ))}
       </SimpleGrid>
       <Flex
-        justifyContent="center"
-        padding="3rem 0rem"
+        my="4rem"
+        padding="4rem 8rem"
         gap="2rem"
         bgImage={`url(${bg3.src})`}
         bgSize="cover"
         bgPosition="center"
         width="100%"
         color="#F7F7F7">
-        <Flex width="49%" alignItems="center">
-          <Flex flexDirection="column" gap="2rem">
-            <Text fontWeight={100}> Sustainability</Text>
-            <Text fontWeight={500} fontSize="2rem">
-              Building Prosperity <br /> and Self-Sufficiency
+        <Flex width="100%" alignItems="center" justifyContent="space-between">
+          <Flex width="50%" flexDirection="column" gap="2rem">
+            <Text fontWeight={300}> Sustainability</Text>
+            <Text fontWeight={500} fontSize="2.5rem">
+              Building Prosperity and Self-Sufficiency
             </Text>
-            <Text fontWeight={300}>
-              Lorem ipsum dolor sit amet consectetur. Blandit <br /> arcu
-              pellentesque adipiscing adipiscing feugiat <br /> nunc varius sed
-              tincidunt. Ultricies dign
+            <Text fontWeight={300} fontSize="1.2rem">
+              Lorem ipsum dolor sit amet consectetur. Blandit arcu pellentesque
+              adipiscing adipiscing feugiat nunc varius sed tincidunt. Ultricies
+              dign
             </Text>
             <Button
               width="fit-content"
@@ -173,7 +173,7 @@ const Services = () => {
             </Button>
           </Flex>
           <Box height="150px" width="0.5px" mx="3rem" bgColor="#F7F7F7" />
-          <Flex width="49%" flexDirection="column" gap="2rem">
+          <Flex width="50%" flexDirection="column" gap="2rem">
             <Text>7 Sustainabilty Pillers</Text>
             <SimpleGrid columns={4} rowGap="5" columnGap={8}>
               <Box width="50px" outline="1px solid #F7F7F7" height="45px" />
@@ -200,26 +200,30 @@ const Services = () => {
           <br /> Media, Auto-part, Autoland.
         </Text>
       </VStack>
-      <HStack>
+      <Flex padding="2rem 8rem" justifyContent="space-between">
         {industries.map((industry) => (
           <Flex
+            width="20rem"
             flexDirection="column"
             bgColor="rgba(241, 241, 248, .4)"
             outline="1px solid rgba(141, 139, 139, .4)"
             key={industry.title}>
-            <Flex flexDirection="column" padding="1rem 1.5rem">
-              <Text color="#171717">{industry.title}</Text>
+            <Flex flexDirection="column" padding="1rem 1.5rem" gap="1rem">
+              <Text color="#171717" fontWeight={500} fontSize="1.5rem">
+                {industry.title}
+              </Text>
               <Text color="textGrey">{industry.description}</Text>
             </Flex>
-            <Box>
-              <Image
-                width="100%"
-                src={industry.image}
-                alt={industry.title}></Image>
-            </Box>
+
+            <Image
+              bgSize="100%"
+              bgPosition="center"
+              src={industry.image}
+              alt={industry.title}
+            />
           </Flex>
         ))}
-      </HStack>
+      </Flex>
       <VStack align="left" my="4rem" padding="2rem 8rem">
         <Text fontWeight={500} fontSize="2rem" color="primaryOrange">
           Testimonial
@@ -232,7 +236,11 @@ const Services = () => {
           a few had to say.
         </Text>
       </VStack>
-      <Flex gap={10} justifyContent="center" my="4rem">
+      <Flex
+        gap={10}
+        padding="2rem 8rem"
+        justifyContent="space-between"
+        my="4rem">
         <Box
           bgColor="#E3E3E8"
           padding="2rem 1rem"
