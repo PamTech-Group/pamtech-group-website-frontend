@@ -7,9 +7,18 @@ import {
   useDisclosure,
   Center,
   Icon,
+  IconButton,
+  VStack,
+  Drawer,
+  DrawerOverlay,
+  DrawerContent,
+  DrawerHeader,
+  DrawerBody,
+  DrawerCloseButton,
 } from "@chakra-ui/react";
+import { HamburgerIcon } from "@chakra-ui/icons";
 import logo from "../../../public/logo.png";
-import logoBlue from "../../../public/logoBlue.png"; // Blue logo
+import logoBlue from "../../../public/logoBlue.png";
 import { Image } from "@chakra-ui/next-js";
 import theme from "@/app/theme";
 import { useState, useEffect } from "react";
@@ -21,6 +30,11 @@ const Nav = () => {
   const [scrollY, setScrollY] = useState(0);
   const [isScrolled, setIsScrolled] = useState(false);
   const { isOpen, onOpen, onClose } = useDisclosure();
+  const {
+    isOpen: isMobileMenuOpen,
+    onOpen: onMobileMenuOpen,
+    onClose: onMobileMenuClose,
+  } = useDisclosure();
 
   // Effect to handle scroll event
   useEffect(() => {
@@ -44,11 +58,17 @@ const Nav = () => {
       left={0}
       right={0}
       zIndex={999}
-      bg={isScrolled ? "white" : "transparent"} // Background changes after scroll
+      bg={isScrolled ? "white" : "transparent"}
       transition="background-color 0.3s ease-in-out"
-      boxShadow={isScrolled ? "md" : "none"} // Optional: add shadow when scrolled
-      padding="2rem 8rem">
+      boxShadow={isScrolled ? "md" : "none"}
+      padding={{
+        base: "1rem 2rem", // Small screens (mobiles)
+        sm: "1.5rem 4rem", // Small PCs and tablets
+        md: "2rem 6rem", // Medium screen (laptops)
+        lg: "2rem 8rem", // Larger screens
+      }}>
       <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
+        {/* Logo */}
         <Box>
           <Link href="/">
             <Image
@@ -64,27 +84,32 @@ const Nav = () => {
           </Link>
         </Box>
 
+        {/* Desktop Menu */}
         <HStack
           as={"nav"}
-          spacing={20}
-          display={{ base: "none", md: "flex" }}
+          spacing={{
+            base: 4, // Smaller gaps on small screens
+            sm: 6, // Slightly larger gap for small tablets
+            md: 8, // Normal gap for medium devices
+            lg: 12, // Large gap for larger screens
+          }}
+          display={{ base: "none", md: "flex" }} // Show from medium screens and above
           fontWeight={400}
-          color={isScrolled ? "primaryOrange" : "white"} // Change text color based on scroll
-        >
+          color={isScrolled ? "primaryOrange" : "white"}>
           <Link className="scaler" href="/about">
             About Us
           </Link>
 
           <Box position="relative" onMouseEnter={onOpen} onMouseLeave={onClose}>
             <Flex className="scaler" cursor="pointer" alignItems="center">
-              <Text>Business</Text>
+              <Text fontSize={{ base: "0.9rem", md: "1rem" }}>Business</Text>
               <Icon fontSize="1rem" as={BiChevronDown} />
             </Flex>
 
             {/* Dropdown menu */}
             <Center>
               <Box
-                marginLeft="4rem"
+                marginLeft="2rem"
                 position="absolute"
                 top="100%"
                 transformOrigin="center"
@@ -96,8 +121,7 @@ const Nav = () => {
                 transition="all 0.3s ease-in-out"
                 opacity={isOpen ? 1 : 0}
                 transform={isOpen ? "translateY(0)" : "translateY(-20px)"}
-                pointerEvents={isOpen ? "auto" : "none"} // Prevents interaction when closed
-              >
+                pointerEvents={isOpen ? "auto" : "none"}>
                 <Dropdown />
               </Box>
             </Center>
@@ -110,12 +134,29 @@ const Nav = () => {
             e-Solution
           </Link>
         </HStack>
-        <HStack spacing={4}>
+
+        {/* Mobile Menu Button */}
+        <IconButton
+          aria-label="Open Menu"
+          icon={<HamburgerIcon />}
+          display={{ base: "flex", md: "none" }} // Display on small screens
+          onClick={onMobileMenuOpen}
+          variant="ghost"
+          color={isScrolled ? "black" : "white"}
+          fontSize="1.5rem"
+        />
+
+        {/* Contact and Social Buttons */}
+        <HStack
+          spacing={4}
+          display={{ base: "none", md: "flex" }} // Show from medium screens
+        >
           <Button
             as="a"
             href="/contact-us"
             colorScheme="transparent"
             color={isScrolled ? "black" : "white"}
+            fontSize={{ base: "0.8rem", md: "1rem" }} // Responsive font size
             _hover={{
               bgColor: "primaryOrange",
               color: "#F7F7F7",
@@ -130,6 +171,7 @@ const Nav = () => {
             Contact Us
           </Button>
           <Button
+            fontSize={{ base: "0.8rem", md: "1rem" }} // Responsive font size
             padding={theme.buttonPadding}
             bgColor="primaryOrange"
             _hover={{
@@ -142,6 +184,42 @@ const Nav = () => {
             Social
           </Button>
         </HStack>
+
+        {/* Mobile Menu Drawer */}
+        <Drawer
+          isOpen={isMobileMenuOpen}
+          placement="right"
+          onClose={onMobileMenuClose}>
+          <DrawerOverlay />
+          <DrawerContent>
+            <DrawerCloseButton />
+            <DrawerHeader>Menu</DrawerHeader>
+            <DrawerBody>
+              <VStack spacing={4} align="start">
+                <Link href="/about" onClick={onMobileMenuClose}>
+                  About Us
+                </Link>
+                <Link href="#" onClick={onMobileMenuClose}>
+                  Business
+                </Link>
+                <Link href="#" onClick={onMobileMenuClose}>
+                  Investor Relations
+                </Link>
+                <Link href="#" onClick={onMobileMenuClose}>
+                  e-Solution
+                </Link>
+                <Button
+                  as="a"
+                  href="/contact-us"
+                  colorScheme="transparent"
+                  width="100%"
+                  onClick={onMobileMenuClose}>
+                  Contact Us
+                </Button>
+              </VStack>
+            </DrawerBody>
+          </DrawerContent>
+        </Drawer>
       </Flex>
 
       {/* Keyframes for fade-in animation */}

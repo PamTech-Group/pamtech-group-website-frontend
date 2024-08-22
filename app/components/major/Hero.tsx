@@ -24,7 +24,7 @@ const Hero = () => {
         <Heading fontSize="3rem" fontWeight={500}>
           Committed Service to Humanity{" "}
         </Heading>
-        <Text width="70%">
+        <Text width="80%" fontSize="1.2rem">
           With a strong commitment to serving humanity, Pamtech Group has built
           a diverse portfolio in the oil and gas, media, and automotive
           industries.

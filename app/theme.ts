@@ -14,12 +14,7 @@ const theme = extendTheme({
     background: "#F1F1FF",
     text: "#FFFBFB",
     headingBlue: "#192140",
-    // NavText: "#FFFDFD",
-    // greenBgText: "#262626",
-    // greyBg: "#333333",
-    // primaryNeonGreen: "#39FF14",
-    // secondaryDarkBlue: "#001f3f",
-    // accentPurple: "#8A2BE2",
+
     backgroundCard: "#FFFDFD",
     textDark: "#FFFDFD",
     textGrey: "#333333",
