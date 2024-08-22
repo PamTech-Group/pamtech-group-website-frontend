@@ -19,15 +19,15 @@ const Hero = () => {
         height="100%"
         flexDir="column"
         justifyContent="center"
-        gap="1.5rem"
+        gap="2rem"
         width="50%">
         <Heading fontSize="3rem" fontWeight={500}>
-          Title Website-Headline
+          Committed Service to Humanity{" "}
         </Heading>
-        <Text>
-          Lorem ipsum dolor sit amet consectetur. Tincidunt ac elit ullamcorper
-          <br />
-          nibh in. Id pretium amet sem eli t nunc maecenas at facilisi.
+        <Text width="70%">
+          With a strong commitment to serving humanity, Pamtech Group has built
+          a diverse portfolio in the oil and gas, media, and automotive
+          industries.
         </Text>
         <Button
           width="fit-content"
