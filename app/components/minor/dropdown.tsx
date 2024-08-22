@@ -121,7 +121,6 @@ const Dropdown = () => {
               }}>
               <Link href={item.href} width="100%" display="flex">
                 <Flex
-                  as="a"
                   justify="space-between"
                   align="center"
                   width="100%"
