@@ -168,7 +168,9 @@ const Services = () => {
                 bgColor: "#bf1e1d",
               }}
               borderRadius={theme.buttonRadius.radius}
-              rightIcon={<BiChevronRight fontSize="2rem" />}>
+              rightIcon={
+                <BiChevronRight fontSize="2rem" className="arrow-icon" />
+              }>
               Read More
             </Button>
           </Flex>

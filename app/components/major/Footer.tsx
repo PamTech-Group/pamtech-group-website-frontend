@@ -91,8 +91,8 @@ const Footer = () => {
             bgColor: "#e8e6e1",
             color: "primaryOrange",
           }}
-          rightIcon={<BiChevronRight fontSize="2rem" />}
-          borderRadius={theme.buttonRadius.radius}>
+          borderRadius={theme.buttonRadius.radius}
+          rightIcon={<BiChevronRight fontSize="2rem" className="arrow-icon" />}>
           Talk to Us{" "}
         </Button>
       </Flex>

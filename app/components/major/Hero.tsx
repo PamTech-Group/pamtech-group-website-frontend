@@ -1,6 +1,6 @@
 import { Box, Button, Flex, Heading, Text, VStack } from "@chakra-ui/react";
 import bg from "../../../public/bg1.jpg";
-
+import "../../globals.css";
 import theme from "@/app/theme";
 import { BiChevronRight } from "react-icons/bi";
 import Nav from "./Nav";
@@ -40,7 +40,7 @@ const Hero = () => {
             bgColor: "#bf1e1d",
           }}
           borderRadius={theme.buttonRadius.radius}
-          rightIcon={<BiChevronRight fontSize="2rem" />}>
+          rightIcon={<BiChevronRight fontSize="2rem" className="arrow-icon" />}>
           Read More
         </Button>
       </Flex>

@@ -6,3 +6,15 @@
 .scaler {
   font-size: 1.2rem;
 }
+.arrow-icon {
+  transition: transform 0.3s ease-in-out;
+}
+
+button:hover .arrow-icon {
+  transform: translateX(8px);
+}
+
+/* Scale down on click */
+button:active .arrow-icon {
+  transform: scale(0.8);
+}

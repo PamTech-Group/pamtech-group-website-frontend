@@ -8,7 +8,6 @@ import {
   Text,
 } from "@chakra-ui/react";
 import { BiChevronRight } from "react-icons/bi";
-import Autoland from "../../autoland/page";
 import {
   FaFacebook,
   FaInstagram,
@@ -19,16 +18,30 @@ import {
 
 const Dropdown = () => {
   return (
-    <Flex>
+    <Flex
+      bg="white"
+      boxShadow="md"
+      padding="2rem"
+      borderRadius="md"
+      justify="space-between"
+      width="80vw">
+      {/* Left Section */}
       <Flex
-        bgColor="#F1F1F1
-">
-        <Text>Our Service</Text>
-        <Text>
+        flexDir="column"
+        bgColor="#F1F1F1"
+        padding="1.5rem"
+        width="50%"
+        gap="1rem"
+        borderRadius="md">
+        <Text fontSize="1.5rem" fontWeight="bold" color="black">
+          Our Services
+        </Text>
+        <Text fontSize="1rem" color="gray.700" lineHeight="1.6">
           Lorem ipsum dolor sit amet consectetur. Massa ac sit adipiscing lectus
           urna arcu. Pulvinar pulvi nar risus elit turpis. Condimentum mauris in
           sed sagittis sit parturient arcu ut. Ac risus diam.
         </Text>
+        {/* Social Media Icons */}
         <Flex justify="start" gap="1rem">
           <IconButton
             as="a"
@@ -82,27 +95,69 @@ const Dropdown = () => {
           />
         </Flex>
       </Flex>
-      <Flex bgColor="#FBFBFB">
-        <List>
-          <ListItem>
-            <Text>Oil and Gas</Text>
-            <ListIcon as={BiChevronRight} />
+
+      {/* Right Section */}
+      <Flex bgColor="#FBFBFB" padding="1.5rem" width="50%" borderRadius="md">
+        <List spacing={3} width="100%">
+          <ListItem
+            display="flex"
+            justifyContent="space-between"
+            alignItems="center">
+            <Text fontSize="1.2rem" color="black">
+              Oil and Gas
+            </Text>
+            <ListIcon as={BiChevronRight} color="gray.500" />
           </ListItem>
-          <ListItem>
-            <Text>Autoland</Text>
-            <ListIcon as={BiChevronRight} />
+
+          {/* Highlighted item for Autoland */}
+          <ListItem
+            display="flex"
+            justifyContent="space-between"
+            alignItems="center">
+            <Text fontSize="1.2rem" color="red.600" fontWeight="bold">
+              Autoland
+            </Text>
+            <ListIcon as={BiChevronRight} color="red.600" />
           </ListItem>
-          <ListItem>
-            <Text>Autoparts</Text>
-            <ListIcon as={BiChevronRight} />
+
+          <ListItem
+            display="flex"
+            justifyContent="space-between"
+            alignItems="center">
+            <Text fontSize="1.2rem" color="black">
+              Autoparts
+            </Text>
+            <ListIcon as={BiChevronRight} color="gray.500" />
           </ListItem>
-          <ListItem>
-            <Text> Pamtech Ride</Text>
-            <ListIcon as={BiChevronRight} />
+
+          <ListItem
+            display="flex"
+            justifyContent="space-between"
+            alignItems="center">
+            <Text fontSize="1.2rem" color="black">
+              Luxury Ride
+            </Text>
+            <ListIcon as={BiChevronRight} color="gray.500" />
           </ListItem>
-          <ListItem>
-            <Text>Media</Text>
-            <ListIcon as={BiChevronRight} />
+
+          <ListItem
+            display="flex"
+            justifyContent="space-between"
+            alignItems="center">
+            <Text fontSize="1.2rem" color="black">
+              Media
+            </Text>
+            <ListIcon as={BiChevronRight} color="gray.500" />
+          </ListItem>
+
+          <ListItem
+            display="flex"
+            justifyContent="space-between"
+            alignItems="center">
+            <Text fontSize="1.2rem" color="black">
+              Foundation
+            </Text>
+            <ListIcon as={BiChevronRight} color="gray.500" />
           </ListItem>
         </List>
       </Flex>

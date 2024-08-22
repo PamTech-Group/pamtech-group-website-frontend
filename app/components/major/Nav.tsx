@@ -1,14 +1,24 @@
-import { Box, Flex, Button, HStack } from "@chakra-ui/react";
+import {
+  Box,
+  Flex,
+  Button,
+  HStack,
+  Text,
+  useDisclosure,
+  Center,
+} from "@chakra-ui/react";
 import logo from "../../../public/logo.png";
 import logoBlue from "../../../public/logoBlue.png"; // Blue logo
 import { Image } from "@chakra-ui/next-js";
 import Link from "next/link";
 import theme from "@/app/theme";
 import { useState, useEffect } from "react";
+import Dropdown from "../minor/dropdown";
 
 const Nav = () => {
   const [scrollY, setScrollY] = useState(0);
   const [isScrolled, setIsScrolled] = useState(false);
+  const { isOpen, onOpen, onClose } = useDisclosure();
 
   // Effect to handle scroll event
   useEffect(() => {
@@ -58,14 +68,38 @@ const Nav = () => {
           spacing={20}
           display={{ base: "none", md: "flex" }}
           fontWeight={400}
-          color={isScrolled ? "black" : "white"} // Change text color based on scroll
+          color={isScrolled ? "primaryOrange" : "white"} // Change text color based on scroll
         >
           <Link className="scaler" href="#">
             About Us
           </Link>
-          <Link className="scaler" href="#">
-            Business
-          </Link>
+          <Box position="relative" onMouseEnter={onOpen} onMouseLeave={onClose}>
+            <Text className="scaler" cursor="pointer">
+              Business
+            </Text>
+
+            {/* Dropdown menu */}
+            <Center>
+              <Box
+                marginLeft="4rem"
+                position="absolute"
+                top="100%"
+                transformOrigin="center"
+                bg="white"
+                width="contain"
+                boxShadow="md"
+                borderRadius="md"
+                zIndex={1000}
+                transition="all 0.3s ease-in-out"
+                opacity={isOpen ? 1 : 0}
+                transform={isOpen ? "translateY(0)" : "translateY(-20px)"}
+                pointerEvents={isOpen ? "auto" : "none"} // Prevents interaction when closed
+              >
+                <Dropdown />
+              </Box>
+            </Center>
+          </Box>
+
           <Link className="scaler" href="#">
             Investor Relations
           </Link>
