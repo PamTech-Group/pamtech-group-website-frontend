@@ -103,35 +103,17 @@ const Footer = () => {
           mt={10}
           flexDir={{ base: "column", md: "row" }}>
           <VStack align="start" spacing={5}>
-            <Box>
+            <Flex flexDirection="column" gap="1.5rem">
               <Link href="/">
                 <Image src={logo} alt="Pamtech Logo" height={50} />
               </Link>
-            </Box>
+              <Text fontSize="1.2rem" fontWeight={300}>
+                Commited service to humanity
+              </Text>
+            </Flex>
           </VStack>
 
           <Flex gap="3rem">
-            <Flex flexDirection="column" justifyContent="start" gap="1rem">
-              <Text fontSize="1.2rem" fontWeight={400}>
-                Quick link
-              </Text>
-
-              <Link fontWeight={300} href="#">
-                About us
-              </Link>
-              <Link fontWeight={300} href="#">
-                Contact us
-              </Link>
-              <Link fontWeight={300} href="#">
-                Sustainability
-              </Link>
-              <Link fontWeight={300} href="#">
-                Investor relations
-              </Link>
-              <Link fontWeight={300} href="#">
-                e-solution
-              </Link>
-            </Flex>
             <Flex flexDirection="column" justifyContent="start" gap="1rem">
               <Text fontSize="1.2rem" fontWeight={400}>
                 Legal

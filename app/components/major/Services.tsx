@@ -72,7 +72,7 @@ const industries = [
 const Services = () => {
   return (
     <Box marginTop="10rem" mb="4rem">
-      <Flex gap={10} justifyContent="center" padding="2rem 8rem">
+      <Flex gap={10} justifyContent="space-between" padding="2rem 8rem">
         {services.map((service) => (
           <VStack
             flexDir="column"

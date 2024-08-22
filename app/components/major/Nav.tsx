@@ -3,7 +3,7 @@ import logo from "../../../public/logo.png";
 import { Image } from "@chakra-ui/next-js";
 import Link from "next/link";
 import theme from "@/app/theme";
-const Header = () => {
+const Nav = () => {
   return (
     <Box>
       <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
@@ -68,4 +68,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default Nav;
