@@ -111,7 +111,6 @@ const Dropdown = () => {
             <ListItem
               key={index}
               display="flex"
-              justifyContent="space-between"
               width="100%"
               alignItems="center"
               cursor="pointer"
@@ -120,7 +119,7 @@ const Dropdown = () => {
                 transform: "translateX(10px)", // Shift text and icon to the right
                 color: "primaryOrange", // Change text color on hover
               }}>
-              <Link href={item.href}>
+              <Link href={item.href} width="100%" display="flex">
                 <Flex
                   as="a"
                   justify="space-between"
