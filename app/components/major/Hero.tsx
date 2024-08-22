@@ -1,9 +1,9 @@
 import { Box, Button, Flex, Heading, Text, VStack } from "@chakra-ui/react";
 import bg from "../../../public/bg1.jpg";
-import Header from "./Nav";
 
 import theme from "@/app/theme";
 import { BiChevronRight } from "react-icons/bi";
+import Nav from "./Nav";
 const Hero = () => {
   return (
     <Box
@@ -13,10 +13,10 @@ const Hero = () => {
       bgPosition="center"
       height="100vh"
       color="#F7F7F7">
-      <Header />
+      <Nav />
 
       <Flex
-        height="90%"
+        height="100%"
         flexDir="column"
         justifyContent="center"
         gap="1.5rem"

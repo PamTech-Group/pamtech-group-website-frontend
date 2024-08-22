@@ -1,18 +1,11 @@
 import { Box, Button, Divider, Flex, Text, VStack } from "@chakra-ui/react";
 import bg from "../../../public/bg2.png";
-import { Image, Link } from "@chakra-ui/next-js";
-import { BsArrowRight } from "react-icons/bs";
 import theme from "@/app/theme";
 import { BiChevronRight } from "react-icons/bi";
 const About = () => {
   return (
     <>
-      <Flex
-        // bg="gray.100"
-
-        alignItems="center"
-        justifyContent="space-between"
-        height="60svh">
+      <Flex alignItems="center" justifyContent="space-between" height="60svh">
         <Box
           flex="1"
           bgImage={`url(${bg.src})`}
