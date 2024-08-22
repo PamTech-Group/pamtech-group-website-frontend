@@ -6,14 +6,15 @@ import {
   Text,
   useDisclosure,
   Center,
+  Icon,
 } from "@chakra-ui/react";
 import logo from "../../../public/logo.png";
 import logoBlue from "../../../public/logoBlue.png"; // Blue logo
-import { Image } from "@chakra-ui/next-js";
-import Link from "next/link";
+import { Image, Link } from "@chakra-ui/next-js";
 import theme from "@/app/theme";
 import { useState, useEffect } from "react";
 import Dropdown from "../minor/dropdown";
+import { BiChevronDown } from "react-icons/bi";
 
 const Nav = () => {
   const [scrollY, setScrollY] = useState(0);
@@ -70,13 +71,15 @@ const Nav = () => {
           fontWeight={400}
           color={isScrolled ? "primaryOrange" : "white"} // Change text color based on scroll
         >
-          <Link className="scaler" href="#">
+          <Link className="scaler" href="/about">
             About Us
           </Link>
+         
           <Box position="relative" onMouseEnter={onOpen} onMouseLeave={onClose}>
-            <Text className="scaler" cursor="pointer">
-              Business
-            </Text>
+            <Flex className="scaler" cursor="pointer" alignItems="center">
+              <Text>Business</Text>
+              <Icon fontSize="1rem" as={BiChevronDown} />
+            </Flex>
 
             {/* Dropdown menu */}
             <Center>
