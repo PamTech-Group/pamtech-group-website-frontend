@@ -102,7 +102,7 @@ const Nav = () => {
 
           <Box position="relative" onMouseEnter={onOpen} onMouseLeave={onClose}>
             <Flex className="scaler" cursor="pointer" alignItems="center">
-              <Text fontSize={{ base: "0.9rem", md: "1rem" }}>Business</Text>
+              <Text fontWeight={400}>Business</Text>
               <Icon fontSize="1rem" as={BiChevronDown} />
             </Flex>
 
