@@ -149,7 +149,7 @@ const Services = () => {
         bgSize="cover"
         bgPosition="center"
         color="#F7F7F7">
-        <Flex width="100%" justifyContent="space-between">
+        <Flex width="100%" alignItems="center" justifyContent="space-between">
           <Flex width="50%" flexDirection="column" gap="2rem">
             <Text fontWeight={300}>Sustainability</Text>
             <Text fontWeight={500} fontSize="2.5rem">
@@ -218,54 +218,6 @@ const Services = () => {
           </Flex>
         ))}
       </Flex>
-      {/* <Flex padding="2rem 8rem" justifyContent="space-between">
-        {industries.map((industry) => (
-          <Flex
-            key={industry.title}
-            width="20rem"
-            flexDirection="column"
-            bgColor="rgba(241, 241, 248, .4)"
-            outline="1px solid rgba(141, 139, 139, .4)"
-            position="relative" // Make the card relative for absolute positioning of the text
-            overflow="hidden"
-            _hover={{
-              "& .description": {
-                opacity: 1,
-                transform: "translateY(0)", // Slide down into view
-              },
-            }}>
-            {/* Image */}
-
-      {/* Hidden Text Content (Description) */}
-      {/* <Flex
-              className="description"
-              flexDirection="column"
-              padding="1rem"
-              gap="1rem"
-              bg="rgba(0, 0, 0, 0.7)" // Semi-transparent background for the description
-              color="white"
-              position="absolute"
-              bottom="0"
-              left="0"
-              width="100%"
-              transform="translateY(100%)" // Start with the description hidden below the card
-              opacity="0" // Initially hidden
-              transition="all 0.3s ease-in-out" // Smooth transition for both opacity and position
-            >
-              <Text fontWeight={500} fontSize="1.5rem">
-                {industry.title}
-              </Text>
-              <Text>{industry.description}</Text>
-            </Flex>
-            <Image
-              src={industry.image}
-              alt={industry.title}
-              width="100%"
-              height="auto"
-            />
-          </Flex>
-        ))}
-      </Flex> */}
 
       {/* Testimonials Section */}
       <VStack align="left" my="4rem" padding="2rem 8rem">

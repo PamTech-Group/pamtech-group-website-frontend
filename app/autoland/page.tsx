@@ -1,3 +1,4 @@
+"use client";
 import theme from "../theme";
 import { BiChevronRight } from "react-icons/bi";
 import gasBg from "../../public/gasBg.png";
@@ -6,8 +7,17 @@ import land2 from "../../public/land2.png";
 import land3 from "../../public/land3.png";
 import bg3 from "../../public/bg3.png";
 import Image from "next/image";
-import { Box, Button, Flex, Heading, SimpleGrid, Text } from "@chakra-ui/react";
+import {
+  Box,
+  Button,
+  Flex,
+  Heading,
+  SimpleGrid,
+  Text,
+  VStack,
+} from "@chakra-ui/react";
 import Footer from "../components/major/Footer";
+import Nav from "../components/major/Nav";
 
 const Autoland = () => {
   return (
@@ -20,26 +30,20 @@ const Autoland = () => {
           bgPosition="center"
           height="100vh"
           color="#F7F7F7">
+          <Nav />
           <Flex
             height="100%"
             flexDir="column"
             justifyContent="center"
-            gap="1.5rem"
+            gap="2rem"
             width="50%">
             <Heading fontSize="3rem" fontWeight={500}>
               Pamtech Autoland
             </Heading>
             <Text fontWeight={500} width="60%" textAlign="justify">
               Lorem ipsum dolor sit amet consectetur. Tincidunt ac elit
-              ullamcorper
-              <br />
-              nibh in. Id pretium amet sem eli t nunc maecenas at facilisi. nibh
-              in. Id pretium amet sem eli t nunc maecenas at facilisi. nibh in.
-              Id pretium amet sem eli t nunc maecenas at facilisi. Id pretium
-              amet sem eli t nunc maecenas at facilisi. nibh in. Id pretium amet
-              sem eli t nunc maecenas at facilisi. Id pretium amet sem eli t
-              nunc maecenas at facilisi. nibh in. Id pretium amet sem eli t nunc
-              maecenas at facilisi.
+              ullamcorper nibh in. Id pretium amet sem eli t nunc maecenas at
+              facilisi. nibh
             </Text>
             <Button
               width="fit-content"
@@ -72,6 +76,21 @@ const Autoland = () => {
             <Image src={land3} alt="land3" />
           </Flex>
         </Box>
+        <VStack align="left" my="4rem" padding="2rem 8rem" width="50%">
+          <Text color="#171717" fontSize="2.5rem" fontWeight={500}>
+            Pamtech Autoland
+          </Text>
+          <Text color="textGrey" fontSize="1.2rem">
+            Lorem ipsum dolor sit amet consectetur. Vulputate amet vel lorem eu
+            pellentesque iaculis elementum purus. Enim ornare quis praesent nunc
+            elit quam mauris elementum a. Porttitor iaculis platea nulla quis
+            molestie urna. Lacus egestas ullamcorper aliquet cursus pharetra.
+            Lorem ipsum dolor sit amet consectetur. Vulputate amet vel lorem eu
+            pellentesque iaculis elementum purus. Enim ornare quis praesent nunc
+            elit quam mauris elementum a. Porttitor iaculis platea nulla quis
+            molestie urna. Lacus egestas ullamcorper aliquet cursus pharetra.
+          </Text>
+        </VStack>
         <Flex
           justifyContent="center"
           padding="3rem 0rem"
@@ -122,8 +141,8 @@ const Autoland = () => {
             </Flex>
           </Flex>
         </Flex>
+        <Footer />
       </Box>
-      {/* <Footer /> */}
     </>
   );
 };
