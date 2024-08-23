@@ -4,9 +4,7 @@ import React from "react";
 import Nav from "../components/major/Nav";
 import Image from "next/image";
 import ceo from "../../public/ceo1.webp";
-import bg3 from "../../public/bg3.png";
-import theme from "../theme";
-import { BiChevronRight } from "react-icons/bi";
+
 import Footer from "../components/major/Footer";
 import Sustainability from "../components/minor/Sustainability";
 

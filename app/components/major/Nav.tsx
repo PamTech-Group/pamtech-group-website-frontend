@@ -172,6 +172,8 @@ const Nav = () => {
             Contact Us
           </Button>
           <Button
+            as="a"
+            href="socials"
             fontSize={{ base: "0.8rem", md: "1rem" }} // Responsive font size
             padding={theme.buttonPadding}
             bgColor="primaryOrange"
