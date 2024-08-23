@@ -1,10 +1,10 @@
 "use client";
 import theme from "../theme";
 import { BiChevronRight } from "react-icons/bi";
-import gasBg from "../../public/gasBg.png";
-import land1 from "../../public/land1.png";
-import land2 from "../../public/land2.png";
-import land3 from "../../public/land3.png";
+import rideBg from "../../public/rideBg.png";
+import ride1 from "../../public/ride1.png";
+import ride2 from "../../public/ride2.png";
+import ride3 from "../../public/ride3.png";
 import bg3 from "../../public/bg3.png";
 import Image from "next/image";
 import {
@@ -19,13 +19,13 @@ import {
 import Footer from "../components/major/Footer";
 import Nav from "../components/major/Nav";
 
-const Autoland = () => {
+const Ride = () => {
   return (
     <>
       <Box bgColor="#F7F7F7">
         <Box
           padding="2rem 8rem"
-          backgroundImage={`url(${gasBg.src})`}
+          backgroundImage={`url(${rideBg.src})`}
           bgSize="cover"
           bgPosition="center"
           height="100vh"
@@ -38,7 +38,7 @@ const Autoland = () => {
             gap="2rem"
             width="50%">
             <Heading fontSize="3rem" fontWeight={500}>
-              Pamtech Autoland
+              Pamtech Foundation
             </Heading>
             <Text fontWeight={500} width="60%" textAlign="justify">
               Lorem ipsum dolor sit amet consectetur. Tincidunt ac elit
@@ -71,14 +71,14 @@ const Autoland = () => {
             Brand Showcase
           </Heading>
           <Flex gap=".5rem" justifyContent="center">
-            <Image src={land1} alt="land1" />
-            <Image src={land2} alt="land2" />
-            <Image src={land3} alt="land3" />
+            <Image src={ride1} alt="ride1" />
+            <Image src={ride2} alt="ride1" />
+            <Image src={ride3} alt="ride1" />
           </Flex>
         </Box>
         <VStack align="left" my="4rem" padding="2rem 8rem" width="50%">
           <Text color="#171717" fontSize="2.5rem" fontWeight={500}>
-            Autoland
+            Foundation
           </Text>
           <Text color="textGrey" fontSize="1.2rem">
             Lorem ipsum dolor sit amet consectetur. Vulputate amet vel lorem eu
@@ -143,4 +143,4 @@ const Autoland = () => {
   );
 };
 
-export default Autoland;
+export default Ride;
