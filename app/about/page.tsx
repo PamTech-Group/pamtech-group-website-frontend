@@ -8,6 +8,7 @@ import bg3 from "../../public/bg3.png";
 import theme from "../theme";
 import { BiChevronRight } from "react-icons/bi";
 import Footer from "../components/major/Footer";
+import Sustainability from "../components/minor/Sustainability";
 
 const AboutPage = () => {
   return (
@@ -64,7 +65,7 @@ const AboutPage = () => {
           {/* Vision Card */}
           <Box
             width={{ base: "100%", md: "45%" }}
-            bg="#F1F1F1"
+            bg="#BFD7FC"
             padding="2rem"
             boxShadow="md"
             height="12rem"
@@ -82,7 +83,7 @@ const AboutPage = () => {
           {/* Mission Card */}
           <Box
             width={{ base: "100%", md: "45%" }}
-            bg="#F1F1F1"
+            bg="#BFD7FC"
             padding="2rem"
             height="12rem"
             boxShadow="md"
@@ -100,7 +101,9 @@ const AboutPage = () => {
 
         {/* Core Values Section */}
         <Box textAlign="center" marginBottom="2rem">
-          <Heading size="lg">Core Values</Heading>
+          <Heading fontSize="2.5rem" fontWeight={500}>
+            Core Values
+          </Heading>
         </Box>
         <SimpleGrid
           columns={{ base: 1, sm: 2, md: 5 }}
@@ -113,9 +116,13 @@ const AboutPage = () => {
             "Team Work",
             "Work Ethics",
           ].map((value, index) => (
-            <Box
+            <Flex
               key={index}
-              bg="#F1F1F1"
+              bg={
+                value === "Excellence" || value === "Team Work"
+                  ? "#62728A"
+                  : "#BFD7FC"
+              }
               padding="3rem"
               boxShadow="md"
               borderRadius="lg"
@@ -123,57 +130,23 @@ const AboutPage = () => {
               width="100%"
               height="8rem"
               maxW="15rem"
-              margin="auto 0">
-              <Text fontWeight={500}>{value}</Text>
-            </Box>
+              alignItems="center"
+              justifyContent="center">
+              <Text
+                color={
+                  value === "Excellence" || value === "Team Work"
+                    ? "#F1F1F1"
+                    : "textGrey"
+                }
+                fontSize="1.2rem"
+                fontWeight={500}>
+                {value}
+              </Text>
+            </Flex>
           ))}
         </SimpleGrid>
       </Box>
-      <Flex
-        my="4rem"
-        padding="4rem 8rem"
-        gap="2rem"
-        bgImage={`url(${bg3.src})`}
-        bgSize="cover"
-        bgPosition="center"
-        color="#F7F7F7">
-        <Flex width="100%" alignItems="center" justifyContent="space-between">
-          <Flex width="50%" flexDirection="column" gap="2rem">
-            <Text fontWeight={300}>Sustainability</Text>
-            <Text fontWeight={500} fontSize="2.5rem">
-              Building Prosperity and Self-Sufficiency
-            </Text>
-            <Text fontWeight={300} fontSize="1.2rem">
-              Lorem ipsum dolor sit amet consectetur. Blandit arcu pellentesque
-              adipiscing adipiscing feugiat nunc varius sed tincidunt.
-            </Text>
-            <Button
-              width="fit-content"
-              padding={theme.buttonPadding}
-              bgColor="primaryOrange"
-              _hover={{ bgColor: "#961615" }}
-              _active={{ bgColor: "#bf1e1d" }}
-              borderRadius={theme.buttonRadius.radius}
-              rightIcon={<BiChevronRight fontSize="2rem" />}>
-              Read More
-            </Button>
-          </Flex>
-          <Box height="150px" width="0.5px" mx="3rem" bgColor="#F7F7F7" />
-          <Flex width="50%" flexDirection="column" gap="2rem">
-            <Text>7 Sustainability Pillars</Text>
-            <SimpleGrid columns={4} rowGap="5" columnGap={8}>
-              {[...Array(7)].map((_, i) => (
-                <Box
-                  key={i}
-                  width="50px"
-                  height="45px"
-                  outline="1px solid #F7F7F7"
-                />
-              ))}
-            </SimpleGrid>
-          </Flex>
-        </Flex>
-      </Flex>
+      <Sustainability />
       <Footer />
     </Box>
   );

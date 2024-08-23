@@ -24,7 +24,7 @@ import { Image, Link } from "@chakra-ui/next-js";
 import theme from "@/app/theme";
 const Footer = () => {
   return (
-    <Box mt="6rem">
+    <Box>
       <Box bgColor="primaryOrange" padding="2rem 8rem" paddingBottom="0">
         <SimpleGrid placeItems="center" columns={2}>
           <Box>

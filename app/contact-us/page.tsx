@@ -21,6 +21,7 @@ import { BiChevronRight } from "react-icons/bi";
 import bg3 from "../../public/bg3.png";
 import Footer from "../components/major/Footer";
 import Link from "next/link";
+import Sustainability from "../components/minor/Sustainability";
 const ContactPage = () => {
   // State to handle form inputs
   const [formData, setFormData] = useState({
@@ -281,56 +282,7 @@ const ContactPage = () => {
           </Flex>
         </Flex>
       </Box>
-      <Flex
-        justifyContent="center"
-        padding="3rem 0rem"
-        gap="2rem"
-        bgImage={`url(${bg3.src})`}
-        bgSize="cover"
-        bgPosition="center"
-        width="100%"
-        color="#F7F7F7">
-        <Flex width="49%" alignItems="center">
-          <Flex flexDirection="column" gap="2rem">
-            <Text fontWeight={100}> Sustainability</Text>
-            <Text fontWeight={500} fontSize="2rem">
-              Building Prosperity <br /> and Self-Sufficiency
-            </Text>
-            <Text fontWeight={300}>
-              Lorem ipsum dolor sit amet consectetur. Blandit <br /> arcu
-              pellentesque adipiscing adipiscing feugiat <br /> nunc varius sed
-              tincidunt. Ultricies dign
-            </Text>
-            <Button
-              width="fit-content"
-              padding={theme.buttonPadding}
-              bgColor="primaryOrange"
-              _hover={{
-                bgColor: "#961615",
-              }}
-              _active={{
-                bgColor: "#bf1e1d",
-              }}
-              borderRadius={theme.buttonRadius.radius}
-              rightIcon={<BiChevronRight fontSize="2rem" />}>
-              Read More
-            </Button>
-          </Flex>
-          <Box height="150px" width="0.5px" mx="3rem" bgColor="#F7F7F7" />
-          <Flex width="49%" flexDirection="column" gap="2rem">
-            <Text>7 Sustainabilty Pillers</Text>
-            <SimpleGrid columns={4} rowGap="5" columnGap={8}>
-              <Box width="50px" outline="1px solid #F7F7F7" height="45px" />
-              <Box width="50px" outline="1px solid #F7F7F7" height="45px" />
-              <Box width="50px" outline="1px solid #F7F7F7" height="45px" />
-              <Box width="50px" outline="1px solid #F7F7F7" height="45px" />
-              <Box width="50px" outline="1px solid #F7F7F7" height="45px" />
-              <Box width="50px" outline="1px solid #F7F7F7" height="45px" />
-              <Box width="50px" outline="1px solid #F7F7F7" height="45px" />
-            </SimpleGrid>
-          </Flex>
-        </Flex>
-      </Flex>
+      <Sustainability />
       <Footer />
     </Box>
   );
