@@ -25,7 +25,7 @@ const Dropdown = () => {
       padding="2rem"
       borderRadius="md"
       justify="space-between"
-      width="80vw">
+      width="80svw">
       {/* Left Section */}
       <Flex
         flexDir="column"
@@ -99,7 +99,7 @@ const Dropdown = () => {
 
       {/* Right Section */}
       <Flex bgColor="#FBFBFB" padding="2rem" width="50%" borderRadius="md">
-        <List spacing={10} width="100%">
+        <List spacing={5} width="100%">
           {[
             { name: "Oil and Gas", href: "/oilgas" },
             { name: "Autoland", href: "/autoland" },
