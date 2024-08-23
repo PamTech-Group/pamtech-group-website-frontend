@@ -220,7 +220,7 @@ const Services = () => {
       </Flex>
 
       {/* Testimonials Section */}
-      <VStack align="left" my="4rem" padding="2rem 8rem">
+      {/* <VStack align="left" my="4rem" padding="2rem 8rem">
         <Text fontWeight={500} fontSize="2rem" color="primaryOrange">
           Testimonial
         </Text>
@@ -231,10 +231,10 @@ const Services = () => {
           With over 100 businesses experiencing our impact, this is what a few
           had to say.
         </Text>
-      </VStack>
+      </VStack> */}
 
       {/* Testimonial Boxes */}
-      <Flex gap={10} padding="2rem 8rem" justifyContent="space-between">
+      {/* <Flex gap={10} padding="2rem 8rem" justifyContent="space-between">
         {[...Array(4)].map((_, i) => (
           <Box
             key={i}
@@ -245,7 +245,7 @@ const Services = () => {
             Testimonial {i + 1}
           </Box>
         ))}
-      </Flex>
+      </Flex> */}
     </Box>
   );
 };
