@@ -79,7 +79,7 @@ const theme = extendTheme({
   buttonRadius: {
     radius: "15px",
   },
-  buttonPadding: "2rem 2rem",
+  buttonPadding: "1rem 1.5rem",
   boxShadow: `0px 4px 6px 2px rgba(11, 1, 45, 0.5)`,
   customBoxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)", // Added custom box shadow
   customBorderRadius: "0.5rem", // Added custom border radius

@@ -8,6 +8,7 @@
 }
 .arrow-icon {
   transition: transform 0.3s ease-in-out;
+  align-items: center;
 }
 
 button:hover .arrow-icon {
@@ -17,4 +18,11 @@ button:hover .arrow-icon {
 /* Scale down on click */
 button:active .arrow-icon {
   transform: scale(0.8);
+}
+
+.business-nav {
+  text-decoration: none;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
 }

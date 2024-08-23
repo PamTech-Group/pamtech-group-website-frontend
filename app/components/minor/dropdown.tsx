@@ -1,4 +1,3 @@
-import { Link } from "@chakra-ui/next-js";
 import {
   Box,
   Flex,
@@ -8,6 +7,7 @@ import {
   ListItem,
   Text,
 } from "@chakra-ui/react";
+import Link from "next/link";
 import { BiChevronRight } from "react-icons/bi";
 import {
   FaFacebook,
@@ -119,7 +119,7 @@ const Dropdown = () => {
                 transform: "translateX(10px)", // Shift text and icon to the right
                 color: "primaryOrange", // Change text color on hover
               }}>
-              <Link href={item.href} width="100%" display="flex">
+              <Link className="business-nav" href={item.href}>
                 <Flex
                   justify="space-between"
                   align="center"

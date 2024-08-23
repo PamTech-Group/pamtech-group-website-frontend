@@ -63,9 +63,9 @@ const Nav = () => {
       boxShadow={isScrolled ? "md" : "none"}
       padding={{
         base: "1rem 2rem", // Small screens (mobiles)
-        sm: "1.5rem 4rem", // Small PCs and tablets
-        md: "2rem 6rem", // Medium screen (laptops)
-        lg: "2rem 8rem", // Larger screens
+        sm: "1rem 4rem", // Small PCs and tablets
+        md: "1rem 6rem", // Medium screen (laptops)
+        lg: "1rem 8rem", // Larger screens
       }}>
       <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
         {/* Logo */}
@@ -109,7 +109,7 @@ const Nav = () => {
             {/* Dropdown menu */}
             <Center>
               <Box
-                marginLeft="2rem"
+                marginLeft="10rem"
                 position="absolute"
                 top="100%"
                 transformOrigin="center"
