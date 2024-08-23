@@ -8,6 +8,17 @@ const config: ThemeConfig = {
 
 const theme = extendTheme({
   config,
+  breakpoints: {
+    base: "0px",
+    sm: "320px",
+    mini: "500px",
+    md: "768px",
+    lg: "960px",
+    xl: "1100px",
+    myxl: "1220px",
+    "2xl": "1400px",
+  },
+
   colors: {
     primaryOrange: "#E52321",
     tertiary: "#061E45",
