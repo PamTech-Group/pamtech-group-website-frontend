@@ -1,5 +1,14 @@
 "use client";
-import { Box, Flex, Heading, SimpleGrid, Text, VStack } from "@chakra-ui/react";
+import {
+  Box,
+  Flex,
+  Grid,
+  GridItem,
+  Heading,
+  SimpleGrid,
+  Text,
+  VStack,
+} from "@chakra-ui/react";
 import Nav from "../components/major/Nav";
 import Image from "next/image";
 import socialsHero from "../../public/socialsBg.webp";
@@ -14,7 +23,7 @@ import Footer from "../components/major/Footer";
 const images = [gallery1, gallery2, gallery3, gallery5, gallery6];
 const Socials = () => {
   return (
-    <Box bgColor="#FFFFFF">
+    <Box bgColor="#FFFFFF" overflow="hidden">
       <Box
         bgPosition="center"
         bgColor="#0F1010"
@@ -59,21 +68,58 @@ const Socials = () => {
         </Heading>
 
         {/* Gallery Grid */}
-        <SimpleGrid
-          columns={{ base: 1, sm: 2, md: 3 }}
-          spacing="1.5rem"
-          justifyItems="center">
-          {images.map((image, index) => (
-            <Box
-              key={index}
-              borderRadius="lg"
-              overflow="hidden"
-              boxShadow="md"
-              maxW={{ base: "90%", md: "100%" }}>
-              <Image src={image} alt={`Gallery Image ${index + 1}`} />
-            </Box>
-          ))}
-        </SimpleGrid>
+        <Grid
+          h="auto"
+          templateRows="repeat(2, 1fr)"
+          templateColumns="repeat(4, 1fr)"
+          gap={4}>
+          {/* Large image that spans 2 rows and 2 columns */}
+          <GridItem rowSpan={2} colSpan={2}>
+            <Image
+              src={gallery1}
+              alt="Gallery Image 1"
+              className="image-style"
+            />
+          </GridItem>
+
+          {/* Small images (top-right) */}
+          <GridItem colSpan={1}>
+            <Image
+              src={gallery2}
+              alt="Gallery Image 2"
+              objectFit="cover"
+              className="image-style"
+            />
+          </GridItem>
+
+          <GridItem colSpan={1}>
+            <Image
+              src={gallery3}
+              alt="Gallery Image 3"
+              objectFit="cover"
+              className="image-style"
+            />
+          </GridItem>
+
+          {/* Small images (bottom-right) */}
+          <GridItem colSpan={1}>
+            <Image
+              src={gallery5}
+              alt="Gallery Image 4"
+              objectFit="cover"
+              className="image-style"
+            />
+          </GridItem>
+
+          <GridItem colSpan={1}>
+            <Image
+              src={gallery6}
+              alt="Gallery Image 5"
+              objectFit="cover"
+              className="image-style"
+            />
+          </GridItem>
+        </Grid>
       </Box>
       <VStack align="left" my="4rem" padding="2rem 8rem" width="50%">
         <Text color="#171717" fontSize="2.5rem" fontWeight={500}>
@@ -175,15 +221,19 @@ const Socials = () => {
           bgColor="#0762C8">
           Linkedin
         </Flex>
-        {/* <Flex
+        <Flex
           alignItems="center"
+          justifyContent="center"
+          color="textGrey"
+          fontWeight={400}
+          fontSize="1.2rem"
           borderRadius="2xl"
           height="4rem"
           width="12rem"
           padding="1rem 3rem"
-          bgColor="green">
+          bgColor="#D9D7D7">
           More
-        </Flex> */}
+        </Flex>
       </Flex>
       <Sustainability />
       <Footer />

@@ -27,7 +27,6 @@ button:active .arrow-icon {
   justify-content: space-between;
 }
 
-/* .image-style {
-  height: 80%;
-  width: 30%;
-} */
+.image-style {
+  border-radius: 15px;
+}
