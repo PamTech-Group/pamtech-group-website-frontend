@@ -19,15 +19,15 @@ const About = () => {
             bgColor="#F5F8FF"
             right="6%"
             top="30%"
-            padding="2rem 5rem">
+            padding="2rem 5rem"
+            width="40%">
             <Flex flexDir="column" gap="1.5rem">
               <Text fontWeight={500} fontSize="2rem" color="primaryOrange">
                 About Us
               </Text>
               <Text fontSize="1.2rem">
-                Lorem ipsum dolor sit amet consectetur. consectetur. <br />{" "}
-                Vitae nibh nec ipsum ut at. Aenean sed <br /> scelerisque
-                tristique eros. Mauris.
+                Founded in 2016, Pamtech Group has grown from a small petroleum
+                supply business to a multi-faceted organization.
               </Text>{" "}
               <Button
                 width="fit-content"
@@ -45,7 +45,7 @@ const About = () => {
               </Button>
             </Flex>
             <Box my="2rem" bgColor=" #192140" height="1px" opacity=".6" />
-            <Flex gap="3rem" color="#333333">
+            <Flex justifyContent="space-between" color="#333333">
               <Flex
                 flexDir="column"
                 gap="1rem"
@@ -53,7 +53,7 @@ const About = () => {
                 fontSize="1.2rem">
                 <Text>Shareholders</Text>
                 <Text color="primaryOrange" fontWeight={700} fontSize="3rem">
-                  500K+
+                  250+
                 </Text>
               </Flex>
               <Flex
@@ -63,7 +63,7 @@ const About = () => {
                 fontSize="1.2rem">
                 <Text>Years</Text>
                 <Text color="primaryOrange" fontWeight={700} fontSize="3rem">
-                  50+
+                  08
                 </Text>
               </Flex>
               <Flex
@@ -73,7 +73,7 @@ const About = () => {
                 fontSize="1.2rem">
                 <Text>Awards</Text>
                 <Text color="primaryOrange" fontWeight={700} fontSize="3rem">
-                  30+
+                  15+
                 </Text>
               </Flex>
             </Flex>
