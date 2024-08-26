@@ -1,5 +1,5 @@
 import { Box, Button, Divider, Flex, Text, VStack } from "@chakra-ui/react";
-import bg from "../../../public/bg2.png";
+import bg from "../../../public/bg2.webp";
 import theme from "@/app/theme";
 import { BiChevronRight } from "react-icons/bi";
 const About = () => {

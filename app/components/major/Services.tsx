@@ -81,8 +81,10 @@ const Services = () => {
           <VStack
             key={service.title}
             alignItems="center"
-            bgColor="#E4E5EA"
-            padding="1rem 4rem">
+            bgColor="#F7F7F7"
+            boxShadow="md"
+            padding="1rem 4rem"
+            borderRadius="lg">
             <Image height={50} src={service.icon} alt={service.title} />
             <Text textAlign="center" color="#0E0E0F" fontWeight="bold">
               {service.title}
@@ -92,7 +94,7 @@ const Services = () => {
       </Flex>
 
       {/* Services Description */}
-      <VStack align="left" my="4rem" padding="2rem 8rem">
+      <VStack align="left" my="4rem" padding="2rem 8rem" width="50%">
         <Text fontWeight={500} fontSize="2rem" color="primaryOrange">
           Our Services
         </Text>
@@ -100,8 +102,9 @@ const Services = () => {
           Explore Our Services
         </Text>
         <Text color="textGrey" fontSize="1.2rem">
-          Lorem ipsum dolor sit amet consectetur. Fringilla sagittis justo nulla
-          a. Morbi sed consectetur porta vitae ullamcorper. Odio at.
+          As a diversified and fully integrated conglomerate, our interest in
+          multiple industries indicates our determination to cater to our vision
+          of empowering success through committed service to humanity. 
         </Text>
       </VStack>
 
@@ -177,34 +180,6 @@ const Services = () => {
           </Flex>
         ))}
       </Flex>
-
-      {/* Testimonials Section */}
-      {/* <VStack align="left" my="4rem" padding="2rem 8rem">
-        <Text fontWeight={500} fontSize="2rem" color="primaryOrange">
-          Testimonial
-        </Text>
-        <Text color="#171717" fontSize="2.5rem" fontWeight={500}>
-          Trusted by multiple organisations!
-        </Text>
-        <Text color="textGrey" fontSize="1.2rem">
-          With over 100 businesses experiencing our impact, this is what a few
-          had to say.
-        </Text>
-      </VStack> */}
-
-      {/* Testimonial Boxes */}
-      {/* <Flex gap={10} padding="2rem 8rem" justifyContent="space-between">
-        {[...Array(4)].map((_, i) => (
-          <Box
-            key={i}
-            bgColor="#E3E3E4"
-            padding="2rem"
-            height="100%"
-            borderRadius={theme.buttonRadius.radius}>
-            Testimonial {i + 1}
-          </Box>
-        ))}
-      </Flex> */}
     </Box>
   );
 };

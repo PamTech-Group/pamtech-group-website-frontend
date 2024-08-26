@@ -9,9 +9,10 @@ import bg6 from "../../../public/hero6.webp";
 import "../../globals.css";
 import theme from "@/app/theme";
 import { BiChevronRight } from "react-icons/bi";
-import Nav from "./Nav";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { StaticImageData } from "next/image";
+import Nav from "./Nav";
 
 // Array of carousel data
 const carouselData = [
@@ -46,51 +47,60 @@ const carouselData = [
     text: "Experience luxury and comfort with Pamtech Luxury Ride. We offer a fleet of premium vehicles for your personal or corporate needs, ensuring a stylish ride every time.",
   },
 ];
+interface SlideContentProps {
+  bg: StaticImageData; // Type for the imported images
+  heading: string;
+  text: string;
+}
 
 // Reusable component for the slide content
-const SlideContent = ({ bg, heading, text }) => (
-  <Box
-    padding="2rem 8rem"
-    backgroundImage={`url(${bg.src})`}
-    bgSize="cover"
-    bgPosition="center"
-    height="100vh"
-    color="#F7F7F7">
-    <Nav />
-    <Flex
-      height="100%"
-      flexDir="column"
-      justifyContent="center"
-      textAlign="left"
-      gap="2rem"
-      width="50%">
-      <Heading fontSize="3rem" fontWeight={500}>
-        {heading}
-      </Heading>
-      <Text width="80%" fontSize="1.2rem">
-        {text}
-      </Text>
-      <Button
-        width="fit-content"
-        padding={theme.buttonPadding}
-        bgColor="primaryOrange"
-        _hover={{
-          bgColor: "#961615",
-        }}
-        _active={{
-          bgColor: "#bf1e1d",
-        }}
-        borderRadius={theme.buttonRadius.radius}
-        rightIcon={<BiChevronRight fontSize="1.5rem" className="arrow-icon" />}>
-        Read More
-      </Button>
-    </Flex>
-  </Box>
+const SlideContent: React.FC<SlideContentProps> = ({ bg, heading, text }) => (
+  <>
+    <Box
+      padding="2rem 8rem"
+      backgroundImage={`url(${bg.src})`}
+      bgSize="cover"
+      bgPosition="center"
+      height="100vh"
+      color="#F7F7F7">
+      <Flex
+        height="100%"
+        flexDir="column"
+        justifyContent="center"
+        textAlign="left"
+        gap="2rem"
+        width="50%">
+        <Heading fontSize="3rem" fontWeight={500}>
+          {heading}
+        </Heading>
+        <Text width="80%" fontSize="1.2rem">
+          {text}
+        </Text>
+        <Button
+          width="fit-content"
+          padding={theme.buttonPadding}
+          bgColor="primaryOrange"
+          _hover={{
+            bgColor: "#961615",
+          }}
+          _active={{
+            bgColor: "#bf1e1d",
+          }}
+          borderRadius={theme.buttonRadius.radius}
+          rightIcon={
+            <BiChevronRight fontSize="1.5rem" className="arrow-icon" />
+          }>
+          Read More
+        </Button>
+      </Flex>
+    </Box>
+  </>
 );
 
 const Hero = () => {
   return (
     <Box>
+      <Nav />
       <Carousel
         showArrows={false}
         infiniteLoop={true}
