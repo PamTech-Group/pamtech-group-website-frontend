@@ -75,7 +75,7 @@ const Nav = () => {
             <Image
               src={isScrolled ? logoBlue : logo}
               alt="Pamtech Logo"
-              height={50}
+              height={35}
               transition="opacity 0.5s ease-in-out"
               style={{
                 opacity: isScrolled ? 1 : 0,
