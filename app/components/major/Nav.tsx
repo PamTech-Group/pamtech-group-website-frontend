@@ -101,6 +101,9 @@ const Nav = () => {
             About Us
           </Link>
 
+          <Link className="scaler" href="#">
+            Our Growth
+          </Link>
           <Box position="relative" onMouseEnter={onOpen} onMouseLeave={onClose}>
             <Flex className="scaler" cursor="pointer" alignItems="center">
               <Text fontWeight={400}>Business</Text>
@@ -128,9 +131,6 @@ const Nav = () => {
             </Center>
           </Box>
 
-          <Link className="scaler" href="#">
-            Investor Relations
-          </Link>
           <Link className="scaler" href="#">
             e-Solution
           </Link>
