@@ -77,7 +77,7 @@ const theme = extendTheme({
       "linear-gradient(90deg, rgba(57,255,20,1) 20%, rgba(138,43,226,1) 73%)",
   },
   buttonRadius: {
-    radius: "15px",
+    radius: "10px",
   },
   buttonPadding: "1rem 1.5rem",
   boxShadow: `0px 4px 6px 2px rgba(11, 1, 45, 0.5)`,
