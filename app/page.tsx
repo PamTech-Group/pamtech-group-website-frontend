@@ -4,6 +4,7 @@ import Hero from "./components/major/Hero";
 import Services from "./components/major/Services";
 import About from "./components/major/About";
 import Footer from "./components/major/Footer";
+import Sustainability from "./components/minor/Sustainability";
 
 export default function Home() {
   return (
