@@ -81,16 +81,26 @@ const Ride = () => {
           <Text color="#171717" fontSize="2.5rem" fontWeight={500}>
             Luxury Ride
           </Text>
-          <Text color="textGrey" fontSize="1.2rem">
-            Lorem ipsum dolor sit amet consectetur. Vulputate amet vel lorem eu
-            pellentesque iaculis elementum purus. Enim ornare quis praesent nunc
-            elit quam mauris elementum a. Porttitor iaculis platea nulla quis
-            molestie urna. Lacus egestas ullamcorper aliquet cursus pharetra.
-            Lorem ipsum dolor sit amet consectetur. Vulputate amet vel lorem eu
-            pellentesque iaculis elementum purus. Enim ornare quis praesent nunc
-            elit quam mauris elementum a. Porttitor iaculis platea nulla quis
-            molestie urna. Lacus egestas ullamcorper aliquet cursus pharetra.
-          </Text>
+          <Flex flexDirection="column" gap="1.5rem" textAlign="justify">
+            <Text color="textGrey" fontSize="1.2rem">
+              Pamtech Luxury Ride redefines elegance and comfort with our
+              exclusive fleet of premium vehicles, tailored for both personal
+              and corporate needs. Whether you’re attending a high-profile
+              event, planning a special occasion, or simply seeking an
+              exceptional travel experience, our luxury vehicles provide
+              unparalleled style and sophistication. Each ride is designed to
+              ensure you travel in utmost comfort and arrive in style.
+            </Text>
+            <Text color="textGrey" fontSize="1.2rem">
+              Our commitment to excellence means that every detail is
+              meticulously managed, from the quality of our vehicles to the
+              professionalism of our drivers. At Pamtech Luxury Ride, we aim to
+              make every journey a memorable experience, offering you a seamless
+              blend of opulence and convenience. Choose us for your next travel
+              experience and indulge in the superior service and refinement that
+              define our brand.
+            </Text>
+          </Flex>
         </VStack>
         <Sustainability />
         <Footer />

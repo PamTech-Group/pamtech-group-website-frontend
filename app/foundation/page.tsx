@@ -81,16 +81,22 @@ const Ride = () => {
           <Text color="#171717" fontSize="2.5rem" fontWeight={500}>
             Foundation
           </Text>
-          <Text color="textGrey" fontSize="1.2rem">
-            Lorem ipsum dolor sit amet consectetur. Vulputate amet vel lorem eu
-            pellentesque iaculis elementum purus. Enim ornare quis praesent nunc
-            elit quam mauris elementum a. Porttitor iaculis platea nulla quis
-            molestie urna. Lacus egestas ullamcorper aliquet cursus pharetra.
-            Lorem ipsum dolor sit amet consectetur. Vulputate amet vel lorem eu
-            pellentesque iaculis elementum purus. Enim ornare quis praesent nunc
-            elit quam mauris elementum a. Porttitor iaculis platea nulla quis
-            molestie urna. Lacus egestas ullamcorper aliquet cursus pharetra.
-          </Text>
+          <Flex flexDirection="column" gap="1.5rem" textAlign="justify">
+            <Text color="textGrey" fontSize="1.2rem">
+              Lorem ipsum dolor sit amet consectetur. Vulputate amet vel lorem
+              eu pellentesque iaculis elementum purus. Enim ornare quis praesent
+              nunc elit quam mauris elementum a. Porttitor iaculis platea nulla
+              quis molestie urna. Lacus egestas ullamcorper aliquet cursus
+              pharetra.
+            </Text>
+            <Text color="textGrey" fontSize="1.2rem">
+              Lorem ipsum dolor sit amet consectetur. Vulputate amet vel lorem
+              eu pellentesque iaculis elementum purus. Enim ornare quis praesent
+              nunc elit quam mauris elementum a. Porttitor iaculis platea nulla
+              quis molestie urna. Lacus egestas ullamcorper aliquet cursus
+              pharetra.
+            </Text>
+          </Flex>
         </VStack>
         <Sustainability />
         <Footer />

@@ -81,16 +81,25 @@ const Autoparts = () => {
           <Text color="#171717" fontSize="2.5rem" fontWeight={500}>
             Autoparts
           </Text>
-          <Text color="textGrey" fontSize="1.2rem">
-            Lorem ipsum dolor sit amet consectetur. Vulputate amet vel lorem eu
-            pellentesque iaculis elementum purus. Enim ornare quis praesent nunc
-            elit quam mauris elementum a. Porttitor iaculis platea nulla quis
-            molestie urna. Lacus egestas ullamcorper aliquet cursus pharetra.
-            Lorem ipsum dolor sit amet consectetur. Vulputate amet vel lorem eu
-            pellentesque iaculis elementum purus. Enim ornare quis praesent nunc
-            elit quam mauris elementum a. Porttitor iaculis platea nulla quis
-            molestie urna. Lacus egestas ullamcorper aliquet cursus pharetra.
-          </Text>
+          <Flex flexDirection="column" gap="1.5rem" textAlign="justify">
+            <Text color="textGrey" fontSize="1.2rem">
+               Pamtech Autoparts offers a wide selection of quality OEM
+              autoparts for vehicle repair, maintenance, servicing, and
+              replacement as well as accessories, — all at extremely competitive
+              prices. Paired with our fast shipping, we prioritize authenticity
+              and quality, so every part in our inventory meets the
+              manufacturer's specifications, giving you confidence in the
+              performance and durability of your equipment.
+            </Text>
+            <Text color="textGrey" fontSize="1.2rem">
+              Currently the bigest auto spare parts plaza in the South East, our
+              commitment to ensuring that you get the right parts at the right
+              price, and our dedicated customer support at Pamtech Autoparts
+              guarantees a seamless and satisfying order and delivery
+              experience. Trust us to provide genuine OEM parts that deliver
+              both exceptional value and peace of mind.
+            </Text>
+          </Flex>
         </VStack>
         <Sustainability />
         <Footer />

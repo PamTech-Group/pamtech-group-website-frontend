@@ -81,16 +81,25 @@ const Autoland = () => {
           <Text color="#171717" fontSize="2.5rem" fontWeight={500}>
             Autoland
           </Text>
-          <Text color="textGrey" fontSize="1.2rem">
-            Lorem ipsum dolor sit amet consectetur. Vulputate amet vel lorem eu
-            pellentesque iaculis elementum purus. Enim ornare quis praesent nunc
-            elit quam mauris elementum a. Porttitor iaculis platea nulla quis
-            molestie urna. Lacus egestas ullamcorper aliquet cursus pharetra.
-            Lorem ipsum dolor sit amet consectetur. Vulputate amet vel lorem eu
-            pellentesque iaculis elementum purus. Enim ornare quis praesent nunc
-            elit quam mauris elementum a. Porttitor iaculis platea nulla quis
-            molestie urna. Lacus egestas ullamcorper aliquet cursus pharetra.
-          </Text>
+          <Flex flexDirection="column" gap="1.5rem" textAlign="justify">
+            <Text color="textGrey" fontSize="1.2rem">
+               Pamtech Autoland is your one-stop solution for quality autoparts,
+              auto maintenance, and repairs. We take extra care of your car to
+              keep your vehicle in top condition, and we go the extra mile to
+              ensure you are safe on the road. Using the latest technology, we
+              deliver the finest in full-service automobile maintenance and
+              repair services.  
+            </Text>
+            <Text color="textGrey" fontSize="1.2rem">
+              Our team of expert mechanics and technicians have the experience
+              to diagnose, maintain, and repair your vehicles. Whether it’s
+              computer diagnostics, engine repair, suspension and transmission
+              systems, electrical systems, air conditioning service and repair,
+              auto body shop, and spray painting of all vehicle types, trust
+              Pamtech Autoland to give your car the care and precision it
+              deserves. 
+            </Text>
+          </Flex>
         </VStack>
         <Sustainability />
         <Footer />

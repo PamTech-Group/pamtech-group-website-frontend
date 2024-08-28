@@ -81,16 +81,28 @@ const OilGas = () => {
           <Text color="#171717" fontSize="2.5rem" fontWeight={500}>
             Oil & Gas
           </Text>
-          <Text color="textGrey" fontSize="1.2rem">
-            Lorem ipsum dolor sit amet consectetur. Vulputate amet vel lorem eu
-            pellentesque iaculis elementum purus. Enim ornare quis praesent nunc
-            elit quam mauris elementum a. Porttitor iaculis platea nulla quis
-            molestie urna. Lacus egestas ullamcorper aliquet cursus pharetra.
-            Lorem ipsum dolor sit amet consectetur. Vulputate amet vel lorem eu
-            pellentesque iaculis elementum purus. Enim ornare quis praesent nunc
-            elit quam mauris elementum a. Porttitor iaculis platea nulla quis
-            molestie urna. Lacus egestas ullamcorper aliquet cursus pharetra.
-          </Text>
+          <Flex flexDirection="column" gap="1.5rem" textAlign="justify">
+            <Text color="textGrey" fontSize="1.2rem">
+              With diversified interests in the Nigerian economy, Pamtech Oil &
+              Gas was incorporated in May 2016 as a direct answer to the
+              emerging trends in the dynamic oil and gas industry. We are
+              committed to being the trusted source for premium petroleum
+              products, ensuring that every drop of fuel we deliver meets the
+              highest industry standards. We understand fuel's critical role in
+              powering industries, businesses, and everyday life, which is why
+              we prioritize value and reliability in every transaction. 
+            </Text>
+            <Text color="textGrey" fontSize="1.2rem">
+              At Pamtech Oil & Gas, excellence is a way of life. We are bridging
+              the gap in the marketing and distribution of quality petroleum
+              products and other value added support services critical to the
+              oil and gas industry through the deployment of creative and
+              innovative solutions making petroleum products and services more
+              accessible and affordable. With our pure, unadulterated petroleum
+              products you will experience zero downtime and low maintenance
+              costs for your equipments.
+            </Text>
+          </Flex>
         </VStack>
         <Sustainability />
         <Footer />
