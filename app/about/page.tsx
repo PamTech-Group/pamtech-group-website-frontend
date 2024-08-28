@@ -4,11 +4,39 @@ import React from "react";
 import Nav from "../components/major/Nav";
 import Image from "next/image";
 import ceo from "../../public/ceo1.webp";
+import value1 from "../../public/value1.webp";
+import value2 from "../../public/value2.webp";
+import value3 from "../../public/value3.webp";
+import value4 from "../../public/value4.webp";
+import value5 from "../../public/value5.webp";
 
 import Footer from "../components/major/Footer";
 import Sustainability from "../components/minor/Sustainability";
 
 const AboutPage = () => {
+  const values = [
+    {
+      image: value1,
+      text: "Intergrity",
+    },
+    {
+      image: value2,
+      text: "Excellence",
+    },
+    {
+      image: value3,
+      text: "Customer Satisfaction",
+    },
+    {
+      image: value4,
+      text: "Team Work",
+    },
+    {
+      image: value5,
+      text: "Work Ethics",
+    },
+  ];
+
   return (
     <Box bgColor="#FFFFFF">
       <Box
@@ -23,14 +51,18 @@ const AboutPage = () => {
             height="100%"
             width="100%"
             alignItems="center"
-            justifyContent="space-between">
+            justifyContent={{
+              base: "center",
+              md: "space-between",
+              dddxl: "space-around",
+            }}>
             <Flex
               flexDir="column"
               justifyContent="center"
               gap="2rem"
               width="50%">
               <Heading fontSize="3rem" fontWeight={500}>
-                Meet Pamtech Grop
+                Meet <br /> Pamtech Group
               </Heading>
               <Text width="80%" fontSize="1.2rem">
                 With a strong commitment to serving humanity, Pamtech Group has
@@ -38,11 +70,15 @@ const AboutPage = () => {
                 automotive industries.
               </Text>
             </Flex>
-            <Flex>
+            <Flex
+              marginTop={{
+                base: "5rem",
+                ddxl: "0rem",
+              }}>
               <Image
                 src={ceo}
                 alt="people of pamtech"
-                className="image-style"
+                className="image-style "
               />
             </Flex>
           </Flex>
@@ -63,7 +99,7 @@ const AboutPage = () => {
           {/* Vision Card */}
           <Box
             width={{ base: "100%", md: "45%" }}
-            bg="#BFD7FC"
+            bg="#F1F1F1"
             padding="2rem"
             boxShadow="md"
             height="12rem"
@@ -81,7 +117,7 @@ const AboutPage = () => {
           {/* Mission Card */}
           <Box
             width={{ base: "100%", md: "45%" }}
-            bg="#BFD7FC"
+            bg="#F1F1F1"
             padding="2rem"
             height="12rem"
             boxShadow="md"
@@ -98,52 +134,121 @@ const AboutPage = () => {
         </Flex>
 
         {/* Core Values Section */}
-        <Box textAlign="center" marginBottom="2rem">
+        <Box textAlign="center" my="4rem">
           <Heading fontSize="2.5rem" fontWeight={500}>
             Core Values
           </Heading>
         </Box>
         <SimpleGrid
-          columns={{ base: 1, sm: 2, md: 5 }}
+          columns={{ base: 2, md: 5 }}
           spacing="1.5rem"
-          justifyItems="center">
-          {[
-            "Integrity",
-            "Excellence",
-            "Customer Satisfaction",
-            "Team Work",
-            "Work Ethics",
-          ].map((value, index) => (
+          justifyItems="center"
+          px="2rem">
+          {values.map((value, index) => (
             <Flex
               key={index}
               bg={
-                value === "Excellence" || value === "Team Work"
-                  ? "#62728A"
-                  : "#BFD7FC"
+                value.text === "Excellence" || value.text === "Team Work"
+                  ? "#00030C"
+                  : "#F1F1F1"
               }
-              padding="3rem"
-              boxShadow="md"
-              borderRadius="lg"
-              textAlign="center"
-              width="100%"
-              height="8rem"
-              maxW="15rem"
+              padding="1.5rem"
+              borderRadius="md"
+              flexDirection="column"
               alignItems="center"
-              justifyContent="center">
+              justifyContent="center"
+              height="8rem"
+              width="12rem"
+              boxShadow="md"
+              transition="0.3s"
+              _hover={{ transform: "scale(1.05)" }}>
+              <Image
+                src={value.image}
+                alt={value.text}
+                width={40}
+                height={40}
+              />
               <Text
+                textAlign="center"
+                fontSize="1rem"
+                fontWeight="500"
+                mt="0.5rem"
                 color={
-                  value === "Excellence" || value === "Team Work"
+                  value.text === "Excellence" || value.text === "Team Work"
                     ? "#F1F1F1"
                     : "textGrey"
-                }
-                fontSize="1.2rem"
-                fontWeight={500}>
-                {value}
+                }>
+                {value.text}
               </Text>
             </Flex>
           ))}
         </SimpleGrid>
+
+        <Box
+          mt="6rem"
+          borderRadius="md"
+          bgColor="#00030C"
+          padding="2.5rem 3rem"
+          color="#F1F1F1"
+          height="100%">
+          <Heading my="2rem">Our History</Heading>
+          <Flex justifyContent="space-between" gap="3rem">
+            <Flex flexDirection="column" gap="2rem" height="100%">
+              <Text>
+                In 2016, Pamtech Group was founded with a mission to render
+                committed service to humanity starting with petroleum
+                distribution in the downstream sector of the oil and gas
+                industry. The company's reputation for reliability and integrity
+                quickly established us among key industry players, leading to
+                expanded operations and investments in infrastructure and
+                technology.
+              </Text>
+              <Text>
+                Pamtech Group diversified into the automotive industry with
+                Pamtech Autoland for vehicle maintenance and repairs in 2020 and
+                Pamtech Auto Parts in 2021 for Tokunbo and OEM spare parts,
+                expanding our reach to both individual car owners and large
+                fleet operators.
+              </Text>
+              <Text>
+                Building on our success in the automotive and energy sectors, we
+                continued to diversify our business interests. In 2023, we
+                diversified into the media industry with Pamtech Media, focusing
+                on content and digital marketing for the automotive sector. It
+                quickly became a trusted partner for brands, enhancing their
+                visibility through innovative content.
+              </Text>
+            </Flex>
+            <Flex flexDirection="column" gap="2rem">
+              <Text>
+                Same 2023, the Pamtech Luxury Ride was also established to meet
+                the demand for premium transportation, offering a fleet of
+                luxury vehicles for personal, corporate, and special events. 
+              </Text>
+              <Text>
+                In 2024, we developed and launched Petrol Padi, a mobile app
+                offering real-time fuel price information and enabling users to
+                order fuel with timely delivery across Nigeria. 
+              </Text>
+              <Text>
+                Our impact extends beyond business through the Pamtech
+                Foundation, established in 2016. The foundation focuses on
+                improving lives across Nigeria with educational,
+                entrepreneurial, and community initiatives, reflecting the
+                company’s commitment to giving back.
+              </Text>
+              <Text>
+                As Pamtech Group grows, we aim to become a leading conglomerate
+                across Africa, driven by innovation and excellence. With a
+                strong foundation of trust and integrity, our journey is one of
+                growth, innovation, and making a societal impact on industries
+                and our communities.
+              </Text>
+            </Flex>
+          </Flex>
+        </Box>
       </Box>
+
       <Sustainability />
       <Footer />
     </Box>

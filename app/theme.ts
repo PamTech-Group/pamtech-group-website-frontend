@@ -16,7 +16,10 @@ const theme = extendTheme({
     lg: "960px",
     xl: "1100px",
     myxl: "1220px",
-    "2xl": "1400px",
+    dxl: "1400px",
+    ddxl: "1700px",
+    dddxl: "2000px",
+    xdxl: "2800px",
   },
 
   colors: {

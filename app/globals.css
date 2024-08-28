@@ -30,7 +30,9 @@ button:active .arrow-icon {
 .image-style {
   border-radius: 15px;
 }
-
+.about-hero-images {
+  margin-top: 4rem;
+}
 .read-more {
   display: flex;
   gap: 1rem;

@@ -17,6 +17,7 @@ import sp6 from "../../../public/SPpromotion.webp";
 import sp7 from "../../../public/SPprogress.webp";
 import bg3 from "../../../public/bg3.png";
 import Image from "next/image";
+import theme from "@/app/theme";
 
 const Sustainability = () => {
   const sustainabilityPillars = [
@@ -125,12 +126,18 @@ const Sustainability = () => {
           </Text>
           <Button
             width="fit-content"
-            padding="1.5rem"
+            padding={theme.buttonPadding}
             bgColor="primaryOrange"
-            _hover={{ bgColor: "#961615" }}
-            _active={{ bgColor: "#bf1e1d" }}
-            borderRadius="md"
-            rightIcon={<BiChevronRight fontSize="1.5rem" />}>
+            _hover={{
+              bgColor: "#961615",
+            }}
+            _active={{
+              bgColor: "#bf1e1d",
+            }}
+            borderRadius={theme.buttonRadius.radius}
+            rightIcon={
+              <BiChevronRight fontSize="1.5rem" className="arrow-icon" />
+            }>
             Read More
           </Button>
         </Flex>

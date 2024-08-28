@@ -43,7 +43,7 @@ const Socials = () => {
               gap="2rem"
               width="50%">
               <Heading fontSize="3rem" fontWeight={500}>
-                Meet Pamtech Grop
+                Meet Pamtech Group
               </Heading>
               <Text width="80%" fontSize="1.2rem">
                 With a strong commitment to serving humanity, Pamtech Group has
@@ -159,7 +159,7 @@ const Socials = () => {
           width="12rem"
           padding="1rem 3rem"
           bgColor="#1877F2">
-          <Text> Facebook</Text>
+          <Text>Facebook</Text>
         </Flex>
         <Flex
           alignItems="center"
