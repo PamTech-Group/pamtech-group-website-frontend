@@ -101,7 +101,7 @@ const Nav = () => {
             About Us
           </Link>
 
-          <Link className="scaler" href="#">
+          <Link className="scaler" href="/growth">
             Our Growth
           </Link>
           <Box position="relative" onMouseEnter={onOpen} onMouseLeave={onClose}>
@@ -131,7 +131,7 @@ const Nav = () => {
             </Center>
           </Box>
 
-          <Link className="scaler" href="#">
+          <Link className="scaler" href="/e-solution">
             e-Solution
           </Link>
         </HStack>
