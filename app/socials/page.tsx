@@ -19,6 +19,15 @@ import gallery5 from "../../public/gallery5.webp";
 import gallery6 from "../../public/gallery6.webp";
 import Sustainability from "../components/minor/Sustainability";
 import Footer from "../components/major/Footer";
+import {
+  FaFacebookSquare,
+  FaInstagramSquare,
+  FaLinkedin,
+  FaTiktok,
+  FaWhatsappSquare,
+  FaYoutube,
+} from "react-icons/fa";
+import { FaInstagram, FaTwitter, FaWhatsapp } from "react-icons/fa6";
 
 const images = [gallery1, gallery2, gallery3, gallery5, gallery6];
 const Socials = () => {
@@ -144,11 +153,15 @@ const Socials = () => {
           fontSize="1.2rem"
           borderRadius="2xl"
           height="4rem"
-          width="12rem"
+          width="contain"
           padding="1rem 3rem"
-          bgColor="#25D366">
+          bgColor="#25D366"
+          gap="1rem">
+          <FaWhatsapp fontSize="1.5rem" /> {/* Whatsapp Icon */}
           <Text>Whatsapp</Text>
         </Flex>
+
+        {/* Facebook */}
         <Flex
           alignItems="center"
           justifyContent="center"
@@ -156,11 +169,15 @@ const Socials = () => {
           fontSize="1.2rem"
           borderRadius="2xl"
           height="4rem"
-          width="12rem"
+          width="contain"
           padding="1rem 3rem"
-          bgColor="#1877F2">
+          bgColor="#1877F2"
+          gap="1rem">
+          <FaFacebookSquare fontSize="1.5rem" /> {/* Facebook Icon */}
           <Text>Facebook</Text>
         </Flex>
+
+        {/* Youtube */}
         <Flex
           alignItems="center"
           justifyContent="center"
@@ -168,11 +185,15 @@ const Socials = () => {
           fontSize="1.2rem"
           borderRadius="2xl"
           height="4rem"
-          width="12rem"
+          width="contain"
           padding="1rem 3rem"
-          bgColor="#FF0000">
-          Youtube
+          bgColor="#FF0000"
+          gap="1rem">
+          <FaYoutube fontSize="1.5rem" /> {/* Youtube Icon */}
+          <Text>Youtube</Text>
         </Flex>
+
+        {/* Tiktok */}
         <Flex
           alignItems="center"
           justifyContent="center"
@@ -180,11 +201,15 @@ const Socials = () => {
           fontSize="1.2rem"
           borderRadius="2xl"
           height="4rem"
-          width="12rem"
+          width="contain"
           padding="1rem 3rem"
-          bgColor="#FE2C55">
-          Tiktok
+          bgColor="#FE2C55"
+          gap="1rem">
+          <FaTiktok fontSize="1.5rem" /> {/* Tiktok Icon */}
+          <Text>Tiktok</Text>
         </Flex>
+
+        {/* Instagram */}
         <Flex
           alignItems="center"
           justifyContent="center"
@@ -192,11 +217,15 @@ const Socials = () => {
           fontSize="1.2rem"
           borderRadius="2xl"
           height="4rem"
-          width="12rem"
+          width="contain"
           padding="1rem 3rem"
-          bgColor="#CD486B">
-          Instagram
+          bgColor="#CD486B"
+          gap="1rem">
+          <FaInstagram fontSize="1.5rem" /> {/* Instagram Icon */}
+          <Text>Instagram</Text>
         </Flex>
+
+        {/* X (formerly Twitter) */}
         <Flex
           alignItems="center"
           justifyContent="center"
@@ -204,11 +233,15 @@ const Socials = () => {
           fontSize="1.2rem"
           borderRadius="2xl"
           height="4rem"
-          width="12rem"
+          width="contain"
           padding="1rem 3rem"
-          bgColor="#171717">
-          X
+          bgColor="#171717"
+          gap="1rem">
+          <FaTwitter fontSize="1.5rem" /> {/* Twitter (X) Icon */}
+          <Text>X</Text>
         </Flex>
+
+        {/* Linkedin */}
         <Flex
           alignItems="center"
           justifyContent="center"
@@ -216,23 +249,12 @@ const Socials = () => {
           fontSize="1.2rem"
           borderRadius="2xl"
           height="4rem"
-          width="12rem"
+          width="contain"
           padding="1rem 3rem"
-          bgColor="#0762C8">
-          Linkedin
-        </Flex>
-        <Flex
-          alignItems="center"
-          justifyContent="center"
-          color="textGrey"
-          fontWeight={400}
-          fontSize="1.2rem"
-          borderRadius="2xl"
-          height="4rem"
-          width="12rem"
-          padding="1rem 3rem"
-          bgColor="#D9D7D7">
-          More
+          bgColor="#0762C8"
+          gap="1rem">
+          <FaLinkedin fontSize="1.5rem" /> {/* Linkedin Icon */}
+          <Text>Linkedin</Text>
         </Flex>
       </Flex>
       <Sustainability />
