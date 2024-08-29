@@ -60,7 +60,7 @@ const Footer = () => {
               </Flex>
             </Flex>
           </Box>
-          <Flex>
+          <Flex alignItems="center" justifyContent="center">
             <Image height={600} src={phone} alt="phone image" />
           </Flex>
         </SimpleGrid>
@@ -117,6 +117,24 @@ const Footer = () => {
           <Flex gap="3rem">
             <Flex flexDirection="column" justifyContent="start" gap="1rem">
               <Text fontSize="1.2rem" fontWeight={400}>
+                Quick Links
+              </Text>
+              <Link fontWeight={300} href="/about">
+                About us
+              </Link>
+
+              <Link fontWeight={300} href="/socials">
+                Socials
+              </Link>
+              <Link fontWeight={300} href="/growth">
+                Our Growth
+              </Link>
+              <Link fontWeight={300} href="/e-solution">
+                e-solutions
+              </Link>
+            </Flex>
+            <Flex flexDirection="column" justifyContent="start" gap="1rem">
+              <Text fontSize="1.2rem" fontWeight={400}>
                 Legal
               </Text>
               <Link fontWeight={300} href="/privacy">
@@ -132,8 +150,8 @@ const Footer = () => {
                 Address
               </Text>
               <Text>
-                Plot CR/8 Port Harcourt Road, Near Hospital Junction, Owerri,
-                Imo State.
+                Plot CR/8 Port Harcourt Road, <br /> Near Hospital Junction,
+                Owerri, Imo State.
               </Text>
               <Text>
                 <Icon as={IoCall} /> +234-811-500-4000

@@ -184,7 +184,7 @@ const Nav = () => {
               bgColor: "#bf1e1d",
             }}
             borderRadius={theme.buttonRadius.radius}>
-            Social
+            Socials
           </Button>
         </HStack>
 

@@ -2,6 +2,7 @@ import { Box, Button, Divider, Flex, Text, VStack } from "@chakra-ui/react";
 import bg from "../../../public/bg2.webp";
 import theme from "@/app/theme";
 import { BiChevronRight } from "react-icons/bi";
+import ButtonMain from "../minor/ButtonMain";
 const About = () => {
   return (
     <>
@@ -14,11 +15,16 @@ const About = () => {
           height="100%"
           position="relative">
           <Box
+            boxShadow="md"
+            borderRadius="md"
             position="absolute"
             color="#333333"
             bgColor="#F5F8FF"
             right="6%"
-            top="30%"
+            top={{
+              base: "30%",
+              dddxl: "45%",
+            }}
             padding="2rem 5rem"
             width="40%">
             <Flex flexDir="column" gap="1.5rem">
@@ -29,22 +35,7 @@ const About = () => {
                 Founded in 2016, Pamtech Group has grown from a small petroleum
                 supply business to a multi-faceted organization.
               </Text>{" "}
-              <Button
-                width="fit-content"
-                padding={theme.buttonPadding}
-                bgColor="primaryOrange"
-                _hover={{
-                  bgColor: "#961615",
-                }}
-                _active={{
-                  bgColor: "#bf1e1d",
-                }}
-                borderRadius={theme.buttonRadius.radius}
-                rightIcon={
-                  <BiChevronRight fontSize="1.5rem" className="arrow-icon" />
-                }>
-                Read More
-              </Button>
+              <ButtonMain text="Read More" />
             </Flex>
             <Box my="2rem" bgColor=" #192140" height="1px" opacity=".6" />
             <Flex justifyContent="space-between" color="#333333">

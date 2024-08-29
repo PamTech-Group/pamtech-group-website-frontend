@@ -1,10 +1,10 @@
 "use client";
 import theme from "../theme";
 import { BiChevronRight } from "react-icons/bi";
-import gasBg from "../../public/gasBg.png";
-import oilgas1 from "../../public/oilgas1.png";
-import oilgas2 from "../../public/oilgas2.png";
-import oilgas3 from "../../public/oilgas3.png";
+import gasBg from "../../public/gasBg.webp";
+import oilgas1 from "../../public/oilgas1.webp";
+import oilgas2 from "../../public/oilgas2.webp";
+import oilgas3 from "../../public/oilgas3.webp";
 import bg3 from "../../public/bg3.png";
 import Image from "next/image";
 import {
@@ -19,11 +19,12 @@ import {
 import Footer from "../components/major/Footer";
 import Nav from "../components/major/Nav";
 import Sustainability from "../components/minor/Sustainability";
+import ButtonMain from "../components/minor/ButtonMain";
 
 const OilGas = () => {
   return (
     <>
-      <Box bgColor="#F7F7F7">
+      <Box bgColor="#FFFFFF">
         <Box
           padding="2rem 8rem"
           backgroundImage={`url(${gasBg.src})`}
@@ -46,20 +47,7 @@ const OilGas = () => {
               ullamcorper nibh in. Id pretium amet sem eli t nunc maecenas at
               facilisi. nibh
             </Text>
-            <Button
-              width="fit-content"
-              padding={theme.buttonPadding}
-              bgColor="primaryOrange"
-              _hover={{
-                bgColor: "#961615",
-              }}
-              _active={{
-                bgColor: "#bf1e1d",
-              }}
-              borderRadius={theme.buttonRadius.radius}
-              rightIcon={<BiChevronRight fontSize="2rem" />}>
-              Talk to us
-            </Button>
+            <ButtonMain text="Read More" />
           </Flex>
         </Box>
         <Box my="6rem">

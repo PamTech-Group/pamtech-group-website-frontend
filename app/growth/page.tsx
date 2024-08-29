@@ -16,15 +16,7 @@ const Growth = () => {
         color="#F7F7F7">
         <Box height="inherit" width="inherit" padding="2rem 8rem">
           <Nav />
-          <Flex
-            height="100%"
-            width="100%"
-            alignItems="center"
-            justifyContent={{
-              base: "center",
-              md: "space-between",
-              dddxl: "space-around",
-            }}>
+          <Flex height="100%" width="100%" alignItems="center">
             <Flex
               flexDir="column"
               justifyContent="center"
@@ -163,10 +155,10 @@ const Growth = () => {
       </SimpleGrid>
       <VStack align="left" my="4rem" padding="2rem 8rem" width="50%">
         <Text fontWeight={500} fontSize="2.5rem" color="primaryOrange">
-          Our Services
+          News Room
         </Text>
-        <Text color="#171717" fontSize="2rem" fontWeight={500}>
-          Explore Our Services
+        <Text color="#171717" fontSize="1.5rem" fontWeight={500}>
+          Stay Informed with Pamtech Group
         </Text>
         <Text color="textGrey" fontSize="1rem">
           As a diversified and fully integrated conglomerate, our interest in

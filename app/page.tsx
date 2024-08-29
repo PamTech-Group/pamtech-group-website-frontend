@@ -7,7 +7,7 @@ import Footer from "./components/major/Footer";
 
 export default function Home() {
   return (
-    <Box bgColor="#F1F1FF">
+    <Box bgColor="#FFFFFF">
       <Hero />
       <About />
       <Services />

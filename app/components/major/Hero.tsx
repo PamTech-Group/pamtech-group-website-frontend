@@ -13,6 +13,7 @@ import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { StaticImageData } from "next/image";
 import Nav from "./Nav";
+import ButtonMain from "../minor/ButtonMain";
 
 // Array of carousel data
 const carouselData = [
@@ -76,22 +77,7 @@ const SlideContent: React.FC<SlideContentProps> = ({ bg, heading, text }) => (
         <Text width="80%" fontSize="1.2rem">
           {text}
         </Text>
-        <Button
-          width="fit-content"
-          padding={theme.buttonPadding}
-          bgColor="primaryOrange"
-          _hover={{
-            bgColor: "#961615",
-          }}
-          _active={{
-            bgColor: "#bf1e1d",
-          }}
-          borderRadius={theme.buttonRadius.radius}
-          rightIcon={
-            <BiChevronRight fontSize="1.5rem" className="arrow-icon" />
-          }>
-          Read More
-        </Button>
+        <ButtonMain text="Read More" />
       </Flex>
     </Box>
   </>

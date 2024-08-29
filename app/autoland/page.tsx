@@ -1,10 +1,10 @@
 "use client";
 import theme from "../theme";
 import { BiChevronRight } from "react-icons/bi";
-import gasBg from "../../public/gasBg.png";
-import land1 from "../../public/land1.png";
-import land2 from "../../public/land2.png";
-import land3 from "../../public/land3.png";
+import landBg from "../../public/landBg.webp";
+import land1 from "../../public/land1.webp";
+import land2 from "../../public/land2.webp";
+import land3 from "../../public/land3.webp";
 import bg3 from "../../public/bg3.png";
 import Image from "next/image";
 import {
@@ -19,14 +19,15 @@ import {
 import Footer from "../components/major/Footer";
 import Nav from "../components/major/Nav";
 import Sustainability from "../components/minor/Sustainability";
+import ButtonMain from "../components/minor/ButtonMain";
 
 const Autoland = () => {
   return (
     <>
-      <Box bgColor="#F7F7F7">
+      <Box bgColor="#FFFFFF">
         <Box
           padding="2rem 8rem"
-          backgroundImage={`url(${gasBg.src})`}
+          backgroundImage={`url(${landBg.src})`}
           bgSize="cover"
           bgPosition="center"
           height="100vh"
@@ -46,20 +47,7 @@ const Autoland = () => {
               ullamcorper nibh in. Id pretium amet sem eli t nunc maecenas at
               facilisi. nibh
             </Text>
-            <Button
-              width="fit-content"
-              padding={theme.buttonPadding}
-              bgColor="primaryOrange"
-              _hover={{
-                bgColor: "#961615",
-              }}
-              _active={{
-                bgColor: "#bf1e1d",
-              }}
-              borderRadius={theme.buttonRadius.radius}
-              rightIcon={<BiChevronRight fontSize="2rem" />}>
-              Talk to us
-            </Button>
+            <ButtonMain text="Talk to us" />
           </Flex>
         </Box>
         <Box my="6rem">

@@ -1,11 +1,10 @@
 "use client";
 import theme from "../theme";
 import { BiChevronRight } from "react-icons/bi";
-import rideBg from "../../public/rideBg.png";
-import ride1 from "../../public/ride1.png";
-import ride2 from "../../public/ride2.png";
-import ride3 from "../../public/ride3.png";
-import bg3 from "../../public/bg3.png";
+import rideBg from "../../public/rideBg.webp";
+import ride1 from "../../public/ride1.webp";
+import ride2 from "../../public/ride2.webp";
+import ride3 from "../../public/ride3.webp";
 import Image from "next/image";
 import {
   Box,
@@ -19,6 +18,7 @@ import {
 import Footer from "../components/major/Footer";
 import Nav from "../components/major/Nav";
 import Sustainability from "../components/minor/Sustainability";
+import ButtonMain from "../components/minor/ButtonMain";
 
 const Ride = () => {
   return (
@@ -46,20 +46,7 @@ const Ride = () => {
               ullamcorper nibh in. Id pretium amet sem eli t nunc maecenas at
               facilisi. nibh
             </Text>
-            <Button
-              width="fit-content"
-              padding={theme.buttonPadding}
-              bgColor="primaryOrange"
-              _hover={{
-                bgColor: "#961615",
-              }}
-              _active={{
-                bgColor: "#bf1e1d",
-              }}
-              borderRadius={theme.buttonRadius.radius}
-              rightIcon={<BiChevronRight fontSize="2rem" />}>
-              Talk to us
-            </Button>
+            <ButtonMain text="Talk to us" />
           </Flex>
         </Box>
         <Box my="6rem">

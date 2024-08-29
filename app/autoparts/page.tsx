@@ -1,32 +1,25 @@
 "use client";
 import theme from "../theme";
 import { BiChevronRight } from "react-icons/bi";
-import gasBg from "../../public/gasBg.png";
-import parts1 from "../../public/parts1.png";
-import parts2 from "../../public/parts2.png";
-import parts3 from "../../public/parts3.png";
-import bg3 from "../../public/bg3.png";
+import partsBg from "../../public/partsBg.webp";
+import parts1 from "../../public/parts1.webp";
+import parts2 from "../../public/parts2.webp";
+import parts3 from "../../public/parts3.webp";
+
 import Image from "next/image";
-import {
-  Box,
-  Button,
-  Flex,
-  Heading,
-  SimpleGrid,
-  Text,
-  VStack,
-} from "@chakra-ui/react";
+import { Box, Flex, Heading, Text, VStack } from "@chakra-ui/react";
 import Footer from "../components/major/Footer";
 import Nav from "../components/major/Nav";
 import Sustainability from "../components/minor/Sustainability";
+import ButtonMain from "../components/minor/ButtonMain";
 
 const Autoparts = () => {
   return (
     <>
-      <Box bgColor="#F7F7F7">
+      <Box bgColor="#FFFFFF">
         <Box
           padding="2rem 8rem"
-          backgroundImage={`url(${gasBg.src})`}
+          backgroundImage={`url(${partsBg.src})`}
           bgSize="cover"
           bgPosition="center"
           height="100vh"
@@ -46,20 +39,7 @@ const Autoparts = () => {
               ullamcorper nibh in. Id pretium amet sem eli t nunc maecenas at
               facilisi. nibh
             </Text>
-            <Button
-              width="fit-content"
-              padding={theme.buttonPadding}
-              bgColor="primaryOrange"
-              _hover={{
-                bgColor: "#961615",
-              }}
-              _active={{
-                bgColor: "#bf1e1d",
-              }}
-              borderRadius={theme.buttonRadius.radius}
-              rightIcon={<BiChevronRight fontSize="2rem" />}>
-              Talk to us
-            </Button>
+            <ButtonMain text="Talk to us" />
           </Flex>
         </Box>
         <Box my="6rem">

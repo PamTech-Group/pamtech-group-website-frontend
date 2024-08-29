@@ -20,7 +20,7 @@ import {
 const Dropdown = () => {
   return (
     <Flex
-      bg="white"
+      bg="#FFFFFF"
       boxShadow="md"
       padding="2rem"
       borderRadius="md"
@@ -35,12 +35,12 @@ const Dropdown = () => {
         gap="1rem"
         borderRadius="md">
         <Text fontSize="2rem" fontWeight="bold" color="#171717">
-          Our Services
+          Our Businesses
         </Text>
         <Text fontSize="1.2rem" color="textGrey" lineHeight="1.6">
-          Lorem ipsum dolor sit amet consectetur. Massa ac sit adipiscing lectus
-          urna arcu. Pulvinar pulvi nar risus elit turpis. Condimentum mauris in
-          sed sagittis sit parturient arcu ut. Ac risus diam.
+          As a diversified and fully integrated conglomerate, our interest in
+          multiple industries indicates our determination to cater to our vision
+          of empowering success through committed service to humanity.
         </Text>
         {/* Social Media Icons */}
         <Flex justify="start" gap="1rem">

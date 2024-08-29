@@ -15,9 +15,10 @@ import sp4 from "../../../public/SPpartners.webp";
 import sp5 from "../../../public/SPpolicy.webp";
 import sp6 from "../../../public/SPpromotion.webp";
 import sp7 from "../../../public/SPprogress.webp";
-import bg3 from "../../../public/bg3.webp";
+import bg3 from "../../../public/bg3.png";
 import Image from "next/image";
 import theme from "@/app/theme";
+import ButtonMain from "./ButtonMain";
 
 const Sustainability = () => {
   const sustainabilityPillars = [
@@ -85,22 +86,7 @@ const Sustainability = () => {
             contributions to the development of our host communities and society
             as a whole.
           </Text>
-          <Button
-            width="fit-content"
-            padding={theme.buttonPadding}
-            bgColor="primaryOrange"
-            _hover={{
-              bgColor: "#961615",
-            }}
-            _active={{
-              bgColor: "#bf1e1d",
-            }}
-            borderRadius={theme.buttonRadius.radius}
-            rightIcon={
-              <BiChevronRight fontSize="1.5rem" className="arrow-icon" />
-            }>
-            Read More
-          </Button>
+          <ButtonMain text="Read More" />
         </Flex>
         <Box height="150px" width="0.5px" mx="3rem" bgColor="#F7F7F7" />
         <Flex width="50%" flexDirection="column" gap="2rem">

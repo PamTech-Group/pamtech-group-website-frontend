@@ -1,10 +1,10 @@
 "use client";
 import theme from "../theme";
 import { BiChevronRight } from "react-icons/bi";
-import rideBg from "../../public/rideBg.png";
-import ride1 from "../../public/ride1.png";
-import ride2 from "../../public/ride2.png";
-import ride3 from "../../public/ride3.png";
+import foundationBg from "../../public/foundationBg.webp";
+import foundation1 from "../../public/foundation1.webp";
+import foundation2 from "../../public/foundation2.webp";
+import foundation3 from "../../public/foundation3.webp";
 import bg3 from "../../public/bg3.png";
 import Image from "next/image";
 import {
@@ -19,14 +19,15 @@ import {
 import Footer from "../components/major/Footer";
 import Nav from "../components/major/Nav";
 import Sustainability from "../components/minor/Sustainability";
+import ButtonMain from "../components/minor/ButtonMain";
 
-const Ride = () => {
+const Foundation = () => {
   return (
     <>
-      <Box bgColor="#F7F7F7">
+      <Box bgColor="#FFFFFF">
         <Box
           padding="2rem 8rem"
-          backgroundImage={`url(${rideBg.src})`}
+          backgroundImage={`url(${foundationBg.src})`}
           bgSize="cover"
           bgPosition="center"
           height="100vh"
@@ -46,20 +47,7 @@ const Ride = () => {
               ullamcorper nibh in. Id pretium amet sem eli t nunc maecenas at
               facilisi. nibh
             </Text>
-            <Button
-              width="fit-content"
-              padding={theme.buttonPadding}
-              bgColor="primaryOrange"
-              _hover={{
-                bgColor: "#961615",
-              }}
-              _active={{
-                bgColor: "#bf1e1d",
-              }}
-              borderRadius={theme.buttonRadius.radius}
-              rightIcon={<BiChevronRight fontSize="2rem" />}>
-              Talk to us
-            </Button>
+            <ButtonMain text="Talk to us" />
           </Flex>
         </Box>
         <Box my="6rem">
@@ -72,9 +60,9 @@ const Ride = () => {
             Brand Showcase
           </Heading>
           <Flex gap=".5rem" justifyContent="center">
-            <Image src={ride1} alt="ride1" />
-            <Image src={ride2} alt="ride1" />
-            <Image src={ride3} alt="ride1" />
+            <Image src={foundation1} alt="foundation1" />
+            <Image src={foundation2} alt="ride1" />
+            <Image src={foundation3} alt="ride1" />
           </Flex>
         </Box>
         <VStack align="left" my="4rem" padding="2rem 8rem" width="50%">
@@ -105,4 +93,4 @@ const Ride = () => {
   );
 };
 
-export default Ride;
+export default Foundation;

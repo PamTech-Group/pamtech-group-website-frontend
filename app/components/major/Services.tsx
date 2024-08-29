@@ -17,6 +17,7 @@ import service4 from "../../../public/service4.webp";
 import Sustainability from "../minor/Sustainability";
 import Link from "next/link";
 import Industries from "../minor/Industries";
+import Marquee from "react-fast-marquee";
 
 // Data for services, images, and industries
 const services = [
@@ -97,36 +98,39 @@ const Services = () => {
         </VStack>
 
         {/* Services Image Grid */}
-        <SimpleGrid
-          my="4rem"
-          columns={[1, 2, 4]}
-          spacing={5}
-          padding="2rem 8rem">
-          {images.map((image) => (
-            <Box
-              key={image.title}
-              position="relative"
-              bgImage={`url(${image.image.src})`}
-              borderRadius="lg"
-              bgSize="cover"
-              bgPosition="center"
-              height="500px"
-              display="flex"
-              flexDirection="column"
-              justifyContent="flex-end"
-              padding="1rem"
-              color="white"
-              _hover={{ transform: "scale(1.05)", transition: "0.3s ease" }}>
-              <Text fontSize="1.5rem" fontWeight={500} mb="2.5rem">
-                {image.title}
-              </Text>
-              <Text fontSize="1rem">{image.description}</Text>
-              <Link href="#" color="#F7F7F7" className="read-more">
-                Read More <BsArrowRight fontSize="1.5rem" />
-              </Link>
-            </Box>
-          ))}
-        </SimpleGrid>
+        <Marquee>
+          <SimpleGrid
+            my="4rem"
+            columns={[1, 2, 4]}
+            spacing={5}
+            padding="2rem 8rem">
+            {images.map((image) => (
+              <Box
+                key={image.title}
+                position="relative"
+                bgImage={`url(${image.image.src})`}
+                borderRadius="lg"
+                bgSize="cover"
+                bgPosition="center"
+                height="500px"
+                width="400px"
+                display="flex"
+                flexDirection="column"
+                justifyContent="flex-end"
+                padding="1rem"
+                color="white"
+                _hover={{ transform: "scale(1.05)", transition: "0.3s ease" }}>
+                <Text fontSize="1.5rem" fontWeight={500} mb="2.5rem">
+                  {image.title}
+                </Text>
+                <Text fontSize="1rem">{image.description}</Text>
+                <Link href="#" color="#F7F7F7" className="read-more">
+                  Read More <BsArrowRight fontSize="1.5rem" />
+                </Link>
+              </Box>
+            ))}
+          </SimpleGrid>
+        </Marquee>
       </Box>
       {/* Industries section */}
       <Industries />
