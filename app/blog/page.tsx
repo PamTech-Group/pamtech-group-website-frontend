@@ -130,7 +130,7 @@ const Blog = () => {
               as="a"
               href="/contact-us"
               colorScheme="transparent"
-              color="white"
+              color="textGrey"
               fontSize={{ base: "0.8rem", md: "1rem" }} // Responsive font size
               _hover={{
                 bgColor: "primaryOrange",
@@ -158,7 +158,7 @@ const Blog = () => {
                 bgColor: "#bf1e1d",
               }}
               borderRadius={theme.buttonRadius.radius}>
-              Social
+              Socials
             </Button>
           </HStack>
 

@@ -27,7 +27,13 @@ import {
   FaWhatsappSquare,
   FaYoutube,
 } from "react-icons/fa";
-import { FaInstagram, FaTwitter, FaWhatsapp } from "react-icons/fa6";
+import {
+  FaInstagram,
+  FaTwitter,
+  FaWhatsapp,
+  FaX,
+  FaXTwitter,
+} from "react-icons/fa6";
 
 const images = [gallery1, gallery2, gallery3, gallery5, gallery6];
 const Socials = () => {
@@ -52,12 +58,13 @@ const Socials = () => {
               gap="2rem"
               width="50%">
               <Heading fontSize="3rem" fontWeight={500}>
-                Meet Pamtech Group
+                Innovating Tomorrow,
+                <br /> Today
               </Heading>
               <Text width="80%" fontSize="1.2rem">
-                With a strong commitment to serving humanity, Pamtech Group has
-                built a diverse portfolio in the oil and gas, media, and
-                automotive industries.
+                Experience never-boring content, excellent services, and a
+                workplace culture that’s as inspiring as it is
+                supportive—welcome to Pamtech Group.
               </Text>
             </Flex>
             <Flex>
@@ -203,7 +210,7 @@ const Socials = () => {
           height="4rem"
           width="contain"
           padding="1rem 3rem"
-          bgColor="#FE2C55"
+          bgColor="#171717"
           gap="1rem">
           <FaTiktok fontSize="1.5rem" /> {/* Tiktok Icon */}
           <Text>Tiktok</Text>
@@ -219,7 +226,7 @@ const Socials = () => {
           height="4rem"
           width="contain"
           padding="1rem 3rem"
-          bgColor="#CD486B"
+          bgColor="#C13584"
           gap="1rem">
           <FaInstagram fontSize="1.5rem" /> {/* Instagram Icon */}
           <Text>Instagram</Text>
@@ -237,7 +244,7 @@ const Socials = () => {
           padding="1rem 3rem"
           bgColor="#171717"
           gap="1rem">
-          <FaTwitter fontSize="1.5rem" /> {/* Twitter (X) Icon */}
+          <FaXTwitter fontSize="1.5rem" /> {/* Twitter (X) Icon */}
           <Text>X</Text>
         </Flex>
 

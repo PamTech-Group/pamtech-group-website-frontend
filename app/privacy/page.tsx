@@ -130,7 +130,7 @@ const Privacy = () => {
               as="a"
               href="/contact-us"
               colorScheme="transparent"
-              color="white"
+              color="textGrey"
               fontSize={{ base: "0.8rem", md: "1rem" }} // Responsive font size
               _hover={{
                 bgColor: "primaryOrange",
@@ -158,7 +158,7 @@ const Privacy = () => {
                 bgColor: "#bf1e1d",
               }}
               borderRadius={theme.buttonRadius.radius}>
-              Social
+              Socials
             </Button>
           </HStack>
 
@@ -199,52 +199,79 @@ const Privacy = () => {
           </Drawer>
         </Flex>
       </Box>
-      <Flex color="textGrey" flexDirection="column" padding="2rem 8rem">
-        <Box>
-          <Heading my="2rem">Privacy</Heading>
+      <Flex
+        color="textGrey"
+        flexDirection="column"
+        justifyContent="left"
+        padding="2rem 8rem">
+        <Heading my="2rem">Privacy Policy</Heading>
+        <Flex flexDirection="column" gap="1.5rem">
           <Text textAlign="justify">
-            Lorem ipsum dolor sit amet consectetur. Pretium curabitur lorem
-            molestie sed. Sed platea dui egestas consequat tincidunt. Eget
-            dignissim morbi lacus bibendum quis pretium etiam elit. Sed pretium
-            massa quisque arcu. Pretium odio ut sem odio. At habitant pretium
-            pellentesque mi est neque sagittis est bibendum. Amet in mattis ut
-            turpis tempor. Arcu quam iaculis phasellus enim elementum in aliquam
-            risus. Ultrices cursus dignissim ac non consequat vel at tortor dui.
-            Consequat consequat nec ac turpis porttitor sit. Amet neque id
-            turpis tristique hendrerit. Sed malesuada faucibus dignissim
-            volutpat eget iaculis elementum. Vitae cras elementum nulla
-            vestibulum eros vitae rhoncus. Nec faucibus semper egestas tincidunt
-            sagittis fames. Tincidunt mauris quam purus a neque in ridiculus.
-            Vestibulum justo laoreet facilisis ac cursus nisi tellus. Sodales
-            nulla mattis vel gravida felis feugiat viverra. Dis blandit
-            pellentesque suspendisse amet amet gravida. Sagittis nt
-            pellentesque. In malesuada rutrum at mattis orci ut urna tempus
-            placerat. Vitae donec scelerisque vel sed sociis sed. Tristique
-            egestas commodo ornare dictum nullam egestas. Sagittis fermentum sit
-            nunc semper fermentum pellentesque faucibus consectetur. Convallis
-            habitant ultricies mauris sit amet a arcu arcu. Ut molestie ut fames
-            tristique nullam libero montes. Elit feugiat amet mattis id amet.
-            Vitae purus nunc rutrum justo quis.
+            Pamtech Group is committed to protecting your privacy. This Privacy
+            Policy outlines how we collect, use, disclose, and protect your
+            information when you visit our website, www.pamtechgroup.com. By
+            accessing or using our website, you agree to the terms outlined in
+            this Privacy Policy.
           </Text>
-        </Box>
-        <Box>
-          <Heading my="2rem">Policy</Heading>
           <Text textAlign="justify">
-            Lorem ipsum dolor sit amet consectetur. Pretium curabitur lorem
-            molestie sed. Sed platea dui egestas consequat tincidunt. Eget
-            dignissim morbi lacus bibendum quis pretium etiam elit. Sed pretium
-            massa quisque arcu. Pretium odio ut sem odio. At habitant pretium
-            pellentesque mi est neque sagittis est bibendum. Amet in mattis ut
-            turpis tempor. Arcu quam iaculis phasellus enim elementum in aliquam
-            risus. Ultrices cursus dignissim ac non consequat vel at tortor dui.
-            Consequat consequat nec ac turpis porttitor sit. Amet neque id
-            turpis tristique hendrerit. Sed malesuada faucibus dignissim
-            volutpat eget iaculis elementum. Vitae cras elementum nulla
-            vestibulum eros vitae rhoncus. Nec faucibus semper egestas tincidunt
-            sagittis fames. Tincidunt mauris quam purus a neque in ridiculus.
-            Vestibulum justo laoreet
+            We collect both personal information, such as your name and email
+            address, and non-personal information, such as your IP address and
+            browser type. We collect personal information that you voluntarily
+            provide to us, and we automatically collect non-personal information
+            when you visit our website. We also use cookies and similar tracking
+            technologies to enhance your experience on our website. These
+            technologies help us understand how you use our website and enable
+            us to provide you with a personalized experience. You can manage
+            your cookie preferences through your browser settings.
           </Text>
-        </Box>
+          <Text textAlign="justify">
+            We may use the information we collect for various purposes,
+            including providing, operating, and maintaining our website,
+            responding to your inquiries or requests, sending you newsletters,
+            updates, and promotional materials, analyzing usage trends and
+            improving our website, complying with legal obligations, and
+            preventing fraudulent activities.
+          </Text>
+          <Text textAlign="justify">
+            We do not sell, trade, or otherwise transfer your personal
+            information to third parties without your consent, except as
+            described in this Privacy Policy. We may share your information with
+            third-party service providers who assist us in operating our
+            website, conducting our business, or serving our users. We may also
+            disclose your information if required by law or in response to valid
+            legal requests from governmental authorities. In the event of a
+            merger, acquisition, or sale of all or a portion of our assets, your
+            information may be transferred to the acquiring party.
+          </Text>
+          <Text textAlign="justify">
+            We take reasonable measures to protect your personal information
+            from unauthorized access, alteration, disclosure, or destruction.
+            However, no method of transmission over the Internet or electronic
+            storage is 100% secure, and we cannot guarantee absolute security.
+            You have the right to access and update your personal information,
+            opt-out of receiving promotional communications, and request the
+            deletion of your personal information. Our website is not intended
+            for individuals under the age of 13, and we do not knowingly collect
+            personal information from children under 13. We may update this
+            Privacy Policy from time to time, and we will notify you of any
+            material changes. If you have any questions or concerns about this
+            Privacy Policy or our data practices, please contact us.
+          </Text>
+          <Box textAlign="justify">
+            Pamtech Group <br />
+            Website <Link href="pamtechgroup.com">pamtechgroup.com</Link> <br />
+            Email:{" "}
+            <Link href="mailto:info@pamtechgroup.com">info@pamtechgroup.</Link>
+            <br />
+            Phone:{" "}
+            <Link href="tel" target="+234 803 7077 608">
+              Phone: +234 803 7077 608
+            </Link>
+            <br />
+            Address: Plot CR17 Housing Area T, Port Harcourt Rd, behind Apams,
+            New Owerri, Owerri, Imo State, Nigeria.
+          </Box>
+        </Flex>
       </Flex>
       <Sustainability />
       <Footer />

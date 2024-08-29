@@ -132,7 +132,7 @@ const Nav = () => {
           </Box>
 
           <Link className="scaler" href="/e-solution">
-            e-Solution
+            e-Solutions
           </Link>
         </HStack>
 

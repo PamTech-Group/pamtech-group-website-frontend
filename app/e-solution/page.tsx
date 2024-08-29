@@ -33,6 +33,7 @@ import { HamburgerIcon } from "@chakra-ui/icons";
 import { GrApple } from "react-icons/gr";
 import Sustainability from "../components/minor/Sustainability";
 import Footer from "../components/major/Footer";
+import ButtonMain from "../components/minor/ButtonMain";
 const Solution = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
@@ -45,169 +46,33 @@ const Solution = () => {
   return (
     <Box bgColor="#FFFFFF">
       <Box
-        bg="white"
-        transition="background-color 0.3s ease-in-out"
-        boxShadow="md"
-        padding={{
-          base: "1rem 2rem", // Small screens (mobiles)
-          sm: "1rem 4rem", // Small PCs and tablets
-          md: "1rem 6rem", // Medium screen (laptops)
-          lg: "1rem 8rem", // Larger screens
-        }}>
-        <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
-          {/* Logo */}
-          <Box>
-            <Link href="/">
-              <Image src={logoBlue} alt="Pamtech Logo" height={35} />
-            </Link>
-          </Box>
-
-          {/* Desktop Menu */}
-          <HStack
-            as={"nav"}
-            spacing={{
-              base: 4, // Smaller gaps on small screens
-              sm: 6, // Slightly larger gap for small tablets
-              md: 8, // Normal gap for medium devices
-              lg: 12, // Large gap for larger screens
-            }}
-            display={{ base: "none", md: "flex" }} // Show from medium screens and above
-            fontWeight={400}
-            color="primaryOrange">
-            <Link className="scaler" href="/about">
-              About Us
-            </Link>
-
-            <Link className="scaler" href="/growth">
-              Our Growth
-            </Link>
-            <Box
-              position="relative"
-              onMouseEnter={onOpen}
-              onMouseLeave={onClose}>
-              <Flex className="scaler" cursor="pointer" alignItems="center">
-                <Text fontWeight={400}>Business</Text>
-                <Icon fontSize="1rem" as={BiChevronDown} />
-              </Flex>
-
-              {/* Dropdown menu */}
-              <Center>
-                <Box
-                  marginLeft="10rem"
-                  position="absolute"
-                  top="100%"
-                  transformOrigin="center"
-                  bg="white"
-                  width="contain"
-                  boxShadow="md"
-                  borderRadius="md"
-                  zIndex={1000}
-                  transition="all 0.3s ease-in-out"
-                  opacity={isOpen ? 1 : 0}
-                  transform={isOpen ? "translateY(0)" : "translateY(-20px)"}
-                  pointerEvents={isOpen ? "auto" : "none"}>
-                  <Dropdown />
-                </Box>
-              </Center>
-            </Box>
-
-            <Link className="scaler" href="/e-solution">
-              e-Solution
-            </Link>
-          </HStack>
-
-          {/* Mobile Menu Button */}
-          <IconButton
-            aria-label="Open Menu"
-            icon={<HamburgerIcon />}
-            display={{ base: "flex", md: "none" }} // Display on small screens
-            onClick={onMobileMenuOpen}
-            variant="ghost"
-            color="white"
-            fontSize="1.5rem"
-          />
-
-          {/* Contact and Social Buttons */}
-          <HStack
-            spacing={4}
-            display={{ base: "none", md: "flex" }} // Show from medium screens
-          >
-            <Button
-              as="a"
-              href="/contact-us"
-              colorScheme="transparent"
-              color="white"
-              fontSize={{ base: "0.8rem", md: "1rem" }} // Responsive font size
-              _hover={{
-                bgColor: "primaryOrange",
-                color: "#F7F7F7",
-              }}
-              _active={{
-                bgColor: "#bf1e1d",
-                color: "#F7F7F7",
-              }}
-              outline="1px solid #E52321"
-              padding={theme.buttonPadding}
-              borderRadius={theme.buttonRadius.radius}>
-              Contact Us
-            </Button>
-            <Button
-              as="a"
-              href="socials"
-              fontSize={{ base: "0.8rem", md: "1rem" }} // Responsive font size
-              padding={theme.buttonPadding}
-              bgColor="primaryOrange"
-              _hover={{
-                bgColor: "#961615",
-              }}
-              _active={{
-                bgColor: "#bf1e1d",
-              }}
-              borderRadius={theme.buttonRadius.radius}>
-              Social
-            </Button>
-          </HStack>
-
-          {/* Mobile Menu Drawer */}
-          <Drawer
-            isOpen={isMobileMenuOpen}
-            placement="right"
-            onClose={onMobileMenuClose}>
-            <DrawerOverlay />
-            <DrawerContent>
-              <DrawerCloseButton />
-              <DrawerHeader>Menu</DrawerHeader>
-              <DrawerBody>
-                <VStack spacing={4} align="start">
-                  <Link href="/about" onClick={onMobileMenuClose}>
-                    About Us
-                  </Link>
-                  <Link href="#" onClick={onMobileMenuClose}>
-                    Business
-                  </Link>
-                  <Link href="#" onClick={onMobileMenuClose}>
-                    Investor Relations
-                  </Link>
-                  <Link href="#" onClick={onMobileMenuClose}>
-                    e-Solution
-                  </Link>
-                  <Button
-                    as="a"
-                    href="/contact-us"
-                    colorScheme="transparent"
-                    width="100%"
-                    onClick={onMobileMenuClose}>
-                    Contact Us
-                  </Button>
-                </VStack>
-              </DrawerBody>
-            </DrawerContent>
-          </Drawer>
+        padding="2rem 8rem"
+        background="#00030C"
+        bgSize="cover"
+        bgPosition="center"
+        height="100vh"
+        color="#F7F7F7">
+        <Nav />
+        <Flex
+          height="100%"
+          flexDir="column"
+          justifyContent="center"
+          gap="2rem"
+          width="50%">
+          <Heading fontSize="3rem" fontWeight={500}>
+            e-Solutions
+          </Heading>
+          <Text fontWeight={500} width="60%" textAlign="justify">
+            Pamtech Group is at the forefront of innovation, consistently
+            developing cutting-edge e-solutions that drive efficiency, enhance
+            user experience, and transform industries.
+          </Text>
+          <ButtonMain text="Talk to us" />
         </Flex>
       </Box>
       <Flex
         padding="2rem 8rem"
-        width="50%"
+        width="70%"
         flexDirection="column"
         gap="2rem"
         color="textGrey">
@@ -238,44 +103,49 @@ const Solution = () => {
           Talk to us
         </Button>
       </Flex>
-      <Box color=" textGrey">
+      <Box color=" textGrey" padding="2rem 8rem" fontWeight={500}>
         {/* Petrol Padi Section */}
-        <Flex
-          my="4rem"
-          padding="2rem 8rem"
-          bg="white"
-          borderRadius="lg"
-          boxShadow="md"
-          gap="4rem"
-          wrap="wrap">
+        <Flex my="4rem" bg="white" borderRadius="lg" boxShadow="md" wrap="wrap">
           {/* Text Section */}
-          <Box flex="1" bg="rgba(100, 94, 94, .3)">
+          <Box padding="2.5rem 3rem" flex="1" bg="rgba(100, 94, 94, .1)">
             <Heading fontSize="2xl" color="red.500" mb="1rem">
               Petrol Padi
             </Heading>
-            <Text mb="1.5rem">
+            <Text mb="1.5rem" fontWeight={500}>
               This innovative platform is designed to transform the way
               customers purchase fuel, offering a seamless and convenient
               experience.
             </Text>
-            <Text>
-              1. Convenience: Buy fuel from the comfort of your own home, 24/7.
-              <br />
-              2. Time-saving: No more waiting in lines or queues at fuel
-              stations.
-              <br />
-              3. Easy Payment: Secure and hassle-free payment options.
-              <br />
-              4. Fuel Price Comparison: Compare prices across different fuel
-              stations.
-              <br />
-              7. Real-time Updates: Get updates on fuel availability and prices.
-              <br />
-              9. Safety: Avoid handling cash and reduce risk of fuel theft.
-              <br />
-              10. Station information: Access information about fuel stations,
-              including hours, amenities, and reviews.
-            </Text>
+            <OrderedList my="2rem" spacing="1rem" fontWeight={500}>
+              <ListItem>
+                Convenience: Buy fuel from the comfort of your own home, 24/7.
+              </ListItem>
+              <ListItem>
+                Time-saving: No more waiting in lines or queues at fuel
+                stations.
+              </ListItem>
+              <ListItem>
+                Easy Payment: Secure and hassle-free payment options.
+              </ListItem>
+
+              <ListItem>
+                Fuel Price Comparison: Compare prices across different fuel
+                stations.
+              </ListItem>
+
+              <ListItem>
+                Real-time Updates: Get updates on fuel availability and prices.
+              </ListItem>
+
+              <ListItem>
+                Safety: Avoid handling cash and reduce risk of fuel theft.
+              </ListItem>
+
+              <ListItem>
+                Station information: Access information about fuel stations,
+                including hours, amenities, and reviews.
+              </ListItem>
+            </OrderedList>
 
             {/* App Store and Google Play Buttons */}
             <Flex gap="1rem">
@@ -297,10 +167,11 @@ const Solution = () => {
 
           {/* Phone Mockup Image */}
           <Flex
+            padding="2.5rem 3rem"
             justifyContent="center"
             flex="1"
             textAlign="center"
-            bgColor="#C72A3D">
+            bgColor="primaryOrange">
             <Image src={esolution} alt="Phone Mockup" />
           </Flex>
         </Flex>
@@ -321,15 +192,14 @@ const Solution = () => {
               Autoland
             </Heading>
             <Text mb="1.5rem">
-              This innovative platform is designed to transform the way
-              customers purchase fuel, offering a seamless and convenient
-              experience.
+              "Autoland is changing the game in vehicle purchasing, providing a
+              streamlined and user-friendly experience for customers.
             </Text>
 
             {/* Coming Soon Button */}
             <Button
               width="fit-content"
-              padding={theme.buttonPadding}
+              padding="1.5rem"
               bgColor="primaryOrange"
               _hover={{
                 bgColor: "#961615",
@@ -337,9 +207,8 @@ const Solution = () => {
               _active={{
                 bgColor: "#bf1e1d",
               }}
-              fontWeight={300}
               fontSize="1.2rem"
-              borderRadius={theme.buttonRadius.radius}>
+              borderRadius="lg">
               Comming Soon...
             </Button>
           </Box>
@@ -384,15 +253,15 @@ const Solution = () => {
               Autoparts
             </Heading>
             <Text mb="1.5rem">
-              This innovative platform is designed to transform the way
-              customers purchase fuel, offering a seamless and convenient
-              experience.
+              Experience a new way to shop for auto parts with Pamtech
+              Autoparts, designed to make finding and buying parts easy,
+              convenient, and enjoyable
             </Text>
 
             {/* Coming Soon Button */}
             <Button
               width="fit-content"
-              padding={theme.buttonPadding}
+              padding="1.5rem"
               bgColor="primaryOrange"
               _hover={{
                 bgColor: "#961615",
@@ -400,7 +269,6 @@ const Solution = () => {
               _active={{
                 bgColor: "#bf1e1d",
               }}
-              fontWeight={300}
               fontSize="1.2rem"
               borderRadius={theme.buttonRadius.radius}>
               Comming Soon...
