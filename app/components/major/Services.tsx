@@ -5,10 +5,10 @@ import { BsArrowRight } from "react-icons/bs";
 // Images
 import autoland from "../../../public/autoland.webp";
 import petrolpadi from "../../../public/petrolPadi.webp";
-import media from "../../../public/media.png";
-import petrol from "../../../public/petrol.png";
-import ride from "../../../public/ride.png";
-import repair from "../../../public/spare-part.png";
+import media from "../../../public/media.webp";
+import petrol from "../../../public/petrol.webp";
+import ride from "../../../public/ride.webp";
+import repair from "../../../public/spare-part.webp";
 import service1 from "../../../public/service1.webp";
 import service2 from "../../../public/service2.webp";
 import service3 from "../../../public/service3.webp";

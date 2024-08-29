@@ -15,7 +15,7 @@ import sp4 from "../../../public/SPpartners.webp";
 import sp5 from "../../../public/SPpolicy.webp";
 import sp6 from "../../../public/SPpromotion.webp";
 import sp7 from "../../../public/SPprogress.webp";
-import bg3 from "../../../public/bg3.png";
+import bg3 from "../../../public/bg3.webp";
 import Image from "next/image";
 import theme from "@/app/theme";
 
@@ -63,43 +63,6 @@ const Sustainability = () => {
     },
   ];
 
-  const [currentPillar, setCurrentPillar] = useState(0);
-  const [inView, setInView] = useState(false);
-  const containerRef = useRef(null);
-
-  // Intersection observer to check if component is in view
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setInView(true);
-        }
-      },
-      { threshold: 0.5 } // Trigger when 50% of the component is visible
-    );
-
-    if (containerRef.current) {
-      observer.observe(containerRef.current);
-    }
-
-    return () => {
-      if (containerRef.current) {
-        observer.unobserve(containerRef.current);
-      }
-    };
-  }, []);
-
-  // Cycle through the sustainability pillars' popups
-  useEffect(() => {
-    if (inView) {
-      const interval = setInterval(() => {
-        setCurrentPillar((prev) => (prev + 1) % sustainabilityPillars.length);
-      }, 3000); // Show each pillar for 3 seconds
-
-      return () => clearInterval(interval);
-    }
-  }, [inView, sustainabilityPillars.length]);
-
   return (
     <Flex
       mt="4rem"
@@ -108,9 +71,7 @@ const Sustainability = () => {
       bgImage={`url(${bg3.src})`}
       bgSize="cover"
       bgPosition="center"
-      color="#F7F7F7"
-      ref={containerRef} // reference for the intersection observer
-    >
+      color="#F7F7F7">
       <Flex width="100%" alignItems="center" justifyContent="space-between">
         <Flex width="50%" flexDirection="column" gap="2rem">
           <Text fontWeight={400} fontSize="1.2rem">
@@ -160,23 +121,6 @@ const Sustainability = () => {
                   padding="1rem 2.5rem"
                   position="relative">
                   <Image src={pillar.image} alt={pillar.text} />
-                  {currentPillar === i && (
-                    <Box
-                      position="absolute"
-                      bottom="100%"
-                      left="50%"
-                      transform="translate(-50%, 0)"
-                      bg="rgba(0, 0, 0, 1)"
-                      color="#fff"
-                      padding="0.5rem 1rem"
-                      borderRadius="md"
-                      mt="0.5rem"
-                      zIndex={10}>
-                      <Text fontSize="0.9rem" fontWeight={500}>
-                        {pillar.description}
-                      </Text>
-                    </Box>
-                  )}
                 </Box>
                 <Text fontWeight={300}>{pillar.text}</Text>
               </Flex>

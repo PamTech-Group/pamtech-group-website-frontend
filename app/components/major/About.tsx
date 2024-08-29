@@ -40,7 +40,9 @@ const About = () => {
                   bgColor: "#bf1e1d",
                 }}
                 borderRadius={theme.buttonRadius.radius}
-                rightIcon={<BiChevronRight fontSize="2rem" />}>
+                rightIcon={
+                  <BiChevronRight fontSize="1.5rem" className="arrow-icon" />
+                }>
                 Read More
               </Button>
             </Flex>

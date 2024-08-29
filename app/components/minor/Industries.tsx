@@ -2,10 +2,12 @@ import { Box, Flex, Text, VStack } from "@chakra-ui/react";
 import Image from "next/image";
 import Marquee from "react-fast-marquee";
 
-import oilandGas from "../../../public/oil-gas.png";
-import banking from "../../../public/banking.png";
-import health from "../../../public/health.png";
-
+import oilandGas from "../../../public/oil&gas.webp";
+import banking from "../../../public/banking.webp";
+import health from "../../../public/health.webp";
+import media from "../../../public/mediaIndustries.webp";
+import government from "../../../public/government.webp";
+import you from "../../../public/you.webp";
 const Industries = () => {
   const industries = [
     {
@@ -27,19 +29,19 @@ const Industries = () => {
         "Pamtech ensures hospitals have reliable fuel for emergency generators and maintains ambulances to be always ready for emergencies.",
     },
     {
-      image: health,
+      image: media,
       title: "Media",
       description:
         "In the media industry, Pamtech helps clients build brand presence and engage their audience with creative, results-driven strategies.",
     },
     {
-      image: health,
+      image: government,
       title: "Government Parastals",
       description:
         "Pamtech Group is crucial to the oil and gas industry, delivering premium petroleum products and vital services that support operational efficiency.",
     },
     {
-      image: health,
+      image: you,
       title: "You",
       description:
         "They provide auto repair services and quality parts, enhancing vehicle performance for individual and business customers while also offering reliable transportation solutions.",

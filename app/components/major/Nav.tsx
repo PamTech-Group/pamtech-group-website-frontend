@@ -18,8 +18,8 @@ import {
   DrawerCloseButton,
 } from "@chakra-ui/react";
 import { HamburgerIcon } from "@chakra-ui/icons";
-import logo from "../../../public/logo.png";
-import logoBlue from "../../../public/logoBlue.png";
+import logo from "../../../public/logo.webp";
+import logoBlue from "../../../public/logoBlue.webp";
 import { Image } from "@chakra-ui/next-js";
 import theme from "@/app/theme";
 import { useState, useEffect } from "react";

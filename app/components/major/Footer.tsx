@@ -16,10 +16,10 @@ import {
   FaTwitter,
   FaYoutube,
 } from "react-icons/fa";
-import logo from "../../../public/logo.png";
+import logo from "../../../public/logo.webp";
 import { IoCall } from "react-icons/io5";
 import { GrApple } from "react-icons/gr";
-import phone from "../../../public/phone.png";
+import phone from "../../../public/esolution.webp";
 import { Image, Link } from "@chakra-ui/next-js";
 import theme from "@/app/theme";
 const Footer = () => {
