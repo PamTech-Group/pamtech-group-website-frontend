@@ -83,13 +83,13 @@ const Autoparts = () => {
           </Text>
           <Flex flexDirection="column" gap="1.5rem" textAlign="justify">
             <Text color="textGrey" fontSize="1.2rem">
-               Pamtech Autoparts offers a wide selection of quality OEM
+              {`Pamtech Autoparts offers a wide selection of quality OEM
               autoparts for vehicle repair, maintenance, servicing, and
               replacement as well as accessories, — all at extremely competitive
               prices. Paired with our fast shipping, we prioritize authenticity
               and quality, so every part in our inventory meets the
               manufacturer's specifications, giving you confidence in the
-              performance and durability of your equipment.
+              performance and durability of your equipment.`}
             </Text>
             <Text color="textGrey" fontSize="1.2rem">
               Currently the bigest auto spare parts plaza in the South East, our

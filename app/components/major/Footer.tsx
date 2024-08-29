@@ -38,11 +38,10 @@ const Footer = () => {
               </Text>
               <Text fontSize="2.5rem" fontWeight={700} width="80%">
                 {" "}
-                Start Tracking Your Business Expenses Today
+                Track Your Business Expenses Today
               </Text>
               <Text fontSize="1.2rem" width="70%">
-                Download the app now and take control of your fuel purchasing
-                decisions
+                Your Padi for Oil & Gas Market
               </Text>
               <Flex gap="1rem">
                 <Button
@@ -73,7 +72,7 @@ const Footer = () => {
         justifyContent="space-between"
         bgColor="#010619">
         <Box>
-          <Text fontSize="3rem" fontWeight={700}>
+          <Text fontSize="2rem" fontWeight={700}>
             Connect with us
           </Text>
         </Box>
@@ -92,7 +91,9 @@ const Footer = () => {
             color: "primaryOrange",
           }}
           borderRadius={theme.buttonRadius.radius}
-          rightIcon={<BiChevronRight fontSize="2rem" className="arrow-icon" />}>
+          rightIcon={
+            <BiChevronRight fontSize="1.5rem" className="arrow-icon" />
+          }>
           Talk to Us{" "}
         </Button>
       </Flex>
@@ -105,7 +106,7 @@ const Footer = () => {
           <VStack align="start" spacing={5}>
             <Flex flexDirection="column" gap="1.5rem">
               <Link href="/">
-                <Image src={logo} alt="Pamtech Logo" height={50} />
+                <Image src={logo} alt="Pamtech Logo" height={35} />
               </Link>
               <Text fontSize="1.2rem" fontWeight={300}>
                 Commited service to humanity
@@ -118,13 +119,11 @@ const Footer = () => {
               <Text fontSize="1.2rem" fontWeight={400}>
                 Legal
               </Text>
-              <Link fontWeight={300} href="#">
+              <Link fontWeight={300} href="/privacy">
                 Privacy
               </Link>
-              <Link fontWeight={300} href="#">
-                Glossary
-              </Link>
-              <Link fontWeight={300} href="#">
+
+              <Link fontWeight={300} href="/blog">
                 Cookie policy
               </Link>
             </Flex>

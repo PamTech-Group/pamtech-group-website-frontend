@@ -1,26 +1,26 @@
 "use client";
 import {
   Box,
-  Button,
-  Center,
-  Drawer,
-  DrawerBody,
-  DrawerCloseButton,
-  DrawerContent,
-  DrawerHeader,
-  DrawerOverlay,
   Flex,
-  Heading,
-  HStack,
-  Icon,
-  IconButton,
   Text,
+  Link,
+  Divider,
+  HStack,
   useDisclosure,
+  Icon,
+  Center,
+  IconButton,
+  Button,
+  Drawer,
+  DrawerOverlay,
+  DrawerContent,
+  DrawerCloseButton,
+  DrawerHeader,
+  DrawerBody,
   VStack,
 } from "@chakra-ui/react";
+import phoneImage from "../../public/phone.png"; // Update the path as necessary
 import Image from "next/image";
-import Link from "next/link";
-import React from "react";
 import logoBlue from "../../public/logoBlue.png";
 import { BiChevronDown } from "react-icons/bi";
 import Dropdown from "../components/minor/dropdown";
@@ -28,7 +28,7 @@ import { HamburgerIcon } from "@chakra-ui/icons";
 import theme from "../theme";
 import Sustainability from "../components/minor/Sustainability";
 import Footer from "../components/major/Footer";
-const Privacy = () => {
+const Blog = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   const {
@@ -37,7 +37,7 @@ const Privacy = () => {
     onClose: onMobileMenuClose,
   } = useDisclosure();
   return (
-    <Box bg="#FFFFFF">
+    <Box bg="#ffffff">
       <Box
         bg="white"
         transition="background-color 0.3s ease-in-out"
@@ -199,57 +199,81 @@ const Privacy = () => {
           </Drawer>
         </Flex>
       </Box>
-      <Flex color="textGrey" flexDirection="column" padding="2rem 8rem">
-        <Box>
-          <Heading my="2rem">Privacy</Heading>
-          <Text textAlign="justify">
-            Lorem ipsum dolor sit amet consectetur. Pretium curabitur lorem
-            molestie sed. Sed platea dui egestas consequat tincidunt. Eget
-            dignissim morbi lacus bibendum quis pretium etiam elit. Sed pretium
-            massa quisque arcu. Pretium odio ut sem odio. At habitant pretium
-            pellentesque mi est neque sagittis est bibendum. Amet in mattis ut
-            turpis tempor. Arcu quam iaculis phasellus enim elementum in aliquam
-            risus. Ultrices cursus dignissim ac non consequat vel at tortor dui.
-            Consequat consequat nec ac turpis porttitor sit. Amet neque id
-            turpis tristique hendrerit. Sed malesuada faucibus dignissim
-            volutpat eget iaculis elementum. Vitae cras elementum nulla
-            vestibulum eros vitae rhoncus. Nec faucibus semper egestas tincidunt
-            sagittis fames. Tincidunt mauris quam purus a neque in ridiculus.
-            Vestibulum justo laoreet facilisis ac cursus nisi tellus. Sodales
-            nulla mattis vel gravida felis feugiat viverra. Dis blandit
-            pellentesque suspendisse amet amet gravida. Sagittis nt
-            pellentesque. In malesuada rutrum at mattis orci ut urna tempus
-            placerat. Vitae donec scelerisque vel sed sociis sed. Tristique
-            egestas commodo ornare dictum nullam egestas. Sagittis fermentum sit
-            nunc semper fermentum pellentesque faucibus consectetur. Convallis
-            habitant ultricies mauris sit amet a arcu arcu. Ut molestie ut fames
-            tristique nullam libero montes. Elit feugiat amet mattis id amet.
-            Vitae purus nunc rutrum justo quis.
-          </Text>
-        </Box>
-        <Box>
-          <Heading my="2rem">Policy</Heading>
-          <Text textAlign="justify">
-            Lorem ipsum dolor sit amet consectetur. Pretium curabitur lorem
-            molestie sed. Sed platea dui egestas consequat tincidunt. Eget
-            dignissim morbi lacus bibendum quis pretium etiam elit. Sed pretium
-            massa quisque arcu. Pretium odio ut sem odio. At habitant pretium
-            pellentesque mi est neque sagittis est bibendum. Amet in mattis ut
-            turpis tempor. Arcu quam iaculis phasellus enim elementum in aliquam
-            risus. Ultrices cursus dignissim ac non consequat vel at tortor dui.
-            Consequat consequat nec ac turpis porttitor sit. Amet neque id
-            turpis tristique hendrerit. Sed malesuada faucibus dignissim
-            volutpat eget iaculis elementum. Vitae cras elementum nulla
-            vestibulum eros vitae rhoncus. Nec faucibus semper egestas tincidunt
-            sagittis fames. Tincidunt mauris quam purus a neque in ridiculus.
-            Vestibulum justo laoreet
-          </Text>
-        </Box>
-      </Flex>
+      <Box color="textGrey">
+        {/* Section 1 */}
+        <Flex
+          justifyContent="center"
+          alignItems="center"
+          flexDirection="column"
+          marginBottom="3rem">
+          <Image src={phoneImage} height={300} alt="Phone Mockup" />
+          <Box textAlign="justify" padding="2rem">
+            <Text fontSize="1.2rem" marginBottom="1rem">
+              Lorem ipsum dolor sit amet consectetur. Pretium curabitur lorem
+              molestie sed. Sed platea dui egestas consequat tincidunt.
+            </Text>
+            <Text fontSize="1.2rem" marginBottom="1rem">
+              Eget dignissim morbi lacus bibendum quis pretium etiam elit. Sed
+              pretium massa quisque arcu. Pretium odio ut sem odio. At habitant
+              pretium pellentesque mi est ne
+            </Text>
+            <Link color="blue.500" fontWeight="bold" href="#">
+              read more...
+            </Link>
+          </Box>
+        </Flex>
+
+        {/* Divider */}
+        <Divider orientation="horizontal" marginBottom="3rem" />
+
+        {/* Section 2 */}
+        <Flex
+          justifyContent="center"
+          alignItems="center"
+          flexDirection="column"
+          marginBottom="3rem">
+          <Image src={phoneImage} height={300} alt="Phone Mockup" />
+          <Box textAlign="justify" padding="2rem">
+            <Text fontSize="1.2rem" marginBottom="1rem">
+              Lorem ipsum dolor sit amet consectetur. Pretium curabitur lorem
+              molestie sed. Sed platea dui egestas consequat tincidunt.
+            </Text>
+            <Text fontSize="1.2rem" marginBottom="1rem">
+              Eget dignissim morbi lacus bibendum quis pretium etiam elit. Sed
+              pretium massa quisque arcu. Pretium odio ut sem odio. At habitant
+              pretium pellentesque mi est ne
+            </Text>
+            <Link color="blue.500" fontWeight="bold" href="#">
+              read more...
+            </Link>
+          </Box>
+        </Flex>
+        <Flex
+          justifyContent="center"
+          alignItems="center"
+          flexDirection="column"
+          marginBottom="3rem">
+          <Image src={phoneImage} height={300} alt="Phone Mockup" />
+          <Box textAlign="justify" padding="2rem">
+            <Text fontSize="1.2rem" marginBottom="1rem">
+              Lorem ipsum dolor sit amet consectetur. Pretium curabitur lorem
+              molestie sed. Sed platea dui egestas consequat tincidunt.
+            </Text>
+            <Text fontSize="1.2rem" marginBottom="1rem">
+              Eget dignissim morbi lacus bibendum quis pretium etiam elit. Sed
+              pretium massa quisque arcu. Pretium odio ut sem odio. At habitant
+              pretium pellentesque mi est ne
+            </Text>
+            <Link color="blue.500" fontWeight="bold" href="#">
+              read more...
+            </Link>
+          </Box>
+        </Flex>
+      </Box>
       <Sustainability />
       <Footer />
     </Box>
   );
 };
 
-export default Privacy;
+export default Blog;

@@ -35,9 +35,9 @@ const Growth = () => {
                 creating value
               </Heading>
               <Text width="80%" fontSize="1.2rem">
-                We are in the business of making our products viable for our
+                {`We are in the business of making our products viable for our
                 stakeholders at various levels. By being part of the Pamtech
-                Group, you're putting yourself on the path of profit.
+                Group, you're putting yourself on the path of profit.`}
               </Text>
             </Flex>
           </Flex>

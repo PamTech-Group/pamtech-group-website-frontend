@@ -195,13 +195,13 @@ const AboutPage = () => {
           <Flex justifyContent="space-between" gap="3rem">
             <Flex flexDirection="column" gap="2rem" height="100%">
               <Text>
-                In 2016, Pamtech Group was founded with a mission to render
+                {`In 2016, Pamtech Group was founded with a mission to render
                 committed service to humanity starting with petroleum
                 distribution in the downstream sector of the oil and gas
                 industry. The company's reputation for reliability and integrity
                 quickly established us among key industry players, leading to
                 expanded operations and investments in infrastructure and
-                technology.
+                technology.`}
               </Text>
               <Text>
                 Pamtech Group diversified into the automotive industry with

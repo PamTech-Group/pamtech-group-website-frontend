@@ -83,14 +83,14 @@ const OilGas = () => {
           </Text>
           <Flex flexDirection="column" gap="1.5rem" textAlign="justify">
             <Text color="textGrey" fontSize="1.2rem">
-              With diversified interests in the Nigerian economy, Pamtech Oil &
+              {`With diversified interests in the Nigerian economy, Pamtech Oil &
               Gas was incorporated in May 2016 as a direct answer to the
               emerging trends in the dynamic oil and gas industry. We are
               committed to being the trusted source for premium petroleum
               products, ensuring that every drop of fuel we deliver meets the
               highest industry standards. We understand fuel's critical role in
               powering industries, businesses, and everyday life, which is why
-              we prioritize value and reliability in every transaction. 
+              we prioritize value and reliability in every transaction.`}
             </Text>
             <Text color="textGrey" fontSize="1.2rem">
               At Pamtech Oil & Gas, excellence is a way of life. We are bridging

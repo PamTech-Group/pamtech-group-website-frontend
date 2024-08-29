@@ -98,7 +98,7 @@ const Sustainability = () => {
 
       return () => clearInterval(interval);
     }
-  }, [inView]);
+  }, [inView, sustainabilityPillars.length]);
 
   return (
     <Flex
