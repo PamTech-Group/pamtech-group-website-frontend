@@ -192,7 +192,7 @@ const Solution = () => {
               Autoland
             </Heading>
             <Text mb="1.5rem">
-              "Autoland is changing the game in vehicle purchasing, providing a
+              Autoland is changing the game in vehicle purchasing, providing a
               streamlined and user-friendly experience for customers.
             </Text>
 
