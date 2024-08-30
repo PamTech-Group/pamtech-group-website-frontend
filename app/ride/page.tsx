@@ -54,9 +54,10 @@ const Ride = () => {
               Pamtech Luxury Ride
             </Heading>
             <Text fontWeight={500} width={{ base: "100%", md: "80%", xl:'50%'  }} textAlign="justify" fontSize={textFontSize}>
-              Lorem ipsum dolor sit amet consectetur. Tincidunt ac elit
-              ullamcorper nibh in. Id pretium amet sem eli t nunc maecenas at
-              facilisi. nibh
+            Experience luxury and comfort with Pamtech Luxury Ride. 
+We offer a fleet of premium vehicles for your personal or 
+corporate needs, ensuring a stylish ride every time.
+
             </Text>
             <ButtonMain text="Talk to us" />
           </Flex>
