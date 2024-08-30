@@ -14,37 +14,37 @@ const Industries = () => {
       image: oilandGas,
       title: "Oil and Gas",
       description:
-        "Pamtech Group is a key player in the oil and gas sector, offering high-quality petroleum products and essential services for smooth industry operations.",
+        "Pamtech Group is deeply integrated into the oil and gas industry, providing premium petroleum products and essential services that are vital for the sector's operations.",
     },
     {
       image: banking,
       title: "Banking",
       description:
-        "Their specialized services include fuel supply for ATMs, bank branches, and vehicle maintenance for bank fleets, ensuring seamless business operations.",
+        "Our tailored services include fuel supply for ATMs and bank branches, as well as vehicle maintenance for bank fleets.",
     },
     {
       image: health,
       title: "Health Care",
       description:
-        "Pamtech ensures hospitals have reliable fuel for emergency generators and maintains ambulances to be always ready for emergencies.",
+        "Pamtech Group provides reliable fuel for healthcare emergency generators and maintains ambulances, ensuring critical equipment and medical vehicles are always ready for emergencies.",
     },
     {
       image: media,
       title: "Media",
       description:
-        "In the media industry, Pamtech helps clients build brand presence and engage their audience with creative, results-driven strategies.",
+        "In the media industry, content is king, and our expert team helps clients build brand presence and drive engagement with creative, results-driven strategies.",
     },
     {
       image: government,
       title: "Government Parastals",
       description:
-        "Pamtech Group is crucial to the oil and gas industry, delivering premium petroleum products and vital services that support operational efficiency.",
+        "Pamtech Group supplies premium petroleum products and essential services to government parastatals, ensuring smooth and efficient operations.",
     },
     {
       image: you,
-      title: "You",
+      title: "Business Owners",
       description:
-        "They provide auto repair services and quality parts, enhancing vehicle performance for individual and business customers while also offering reliable transportation solutions.",
+        "We also supply premium petroleum products and services to individual businesses, ensuring operational efficiency and reliable fuel solutions.",
     },
   ];
   return (
@@ -58,8 +58,8 @@ const Industries = () => {
           Industries that trust our services
         </Text>
         <Text color="textGrey" fontSize="1.2rem">
-          Pamtech group tailored registrar services, enhancing efficiency and
-          compliance across various industries.
+        Our deep expertise across various fields allows us to deliver top-quality services and products that drive efficiency, innovation, and sustainable growth.
+
         </Text>
       </VStack>
       {/* Cards*/}
