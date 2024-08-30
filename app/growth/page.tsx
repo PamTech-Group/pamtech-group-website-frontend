@@ -1,32 +1,44 @@
 "use client";
-import { Box, Flex, Heading, SimpleGrid, Text, VStack } from "@chakra-ui/react";
+import { Box, Flex, Heading, SimpleGrid, Text, VStack, useBreakpointValue } from "@chakra-ui/react";
 import React from "react";
 import Nav from "../components/major/Nav";
 import Sustainability from "../components/minor/Sustainability";
 import Footer from "../components/major/Footer";
+import theme from "../theme";
 
 const Growth = () => {
+  const contentPadding = useBreakpointValue({
+    base: "2rem 1rem",
+    sm: "2rem 2rem",
+    md: "2rem 4rem",
+    lg: "2rem 6rem",
+    xl: "2rem 8rem",
+  });
+  const headingFontSize = useBreakpointValue({ base: "2rem", md: "2.5rem", lg: "3rem" });
+  const textFontSize = useBreakpointValue({ base: "1rem", md: "1.1rem", lg: "1.2rem" });
+  const yearFontSize = useBreakpointValue({ base: "1.2rem", md: "1.3rem", lg: "1.5rem" });
+
   return (
     <Box bg="#FFFFFF">
       <Box
         bgPosition="center"
         bgColor="#0F1010"
-        height="100vh"
-        width="100vw"
+        minHeight={{ base: "auto", md: "100vh" }}
+        width="100%"
         color="#F7F7F7">
-        <Box height="inherit" width="inherit" padding="2rem 8rem">
+        <Box height="100%" width="100%" padding={contentPadding}>
           <Nav />
-          <Flex height="100%" width="100%" alignItems="center">
+          <Flex height={{ base: "auto", md: "calc(100vh - 80px)" }} width="100%" alignItems="center" paddingY={{ base: "4rem", md: "0" }}>
             <Flex
               flexDir="column"
               justifyContent="center"
               gap="2rem"
-              width="50%">
-              <Heading fontSize="3rem" fontWeight={500}>
+              width={{ base: "100%", md: "70%", lg: "50%" }}>
+              <Heading fontSize={headingFontSize} fontWeight={500}>
                 Identifying Opportunities, <br />
                 creating value
               </Heading>
-              <Text width="80%" fontSize="1.2rem">
+              <Text width={{ base: "100%", md: "80%" }} fontSize={textFontSize}>
                 {`We are in the business of making our products viable for our
                 stakeholders at various levels. By being part of the Pamtech
                 Group, you're putting yourself on the path of profit.`}
@@ -36,78 +48,27 @@ const Growth = () => {
         </Box>
       </Box>
       <SimpleGrid
-        columns={2}
+        columns={{ base: 1, md: 2 }}
         spacingX="4rem"
         spacingY="2rem"
         color="textGrey"
-        padding="2rem 8rem"
+        padding={contentPadding}
         my="4rem">
-        <Flex flexDirection="column">
-          <Text fontWeight={500} fontSize="1.5rem">
-            2018
-          </Text>
-          <Text fontWeight={300} fontSize="1rem">
-            Lorem ipsum dolor sit amet consectetur. Malesuada pellentesque arcu
-            enim tortor vulputate ac enim sed aliquam. Quis in nisl purus
-            feugiat tellus eu porttitor mollis. Euismod massa amet et posuere
-            amet vel. Aliquet dictum vulputate suspendisse congue
-          </Text>
-        </Flex>
-        <Flex flexDirection="column">
-          <Text fontWeight={500} fontSize="1.5rem">
-            2019
-          </Text>
-          <Text fontWeight={300} fontSize="1rem">
-            Lorem ipsum dolor sit amet consectetur. Malesuada pellentesque arcu
-            enim tortor vulputate ac enim sed aliquam. Quis in nisl purus
-            feugiat tellus eu porttitor mollis. Euismod massa amet et posuere
-            amet vel. Aliquet dictum vulputate suspendisse congue
-          </Text>
-        </Flex>
-        <Flex flexDirection="column">
-          <Text fontWeight={500} fontSize="1.5rem">
-            2020
-          </Text>
-          <Text fontWeight={300} fontSize="1rem">
-            Lorem ipsum dolor sit amet consectetur. Malesuada pellentesque arcu
-            enim tortor vulputate ac enim sed aliquam. Quis in nisl purus
-            feugiat tellus eu porttitor mollis. Euismod massa amet et posuere
-            amet vel. Aliquet dictum vulputate suspendisse congue
-          </Text>
-        </Flex>
-        <Flex flexDirection="column">
-          <Text fontWeight={500} fontSize="1.5rem">
-            2021
-          </Text>
-          <Text fontWeight={300} fontSize="1rem">
-            Lorem ipsum dolor sit amet consectetur. Malesuada pellentesque arcu
-            enim tortor vulputate ac enim sed aliquam. Quis in nisl purus
-            feugiat tellus eu porttitor mollis. Euismod massa amet et posuere
-            amet vel. Aliquet dictum vulputate suspendisse congue
-          </Text>
-        </Flex>
-        <Flex flexDirection="column">
-          <Text fontWeight={500} fontSize="1.5rem">
-            2022
-          </Text>
-          <Text fontWeight={300} fontSize="1rem">
-            Lorem ipsum dolor sit amet consectetur. Malesuada pellentesque arcu
-            enim tortor vulputate ac enim sed aliquam. Quis in nisl purus
-            feugiat tellus eu porttitor mollis. Euismod massa amet et posuere
-            amet vel. Aliquet dictum vulputate suspendisse congue
-          </Text>
-        </Flex>
-        <Flex flexDirection="column">
-          <Text fontWeight={500} fontSize="1.5rem">
-            2023
-          </Text>
-          <Text fontWeight={300} fontSize="1rem">
-            Lorem ipsum dolor sit amet consectetur. Malesuada pellentesque arcu
-            enim tortor vulputate ac enim sed aliquam. Quis in nisl purus
-            feugiat tellus eu porttitor mollis. Euismod massa amet et posuere
-            amet vel. Aliquet dictum vulputate suspendisse congue
-          </Text>
-        </Flex>
+       
+        {["2016", "2017", "2018", "2019"].map((year) => (
+          <Flex key={year} flexDirection="column" marginBottom={{ base: "2rem", md: "0" }}>
+            <Text fontWeight={500} fontSize={yearFontSize} marginBottom="1rem">
+              {year}
+            </Text>
+            <Text fontWeight={300} fontSize={textFontSize}>
+              Lorem ipsum dolor sit amet consectetur. Malesuada pellentesque arcu
+              enim tortor vulputate ac enim sed aliquam. Quis in nisl purus
+              feugiat tellus eu porttitor mollis. Euismod massa amet et posuere
+              amet vel. Aliquet dictum vulputate suspendisse congue
+            </Text>
+          </Flex>
+        ))}
+       
       </SimpleGrid>
       <Box
         mb="4rem"
@@ -116,12 +77,13 @@ const Growth = () => {
         outline=".2px solid rgba(51, 51, 51, 0.2)"
       />
       <SimpleGrid
-        columns={2}
-        padding="2rem 8rem"
+        columns={{ base: 1, xl: 2 }}
+        padding={contentPadding}
         spacingX="4rem"
+        spacingY="2rem"
         color="textGrey"
-        fontSize="1rem">
-        <Heading fontWeight={500} fontSize="2.5rem">
+        fontSize={textFontSize}>
+        <Heading fontWeight={500} fontSize={headingFontSize} marginBottom={{ base: "2rem", md: "0" }}>
           Why you should partner with pamtech group
         </Heading>
         <Flex flexDirection="column" gap="1.5rem">
@@ -153,46 +115,43 @@ const Growth = () => {
           </Text>
         </Flex>
       </SimpleGrid>
-      <VStack align="left" my="4rem" padding="2rem 8rem" width="50%">
-        <Text fontWeight={500} fontSize="2.5rem" color="primaryOrange">
+      <VStack align="left" my="4rem" padding={contentPadding} width={{ base: "100%",  lg: "70%", xl:'50%' }}>
+        <Text fontWeight={500} fontSize={headingFontSize} color="primaryOrange">
           News Room
         </Text>
-        <Text color="#171717" fontSize="1.5rem" fontWeight={500}>
+        <Text color="#171717" fontSize={yearFontSize} fontWeight={500}>
           Stay Informed with Pamtech Group
         </Text>
-        <Text color="textGrey" fontSize="1rem">
+        <Text color="textGrey" fontSize={textFontSize}>
           As a diversified and fully integrated conglomerate, our interest in
           multiple industries indicates our determination to cater to our vision
-          of empowering success through committed service to humanity. 
+          of empowering success through committed service to humanity. 
         </Text>
       </VStack>
       <Flex
-        width="20rem"
-        height="24rem" // Set a fixed height for the card
-        mx="3rem"
-        borderRadius="lg"
+        width={{ base: "90%", sm: "80%", md: "20rem" }}
+        height="24rem"
+        mx="auto"
+        mb="4rem"
+        borderRadius={theme.customBorderRadius}
         flexDirection="column"
-        justifyContent="space-between" // Distribute space evenly
+        justifyContent="space-between"
         bgColor="rgba(241, 241, 248, .4)"
         outline="1px solid rgba(141, 139, 139, .4)">
         <Flex
           flexDirection="column"
           padding="1rem 1.5rem"
           gap="1rem"
-          flexGrow={1} // Allow the text content to grow and shrink as needed
-          overflow="hidden" // Hide overflow content
+          flexGrow={1}
+          overflow="hidden"
         >
           <Box mt="auto">
-            {" "}
-            {/* Ensures the image is at the bottom */}
             {/* <Image src={} alt={} /> */}
           </Box>
-          <Text color="#171717" fontWeight={500} fontSize="1.5rem">
+          <Text color="#171717" fontWeight={500} fontSize={yearFontSize}>
             {}
           </Text>
-          <Text color="textGrey" noOfLines={5}>
-            {" "}
-            {/* Limit description to 3 lines */}
+          <Text color="textGrey" noOfLines={5} fontSize={textFontSize}>
             {}
           </Text>
         </Flex>
