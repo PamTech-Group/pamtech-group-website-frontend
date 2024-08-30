@@ -23,7 +23,6 @@ const About = () => {
             right="6%"
             top={{
               base: "5%",
-             
               dxl: '10%',
               ddxl: "30%",
             }}

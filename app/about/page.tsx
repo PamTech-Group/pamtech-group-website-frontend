@@ -113,7 +113,7 @@ const AboutPage = () => {
             alignItems="center"
             justifyContent={{
               base: "center",
-              md: "space-between",
+              dxl: "space-around",
               ddxl: "space-around",
             }}>
             <Flex
@@ -139,12 +139,13 @@ const AboutPage = () => {
               <Box
                 className={`fade ${isFading ? "fade-out" : "fade-in"}`}
                 position="relative"
-                width={400}
-                height={400}>
+               >
                 <Image
+                  height={500}
+                
                   src={heroImages[currentImageIndex].image}
                   alt={heroImages[currentImageIndex].alt}
-                  fill
+                  
                   style={{ objectFit: "cover" }}
                 />
               </Box>
