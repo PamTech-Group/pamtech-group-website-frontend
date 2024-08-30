@@ -26,8 +26,8 @@ import ButtonMain from "../minor/ButtonMain";
 const carouselData = [
   {
     bg: bg,
-    heading: "Committed Service to Humanity",
-    text: "With a strong commitment to serving humanity, Pamtech Group has built a diverse portfolio in the oil and gas, media, and automotive industries.",
+    heading: "Excellence is a Way of Life at Pamtech Group",
+    text: "We serve humanity with a diverse portfolio in oil and gas, media, and automotive industries.",
   },
   {
     bg: bg2,
@@ -91,12 +91,18 @@ const SlideContent: React.FC<SlideContentProps> = ({ bg, heading, text }) => {
         backgroundImage={`url(${bg.src})`}
         bgSize="cover"
         bgPosition="center"
-        height="100vh"
+        height={{
+          base:'80vh',
+          xl: '100vh'
+        }}
         color="#F7F7F7"
       >
         <Flex
           mt={{ base: "5rem", md: "3rem" }}
-          height="100%"
+          height={{
+            base: '90%',
+            xl: '100%'
+          }}
           flexDir="column"
           justifyContent="center"
           textAlign={{
