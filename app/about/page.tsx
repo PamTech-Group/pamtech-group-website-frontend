@@ -4,9 +4,9 @@ import React, { useEffect } from "react";
 import Nav from "../components/major/Nav";
 import Image from "next/image";
 import ceo from "../../public/ceo1.webp";
-import gm from "../../public/GM.webp";
-import deacon from "../../public/Deacon.webp";
-import buchi from "../../public/buchi.webp";
+import gm from "../../public/gm.png"
+import deacon from "../../public/deacon.png";
+import buchi from "../../public/buchi.png";
 import somi from "../../public/somi.webp";
 import bro from "../../public/bro.webp";
 import akay from "../../public/akay.webp";
