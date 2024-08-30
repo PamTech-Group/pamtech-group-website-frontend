@@ -2,15 +2,14 @@
 import { Box, Button, Flex, Heading, SimpleGrid, Text } from "@chakra-ui/react";
 import React, { useEffect } from "react";
 import Nav from "../components/major/Nav";
-import Image from "next/image";
 import ceo from "../../public/ceo1.webp";
 import gm from "../../public/gm.png"
 import deacon from "../../public/deacon.png";
 import buchi from "../../public/buchi.png";
-import somi from "../../public/somi.webp";
-import bro from "../../public/bro.webp";
-import akay from "../../public/akay.webp";
-import praise from "../../public/praise.webp";
+import somi from "../../public/somi.png";
+import bro from "../../public/bro.png";
+import akay from "../../public/akay.png";
+import praise from "../../public/praise.png";
 import value1 from "../../public/value1.webp";
 import value2 from "../../public/value2.webp";
 import value3 from "../../public/value3.webp";
@@ -20,6 +19,7 @@ import value5 from "../../public/value5.webp";
 import Footer from "../components/major/Footer";
 import Sustainability from "../components/minor/Sustainability";
 import { useState } from "react";
+import { Image } from "@chakra-ui/next-js";
 
 const AboutPage = () => {
   const heroImages = [
@@ -91,7 +91,7 @@ const AboutPage = () => {
         );
         setIsFading(false);
       }, 500); // Match the fade-out duration
-    }, 1000); // 4-second interval
+    }, 2000); // 2-second interval
 
     return () => clearInterval(interval);
   }, [heroImages.length]);
@@ -141,7 +141,8 @@ const AboutPage = () => {
                 position="relative"
                >
                 <Image
-                  height={500}
+                  height='600'
+
                 
                   src={heroImages[currentImageIndex].image}
                   alt={heroImages[currentImageIndex].alt}
