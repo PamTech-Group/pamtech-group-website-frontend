@@ -22,8 +22,8 @@ const About = () => {
             bgColor="#F5F8FF"
             right="6%"
             top={{
-              base: "30%",
-              dddxl: "45%",
+              base: "10%",
+              "2xl": "75%",
             }}
             padding="2rem 5rem"
             width="40%">

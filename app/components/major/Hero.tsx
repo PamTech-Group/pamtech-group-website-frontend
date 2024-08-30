@@ -1,6 +1,6 @@
 import { Box, Button, Flex, Heading, Text } from "@chakra-ui/react";
 import bg from "../../../public/hero1.webp";
-import bg2 from "../../../public/hero2.webp";
+import bg2 from "../../../public/hero2.png";
 import bg3 from "../../../public/hero3.webp";
 import bg4 from "../../../public/hero4.webp";
 import bg5 from "../../../public/hero5.webp";
@@ -65,6 +65,7 @@ const SlideContent: React.FC<SlideContentProps> = ({ bg, heading, text }) => (
       height="100vh"
       color="#F7F7F7">
       <Flex
+        mt='3rem'
         height="100%"
         flexDir="column"
         justifyContent="center"

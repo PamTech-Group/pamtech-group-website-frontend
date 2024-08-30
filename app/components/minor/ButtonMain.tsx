@@ -10,7 +10,7 @@ interface ButtonMainProps {
 const ButtonMain: React.FC<ButtonMainProps> = ({ text }) => {
   return (
     <Button
-      my="1.5rem"
+      mt="4rem"
       width="fit-content"
       padding={theme.buttonPadding}
       bgColor="primaryOrange"
