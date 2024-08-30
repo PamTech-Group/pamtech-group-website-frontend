@@ -1,4 +1,4 @@
-import { Box, Flex, Text, VStack } from "@chakra-ui/react";
+import { Box, Flex, Text, useBreakpointValue, VStack } from "@chakra-ui/react";
 import Image from "next/image";
 import Marquee from "react-fast-marquee";
 
@@ -9,6 +9,21 @@ import media from "../../../public/mediaIndustries.webp";
 import government from "../../../public/government.webp";
 import you from "../../../public/you.webp";
 const Industries = () => {
+  const contentPadding = useBreakpointValue({
+    base: "1rem",
+    sm: "1.5rem",
+    md: "2rem 4rem",
+    lg: "2rem 6rem",
+    xl: "2rem 8rem",
+  });
+  const headingFontSize = useBreakpointValue({
+    base: "1.5rem",
+    md: "2rem",
+    lg: "2.5rem",
+  });
+  const textFontSize = useBreakpointValue({ base: "1rem", md: "1.2rem" });
+  const cardWidth = useBreakpointValue({ base: "18rem", md: "20rem" });
+  const cardHeight = useBreakpointValue({ base: "22rem", md: "24rem" });
   const industries = [
     {
       image: oilandGas,
@@ -50,51 +65,49 @@ const Industries = () => {
   return (
     <>
       {/* Industries Section */}
-      <VStack align="left" my="4rem" padding="2rem 8rem" width="50%">
-        <Text fontWeight={500} fontSize="2rem" color="primaryOrange">
+      <VStack align="left" my="4rem" padding={contentPadding} width={{ base: "100%", md: "80%", lg: "50%" }}>
+        <Text fontWeight={500} fontSize={textFontSize} color="primaryOrange">
           Industries We Serve
         </Text>
-        <Text color="#171717" fontSize="2.5rem" fontWeight={500}>
+        <Text color="#171717"fontSize={headingFontSize} fontWeight={500}>
           Industries that trust our services
         </Text>
-        <Text color="textGrey" fontSize="1.2rem">
+        <Text color="textGrey" fontSize={textFontSize}>
         Our deep expertise across various fields allows us to deliver top-quality services and products that drive efficiency, innovation, and sustainable growth.
 
         </Text>
       </VStack>
       {/* Cards*/}
-      <Flex padding="2rem 8rem" gap="4rem">
-        <Marquee>
+      <Flex padding={contentPadding} >
+        <Marquee gradientWidth={50}>
           {industries.map((industry) => (
             <Flex
               key={industry.title}
-              width="20rem"
-              height="24rem" // Set a fixed height for the card
+              width={cardWidth}
+                height={cardHeight}// Set a fixed height for the card
               mx="1rem"
               borderRadius="lg"
               flexDirection="column"
               justifyContent="space-between" // Distribute space evenly
               bgColor="rgba(241, 241, 248, .4)"
-              outline="1px solid rgba(141, 139, 139, .4)">
+              outline="1px solid rgba(141, 139, 139, .4)"   overflow="hidden">
               <Flex
                 flexDirection="column"
                 padding="1rem 1.5rem"
                 gap="1rem"
                 flexGrow={1} // Allow the text content to grow and shrink as needed
-                overflow="hidden" // Hide overflow content
+                overflow="hidden" 
               >
-                <Text color="#171717" fontWeight={500} fontSize="1.5rem">
+                <Text color="#171717" fontWeight={500} fontSize={{ base: "1.2rem", md: "1.5rem" }}>
                   {industry.title}
                 </Text>
-                <Text color="textGrey" noOfLines={5}>
-                  {" "}
-                  {/* Limit description to 3 lines */}
+                <Text color="textGrey" fontSize={textFontSize} noOfLines={5}>
+
                   {industry.description}
                 </Text>
               </Flex>
               <Box mt="auto">
-                {" "}
-                {/* Ensures the image is at the bottom */}
+              
                 <Image src={industry.image} alt={industry.title} />
               </Box>
             </Flex>
