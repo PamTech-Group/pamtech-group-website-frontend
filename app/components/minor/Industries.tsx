@@ -70,7 +70,7 @@ const Industries = () => {
               key={industry.title}
               width="20rem"
               height="24rem" // Set a fixed height for the card
-              mx="3rem"
+              mx="1rem"
               borderRadius="lg"
               flexDirection="column"
               justifyContent="space-between" // Distribute space evenly
