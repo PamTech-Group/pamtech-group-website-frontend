@@ -21,17 +21,17 @@ import Sustainability from "../components/minor/Sustainability";
 import Footer from "../components/major/Footer";
 import {
   FaFacebookSquare,
-  FaInstagramSquare,
+
   FaLinkedin,
   FaTiktok,
-  FaWhatsappSquare,
+ 
   FaYoutube,
 } from "react-icons/fa";
 import {
   FaInstagram,
-  FaTwitter,
+  
   FaWhatsapp,
-  FaX,
+
   FaXTwitter,
 } from "react-icons/fa6";
 

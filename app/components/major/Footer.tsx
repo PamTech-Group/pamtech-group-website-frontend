@@ -15,7 +15,6 @@ import {
   FaFacebook,
   FaInstagram,
   FaLinkedin,
-  FaTwitter,
   FaYoutube,
 } from "react-icons/fa";
 import logo from "../../../public/logo.webp";
@@ -24,6 +23,7 @@ import { GrApple } from "react-icons/gr";
 import phone from "../../../public/esolution.webp";
 import { Image, Link } from "@chakra-ui/next-js";
 import theme from "@/app/theme";
+import { FaXTwitter } from "react-icons/fa6";
 const Footer = () => {
   
   const contentPadding = useBreakpointValue({
@@ -33,7 +33,6 @@ const Footer = () => {
     lg: "2rem 6rem",
     xl: "2rem 8rem",
   });
-  const flexDirection = useBreakpointValue({ base: "column", md: "row" });
   const textAlign = useBreakpointValue({ base: "center", md: "left" }) as ResponsiveValue<CanvasTextAlign>;
   const headingFontSize = useBreakpointValue({ base: "1.8rem", md: "2.2rem", lg: "2.5rem" });
   const textFontSize = useBreakpointValue({ base: "1rem", md: "1.1rem", lg: "1.2rem" });
@@ -226,7 +225,7 @@ const Footer = () => {
                   as="a"
                   href="#"
                   aria-label="Twitter"
-                  icon={<FaTwitter fontSize="1.5rem" />}
+                  icon={<FaXTwitter fontSize="1.5rem" />}
                   bg="gray.100"
                   color="black"
                   rounded="5px"

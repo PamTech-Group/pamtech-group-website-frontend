@@ -13,9 +13,9 @@ import {
   FaFacebook,
   FaInstagram,
   FaLinkedin,
-  FaTwitter,
   FaYoutube,
 } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 
 const Dropdown = () => {
   return (
@@ -78,7 +78,7 @@ const Dropdown = () => {
             as="a"
             href="#"
             aria-label="Twitter"
-            icon={<FaTwitter fontSize="1.5rem" />}
+            icon={<FaXTwitter fontSize="1.5rem" />}
             bg="gray.100"
             color="#171717"
             rounded="5px"

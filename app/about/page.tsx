@@ -1,7 +1,13 @@
 "use client";
-import { Box, Button, Flex, Heading, SimpleGrid, Text } from "@chakra-ui/react";
-import React, { useEffect } from "react";
+import { Box, Button, Flex, Heading, SimpleGrid, Text, useBreakpointValue } from "@chakra-ui/react";
+import React, { useEffect, useState } from "react";
 import Nav from "../components/major/Nav";
+import Footer from "../components/major/Footer";
+import Sustainability from "../components/minor/Sustainability";
+import { Image } from "@chakra-ui/next-js";
+import theme from "../theme";
+
+// Import images
 import ceo from "../../public/ceo1.webp";
 import gm from "../../public/gm.png";
 import deacon from "../../public/deacon.png";
@@ -17,72 +23,29 @@ import value4 from "../../public/value4.webp";
 import value5 from "../../public/value5.webp";
 import pamtech from "../../public/pamtech-way.png";
 
-import Footer from "../components/major/Footer";
-import Sustainability from "../components/minor/Sustainability";
-import { useState } from "react";
-import { Image } from "@chakra-ui/next-js";
-
 const AboutPage = () => {
   const heroImages = [
-    {
-      image: ceo,
-      alt: "ceo",
-    },
-    {
-      image: gm,
-      alt: "general manager",
-    },
-    {
-      image: deacon,
-      alt: "director3",
-    },
-    {
-      image: buchi,
-      alt: "director4",
-    },
-    {
-      image: somi,
-      alt: "director5",
-    },
-    {
-      image: bro,
-      alt: "director6",
-    },
-    {
-      image: akay,
-      alt: "director7",
-    },
-    {
-      image: praise,
-      alt: "director8",
-    },
+    { image: ceo, alt: "ceo" },
+    { image: gm, alt: "general manager" },
+    { image: deacon, alt: "director3" },
+    { image: buchi, alt: "director4" },
+    { image: somi, alt: "director5" },
+    { image: bro, alt: "director6" },
+    { image: akay, alt: "director7" },
+    { image: praise, alt: "director8" },
   ];
+
   const values = [
-    {
-      image: value1,
-      text: "Intergrity",
-    },
-    {
-      image: value2,
-      text: "Excellence",
-    },
-    {
-      image: value3,
-      text: "Customer Satisfaction",
-    },
-    {
-      image: value4,
-      text: "Team Work",
-    },
-    {
-      image: value5,
-      text: "Work Ethics",
-    },
+    { image: value1, text: "Integrity" },
+    { image: value2, text: "Excellence" },
+    { image: value3, text: "Customer Satisfaction" },
+    { image: value4, text: "Team Work" },
+    { image: value5, text: "Work Ethics" },
   ];
+
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [isFading, setIsFading] = useState(false);
 
-  // Automatically change the image every 4 seconds
   useEffect(() => {
     const interval = setInterval(() => {
       setIsFading(true);
@@ -91,44 +54,57 @@ const AboutPage = () => {
           prevIndex === heroImages.length - 1 ? 0 : prevIndex + 1
         );
         setIsFading(false);
-      }, 500); // Match the fade-out duration
-    }, 2000); // 2-second interval
+      }, 500);
+    }, 2000);
 
     return () => clearInterval(interval);
   }, [heroImages.length]);
+
+  const contentPadding = useBreakpointValue({
+    base: "1rem",
+    sm: "1.5rem",
+    md: "2rem 4rem",
+    lg: "2rem 6rem",
+    xl: "2rem 8rem",
+  });
+
+  const headingFontSize = useBreakpointValue({ base: "2rem", md: "2.5rem", lg: "3rem" });
+  const textFontSize = useBreakpointValue({ base: "1rem", md: "1.1rem", lg: "1.2rem" });
+  const imageHeight = useBreakpointValue({ base: 400, md: 500, lg: 600 });
+
   return (
     <Box bgColor="#FFFFFF" overflow="hidden">
       {/* HERO SECTION */}
       <Box
         bgPosition="center"
         bgColor="#0F1010"
-        height="100vh"
+        height={{ base: "auto", md: "100vh" }}
         width="100vw"
         color="#F7F7F7"
         position="relative"
       >
-        <Box height="inherit" width="inherit" padding="2rem 8rem">
+        <Box height="inherit" width="inherit" padding={contentPadding}>
           <Nav />
           <Flex
             height="100%"
             width="100%"
             alignItems="center"
-            justifyContent={{
-              base: "center",
-              dxl: "space-around",
-              ddxl: "space-around",
-            }}
+            justifyContent={{ base: "center", md: "space-around" }}
+            flexDirection={{ base: "column", md: "row" }}
+            gap={{ base: "2rem", md: "0" }}
+            paddingY={{ base: "2rem", md: "0" }}
           >
             <Flex
               flexDir="column"
               justifyContent="center"
               gap="2rem"
-              width="50%"
+              width={{ base: "100%", md: "50%" }}
+              textAlign={{ base: "center", md: "left" }}
             >
-              <Heading fontSize="3rem" fontWeight={500}>
+              <Heading fontSize={headingFontSize} fontWeight={500}>
                 Meet <br /> Pamtech Group
               </Heading>
-              <Text width="80%" fontSize="1.2rem">
+              <Text width={{ base: "100%", md: "80%" }} fontSize={textFontSize}>
                 At our core, we are committed to empowering success and
                 prosperity for all. We deliver innovative and beneficial
                 solutions designed to drive growth and unlock potential.
@@ -136,47 +112,56 @@ const AboutPage = () => {
             </Flex>
 
             <Flex
-              marginTop={{
-                base: "0rem",
-                ddxl: "0rem",
-              }}
+              marginTop={{ base: "2rem", md: "0" }}
+              justifyContent={{ base: "center", md: "flex-end" }}
+              width={{ base: "100%", md: "50%" }}
             >
-              <Box
+              <Flex
+              justifyContent='center'
                 className={`fade ${isFading ? "fade-out" : "fade-in"}`}
                 position="relative"
+                width={{ base: "100%", md: "100%" }}
               >
                 <Image
-                  height="600"
+                  height={imageHeight}
                   src={heroImages[currentImageIndex].image}
                   alt={heroImages[currentImageIndex].alt}
-                  style={{ objectFit: "cover" }}
+                  style={{ objectFit: "cover", width: "100%" }}
                 />
-              </Box>
+              </Flex>
             </Flex>
           </Flex>
         </Box>
       </Box>
-      {/* BODY */}
 
-    
-<Flex width='100%' padding='2rem 8rem'  color='textGrey' my='4rem' justifyContent='space-between' alignItems='center'>
-<Box width='50%'>
-  <Image src={pamtech} alt="pamtech way"/>
-</Box>
-<Box width='50%'>
-  <Text textAlign='justify' fontWeight={500} fontSize='1.2rem'>
-  Our culture is built on the biblical cornerstones and
-principles of doing business in accordance with the ways
-of God. We strive to be a beacon of light; bringing value
-and prosperity to everyone we encounter.
-  </Text>
-</Box>
-</Flex>
-      <Box
-        padding={{ base: "2rem 8rem", md: "4rem 8rem" }}
+      {/* BODY */}
+      <Flex
+        width="100%"
+        padding={contentPadding}
         color="textGrey"
         my="4rem"
+        justifyContent="space-between"
+        alignItems="center"
+        flexDirection={{ base: "column", md: "row" }}
+        gap={{ base: "2rem", md: "0" }}
       >
+        <Flex justifyContent={{
+          base: 'center',
+          md: 'initial'
+        }} width={{ base: "50%", md: "100%" }}>
+          <Image src={pamtech} alt="pamtech way" style={{ width: "100%", height: "auto" }} />
+        </Flex>
+        <Box width={{ base: "100%", md: "50%" }}>
+          <Text textAlign="justify" fontWeight={500} fontSize={textFontSize}>
+            Our culture is built on the biblical cornerstones and
+            principles of doing business in accordance with the ways
+            of God. We strive to be a beacon of light; bringing value
+            and prosperity to everyone we encounter.
+          </Text>
+        </Box>
+      </Flex>
+
+      <Box padding={contentPadding} color="textGrey" my="4rem">
         {/* Vision and Mission Section */}
         <Flex
           direction={{ base: "column", md: "row" }}
@@ -191,16 +176,18 @@ and prosperity to everyone we encounter.
             bg="#F1F1F1"
             padding="2rem"
             boxShadow="md"
-            height="12rem"
+            height={{ base: "auto", md: "12rem" }}
             borderRadius="lg"
             textAlign="center"
           >
-            <Heading fontSize="2.5rem" fontWeight={500} marginBottom="1rem">
+            <Heading fontSize={headingFontSize} fontWeight={500} marginBottom="1rem">
               Vision
             </Heading>
-            <Text fontWeight={400} fontSize="1.2rem">
-              {`Empowering customers' success through excellent services and
-              innovative solutions.`}
+            <Text fontWeight={400} fontSize={textFontSize}>
+            {`
+             Empowering customers' success through excellent services and
+              innovative solutions.
+            `} 
             </Text>
           </Box>
 
@@ -209,15 +196,15 @@ and prosperity to everyone we encounter.
             width={{ base: "100%", md: "45%" }}
             bg="#F1F1F1"
             padding="2rem"
-            height="12rem"
+            height={{ base: "auto", md: "12rem" }}
             boxShadow="md"
             borderRadius="lg"
             textAlign="center"
           >
-            <Heading fontSize="2.5rem" fontWeight={500} marginBottom="1rem">
+            <Heading fontSize={headingFontSize} fontWeight={500} marginBottom="1rem">
               Mission
             </Heading>
-            <Text fontWeight={400} fontSize="1.2rem">
+            <Text fontWeight={400} fontSize={textFontSize}>
               Delivering the most innovative solutions with integrity, passion,
               and expertise.
             </Text>
@@ -226,15 +213,19 @@ and prosperity to everyone we encounter.
 
         {/* Core Values Section */}
         <Box textAlign="center" my="4rem">
-          <Heading fontSize="2.5rem" fontWeight={500}>
+          <Heading fontSize={headingFontSize} fontWeight={500}>
             Core Values
           </Heading>
         </Box>
         <SimpleGrid
-          columns={{ base: 2, md: 5 }}
+          columns={{ base: 2, md: 3, lg: 4, dxl: 5 }}
           spacing="1.5rem"
           justifyItems="center"
-          px="2rem"
+          px={{
+            base: '.5rem',
+            md:'1rem',
+            lg:'1.5rem'
+          }}
         >
           {values.map((value, index) => (
             <Flex
@@ -244,13 +235,19 @@ and prosperity to everyone we encounter.
                   ? "#00030C"
                   : "#F1F1F1"
               }
-              padding="1.5rem"
+              padding="1rem"
               borderRadius="md"
               flexDirection="column"
               alignItems="center"
               justifyContent="center"
-              height="8rem"
-              width="12rem"
+              height={{
+                base: '7.5rem',
+                md: '8rem'
+              }}
+              width={{
+                base: '8rem',
+                md: '12rem'
+              }}
               boxShadow="md"
               transition="0.3s"
               _hover={{ transform: "scale(1.08)" }}
@@ -258,12 +255,11 @@ and prosperity to everyone we encounter.
               <Image
                 src={value.image}
                 alt={value.text}
-                width={40}
-                height={40}
+                style={{ objectFit: "cover", width: "auto", height: "auto" }}
               />
               <Text
                 textAlign="center"
-                fontSize="1rem"
+                fontSize={textFontSize}
                 fontWeight="500"
                 mt="0.5rem"
                 color={
@@ -286,52 +282,35 @@ and prosperity to everyone we encounter.
           color="#F1F1F1"
           height="100%"
         >
-          <Heading my="2rem">Our History</Heading>
-          <Flex justifyContent="space-between" gap="3rem">
+          <Heading my="2rem" fontSize={headingFontSize}>Our History</Heading>
+          <Flex justifyContent="space-between" gap="3rem" flexDirection={{ base: "column", md: "row" }}>
             <Flex flexDirection="column" gap="2rem" height="100%">
-              <Text>
-                {`In 2016, Pamtech Group was founded with a mission to render committed service to humanity starting with petroleum distribution in the downstream sector of the oil and gas industry. The company's reputation for reliability and integrity quickly established us among key industry players, leading to expanded operations and investments in infrastructure and technology.`}
+              <Text fontSize={textFontSize}>
+            {`In 2016, Pamtech Group was founded with a mission to render committed service to humanity starting with petroleum distribution in the downstream sector of the oil and gas industry. The company's reputation for reliability and integrity quickly established us among key industry players, leading to expanded operations and investments in infrastructure and technology.`}
+            
               </Text>
-              <Text>
-                Pamtech Group diversified into the automotive industry with
-                Pamtech Autoland for vehicle maintenance and repairs in 2020 and
-                Pamtech Auto Parts in 2021 for Tokunbo and OEM spare parts,
-                expanding our reach to both individual car owners and large
-                fleet operators.
-              </Text>
-              <Text>
-                Building on our success in the automotive and energy sectors, we
-                continued to diversify our business interests. In 2023, we
-                diversified into the media industry with Pamtech Media, focusing
-                on content and digital marketing for the automotive sector. It
-                quickly became a trusted partner for brands, enhancing their
-                visibility through innovative content.
+              <Text fontSize={textFontSize}>
+                As we grew, we diversified our portfolio, venturing into auto services, spare parts distribution, and media production. Each new venture was driven by our core values and a commitment to excellence, further solidifying our position as a trusted name across multiple sectors.
               </Text>
             </Flex>
-            <Flex flexDirection="column" gap="2rem">
-              <Text>
-                Same 2023, the Pamtech Luxury Ride was also established to meet
-                the demand for premium transportation, offering a fleet of
-                luxury vehicles for personal, corporate, and special events.
+            <Flex flexDirection="column" gap="2rem" height="100%">
+              <Text fontSize={textFontSize}>
+                Today, Pamtech Group stands as a diversified conglomerate, with interests spanning oil and gas, automotive services, media, and technology. Our journey is marked by continuous innovation, strategic partnerships, and a steadfast commitment to our founding principles.
               </Text>
-              <Text>
-                {`In 2024, we developed and launched Petrol Padi, a mobile app
-                offering real-time fuel price information and enabling users to
-                order fuel with timely delivery across Nigeria.  Our impact
-                extends beyond business through the Pamtech Foundation,
-                established in 2016. The foundation focuses on improving lives
-                across Nigeria with educational, entrepreneurial, and community
-                initiatives, reflecting the company’s commitment to giving back.`}
-              </Text>
-              <Text>
-                {`As Pamtech Group grows, we aim to become a leading conglomerate across Africa, driven by innovation and excellence. With a strong foundation of trust and integrity, our journey is one of growth, innovation, and making a societal impact on industries and our communities.`}
+              <Text fontSize={textFontSize}>
+                Looking ahead, we remain dedicated to our mission of empowering success and prosperity for all, constantly seeking new ways to deliver value and drive positive change in the communities we serve.
               </Text>
             </Flex>
           </Flex>
         </Box>
       </Box>
 
-      <Sustainability />
+      {/* Sustainability Section */}
+      <Box>
+        <Sustainability />
+      </Box>
+
+      {/* Footer */}
       <Footer />
     </Box>
   );
