@@ -3,7 +3,7 @@ import { Box, Button, Flex, Heading, SimpleGrid, Text } from "@chakra-ui/react";
 import React, { useEffect } from "react";
 import Nav from "../components/major/Nav";
 import ceo from "../../public/ceo1.webp";
-import gm from "../../public/gm.png"
+import gm from "../../public/gm.png";
 import deacon from "../../public/deacon.png";
 import buchi from "../../public/buchi.png";
 import somi from "../../public/somi.png";
@@ -15,6 +15,7 @@ import value2 from "../../public/value2.webp";
 import value3 from "../../public/value3.webp";
 import value4 from "../../public/value4.webp";
 import value5 from "../../public/value5.webp";
+import pamtech from "../../public/pamtech-way.png";
 
 import Footer from "../components/major/Footer";
 import Sustainability from "../components/minor/Sustainability";
@@ -96,7 +97,7 @@ const AboutPage = () => {
     return () => clearInterval(interval);
   }, [heroImages.length]);
   return (
-    <Box bgColor="#FFFFFF" overflow='hidden'>
+    <Box bgColor="#FFFFFF" overflow="hidden">
       {/* HERO SECTION */}
       <Box
         bgPosition="center"
@@ -104,7 +105,8 @@ const AboutPage = () => {
         height="100vh"
         width="100vw"
         color="#F7F7F7"
-        position="relative">
+        position="relative"
+      >
         <Box height="inherit" width="inherit" padding="2rem 8rem">
           <Nav />
           <Flex
@@ -115,12 +117,14 @@ const AboutPage = () => {
               base: "center",
               dxl: "space-around",
               ddxl: "space-around",
-            }}>
+            }}
+          >
             <Flex
               flexDir="column"
               justifyContent="center"
               gap="2rem"
-              width="50%">
+              width="50%"
+            >
               <Heading fontSize="3rem" fontWeight={500}>
                 Meet <br /> Pamtech Group
               </Heading>
@@ -135,18 +139,16 @@ const AboutPage = () => {
               marginTop={{
                 base: "0rem",
                 ddxl: "0rem",
-              }}>
+              }}
+            >
               <Box
                 className={`fade ${isFading ? "fade-out" : "fade-in"}`}
                 position="relative"
-               >
+              >
                 <Image
-                  height='600'
-
-                
+                  height="600"
                   src={heroImages[currentImageIndex].image}
                   alt={heroImages[currentImageIndex].alt}
-                  
                   style={{ objectFit: "cover" }}
                 />
               </Box>
@@ -155,17 +157,34 @@ const AboutPage = () => {
         </Box>
       </Box>
       {/* BODY */}
+
+    
+<Flex width='100%' padding='2rem 8rem'  color='textGrey' my='4rem' justifyContent='space-between' alignItems='center'>
+<Box width='50%'>
+  <Image src={pamtech} alt="pamtech way"/>
+</Box>
+<Box width='50%'>
+  <Text textAlign='justify' fontWeight={500} fontSize='1.2rem'>
+  Our culture is built on the biblical cornerstones and
+principles of doing business in accordance with the ways
+of God. We strive to be a beacon of light; bringing value
+and prosperity to everyone we encounter.
+  </Text>
+</Box>
+</Flex>
       <Box
         padding={{ base: "2rem 8rem", md: "4rem 8rem" }}
         color="textGrey"
-        my="4rem">
+        my="4rem"
+      >
         {/* Vision and Mission Section */}
         <Flex
           direction={{ base: "column", md: "row" }}
           gap="2rem"
           justifyContent="space-between"
           alignItems="center"
-          marginBottom="6rem">
+          marginBottom="6rem"
+        >
           {/* Vision Card */}
           <Box
             width={{ base: "100%", md: "45%" }}
@@ -174,7 +193,8 @@ const AboutPage = () => {
             boxShadow="md"
             height="12rem"
             borderRadius="lg"
-            textAlign="center">
+            textAlign="center"
+          >
             <Heading fontSize="2.5rem" fontWeight={500} marginBottom="1rem">
               Vision
             </Heading>
@@ -192,7 +212,8 @@ const AboutPage = () => {
             height="12rem"
             boxShadow="md"
             borderRadius="lg"
-            textAlign="center">
+            textAlign="center"
+          >
             <Heading fontSize="2.5rem" fontWeight={500} marginBottom="1rem">
               Mission
             </Heading>
@@ -213,7 +234,8 @@ const AboutPage = () => {
           columns={{ base: 2, md: 5 }}
           spacing="1.5rem"
           justifyItems="center"
-          px="2rem">
+          px="2rem"
+        >
           {values.map((value, index) => (
             <Flex
               key={index}
@@ -231,7 +253,8 @@ const AboutPage = () => {
               width="12rem"
               boxShadow="md"
               transition="0.3s"
-              _hover={{ transform: "scale(1.08)" }}>
+              _hover={{ transform: "scale(1.08)" }}
+            >
               <Image
                 src={value.image}
                 alt={value.text}
@@ -247,7 +270,8 @@ const AboutPage = () => {
                   value.text === "Excellence" || value.text === "Team Work"
                     ? "#F1F1F1"
                     : "textGrey"
-                }>
+                }
+              >
                 {value.text}
               </Text>
             </Flex>
@@ -260,7 +284,8 @@ const AboutPage = () => {
           bgColor="#00030C"
           padding="2.5rem 3rem"
           color="#F1F1F1"
-          height="100%">
+          height="100%"
+        >
           <Heading my="2rem">Our History</Heading>
           <Flex justifyContent="space-between" gap="3rem">
             <Flex flexDirection="column" gap="2rem" height="100%">
