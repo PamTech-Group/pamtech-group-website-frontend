@@ -8,7 +8,7 @@ const config: ThemeConfig = {
 
 const theme = extendTheme({
   config,
-  breakpoints: {
+  breakpoints : {
     base: "0px",
     sm: "320px",
     mini: "500px",
