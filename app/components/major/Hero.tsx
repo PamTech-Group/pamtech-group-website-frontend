@@ -14,8 +14,7 @@ import bg5 from "../../../public/hero5.webp";
 import bg6 from "../../../public/hero6.webp";
 
 import "../../globals.css";
-import theme from "@/app/theme";
-import { BiChevronRight } from "react-icons/bi";
+
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { StaticImageData } from "next/image";

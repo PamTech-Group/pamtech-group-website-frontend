@@ -9,7 +9,12 @@ import Image from "next/image";
 import phoneImage from "../../public/phone.png"
 import Link from "next/link";
 import { ArrowForwardIcon } from "@chakra-ui/icons";
-
+const yearContent = {
+  "2016": "The Pamtech Oil and Gas started with intense apprenticeship and training. With just a team of three and two drivers, Pamtech Group began the journey of being the foremost downstream oil marketing and distribution company in Imo State, Nigeria. ",
+  "2021": "As part of our growth strategy, Pamtech Autoland, a state-of-the-art facility for car maintenance and repairs was established in Owerri, Imo State to address the challenges of car owners in accessing reliable maintenance and repair services.",
+  "2022": "The Pamtech Autoparts Plaza, a reliable source for genuine motor spare parts was built to solve the problems of trust in the automobile spare parts industry by providing car owners with OEM standard parts.",
+  "2023": `With the desire to live up to our mantra - “committed service to humanity”, we ventured into the social media space, providing educative and entertaining content to our community through the establishment of the Pamtech Media.`
+};
 const Growth = () => {
   const contentPadding = useBreakpointValue({
     base: "2rem 1rem",
@@ -59,16 +64,13 @@ const Growth = () => {
         padding={contentPadding}
         my="4rem">
        
-        {["2016", "2017", "2018", "2019"].map((year) => (
+        {Object.entries(yearContent).map(([year, text]) => (
           <Flex key={year} flexDirection="column" marginBottom={{ base: "2rem", md: "0" }}>
             <Text fontWeight={500} fontSize={yearFontSize} marginBottom="1rem">
               {year}
             </Text>
             <Text fontWeight={300} fontSize={textFontSize}>
-              Lorem ipsum dolor sit amet consectetur. Malesuada pellentesque arcu
-              enim tortor vulputate ac enim sed aliquam. Quis in nisl purus
-              feugiat tellus eu porttitor mollis. Euismod massa amet et posuere
-              amet vel. Aliquet dictum vulputate suspendisse congue
+             {text}
             </Text>
           </Flex>
         ))}

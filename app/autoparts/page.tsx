@@ -7,7 +7,14 @@ import parts2 from "../../public/parts2.webp";
 import parts3 from "../../public/parts3.webp";
 
 import Image from "next/image";
-import { Box, Flex, Heading, Text, useBreakpointValue, VStack } from "@chakra-ui/react";
+import {
+  Box,
+  Flex,
+  Heading,
+  Text,
+  useBreakpointValue,
+  VStack,
+} from "@chakra-ui/react";
 import Footer from "../components/major/Footer";
 import Nav from "../components/major/Nav";
 import Sustainability from "../components/minor/Sustainability";
@@ -21,8 +28,16 @@ const Autoparts = () => {
     lg: "2rem 6rem",
     xl: "2rem 8rem",
   });
-  const headingFontSize = useBreakpointValue({ base: "2rem", md: "2.5rem", lg: "3rem" });
-  const textFontSize = useBreakpointValue({ base: "1rem", md: "1.1rem", lg: "1.2rem" });
+  const headingFontSize = useBreakpointValue({
+    base: "2rem",
+    md: "2.5rem",
+    lg: "3rem",
+  });
+  const textFontSize = useBreakpointValue({
+    base: "1rem",
+    md: "1.1rem",
+    lg: "1.2rem",
+  });
 
   return (
     <>
@@ -33,7 +48,8 @@ const Autoparts = () => {
           bgSize="cover"
           bgPosition="center"
           minHeight={{ base: "auto", md: "100vh" }}
-          color="#F7F7F7">
+          color="#F7F7F7"
+        >
           <Nav />
           <Flex
             height={{ base: "auto", md: "calc(100vh - 80px)" }}
@@ -41,14 +57,19 @@ const Autoparts = () => {
             justifyContent="center"
             gap="2rem"
             width={{ base: "100%", md: "70%", lg: "50%" }}
-            paddingY={{ base: "4rem", md: "0" }}>
+            paddingY={{ base: "4rem", md: "0" }}
+          >
             <Heading fontSize={headingFontSize} fontWeight={500}>
               Pamtech Autoparts
             </Heading>
-            <Text fontWeight={500}  width={{ base: "100%", md: "80%", xl: '60%' }} textAlign="justify" fontSize={textFontSize}>
-              Lorem ipsum dolor sit amet consectetur. Tincidunt ac elit
-              ullamcorper nibh in. Id pretium amet sem eli t nunc maecenas at
-              facilisi. nibh
+            <Text
+              fontWeight={500}
+              width={{ base: "100%", md: "80%", xl: "60%" }}
+              textAlign="justify"
+              fontSize={textFontSize}
+            >
+              Get all the genuine OEM parts at the right price and without
+              stress. 
             </Text>
             <ButtonMain text="Talk to us" />
           </Flex>
@@ -59,16 +80,39 @@ const Autoparts = () => {
             textAlign="center"
             fontSize={headingFontSize}
             fontWeight={500}
-            color="#2C2B2B">
+            color="#2C2B2B"
+          >
             Brand Showcase
           </Heading>
-          <Flex gap=".5rem" justifyContent="center" flexWrap="wrap" padding={contentPadding}>
-            <Image src={parts1} alt="parts1"  style={{ maxWidth: '100%', height: 'auto' }}/>
-            <Image src={parts2} alt="parts2"  style={{ maxWidth: '100%', height: 'auto' }}/>
-            <Image src={parts3} alt="parts3"  style={{ maxWidth: '100%', height: 'auto' }}/>
+          <Flex
+            gap=".5rem"
+            justifyContent="center"
+            flexWrap="wrap"
+            padding={contentPadding}
+          >
+            <Image
+              src={parts1}
+              alt="parts1"
+              style={{ maxWidth: "100%", height: "auto" }}
+            />
+            <Image
+              src={parts2}
+              alt="parts2"
+              style={{ maxWidth: "100%", height: "auto" }}
+            />
+            <Image
+              src={parts3}
+              alt="parts3"
+              style={{ maxWidth: "100%", height: "auto" }}
+            />
           </Flex>
         </Box>
-        <VStack align="left" my="4rem" padding={contentPadding} width={{ base: "100%", md: "70%", lg: "50%" }}>
+        <VStack
+          align="left"
+          my="4rem"
+          padding={contentPadding}
+          width={{ base: "100%", md: "70%", lg: "50%" }}
+        >
           <Text color="#171717" fontSize={headingFontSize} fontWeight={500}>
             Autoparts
           </Text>
