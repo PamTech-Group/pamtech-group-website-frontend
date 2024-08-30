@@ -96,7 +96,7 @@ const AboutPage = () => {
     return () => clearInterval(interval);
   }, [heroImages.length]);
   return (
-    <Box bgColor="#FFFFFF">
+    <Box bgColor="#FFFFFF" overflow='hidden'>
       {/* HERO SECTION */}
       <Box
         bgPosition="center"

@@ -23,8 +23,9 @@ const About = () => {
             right="6%"
             top={{
               base: "5%",
+             
               dxl: '10%',
-              dddxl: "20%",
+              ddxl: "30%",
             }}
             padding="2rem 5rem"
             width="40%">

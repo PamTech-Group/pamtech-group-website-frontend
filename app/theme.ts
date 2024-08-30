@@ -8,18 +8,18 @@ const config: ThemeConfig = {
 
 const theme = extendTheme({
   config,
-  breakpoints : {
-    base: "0px",
-    sm: "320px",
-    mini: "500px",
-    md: "768px",
-    lg: "960px",
-    xl: "1100px",
-    myxl: "1220px",
-    dxl: "1400px",
-    ddxl: "1700px",
-    dddxl: "2000px",
-    xdxl: "2800px",
+  breakpoints: {
+    base: "0em",
+    sm: "20em",    // 320px
+    mini: "31.25em", // 500px
+    md: "48em",    // 768px
+    lg: "60em",    // 960px
+    xl: "68.75em", // 1100px
+    myxl: "76.25em", // 1220px
+    dxl: "87.5em", // 1400px
+    ddxl: "106.25em", // 1700px
+    dddxl: "125em", // 2000px
+    xdxl: "175em", // 2800px
   },
 
   colors: {
