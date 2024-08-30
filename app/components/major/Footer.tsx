@@ -146,7 +146,7 @@ const Footer = () => {
             base: 'space-between',
             lg: 'center',
           }}>
-            <Flex flexDirection="column" justifyContent="start" gap="1rem"  alignItems={{ base: "center", md: "flex-start" }}>
+            <Flex flexDirection="column" justifyContent="start" gap="1rem"  alignItems={{ base: "start", md: "flex-start" }}>
               <Text fontSize={textFontSize} fontWeight={400}>
                 Quick Links
               </Text>
@@ -164,7 +164,7 @@ const Footer = () => {
                 e-solutions
               </Link>
             </Flex>
-            <Flex flexDirection="column" justifyContent="start" gap="1rem" alignItems={{ base: "center", md: "flex-start" }}>
+            <Flex flexDirection="column" justifyContent="start" gap="1rem" alignItems={{ base: "start", md: "flex-start" }}>
               <Text fontSize={textFontSize}  fontWeight={400}>
                 Legal
               </Text>
@@ -176,14 +176,11 @@ const Footer = () => {
                 Cookie policy
               </Link>
             </Flex>
-            <Flex flexDirection="column" justifyContent="start" gap="1rem" alignItems={{ base: "center", md: "flex-start" }}>
+            <Flex flexDirection="column" justifyContent="start" gap="1rem" alignItems={{ base: "start", md: "flex-start" }}>
               <Text fontSize={textFontSize}  fontWeight={400}>
                 Address
               </Text>
-              <Text textAlign={{
-                base: "center",
-                lg:'inherit'
-              }}>
+              <Text >
                 Plot CR/8 Port Harcourt Road, <br /> Near Hospital Junction,
                 Owerri, Imo State.
               </Text>
