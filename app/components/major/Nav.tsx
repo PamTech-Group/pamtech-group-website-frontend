@@ -51,7 +51,7 @@ const Nav = () => {
   useEffect(() => {
     const handleScroll = () => {
       setScrollY(window.scrollY);
-      setIsScrolled(window.scrollY > (window.innerHeight) ); // When past the hero section
+      setIsScrolled(window.scrollY > (window.innerHeight * 0.2) ); // When past the hero section
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -164,7 +164,7 @@ const Nav = () => {
             as="a"
             href="/contact-us"
             colorScheme="transparent"
-            color={isScrolled ? "black" : "white"}
+            color={isScrolled ? "textGrey" : "white"}
             fontSize={buttonFontSize} // Responsive font size
             _hover={{
               bgColor: "primaryOrange",
@@ -182,7 +182,7 @@ const Nav = () => {
           </Button>
           <Button
             as="a"
-            href="socials"
+            href="/socials"
             fontSize={buttonFontSize} // Responsive font size
             padding={theme.buttonPadding}
             bgColor="primaryOrange"
@@ -238,16 +238,16 @@ const Nav = () => {
                     </Link>
                   </MenuList>
                 </Menu>
-                <Link href="#" onClick={onMobileMenuClose}>
+                <Link href="/growth" onClick={onMobileMenuClose}>
                   Our Growth
                 </Link>
-                <Link href="#" onClick={onMobileMenuClose}>
+                <Link href="/e-solution" onClick={onMobileMenuClose}>
                   e-Solution
                 </Link>
-                <Link href="#" onClick={onMobileMenuClose}>
+                <Link href="/contact-us" onClick={onMobileMenuClose}>
                   Contact us
                 </Link>
-                <Link href="#" onClick={onMobileMenuClose}>
+                <Link href="/socials" onClick={onMobileMenuClose}>
                   Socials
                 </Link>
               </VStack>

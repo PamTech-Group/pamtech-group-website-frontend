@@ -1,10 +1,14 @@
 "use client";
-import { Box, Flex, Heading, SimpleGrid, Text, VStack, useBreakpointValue } from "@chakra-ui/react";
+import { Box, Card, CardBody, CardFooter, Flex, Heading, SimpleGrid, Text, VStack, useBreakpointValue } from "@chakra-ui/react";
 import React from "react";
 import Nav from "../components/major/Nav";
 import Sustainability from "../components/minor/Sustainability";
 import Footer from "../components/major/Footer";
 import theme from "../theme";
+import Image from "next/image";
+import phoneImage from "../../public/phone.png"
+import Link from "next/link";
+import { ArrowForwardIcon } from "@chakra-ui/icons";
 
 const Growth = () => {
   const contentPadding = useBreakpointValue({
@@ -128,34 +132,99 @@ const Growth = () => {
           of empowering success through committed service to humanity. 
         </Text>
       </VStack>
-      <Flex
-        width={{ base: "90%", sm: "80%", md: "20rem" }}
-        height="24rem"
-        mx="auto"
-        mb="4rem"
-        borderRadius={theme.customBorderRadius}
-        flexDirection="column"
-        justifyContent="space-between"
-        bgColor="rgba(241, 241, 248, .4)"
-        outline="1px solid rgba(141, 139, 139, .4)">
-        <Flex
-          flexDirection="column"
-          padding="1rem 1.5rem"
-          gap="1rem"
-          flexGrow={1}
-          overflow="hidden"
+      <Flex my="4rem" gap='2rem' padding={contentPadding} wrap='wrap'>
+      <Link href="/blog" passHref>
+        <Card
+        bgColor='#fde8e7'
+          as="a"
+          width={{ base: "90%", sm: "80%", md: "24rem" }}
+          height="auto"
+          mx="auto"
+          mb="4rem"
+          borderRadius='xl'
+          boxShadow="md"
+          transition="all 0.3s"
+          _hover={{ transform: 'translateY(-5px)', boxShadow: 'lg' }}
         >
-          <Box mt="auto">
-            {/* <Image src={} alt={} /> */}
-          </Box>
-          <Text color="#171717" fontWeight={500} fontSize={yearFontSize}>
-            {}
-          </Text>
-          <Text color="textGrey" noOfLines={5} fontSize={textFontSize}>
-            {}
-          </Text>
-        </Flex>
+          <CardBody >
+            <Image src={phoneImage} alt='Blog post image' width={300} height={200} objectFit="cover" />
+            <Text color="#171717" fontWeight={500} fontSize={yearFontSize} mt={4}>
+              August 31st, 2024
+            </Text>
+            <Text color="textGrey" fontSize={textFontSize} mt={2} noOfLines={3}>
+              Pamtech Oil & Gas is set to revolutionize the fuel retail industry with the launch of Petrol Padi, a cutting-edge fuel e-commerce app.
+            </Text>
+          </CardBody>
+          <CardFooter>
+            <Flex alignItems="center" color="primaryOrange">
+              <Text fontWeight={500} mr={2}>Read More</Text>
+              <ArrowForwardIcon />
+            </Flex>
+          </CardFooter>
+        </Card>
+      </Link>
+      <Link href="/blog" passHref>
+        <Card
+        bgColor='#fde8e7'
+          as="a"
+          width={{ base: "90%", sm: "80%", md: "24rem" }}
+          height="auto"
+          mx="auto"
+          mb="4rem"
+          borderRadius='xl'
+          boxShadow="md"
+          transition="all 0.3s"
+          _hover={{ transform: 'translateY(-5px)', boxShadow: 'lg' }}
+        >
+          <CardBody >
+            <Image src={phoneImage} alt='Blog post image' width={300} height={200} objectFit="cover" />
+            <Text color="#171717" fontWeight={500} fontSize={yearFontSize} mt={4}>
+              August 31st, 2024
+            </Text>
+            <Text color="textGrey" fontSize={textFontSize} mt={2} noOfLines={3}>
+              Pamtech Oil & Gas is set to revolutionize the fuel retail industry with the launch of Petrol Padi, a cutting-edge fuel e-commerce app.
+            </Text>
+          </CardBody>
+          <CardFooter>
+            <Flex alignItems="center" color="primaryOrange">
+              <Text fontWeight={500} mr={2}>Read More</Text>
+              <ArrowForwardIcon />
+            </Flex>
+          </CardFooter>
+        </Card>
+      </Link> 
+      <Link href="/blog" passHref>
+        <Card
+        bgColor='#fde8e7'
+          as="a"
+          width={{ base: "90%", sm: "80%", md: "24rem" }}
+          height="auto"
+          mx="auto"
+          mb="4rem"
+          borderRadius='xl'
+          boxShadow="md"
+          transition="all 0.3s"
+          _hover={{ transform: 'translateY(-5px)', boxShadow: 'lg' }}
+        >
+          <CardBody >
+            <Image src={phoneImage} alt='Blog post image' width={300} height={200} objectFit="cover" />
+            <Text color="#171717" fontWeight={500} fontSize={yearFontSize} mt={4}>
+              August 31st, 2024
+            </Text>
+            <Text color="textGrey" fontSize={textFontSize} mt={2} noOfLines={3}>
+              Pamtech Oil & Gas is set to revolutionize the fuel retail industry with the launch of Petrol Padi, a cutting-edge fuel e-commerce app.
+            </Text>
+          </CardBody>
+          <CardFooter>
+            <Flex alignItems="center" color="primaryOrange">
+              <Text fontWeight={500} mr={2}>Read More</Text>
+              <ArrowForwardIcon />
+            </Flex>
+          </CardFooter>
+        </Card>
+      </Link>
       </Flex>
+     
       <Sustainability />
       <Footer />
     </Box>

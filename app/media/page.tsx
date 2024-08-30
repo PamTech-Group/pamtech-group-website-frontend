@@ -46,10 +46,11 @@ const Media = () => {
           <Flex
            height={{ base: "auto", md: "calc(100vh - 80px)" }}
             flexDir="column"
+            gap='1rem'
             justifyContent="center"
             width={{ base: "100%", md: "70%", lg: "50%" }}
             paddingY={{ base: "4rem", md: "0" }}>
-            <Heading fontSize="3rem" fontWeight={500}>
+            <Heading fontSize={headingFontSize} fontWeight={500}>
               Pamtech Media
             </Heading>
             <Text fontWeight={500} width={{ base: "100%", md: "80%", xl: '60%' }} textAlign="justify"  fontSize={textFontSize}>

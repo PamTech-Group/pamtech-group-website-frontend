@@ -3,44 +3,32 @@ import { Image } from "@chakra-ui/next-js";
 import {
   Box,
   Button,
-  Center,
-  Divider,
-  Drawer,
-  DrawerBody,
-  DrawerCloseButton,
-  DrawerContent,
-  DrawerHeader,
-  DrawerOverlay,
   Flex,
   FormControl,
   FormLabel,
-  HStack,
-  Icon,
-  IconButton,
   Input,
-  SimpleGrid,
   Text,
   Textarea,
-  useDisclosure,
   VStack,
+  useBreakpointValue,
 } from "@chakra-ui/react";
 import { useState } from "react";
-import logoBlue from "../../public/logoBlue.webp";
-import theme from "../theme";
-import Footer from "../components/major/Footer";
-import Link from "next/link";
-import Sustainability from "../components/minor/Sustainability";
-import { BiChevronDown } from "react-icons/bi";
-import Dropdown from "../components/minor/dropdown";
-import { HamburgerIcon } from "@chakra-ui/icons";
-const ContactPage = () => {
-  const { isOpen, onOpen, onClose } = useDisclosure();
 
-  const {
-    isOpen: isMobileMenuOpen,
-    onOpen: onMobileMenuOpen,
-    onClose: onMobileMenuClose,
-  } = useDisclosure();
+import Footer from "../components/major/Footer";
+import Sustainability from "../components/minor/Sustainability";
+import NavWhite from "../components/major/NavWhite";
+
+const ContactPage = () => {
+  const contentPadding = useBreakpointValue({
+    base: "1rem",
+    sm: "2rem",
+    md: "4rem",
+    lg: "6rem",
+    xl: "8rem",
+  });
+  const headingFontSize = useBreakpointValue({ base: "1.8rem", md: "2rem", lg: "2.5rem" });
+  const textFontSize = useBreakpointValue({ base: "1rem", md: "1.1rem", lg: "1.2rem" });
+  const formWidth = useBreakpointValue({ base: "100%", md: "70%", lg: "60%" });
 
   // State to handle form inputs
   const [formData, setFormData] = useState({
@@ -72,179 +60,23 @@ const ContactPage = () => {
   };
 
   // Handle form submission
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    // Add your form submission logic here
+  };
 
   return (
     <Box bgColor="#FFFFFF">
-      <Box
-        bg="white"
-        transition="background-color 0.3s ease-in-out"
-        boxShadow="md"
-        padding={{
-          base: "1rem 2rem", // Small screens (mobiles)
-          sm: "1rem 4rem", // Small PCs and tablets
-          md: "1rem 6rem", // Medium screen (laptops)
-          lg: "1rem 8rem", // Larger screens
-        }}>
-        <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
-          {/* Logo */}
-          <Box>
-            <Link href="/">
-              <Image src={logoBlue} alt="Pamtech Logo" height={35} />
-            </Link>
-          </Box>
-
-          {/* Desktop Menu */}
-          <HStack
-            as={"nav"}
-            spacing={{
-              base: 4, // Smaller gaps on small screens
-              sm: 6, // Slightly larger gap for small tablets
-              md: 8, // Normal gap for medium devices
-              lg: 12, // Large gap for larger screens
-            }}
-            display={{ base: "none", md: "flex" }} // Show from medium screens and above
-            fontWeight={400}
-            color="primaryOrange">
-            <Link className="scaler" href="/about">
-              About Us
-            </Link>
-
-            <Link className="scaler" href="/growth">
-              Our Growth
-            </Link>
-            <Box
-              position="relative"
-              onMouseEnter={onOpen}
-              onMouseLeave={onClose}>
-              <Flex className="scaler" cursor="pointer" alignItems="center">
-                <Text fontWeight={400}>Business</Text>
-                <Icon fontSize="1rem" as={BiChevronDown} />
-              </Flex>
-
-              {/* Dropdown menu */}
-              <Center>
-                <Box
-                  marginLeft="10rem"
-                  position="absolute"
-                  top="100%"
-                  transformOrigin="center"
-                  bg="white"
-                  width="contain"
-                  boxShadow="md"
-                  borderRadius="md"
-                  zIndex={1000}
-                  transition="all 0.3s ease-in-out"
-                  opacity={isOpen ? 1 : 0}
-                  transform={isOpen ? "translateY(0)" : "translateY(-20px)"}
-                  pointerEvents={isOpen ? "auto" : "none"}>
-                  <Dropdown />
-                </Box>
-              </Center>
-            </Box>
-
-            <Link className="scaler" href="/e-solution">
-              e-Solution
-            </Link>
-          </HStack>
-
-          {/* Mobile Menu Button */}
-          <IconButton
-            aria-label="Open Menu"
-            icon={<HamburgerIcon />}
-            display={{ base: "flex", md: "none" }} // Display on small screens
-            onClick={onMobileMenuOpen}
-            variant="ghost"
-            color="white"
-            fontSize="1.5rem"
-          />
-
-          {/* Contact and Social Buttons */}
-          <HStack
-            spacing={4}
-            display={{ base: "none", md: "flex" }} // Show from medium screens
-          >
-            <Button
-              as="a"
-              href="/contact-us"
-              colorScheme="transparent"
-              color="textGrey"
-              fontSize={{ base: "0.8rem", md: "1rem" }} // Responsive font size
-              _hover={{
-                bgColor: "primaryOrange",
-                color: "#F7F7F7",
-              }}
-              _active={{
-                bgColor: "#bf1e1d",
-                color: "#F7F7F7",
-              }}
-              outline="1px solid #E52321"
-              padding={theme.buttonPadding}
-              borderRadius={theme.buttonRadius.radius}>
-              Contact Us
-            </Button>
-            <Button
-              as="a"
-              href="socials"
-              fontSize={{ base: "0.8rem", md: "1rem" }} // Responsive font size
-              padding={theme.buttonPadding}
-              bgColor="primaryOrange"
-              _hover={{
-                bgColor: "#961615",
-              }}
-              _active={{
-                bgColor: "#bf1e1d",
-              }}
-              borderRadius={theme.buttonRadius.radius}>
-              Socials
-            </Button>
-          </HStack>
-
-          {/* Mobile Menu Drawer */}
-          <Drawer
-            isOpen={isMobileMenuOpen}
-            placement="right"
-            onClose={onMobileMenuClose}>
-            <DrawerOverlay />
-            <DrawerContent>
-              <DrawerCloseButton />
-              <DrawerHeader>Menu</DrawerHeader>
-              <DrawerBody>
-                <VStack spacing={4} align="start">
-                  <Link href="/about" onClick={onMobileMenuClose}>
-                    About Us
-                  </Link>
-                  <Link href="#" onClick={onMobileMenuClose}>
-                    Business
-                  </Link>
-                  <Link href="#" onClick={onMobileMenuClose}>
-                    Investor Relations
-                  </Link>
-                  <Link href="#" onClick={onMobileMenuClose}>
-                    e-Solution
-                  </Link>
-                  <Button
-                    as="a"
-                    href="/contact-us"
-                    colorScheme="transparent"
-                    width="100%"
-                    onClick={onMobileMenuClose}>
-                    Contact Us
-                  </Button>
-                </VStack>
-              </DrawerBody>
-            </DrawerContent>
-          </Drawer>
-        </Flex>
-      </Box>
-      <Box padding="2rem 8rem" color="textGrey">
-        <VStack align="left" my="4rem" width="50%">
+      <NavWhite />
+      <Box padding={contentPadding} color="textGrey">
+        <VStack align="left" my="4rem" width={{ base: "100%", md: "70%", lg: "50%" }}>
           <Text fontWeight={500} fontSize="1.5rem" color="primaryOrange">
-            Contact Us{" "}
+            Contact Us
           </Text>
-          <Text fontSize="2rem" fontWeight={500}>
+          <Text fontSize={headingFontSize} fontWeight={500}>
             How can we help you?
           </Text>
-          <Text fontSize="1.2rem">
+          <Text fontSize={textFontSize}>
             We understand that every business is unique, which is why we take
             the time to get to know you and your specific needs
           </Text>
@@ -253,21 +85,19 @@ const ContactPage = () => {
           bgColor="#F7F7F7"
           color="#333333"
           gap="2rem"
-          height="100%"
-          width="100%"
+          flexDirection={{ base: "column", lg: "row" }}
           justifyContent="space-between">
           <Flex
             flexDirection="column"
             bgColor="#F1F1F1"
-            minHeight="100%"
             padding="4rem 2rem"
             boxShadow="sm"
-            width="40%"
-            fontSize="1rem">
+            width={{ base: "100%", lg: "40%" }}
+            fontSize={textFontSize}>
             <Flex flexDirection="column" gap=".4rem">
               <Text fontWeight={500}>Contact</Text>
-              <Link href="#">+2348115004000</Link>
-              <Link href="#">info@pamtech.com</Link>
+              <Text>+2348115004000</Text>
+              <Text>info@pamtech.com</Text>
             </Flex>
             <Box bgColor="#33333340" my="1.5rem" height="1px" opacity=".6" />
 
@@ -296,19 +126,17 @@ const ContactPage = () => {
                 Owerri, Owerri, Imo State, Nigeria.
               </Text>
             </Flex>
-            <Box bgColor="#33333340" my="1.5rem" height="1px" opacity=".6" />
           </Flex>
           <Flex
             flexDirection="column"
-            width="60%"
-            height="100%"
+            width={{ base: "100%", lg: "60%" }}
             padding="4rem 2rem"
             gap="2rem"
             borderRadius="md">
-            <FormControl width="70%">
+            <FormControl width={formWidth}>
               <FormLabel
                 fontWeight={500}
-                fontSize="1rem"
+                fontSize={textFontSize}
                 htmlFor="name"
                 color="#333333">
                 Name
@@ -331,8 +159,8 @@ const ContactPage = () => {
                 variant="outline"
               />
             </FormControl>
-            <FormControl width="70%">
-              <FormLabel fontWeight={500} fontSize="1rem" htmlFor="email">
+            <FormControl width={formWidth}>
+              <FormLabel fontWeight={500} fontSize={textFontSize} htmlFor="email">
                 Email
               </FormLabel>
               <Input
@@ -349,12 +177,12 @@ const ContactPage = () => {
                 }}
                 value={formData.email}
                 onChange={handleInputChange}
-                placeholder="myemail@gmail.com"
+                placeholder="Enter your email address"
                 variant="outline"
               />
             </FormControl>
-            <FormControl width="70%">
-              <FormLabel fontWeight={500} fontSize="1rem" htmlFor="phone">
+            <FormControl width={formWidth}>
+              <FormLabel fontWeight={500} fontSize={textFontSize} htmlFor="phoneNumber">
                 Phone Number
               </FormLabel>
               <Input
@@ -371,16 +199,15 @@ const ContactPage = () => {
                 }}
                 value={formData.phoneNumber}
                 onChange={handleInputChange}
-                placeholder="+23480080010"
+                placeholder="Enter your phone number"
                 variant="outline"
               />
             </FormControl>
-            <FormControl width="70%">
-              <FormLabel fontWeight={500} fontSize="1rem" htmlFor="message">
+            <FormControl width={formWidth}>
+              <FormLabel fontWeight={500} fontSize={textFontSize} htmlFor="message">
                 Message
               </FormLabel>
               <Textarea
-                height="10rem"
                 id="message"
                 name="message"
                 borderColor="#33333326"
@@ -394,18 +221,25 @@ const ContactPage = () => {
                 }}
                 value={formData.message}
                 onChange={handleInputChange}
-                placeholder="my message"
+                placeholder="Enter your message"
                 variant="outline"
+                rows={5}
               />
             </FormControl>
-            <Box textAlign="center" width="70%">
-              <Button
-                padding="1rem 1.5rem"
-                width="fit-content"
-                bgColor="primaryOrange">
-                Submit
-              </Button>
-            </Box>
+            <Button
+              type="submit"
+              bgColor="primaryOrange"
+              color="white"
+              width="fit-content"
+              _hover={{
+                bgColor: "#961615",
+              }}
+              _active={{
+                bgColor: "#bf1e1d",
+              }}
+              onClick={handleSubmit}>
+              Send Message
+            </Button>
           </Flex>
         </Flex>
       </Box>

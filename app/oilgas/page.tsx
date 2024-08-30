@@ -37,6 +37,7 @@ const OilGas = () => {
     <>
       <Box bgColor="#FFFFFF">
         <Box
+     
          padding={contentPadding}
           backgroundImage={`url(${gasBg.src})`}
           bgSize="cover"
@@ -45,6 +46,10 @@ const OilGas = () => {
           color="#F7F7F7">
           <Nav />
           <Flex
+             mt={{
+              base: "3rem",
+              md: '0rem'
+            }}
            height={{ base: "auto", md: "calc(100vh - 80px)" }}
             flexDir="column"
             justifyContent="center"
