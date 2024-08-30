@@ -7,7 +7,7 @@ import {
   useBreakpointValue,
 } from "@chakra-ui/react";
 import bg from "../../../public/hero1.webp";
-import bg2 from "../../../public/hero2.png";
+import bg2 from "../../../public/hero2.webp";
 import bg3 from "../../../public/hero3.webp";
 import bg4 from "../../../public/hero4.webp";
 import bg5 from "../../../public/hero5.webp";

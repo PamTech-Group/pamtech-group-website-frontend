@@ -1,7 +1,7 @@
 "use client";
 import theme from "../theme";
 import { BiChevronRight } from "react-icons/bi";
-import rideBg from "../../public/rideBg.png";
+import mediaBg from "../../public/mediaBg.webp";
 import media1 from "../../public/media1.webp";
 import media2 from "../../public/media2.webp";
 import media3 from "../../public/media3.webp";
@@ -38,7 +38,8 @@ const Media = () => {
       <Box bgColor="#FFFFFF">
         <Box
           padding={contentPadding}
-          backgroundImage={`url(${rideBg.src})`}
+          backgroundImage={`url(${mediaBg.src})`}
+          backdropFilter='brightness(0%)'
           bgSize="cover"
           bgPosition="center"
           minHeight={{ base: "auto", md: "100vh" }}          color="#F7F7F7">
@@ -82,21 +83,10 @@ const Media = () => {
           </Text>
           <Flex flexDirection="column" gap="1.5rem" textAlign="justify">
             <Text color="textGrey" fontSize={textFontSize}>
-              {`Pamtech Autoparts offers a wide selection of quality OEM
-              autoparts for vehicle repair, maintenance, servicing, and
-              replacement as well as accessories, — all at extremely competitive
-              prices. Paired with our fast shipping, we prioritize authenticity
-              and quality, so every part in our inventory meets the
-              manufacturer's specifications, giving you confidence in the
-              performance and durability of your equipment.`}
+              {`Pamtech Media offers a comprehensive suite of services designed to elevate your brand's presence and engagement in the digital landscape. From crafting compelling content marketing strategies to managing and nurturing talent, we tailor our approach to meet your unique needs.`}
             </Text>
             <Text color="textGrey" fontSize={textFontSize}>
-              Currently the bigest auto spare parts plaza in the South East, our
-              commitment to ensuring that you get the right parts at the right
-              price, and our dedicated customer support at Pamtech Autoparts
-              guarantees a seamless and satisfying order and delivery
-              experience. Trust us to provide genuine OEM parts that deliver
-              both exceptional value and peace of mind.
+            Our expertise extends to media consulting, where we guide brands in navigating the complexities of digital platforms to effectively connect with their target audience.
             </Text>
           </Flex>
         </VStack>

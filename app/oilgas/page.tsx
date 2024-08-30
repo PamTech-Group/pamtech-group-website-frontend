@@ -2,17 +2,15 @@
 import theme from "../theme";
 import { BiChevronRight } from "react-icons/bi";
 import gasBg from "../../public/gasBg.webp";
-import oilgas1 from "../../public/oilgas1.webp";
-import oilgas2 from "../../public/oilgas2.webp";
+import oilgas1 from "../../public/oilgas1.png";
+import oilgas2 from "../../public/oilgas2.png";
 import oilgas3 from "../../public/oilgas3.webp";
 import bg3 from "../../public/bg3.png";
 import Image from "next/image";
 import {
   Box,
-  Button,
   Flex,
   Heading,
-  SimpleGrid,
   Text,
   useBreakpointValue,
   VStack,

@@ -72,9 +72,18 @@ const Foundation = () => {
             Brand Showcase
           </Heading>
           <Flex gap=".5rem" justifyContent="center" flexWrap="wrap" padding={contentPadding}>
-            <Image src={foundation1} alt="foundation1" style={{ maxWidth: '100%', height: 'auto' }}/>
+            <Box >
+
+            <Image src={foundation1} alt="foundation1" style={{ maxWidth: '100%', height: 'auto', borderRadius: '1rem', marginTop: '1.3rem' }}/>
+            </Box>
+            <Box>
+
             <Image src={foundation2} alt="ride1" style={{ maxWidth: '100%', height: 'auto' }}/>
+            </Box>
+            <Box>
+
             <Image src={foundation3} alt="ride1" style={{ maxWidth: '100%', height: 'auto' }}/>
+            </Box>
           </Flex>
         </Box>
         <VStack align="left" my="4rem" padding={contentPadding} width={{ base: "100%", md: "70%", lg: "50%" }}>
@@ -83,18 +92,10 @@ const Foundation = () => {
           </Text>
           <Flex flexDirection="column" gap="1.5rem" textAlign="justify">
             <Text color="textGrey" fontSize={textFontSize}>
-              Lorem ipsum dolor sit amet consectetur. Vulputate amet vel lorem
-              eu pellentesque iaculis elementum purus. Enim ornare quis praesent
-              nunc elit quam mauris elementum a. Porttitor iaculis platea nulla
-              quis molestie urna. Lacus egestas ullamcorper aliquet cursus
-              pharetra.
+            The Pamtech Foundation is guided by a core vision: Giving hope and sharing love to humanity. We strive to positively influence our community by improving the welfare of underprivileged widows, children, and youths by providing access to education, healthcare, and economic empowerment opportunities. 
             </Text>
             <Text color="textGrey" fontSize={textFontSize}>
-              Lorem ipsum dolor sit amet consectetur. Vulputate amet vel lorem
-              eu pellentesque iaculis elementum purus. Enim ornare quis praesent
-              nunc elit quam mauris elementum a. Porttitor iaculis platea nulla
-              quis molestie urna. Lacus egestas ullamcorper aliquet cursus
-              pharetra.
+            Established in 2016, the Foundation is the Corporate Social Responsibility (CSR) arm of the Pamtech Group, strategically focusing on providing educational scholarships and grants for youths, empowering small-scale business owners and so much more. With our engagements such as the DAD4Adolescents program, the Business Made in Imo Community, and the Widows Economic Empowerment, the foundation remains resolute to give hope and share love to humanity. 
             </Text>
           </Flex>
         </VStack>
