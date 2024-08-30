@@ -213,28 +213,28 @@ const Nav = () => {
                 <Link href="/about" onClick={onMobileMenuClose}>
                   About Us
                 </Link>
-                <Menu>
+                <Menu >
                   <MenuButton variant='flushed' padding={0} fontWeight={400} fontSize='1rem' as={Button} rightIcon={<ChevronDownIcon alignSelf='center' />}>
                     Our Business
                   </MenuButton>
-                  <MenuList>
+                  <MenuList bg='rgba(20, 20, 20, 0.4)'>
                     <Link href="/oilgas">
-                      <MenuItem>Oil & Gas</MenuItem>
+                      <MenuItem bg='rgba(20, 20, 20, 0.9)'>Oil & Gas</MenuItem>
                     </Link>
                     <Link href="/autoland">
-                      <MenuItem>Autoland</MenuItem>
+                      <MenuItem bg='rgba(20, 20, 20, 0.9)'>Autoland</MenuItem>
                     </Link>
                     <Link href="/autoparts">
-                      <MenuItem>Autoparts</MenuItem>
+                      <MenuItem bg='rgba(20, 20, 20, 0.9)'>Autoparts</MenuItem>
                     </Link>
                     <Link href="/ride">
-                      <MenuItem>Luxury Ride</MenuItem>
+                      <MenuItem bg='rgba(20, 20, 20, 0.9)'>Luxury Ride</MenuItem>
                     </Link>
                     <Link href="/media">
-                      <MenuItem>Media</MenuItem>
+                      <MenuItem bg='rgba(20, 20, 20, 0.9)'>Media</MenuItem>
                     </Link>
                     <Link href="/foundation">
-                      <MenuItem>Foundation</MenuItem>
+                      <MenuItem bg='rgba(20, 20, 20, 0.9)'>Foundation</MenuItem>
                     </Link>
                   </MenuList>
                 </Menu>
