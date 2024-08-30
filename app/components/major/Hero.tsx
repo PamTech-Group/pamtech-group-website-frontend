@@ -1,4 +1,11 @@
-import { Box, Button, Flex, Heading, Text } from "@chakra-ui/react";
+import {
+  Box,
+  Button,
+  Flex,
+  Heading,
+  Text,
+  useBreakpointValue,
+} from "@chakra-ui/react";
 import bg from "../../../public/hero1.webp";
 import bg2 from "../../../public/hero2.png";
 import bg3 from "../../../public/hero3.webp";
@@ -55,35 +62,81 @@ interface SlideContentProps {
 }
 
 // Reusable component for the slide content
-const SlideContent: React.FC<SlideContentProps> = ({ bg, heading, text }) => (
-  <>
-    <Box
-      padding="2rem 8rem"
-      backgroundImage={`url(${bg.src})`}
-      bgSize="cover"
-      bgPosition="center"
-      height="100vh"
-      color="#F7F7F7">
-      <Flex
-        mt='3rem'
-        height="100%"
-        flexDir="column"
-        justifyContent="center"
-        textAlign="left"
-        gap="2rem"
-        width="50%">
-        <Heading fontSize="3rem" fontWeight={500}>
-          {heading}
-        </Heading>
-        <Text width="80%" fontSize="1.2rem">
-          {text}
-        </Text>
-        <ButtonMain text="Read More" />
-      </Flex>
-    </Box>
-  </>
-);
+const SlideContent: React.FC<SlideContentProps> = ({ bg, heading, text }) => {
+  const headingFontSize = useBreakpointValue({
+    base: "2rem",
+    md: "2.5rem",
+    lg: "3rem",
+  });
+  const textFontSize = useBreakpointValue({
+    base: "1rem",
+    md: "1.1rem",
+    lg: "1.2rem",
+  });
+  const contentWidth = useBreakpointValue({
+    base: "90%",
+    md: "70%",
+    lg: "50%",
+  });
+  const padding = useBreakpointValue({
+    base: "1rem",
+    md: "2rem 4rem",
+    lg: "2rem 8rem",
+  });
 
+  return (
+    <>
+      <Box
+        padding={padding}
+        backgroundImage={`url(${bg.src})`}
+        bgSize="cover"
+        bgPosition="center"
+        height="100vh"
+        color="#F7F7F7"
+      >
+        <Flex
+          mt={{ base: "5rem", md: "3rem" }}
+          height="100%"
+          flexDir="column"
+          justifyContent="center"
+          textAlign={{
+            base: "center",
+            lg: "left",
+          }}
+          gap="2rem"
+          width={{
+            base: "100%",
+            md: "90%",
+            xl: "60%",
+            myxl: "50%",
+          }}
+        >
+          <Heading fontSize={headingFontSize} fontWeight={500}>
+            {heading}
+          </Heading>
+          <Text
+            textAlign={{
+              base: "center",
+              lg: "left",
+            }}
+            width={{ base: "100%", }}
+            fontSize={textFontSize}
+          >
+            {text}
+          </Text>
+          <Box
+            textAlign={{
+              base: "center",
+              lg: "left",
+            }}
+          >
+            <ButtonMain text="Read More" />
+          </Box>
+        </Flex>
+      </Box>
+    </>
+  );
+};
 const Hero = () => {
   return (
     <Box>
@@ -94,7 +147,8 @@ const Hero = () => {
         showStatus={false}
         showThumbs={false}
         autoPlay={true}
-        interval={4500}>
+        interval={4500}
+      >
         {carouselData.map((slide, index) => (
           <SlideContent
             key={index}

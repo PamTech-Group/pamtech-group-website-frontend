@@ -16,8 +16,13 @@ import {
   DrawerHeader,
   DrawerBody,
   DrawerCloseButton,
+  useBreakpointValue,
+  Menu,
+  MenuButton,
+  MenuList,
+  MenuItem,
 } from "@chakra-ui/react";
-import { HamburgerIcon } from "@chakra-ui/icons";
+import { ChevronDownIcon, HamburgerIcon } from "@chakra-ui/icons";
 import logo from "../../../public/logo.webp";
 import logoBlue from "../../../public/logoBlue.webp";
 import { Image } from "@chakra-ui/next-js";
@@ -31,6 +36,11 @@ const Nav = () => {
   const [scrollY, setScrollY] = useState(0);
   const [isScrolled, setIsScrolled] = useState(false);
   const { isOpen, onOpen, onClose } = useDisclosure();
+  // Use breakpoints for responsive design
+  const logoSize = useBreakpointValue({ base: 25, sm: 30, md: 35 });
+  const buttonFontSize = useBreakpointValue({ base: "xs", sm: "sm", md: "md" });
+  const navSpacing = useBreakpointValue({ base: 2, sm: 4, md: 6, lg: 8 });
+
   const {
     isOpen: isMobileMenuOpen,
     onOpen: onMobileMenuOpen,
@@ -63,11 +73,12 @@ const Nav = () => {
       transition="background-color 0.3s ease-in-out"
       boxShadow={isScrolled ? "md" : "none"}
       padding={{
-        base: "1rem 2rem", // Small screens (mobiles)
-        sm: "1rem 4rem", // Small PCs and tablets
-        md: "1rem 6rem", // Medium screen (laptops)
-        lg: "1rem 8rem", // Larger screens
-      }}>
+        base: "0.5rem 1rem",
+        sm: "0.75rem 2rem",
+        md: "1rem 4rem",
+        lg: "1rem 6rem",
+      }}
+    >
       <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
         {/* Logo */}
         <Box>
@@ -75,7 +86,7 @@ const Nav = () => {
             <Image
               src={isScrolled ? logoBlue : logo}
               alt="Pamtech Logo"
-              height={35}
+              height={logoSize}
               transition="opacity 0.5s ease-in-out"
               style={{
                 opacity: isScrolled ? 1 : 0,
@@ -88,15 +99,11 @@ const Nav = () => {
         {/* Desktop Menu */}
         <HStack
           as={"nav"}
-          spacing={{
-            base: 4, // Smaller gaps on small screens
-            sm: 6, // Slightly larger gap for small tablets
-            md: 8, // Normal gap for medium devices
-            lg: 12, // Large gap for larger screens
-          }}
-          display={{ base: "none", md: "flex" }} // Show from medium screens and above
-          fontWeight={400}
-          color={isScrolled ? "primaryOrange" : "white"}>
+          spacing={navSpacing}
+          display={{ base: "none", xl: "flex" }} // Show from medium screens and above
+          fontWeight={theme.fontWeights.medium}
+          color={isScrolled ? "primaryOrange" : "white"}
+        >
           <Link className="scaler" href="/about">
             About Us
           </Link>
@@ -125,7 +132,8 @@ const Nav = () => {
                 transition="all 0.3s ease-in-out"
                 opacity={isOpen ? 1 : 0}
                 transform={isOpen ? "translateY(0)" : "translateY(-20px)"}
-                pointerEvents={isOpen ? "auto" : "none"}>
+                pointerEvents={isOpen ? "auto" : "none"}
+              >
                 <Dropdown />
               </Box>
             </Center>
@@ -140,24 +148,24 @@ const Nav = () => {
         <IconButton
           aria-label="Open Menu"
           icon={<HamburgerIcon />}
-          display={{ base: "flex", md: "none" }} // Display on small screens
+          display={{ base: "flex", xl: "none" }} // Display on small screens
           onClick={onMobileMenuOpen}
           variant="ghost"
           color={isScrolled ? "black" : "white"}
-          fontSize="1.5rem"
+          fontSize={{ base: "1.2rem", sm: "1.5rem" }}
         />
 
         {/* Contact and Social Buttons */}
         <HStack
           spacing={4}
-          display={{ base: "none", md: "flex" }} // Show from medium screens
+          display={{ base: "none", xl: "flex" }} // Show from medium screens
         >
           <Button
             as="a"
             href="/contact-us"
             colorScheme="transparent"
             color={isScrolled ? "black" : "white"}
-            fontSize={{ base: "0.8rem", md: "1rem" }} // Responsive font size
+            fontSize={buttonFontSize} // Responsive font size
             _hover={{
               bgColor: "primaryOrange",
               color: "#F7F7F7",
@@ -168,13 +176,14 @@ const Nav = () => {
             }}
             outline="1px solid #E52321"
             padding={theme.buttonPadding}
-            borderRadius={theme.buttonRadius.radius}>
+            borderRadius={theme.buttonRadius.radius}
+          >
             Contact Us
           </Button>
           <Button
             as="a"
             href="socials"
-            fontSize={{ base: "0.8rem", md: "1rem" }} // Responsive font size
+            fontSize={buttonFontSize} // Responsive font size
             padding={theme.buttonPadding}
             bgColor="primaryOrange"
             _hover={{
@@ -183,7 +192,8 @@ const Nav = () => {
             _active={{
               bgColor: "#bf1e1d",
             }}
-            borderRadius={theme.buttonRadius.radius}>
+            borderRadius={theme.buttonRadius.radius}
+          >
             Socials
           </Button>
         </HStack>
@@ -192,33 +202,54 @@ const Nav = () => {
         <Drawer
           isOpen={isMobileMenuOpen}
           placement="right"
-          onClose={onMobileMenuClose}>
+          onClose={onMobileMenuClose}
+        >
           <DrawerOverlay />
-          <DrawerContent>
+          <DrawerContent bgColor="#0F1010">
             <DrawerCloseButton />
-            <DrawerHeader>Menu</DrawerHeader>
-            <DrawerBody>
+
+            <DrawerBody py="3rem">
               <VStack spacing={4} align="start">
                 <Link href="/about" onClick={onMobileMenuClose}>
                   About Us
                 </Link>
+                <Menu>
+                  <MenuButton variant='flushed' padding={0} fontWeight={400} fontSize='1rem' as={Button} rightIcon={<ChevronDownIcon alignSelf='center' />}>
+                    Our Business
+                  </MenuButton>
+                  <MenuList>
+                    <Link href="/oilgas">
+                      <MenuItem>Oil & Gas</MenuItem>
+                    </Link>
+                    <Link href="/autoland">
+                      <MenuItem>Autoland</MenuItem>
+                    </Link>
+                    <Link href="/autoparts">
+                      <MenuItem>Autoparts</MenuItem>
+                    </Link>
+                    <Link href="/ride">
+                      <MenuItem>Luxury Ride</MenuItem>
+                    </Link>
+                    <Link href="/media">
+                      <MenuItem>Media</MenuItem>
+                    </Link>
+                    <Link href="/foundation">
+                      <MenuItem>Foundation</MenuItem>
+                    </Link>
+                  </MenuList>
+                </Menu>
                 <Link href="#" onClick={onMobileMenuClose}>
-                  Business
-                </Link>
-                <Link href="#" onClick={onMobileMenuClose}>
-                  Investor Relations
+                  Our Growth
                 </Link>
                 <Link href="#" onClick={onMobileMenuClose}>
                   e-Solution
                 </Link>
-                <Button
-                  as="a"
-                  href="/contact-us"
-                  colorScheme="transparent"
-                  width="100%"
-                  onClick={onMobileMenuClose}>
-                  Contact Us
-                </Button>
+                <Link href="#" onClick={onMobileMenuClose}>
+                  Contact us
+                </Link>
+                <Link href="#" onClick={onMobileMenuClose}>
+                  Socials
+                </Link>
               </VStack>
             </DrawerBody>
           </DrawerContent>
