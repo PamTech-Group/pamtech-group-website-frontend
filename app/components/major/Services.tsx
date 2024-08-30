@@ -13,7 +13,8 @@ import service1 from "../../../public/service1.webp";
 import service2 from "../../../public/service2.webp";
 import service3 from "../../../public/service3.webp";
 import service4 from "../../../public/service4.webp";
-
+import service5 from "../../../public/service5.webp";
+import service6 from "../../../public/service6.webp";
 import Sustainability from "../minor/Sustainability";
 import Link from "next/link";
 import Industries from "../minor/Industries";
@@ -31,28 +32,40 @@ const services = [
 
 const images = [
   {
-    image: service1,
-    title: "Ride",
-    description:
-      "Experience luxury and comfort with Pamtech Luxury Ride. We offer a fleet of premium vehicles for your personal or corporate needs, ensuring a stylish ride every time.",
-  },
-  {
     image: service2,
     title: "Oil & Gas",
     description:
-      "With our unadulterated and petroleum products, you will experience zero downtime and low maintenance costs for your equipment and facilities.",
+      "Experience zero downtime and reduced maintenance costs with our pure petroleum products.",
   },
   {
     image: service3,
     title: "Autoland",
     description:
-      " Pamtech Autoland is your one-stop solution for quality auto repairs and maintenance.",
+      "Pamtech Autoland is your one-stop solution for quality auto repairs and maintenance.",
   },
   {
     image: service4,
     title: "Autoparts",
     description:
-      "Get all the genuine OEM parts at the right price and without stress.",
+    "Get all the genuine OEM parts at the right price and without stress.",
+  },
+  {
+    image: service5,
+    title: "Media",
+    description:
+    "Pamtech Media is your go-to hub for content creation and digital marketing, helping brands grow and connect with their audience online.",
+  },
+  {
+    image: service1,
+    title: "Ride",
+    description:
+      "Experience luxury and comfort with Pamtech Luxury Ride's premium vehicles for all your personal and corporate needs.",
+  },
+  {
+    image: service6,
+    title: "Foundation",
+    description:
+      "The Pamtech Foundation is guided by a core vision: Giving hope and sharing love to humanity.",
   },
 ];
 
@@ -98,12 +111,13 @@ const Services = () => {
         </VStack>
 
         {/* Services Image Grid */}
+        <Box padding='2rem 8rem'>
+
         <Marquee>
-          <SimpleGrid
+          <Flex
             my="4rem"
-            columns={[1, 2, 4]}
-            spacing={5}
-            padding="2rem 8rem">
+            gap={5}
+            padding={5}>
             {images.map((image) => (
               <Box
                 key={image.title}
@@ -112,8 +126,8 @@ const Services = () => {
                 borderRadius="lg"
                 bgSize="cover"
                 bgPosition="center"
-                height="500px"
-                width="400px"
+                height="450px"
+                width="300px"
                 display="flex"
                 flexDirection="column"
                 justifyContent="flex-end"
@@ -129,8 +143,9 @@ const Services = () => {
                 </Link>
               </Box>
             ))}
-          </SimpleGrid>
+          </Flex>
         </Marquee>
+        </Box>
       </Box>
       {/* Industries section */}
       <Industries />
