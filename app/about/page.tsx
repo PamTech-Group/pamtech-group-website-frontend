@@ -95,6 +95,10 @@ const AboutPage = () => {
             paddingY={{ base: "2rem", md: "0" }}
           >
             <Flex
+            mt={{
+              base: '1.5rem',
+              md: '0rem'
+            }}
               flexDir="column"
               justifyContent="center"
               gap="2rem"
