@@ -18,6 +18,7 @@ import {
   ListItem,
   OrderedList,
   Text,
+  useBreakpointValue,
   useDisclosure,
   VStack,
 } from "@chakra-ui/react";
@@ -35,6 +36,16 @@ import Sustainability from "../components/minor/Sustainability";
 import Footer from "../components/major/Footer";
 import ButtonMain from "../components/minor/ButtonMain";
 const Solution = () => {
+  const contentPadding = useBreakpointValue({
+    base: "2rem 1rem",
+    sm: "2rem 2rem",
+    md: "2rem 4rem",
+    lg: "2rem 6rem",
+    xl: "2rem 8rem",
+  });
+  const headingFontSize = useBreakpointValue({ base: "2rem", md: "2.5rem", lg: "3rem" });
+  const textFontSize = useBreakpointValue({ base: "1rem", md: "1.1rem", lg: "1.2rem" });
+  const buttonFontSize = useBreakpointValue({ base: "0.8rem", md: "1rem", lg: "1.2rem" });
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   const {
@@ -46,23 +57,24 @@ const Solution = () => {
   return (
     <Box bgColor="#FFFFFF">
       <Box
-        padding="2rem 8rem"
+      padding={contentPadding}
         background="#00030C"
         bgSize="cover"
         bgPosition="center"
-        height="100vh"
+        minHeight={{ base: "auto", md: "100vh" }}
         color="#F7F7F7">
         <Nav />
         <Flex
-          height="100%"
+          height={{ base: "auto", md: "calc(100vh - 80px)" }}
           flexDir="column"
           justifyContent="center"
           gap="2rem"
-          width="50%">
-          <Heading fontSize="3rem" fontWeight={500}>
+          width={{ base: "100%", md: "70%", lg: "50%" }}
+          paddingY={{ base: "4rem", md: "0" }}>
+          <Heading fontSize={headingFontSize} fontWeight={500}>
             e-Solutions
           </Heading>
-          <Text fontWeight={500} width="60%" textAlign="justify">
+          <Text fontWeight={500} width={{ base: "100%", md: "80%" }} textAlign="justify" fontSize={textFontSize}>
             Pamtech Group is at the forefront of innovation, consistently
             developing cutting-edge e-solutions that drive efficiency, enhance
             user experience, and transform industries.
@@ -70,53 +82,21 @@ const Solution = () => {
           <ButtonMain text="Talk to us" />
         </Flex>
       </Box>
-      <Flex
-        padding="2rem 8rem"
-        width="70%"
-        flexDirection="column"
-        gap="2rem"
-        color="textGrey">
-        <Text fontWeight={500} fontSize="2.5rem">
-          e-Solutions
-        </Text>
-        <Text fontWeight={300} fontSize="1.2rem">
-          At Pamtech, we are motivated by a deep desire to make impactful
-          contributions to the development of our host communities and society
-          as a whole.
-        </Text>
-        <Button
-          width="fit-content"
-          padding={theme.buttonPadding}
-          bgColor="primaryOrange"
-          _hover={{
-            bgColor: "#961615",
-          }}
-          _active={{
-            bgColor: "#bf1e1d",
-          }}
-          fontWeight={300}
-          fontSize="1.2rem"
-          borderRadius={theme.buttonRadius.radius}
-          rightIcon={
-            <BiChevronRight fontSize="1.5rem" className="arrow-icon" />
-          }>
-          Talk to us
-        </Button>
-      </Flex>
-      <Box color=" textGrey" padding="2rem 8rem" fontWeight={500}>
+
+      <Box color=" textGrey" padding={contentPadding} fontWeight={500}>
         {/* Petrol Padi Section */}
-        <Flex my="4rem" bg="white" borderRadius="lg" boxShadow="md" wrap="wrap">
+        <Flex my="4rem" bg="white" borderRadius="lg" boxShadow="md" flexDirection={{ base: "column", md: "row" }} wrap='wrap'>
           {/* Text Section */}
           <Box padding="2.5rem 3rem" flex="1" bg="rgba(100, 94, 94, .1)">
-            <Heading fontSize="2xl" color="red.500" mb="1rem">
+            <Heading fontSize="2xl" color="primaryOrange" mb="1rem">
               Petrol Padi
             </Heading>
-            <Text mb="1.5rem" fontWeight={500}>
+            <Text mb="1.5rem" fontWeight={500} fontSize={textFontSize}>
               This innovative platform is designed to transform the way
               customers purchase fuel, offering a seamless and convenient
               experience.
             </Text>
-            <OrderedList my="2rem" spacing="1rem" fontWeight={500}>
+            <OrderedList my="2rem" spacing="1rem" fontWeight={500} fontSize={textFontSize}>
               <ListItem>
                 Convenience: Buy fuel from the comfort of your own home, 24/7.
               </ListItem>
@@ -148,18 +128,18 @@ const Solution = () => {
             </OrderedList>
 
             {/* App Store and Google Play Buttons */}
-            <Flex gap="1rem">
+            <Flex gap="1rem" flexDirection={{ base: "column", sm: "row" }}>
               <Button
                 bgColor="#0e0e0e"
                 colorScheme="gray"
                 leftIcon={<BiLogoPlayStore fontSize="1.5rem" />}
-                variant="solid">
+                variant="solid" fontSize={buttonFontSize}>
                 Google Play
               </Button>
               <Button
                 leftIcon={<GrApple fontSize="1.5rem" />}
                 bgColor="#0e0e0e"
-                variant="solid">
+                variant="solid" fontSize={buttonFontSize}>
                 App Store{" "}
               </Button>
             </Flex>
@@ -172,26 +152,25 @@ const Solution = () => {
             flex="1"
             textAlign="center"
             bgColor="primaryOrange">
-            <Image src={esolution} alt="Phone Mockup" />
+            <Image src={esolution} alt="Phone Mockup" style={{ maxWidth: '100%', height: 'auto' }}/>
           </Flex>
         </Flex>
 
         {/* Autoland Section */}
         <Flex
           my="4rem"
-          padding="2rem 8rem"
-          bg="rgba(100, 94, 94, .1)"
+          padding={contentPadding}          bg="rgba(100, 94, 94, .1)"
           borderRadius="lg"
           boxShadow="md"
           gap="4rem"
           alignItems="center"
-          wrap="wrap">
+          flexDirection={{ base: "column", md: "row" }} wrap='wrap'>
           {/* Text Section */}
           <Box flex="1">
-            <Heading fontSize="2xl" color="red.500" mb="1rem">
+            <Heading fontSize="2xl" color="primaryOrange" mb="1rem">
               Autoland
             </Heading>
-            <Text mb="1.5rem">
+            <Text mb="1.5rem" fontSize={textFontSize}>
               Autoland is changing the game in vehicle purchasing, providing a
               streamlined and user-friendly experience for customers.
             </Text>
@@ -207,15 +186,15 @@ const Solution = () => {
               _active={{
                 bgColor: "#bf1e1d",
               }}
-              fontSize="1.2rem"
-              borderRadius="lg">
+              borderRadius="lg"  
+              fontSize={buttonFontSize}>
               Comming Soon...
             </Button>
           </Box>
 
           {/* Placeholder for phone mockup image or extra content */}
           <Flex flex="1">
-            <OrderedList color="textGrey" spacing="1rem">
+            <OrderedList color="textGrey" spacing="1rem" fontSize={textFontSize}>
               {" "}
               <ListItem>
                 {" "}
@@ -240,19 +219,20 @@ const Solution = () => {
         </Flex>
         <Flex
           my="4rem"
-          padding="2rem 8rem"
+          padding={contentPadding}
           bg="rgba(100, 94, 94, .1)"
           borderRadius="lg"
           boxShadow="md"
           gap="4rem"
           alignItems="center"
+          flexDirection={{ base: "column", md: "row" }}
           wrap="wrap">
           {/* Text Section */}
           <Box flex="1">
-            <Heading fontSize="2xl" color="red.500" mb="1rem">
+            <Heading fontSize="2xl" color="primaryOrange" mb="1rem">
               Autoparts
             </Heading>
-            <Text mb="1.5rem">
+            <Text mb="1.5rem" fontSize={textFontSize}>
               Experience a new way to shop for auto parts with Pamtech
               Autoparts, designed to make finding and buying parts easy,
               convenient, and enjoyable
@@ -269,15 +249,14 @@ const Solution = () => {
               _active={{
                 bgColor: "#bf1e1d",
               }}
-              fontSize="1.2rem"
-              borderRadius={theme.buttonRadius.radius}>
+              fontSize={buttonFontSize}              borderRadius={theme.buttonRadius.radius}>
               Comming Soon...
             </Button>
           </Box>
 
           {/* Placeholder for phone mockup image or extra content */}
           <Flex flex="1">
-            <OrderedList color="textGrey" spacing="1rem">
+            <OrderedList color="textGrey" spacing="1rem" fontSize={textFontSize}>
               {" "}
               <ListItem>
                 {" "}

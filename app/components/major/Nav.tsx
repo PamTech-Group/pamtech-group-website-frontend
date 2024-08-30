@@ -51,7 +51,7 @@ const Nav = () => {
   useEffect(() => {
     const handleScroll = () => {
       setScrollY(window.scrollY);
-      setIsScrolled(window.scrollY > window.innerHeight); // When past the hero section
+      setIsScrolled(window.scrollY > (window.innerHeight) ); // When past the hero section
     };
 
     window.addEventListener("scroll", handleScroll);

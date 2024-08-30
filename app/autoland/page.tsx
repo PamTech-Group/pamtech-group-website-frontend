@@ -5,14 +5,13 @@ import landBg from "../../public/landBg.webp";
 import land1 from "../../public/land1.webp";
 import land2 from "../../public/land2.webp";
 import land3 from "../../public/land3.webp";
-import bg3 from "../../public/bg3.png";
 import Image from "next/image";
 import {
   Box,
-  Button,
+ 
   Flex,
   Heading,
-  SimpleGrid,
+ 
   Text,
   VStack,
   useBreakpointValue,

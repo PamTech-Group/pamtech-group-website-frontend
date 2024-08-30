@@ -7,6 +7,7 @@ import {
   Heading,
   SimpleGrid,
   Text,
+  useBreakpointValue,
   VStack,
 } from "@chakra-ui/react";
 import Nav from "../components/major/Nav";
@@ -37,232 +38,141 @@ import {
 
 const images = [gallery1, gallery2, gallery3, gallery5, gallery6];
 const Socials = () => {
+  const contentPadding = useBreakpointValue({
+    base: "1rem",
+    sm: "2rem",
+    md: "4rem",
+    lg: "6rem",
+    xl: "8rem",
+  });
+  const headingFontSize = useBreakpointValue({ base: "2rem", md: "2.5rem", lg: "3rem" });
+  const textFontSize = useBreakpointValue({ base: "1rem", md: "1.1rem", lg: "1.2rem" });
+  const socialIconSize = useBreakpointValue({ base: "1.2rem", md: "1.5rem" });
+  const socialTextSize = useBreakpointValue({ base: "0.9rem", md: "1rem", lg: "1.2rem" });
   return (
     <Box bgColor="#FFFFFF" overflow="hidden">
-      <Box
-        bgPosition="center"
-        bgColor="#0F1010"
-        height="100vh"
-        width="100vw"
-        color="#F7F7F7">
-        <Box height="inherit" width="inherit" padding="2rem 8rem">
-          <Nav />
-          <Flex
-            height="100%"
-            width="100%"
-            alignItems="center"
-            justifyContent="space-between">
-            <Flex
-              flexDir="column"
-              justifyContent="center"
-              gap="2rem"
-              width="50%">
-              <Heading fontSize="3rem" fontWeight={500}>
-                Innovating Tomorrow,
-                <br /> Today
-              </Heading>
-              <Text width="80%" fontSize="1.2rem">
-                Experience never-boring content, excellent services, and a
-                workplace culture that’s as inspiring as it is
-                supportive—welcome to Pamtech Group.
-              </Text>
-            </Flex>
-            <Flex>
-              <Image
-                src={socialsHero}
-                alt="people of pamtech"
-                className="image-style"
-              />
-            </Flex>
-          </Flex>
-        </Box>
-      </Box>
-      <Box padding={{ base: "2rem", md: "4rem 8rem" }}>
-        {/* Gallery Heading */}
-        <Heading size="lg" marginBottom="2rem">
-          Gallery
-        </Heading>
+    <Box
+    bgPosition="center"
+    bgColor="#0F1010"
+    minHeight={{ base: "auto", md: "100vh" }}
+    width="100%"
+    color="#F7F7F7">
+    <Box height="100%" width="100%" padding={`2rem ${contentPadding}`}>
+      <Nav />
+      <Flex
+      mt={{
+        base:'3.5rem',
+        md: '0rem'
+      }}
+        height={{ base: "auto", md: "calc(100vh - 80px)" }}
+        width="100%"
+        alignItems="center"
+        justifyContent="space-between"
+        flexDirection={{ base: "column", md: "row" }}
+        gap={{ base: "2rem", md: "0" }}>
+        <Flex
+          flexDir="column"
+          justifyContent="center"
+          gap="2rem"
+          width={{ base: "100%", lg: "50%" }}>
+          <Heading fontSize={headingFontSize} fontWeight={500}>
+            Innovating Tomorrow,
+            <br /> Today
+          </Heading>
+          <Text width={{ base: "100%", md: "80%" }} fontSize={textFontSize}>
+          {`Experience never-boring content, excellent services, and a
+            workplace culture that's as inspiring as it is
+            supportive—welcome to Pamtech Group.`}  
+          </Text>
+        </Flex>
+        <Flex>
+          <Image
+            src={socialsHero}
+            alt="people of pamtech"
+            style={{ maxWidth: '100%', height: 'auto' }}
+          />
+        </Flex>
+      </Flex>
+    </Box>
+  </Box>
+  <Box padding={`2rem ${contentPadding}`}>
+  {/* Gallery Heading */}
+  <Heading size="lg" marginBottom="2rem">
+    Gallery
+  </Heading>
 
-        {/* Gallery Grid */}
-        <Grid
-          h="auto"
-          templateRows="repeat(2, 1fr)"
-          templateColumns="repeat(4, 1fr)"
-          gap={4}>
-          {/* Large image that spans 2 rows and 2 columns */}
-          <GridItem rowSpan={2} colSpan={2}>
-            <Image
-              src={gallery1}
-              alt="Gallery Image 1"
-              className="image-style"
-            />
-          </GridItem>
+  {/* Gallery Grid */}
+  <Grid
+    h="auto"
+    templateRows={{ base: "repeat(5, 1fr)", md: "repeat(2, 1fr)" }}
+    templateColumns={{ base: "repeat(1, 1fr)", md: "repeat(4, 1fr)" }}
+    gap={4}>
+    {/* Large image that spans 2 rows and 2 columns on larger screens */}
+    <GridItem rowSpan={{ base: 1, md: 2 }} colSpan={{ base: 1, md: 2 }}>
+      <Image
+        src={gallery1}
+        alt="Gallery Image 1"
+        style={{ width: '100%', height: 'auto', objectFit: 'cover' }}
+      />
+    </GridItem>
 
-          {/* Small images (top-right) */}
-          <GridItem colSpan={1}>
-            <Image
-              src={gallery2}
-              alt="Gallery Image 2"
-              objectFit="cover"
-              className="image-style"
-            />
-          </GridItem>
-
-          <GridItem colSpan={1}>
-            <Image
-              src={gallery3}
-              alt="Gallery Image 3"
-              objectFit="cover"
-              className="image-style"
-            />
-          </GridItem>
-
-          {/* Small images (bottom-right) */}
-          <GridItem colSpan={1}>
-            <Image
-              src={gallery5}
-              alt="Gallery Image 4"
-              objectFit="cover"
-              className="image-style"
-            />
-          </GridItem>
-
-          <GridItem colSpan={1}>
-            <Image
-              src={gallery6}
-              alt="Gallery Image 5"
-              objectFit="cover"
-              className="image-style"
-            />
-          </GridItem>
-        </Grid>
-      </Box>
-      <VStack align="left" my="4rem" padding="2rem 8rem" width="50%">
-        <Text color="#171717" fontSize="2.5rem" fontWeight={500}>
-          Explore our social media platforms
-        </Text>
-        <Text color="textGrey" fontSize="1.2rem">
-          Lorem ipsum dolor sit amet consectetur. Eget est velit senectus nunc
-          nulla malesuada dignissim. Adipiscing a lectus urna rhoncus lectus in
-          molestie quam. Gravida iaculi
-        </Text>
-      </VStack>
+    {/* Small images */}
+    {[gallery2, gallery3, gallery5, gallery6].map((img, index) => (
+      <GridItem key={index} colSpan={1}>
+        <Image
+          src={img}
+          alt={`Gallery Image ${index + 2}`}
+          style={{ width: '100%', height: 'auto', objectFit: 'cover' }}
+        />
+      </GridItem>
+    ))}
+  </Grid>
+</Box>
+<VStack align="left" my="4rem" padding={`2rem ${contentPadding}`} width={{ base: "100%", md: "70%", lg: "50%" }}>
+  <Text color="#171717" fontSize={headingFontSize} fontWeight={500}>
+    Explore our social media platforms
+  </Text>
+  <Text color="textGrey" fontSize={textFontSize}>
+    Lorem ipsum dolor sit amet consectetur. Eget est velit senectus nunc
+    nulla malesuada dignissim. Adipiscing a lectus urna rhoncus lectus in
+    molestie quam. Gravida iaculi
+  </Text>
+  </VStack>
       <Flex
         my="4rem"
-        padding="2rem 8rem"
-        justifyContent="space-between"
-        wrap="wrap"
+        flexDirection={{
+          base: 'column',
+          md: 'row'
+        }}
+        padding={`2rem ${contentPadding}`}
+        justifyContent={{ base: "center", md: "space-between" }}
+        flexWrap="wrap"
         gap="2rem">
-        <Flex
-          alignItems="center"
-          justifyContent="center"
-          fontWeight={400}
-          fontSize="1.2rem"
-          borderRadius="2xl"
-          height="4rem"
-          width="contain"
-          padding="1rem 3rem"
-          bgColor="#25D366"
-          gap="1rem">
-          <FaWhatsapp fontSize="1.5rem" /> {/* Whatsapp Icon */}
-          <Text>Whatsapp</Text>
-        </Flex>
-
-        {/* Facebook */}
-        <Flex
-          alignItems="center"
-          justifyContent="center"
-          fontWeight={400}
-          fontSize="1.2rem"
-          borderRadius="2xl"
-          height="4rem"
-          width="contain"
-          padding="1rem 3rem"
-          bgColor="#1877F2"
-          gap="1rem">
-          <FaFacebookSquare fontSize="1.5rem" /> {/* Facebook Icon */}
-          <Text>Facebook</Text>
-        </Flex>
-
-        {/* Youtube */}
-        <Flex
-          alignItems="center"
-          justifyContent="center"
-          fontWeight={400}
-          fontSize="1.2rem"
-          borderRadius="2xl"
-          height="4rem"
-          width="contain"
-          padding="1rem 3rem"
-          bgColor="#FF0000"
-          gap="1rem">
-          <FaYoutube fontSize="1.5rem" /> {/* Youtube Icon */}
-          <Text>Youtube</Text>
-        </Flex>
-
-        {/* Tiktok */}
-        <Flex
-          alignItems="center"
-          justifyContent="center"
-          fontWeight={400}
-          fontSize="1.2rem"
-          borderRadius="2xl"
-          height="4rem"
-          width="contain"
-          padding="1rem 3rem"
-          bgColor="#171717"
-          gap="1rem">
-          <FaTiktok fontSize="1.5rem" /> {/* Tiktok Icon */}
-          <Text>Tiktok</Text>
-        </Flex>
-
-        {/* Instagram */}
-        <Flex
-          alignItems="center"
-          justifyContent="center"
-          fontWeight={400}
-          fontSize="1.2rem"
-          borderRadius="2xl"
-          height="4rem"
-          width="contain"
-          padding="1rem 3rem"
-          bgColor="#C13584"
-          gap="1rem">
-          <FaInstagram fontSize="1.5rem" /> {/* Instagram Icon */}
-          <Text>Instagram</Text>
-        </Flex>
-
-        {/* X (formerly Twitter) */}
-        <Flex
-          alignItems="center"
-          justifyContent="center"
-          fontWeight={400}
-          fontSize="1.2rem"
-          borderRadius="2xl"
-          height="4rem"
-          width="contain"
-          padding="1rem 3rem"
-          bgColor="#171717"
-          gap="1rem">
-          <FaXTwitter fontSize="1.5rem" /> {/* Twitter (X) Icon */}
-          <Text>X</Text>
-        </Flex>
-
-        {/* Linkedin */}
-        <Flex
-          alignItems="center"
-          justifyContent="center"
-          fontWeight={400}
-          fontSize="1.2rem"
-          borderRadius="2xl"
-          height="4rem"
-          width="contain"
-          padding="1rem 3rem"
-          bgColor="#0762C8"
-          gap="1rem">
-          <FaLinkedin fontSize="1.5rem" /> {/* Linkedin Icon */}
-          <Text>Linkedin</Text>
-        </Flex>
+        {[
+          { icon: FaWhatsapp, text: "Whatsapp", color: "#25D366" },
+          { icon: FaFacebookSquare, text: "Facebook", color: "#1877F2" },
+          { icon: FaYoutube, text: "Youtube", color: "#FF0000" },
+          { icon: FaTiktok, text: "Tiktok", color: "#171717" },
+          { icon: FaInstagram, text: "Instagram", color: "#C13584" },
+          { icon: FaXTwitter, text: "X", color: "#171717" },
+          { icon: FaLinkedin, text: "Linkedin", color: "#0762C8" },
+        ].map((social, index) => (
+          <Flex
+            key={index}
+            alignItems="center"
+            justifyContent="center"
+            fontWeight={400}
+            fontSize={socialTextSize}
+            borderRadius="2xl"
+            height="4rem"
+            minWidth={{ base: "6rem" }}
+            padding="1rem 2rem"
+            bgColor={social.color}
+            gap="1rem">
+            <social.icon fontSize={socialIconSize} />
+            <Text>{social.text}</Text>
+          </Flex>
+        ))}
       </Flex>
       <Sustainability />
       <Footer />
