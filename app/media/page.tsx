@@ -71,9 +71,10 @@ const Media = () => {
               textAlign="justify"
               fontSize={textFontSize}
             >
-              Lorem ipsum dolor sit amet consectetur. Tincidunt ac elit
-              ullamcorper nibh in. Id pretium amet sem eli t nunc maecenas at
-              facilisi. nibh
+              From content marketing to talent management and 
+media consulting, we help brands connect with their 
+audience and grow their presence online.
+
             </Text>
             <ButtonMain linkHref="#media" text="Talk to us" />
           </Flex>
