@@ -6,7 +6,11 @@ import Sustainability from "../components/minor/Sustainability";
 import Footer from "../components/major/Footer";
 import theme from "../theme";
 import Image from "next/image";
-import phoneImage from "../../public/phone.png"
+import news1 from "../../public/news1.webp"
+
+import news2 from "../../public/news2.jpg"
+
+import news3 from "../../public/news3.jpeg"
 import Link from "next/link";
 import { ArrowForwardIcon } from "@chakra-ui/icons";
 const yearContent = {
@@ -149,13 +153,15 @@ const Growth = () => {
           _hover={{ transform: 'translateY(-5px)', boxShadow: 'lg' }}
         >
           <CardBody >
-            <Image src={phoneImage} alt='Blog post image' width={300} height={200} objectFit="cover" />
+            <Flex justify='center'>
+
+            <Image src={news1} alt='Blog post image' width={300} height={200} objectFit="cover" />
+            </Flex>
             <Text color="#171717" fontWeight={500} fontSize={yearFontSize} mt={4}>
-              August 31st, 2024
+              August 31st, 2023
             </Text>
             <Text color="textGrey" fontSize={textFontSize} mt={2} noOfLines={3}>
-              Pamtech Oil & Gas is set to revolutionize the fuel retail industry with the launch of Petrol Padi, a cutting-edge fuel e-commerce app.
-            </Text>
+            Pamtech CEO Chidomere Ndubuisi Awarded, at Owerri Business Week 2023            </Text>
           </CardBody>
           <CardFooter>
             <Flex alignItems="center" color="primaryOrange">
@@ -179,13 +185,15 @@ const Growth = () => {
           _hover={{ transform: 'translateY(-5px)', boxShadow: 'lg' }}
         >
           <CardBody >
-            <Image src={phoneImage} alt='Blog post image' width={300} height={200} objectFit="cover" />
+            <Flex justify='center' >
+
+            <Image src={news2} alt='Blog post image' width={300} height={200} objectFit="cover" />
+            </Flex>
             <Text color="#171717" fontWeight={500} fontSize={yearFontSize} mt={4}>
-              August 31st, 2024
+              May 31st, 2024
             </Text>
             <Text color="textGrey" fontSize={textFontSize} mt={2} noOfLines={3}>
-              Pamtech Oil & Gas is set to revolutionize the fuel retail industry with the launch of Petrol Padi, a cutting-edge fuel e-commerce app.
-            </Text>
+            Pamtech CEO Chidomere Ndubuisi Bags International Business Leader Award            </Text>
           </CardBody>
           <CardFooter>
             <Flex alignItems="center" color="primaryOrange">
@@ -209,13 +217,15 @@ const Growth = () => {
           _hover={{ transform: 'translateY(-5px)', boxShadow: 'lg' }}
         >
           <CardBody >
-            <Image src={phoneImage} alt='Blog post image' width={300} height={200} objectFit="cover" />
+            <Flex justifyContent='center' >
+
+            <Image src={news3} alt='Blog post image' width={300} height={200} objectFit="cover" />
+            </Flex>
             <Text color="#171717" fontWeight={500} fontSize={yearFontSize} mt={4}>
-              August 31st, 2024
+              December 20th, 2022
             </Text>
             <Text color="textGrey" fontSize={textFontSize} mt={2} noOfLines={3}>
-              Pamtech Oil & Gas is set to revolutionize the fuel retail industry with the launch of Petrol Padi, a cutting-edge fuel e-commerce app.
-            </Text>
+            Pamtech CEO Chidomere Accepted Into Forbes Business Council            </Text>
           </CardBody>
           <CardFooter>
             <Flex alignItems="center" color="primaryOrange">

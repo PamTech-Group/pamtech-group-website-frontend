@@ -39,47 +39,47 @@ const services = [
 
 const images = [
   {
-    image: service2,
+    image: service4,
     title: "Oil & Gas",
     description:
       "Experience zero downtime and reduced maintenance costs with our pure petroleum products.",
-      linkHref:"/oilgas"
+    linkHref: "/oilgas",
   },
   {
     image: service3,
     title: "Autoland",
     description:
       "Pamtech Autoland is your one-stop solution for quality auto repairs and maintenance.",
-   linkHref:"/autoland"
-    },
+    linkHref: "/autoland",
+  },
   {
-    image: service4,
+    image: service2,
     title: "Autoparts",
     description:
       "Get all the genuine OEM parts at the right price and without stress.",
-   linkHref:"/autoparts"
-    },
+    linkHref: "/autoparts",
+  },
   {
     image: service5,
     title: "Media",
     description:
       "Pamtech Media is your go-to hub for content creation and digital marketing, helping brands grow and connect with their audience online.",
-  linkHref:"/media"
-    },
+    linkHref: "/media",
+  },
   {
     image: service1,
     title: "Ride",
     description:
       "Experience luxury and comfort with Pamtech Luxury Ride's premium vehicles for all your personal and corporate needs.",
-   linkHref:"/ride"
-    },
+    linkHref: "/ride",
+  },
   {
     image: service6,
     title: "Foundation",
     description:
       "The Pamtech Foundation is guided by a core vision: Giving hope and sharing love to humanity.",
-   linkHref:"/foundation"
-    },
+    linkHref: "/foundation",
+  },
 ];
 
 // Services component
@@ -123,13 +123,22 @@ const Services = () => {
               gap="1rem"
               bgColor="#F7F7F7"
               boxShadow="md"
-              padding={{ base: "0.5rem 1rem", md: "1rem 2rem", lg: "1rem 3rem" }}
+              padding={{
+                base: "0.5rem 1rem",
+                md: "1rem 2rem",
+                lg: "1rem 3rem",
+              }}
               borderRadius="lg"
               flex={{ base: "0 0 45%", md: "0 0 30%", lg: "0 0 auto" }}
               mb={{ base: 4, lg: 0 }}
             >
               <Image height={50} src={service.icon} alt={service.title} />
-              <Text textAlign="center" color="#0E0E0F" fontWeight="bold" fontSize={textFontSize}>
+              <Text
+                textAlign="center"
+                color="#0E0E0F"
+                fontWeight="bold"
+                fontSize={textFontSize}
+              >
                 {service.title}
               </Text>
             </Flex>
@@ -137,7 +146,12 @@ const Services = () => {
         </Flex>
 
         {/* Services Description */}
-        <VStack align="left" my="4rem" padding={contentPadding} width={descriptionWidth}>
+        <VStack
+          align="left"
+          my="4rem"
+          padding={contentPadding}
+          width={descriptionWidth}
+        >
           <Text fontWeight={500} fontSize={textFontSize} color="primaryOrange">
             Our Services
           </Text>
@@ -147,10 +161,9 @@ const Services = () => {
           <Text color="textGrey" fontSize={textFontSize}>
             As a diversified and fully integrated conglomerate, our interest in
             multiple industries indicates our determination to cater to our
-            vision of empowering success through committed service to humanity. 
+            vision of empowering success through committed service to humanity.
           </Text>
         </VStack>
-     
 
         {/* Services Image Grid */}
         <Box padding={contentPadding}>
@@ -173,11 +186,17 @@ const Services = () => {
                   color="white"
                   _hover={{ transform: "scale(1.05)", transition: "0.3s ease" }}
                 >
-                  <Text fontSize={{ base: "1.2rem", md: "1.5rem" }}  fontWeight={500} mb="2.5rem">
+                  <Text
+                    fontSize={{ base: "1.2rem", md: "1.5rem" }}
+                    fontWeight={500}
+                    mb="2.5rem"
+                  >
                     {image.title}
                   </Text>
-                  <Text fontSize={{ base: "0.9rem", md: "1rem" }}>{image.description}</Text>
-                  <Link href="#" color="#F7F7F7" className="read-more">
+                  <Text fontSize={{ base: "0.9rem", md: "1rem" }}>
+                    {image.description}
+                  </Text>
+                  <Link href={image.linkHref} color="#F7F7F7" className="read-more">
                     Read More <BsArrowRight fontSize="1.5rem" />
                   </Link>
                 </Box>
