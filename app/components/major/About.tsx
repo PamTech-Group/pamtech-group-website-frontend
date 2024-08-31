@@ -28,7 +28,7 @@ const About = () => {
         padding={contentPadding}
         position={isXlScreen ? "absolute" : "relative"}
         right={isXlScreen ? "6%" : "auto"}
-        top={isXlScreen ? { xl: "10%", dxl: "10%", ddxl:'20%', dddxl: '25%' } : "auto"}
+        top={isXlScreen ? { xl: "5%", dxl: "10%", ddxl:'20%', dddxl: '25%' } : "auto"}
         mt={isXlScreen ? 'auto' : "4rem"}
       >
         <VStack spacing="1.5rem" align="start">
