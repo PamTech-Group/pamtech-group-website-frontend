@@ -68,24 +68,27 @@ const ContactPage = () => {
   
     // Prepare the data to be sent
     const data = {
-      firstName: formData.name.split(" ")[0], // Assuming first name is the first part of the name
+      firstName: formData.name.split(" ")[0], 
       lastName: formData.name.split(" ")[1] || "", // Assuming last name is the second part of the name
       email: formData.email,
       phoneNumber: formData.phoneNumber,
-      subject: "General Inquiry", // You can modify this as needed
+      subject: "General Inquiry", 
       message: formData.message,
     };
   
     try {
       const response = await axios.post('https://pamtech-group-website-backend.onrender.com/api/users/contact', data);
-      toast({
-        title: 'Sent Successfully.',
-        description: "Thank  you for reaching out to us",
-        status: 'success',
-        duration: 5000,
-        isClosable: true,
-        position: 'top-right'
-      })
+      if (response.status==200) {
+
+        toast({
+          title: 'Sent Successfully.',
+          description: "Thank  you for reaching out to us",
+          status: 'success',
+          duration: 5000,
+          isClosable: true,
+          position: 'top-right'
+        })
+      }
       // Handle success (e.g., show a success message)
     } catch (error) {
       console.error('Error submitting form:', error);
