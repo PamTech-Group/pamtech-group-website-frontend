@@ -11,14 +11,17 @@ import {
   Textarea,
   VStack,
   useBreakpointValue,
+  useToast,
 } from "@chakra-ui/react";
 import { useState } from "react";
+import axios from 'axios';
 
 import Footer from "../components/major/Footer";
 import Sustainability from "../components/minor/Sustainability";
 import NavWhite from "../components/major/NavWhite";
 
 const ContactPage = () => {
+  const toast = useToast()
   const contentPadding = useBreakpointValue({
     base: "1rem",
     sm: "2rem",
@@ -60,9 +63,42 @@ const ContactPage = () => {
   };
 
   // Handle form submission
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Add your form submission logic here
+  
+    // Prepare the data to be sent
+    const data = {
+      firstName: formData.name.split(" ")[0], // Assuming first name is the first part of the name
+      lastName: formData.name.split(" ")[1] || "", // Assuming last name is the second part of the name
+      email: formData.email,
+      phoneNumber: formData.phoneNumber,
+      subject: "General Inquiry", // You can modify this as needed
+      message: formData.message,
+    };
+  
+    try {
+      const response = await axios.post('https://pamtech-group-website-backend.onrender.com/api/users/contact', data);
+      toast({
+        title: 'Sent Successfully.',
+        description: "Thank  you for reaching out to us",
+        status: 'success',
+        duration: 5000,
+        isClosable: true,
+        position: 'top-right'
+      })
+      // Handle success (e.g., show a success message)
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      toast({
+        title: 'Error.',
+        description: "An error ocurred",
+        status: 'error',
+        duration: 5000,
+        isClosable: true,
+        position: 'top-right'
+      })
+      // Handle error (e.g., show an error message)
+    }
   };
 
   return (
@@ -227,6 +263,7 @@ const ContactPage = () => {
               />
             </FormControl>
             <Button
+            fontSize='1rem'
               type="submit"
               bgColor="primaryOrange"
               color="white"
