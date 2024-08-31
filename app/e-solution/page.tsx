@@ -79,7 +79,7 @@ const Solution = () => {
             developing cutting-edge e-solutions that drive efficiency, enhance
             user experience, and transform industries.
           </Text>
-          <ButtonMain text="Talk to us" />
+          <ButtonMain linkHref="https://wa.me/+2347007268324"   text="Talk to us" />
         </Flex>
       </Box>
 
