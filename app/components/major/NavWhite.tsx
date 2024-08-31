@@ -177,7 +177,7 @@ const NavWhite = () => {
               <Link href="/growth" onClick={onMobileMenuClose}>
                 Our Growth
               </Link>
-              <Link href="#" onClick={onMobileMenuClose}>
+              <Link href="/e-solution" onClick={onMobileMenuClose}>
                 e-Solution
               </Link>
               <Link href="/contact-us" onClick={onMobileMenuClose}>

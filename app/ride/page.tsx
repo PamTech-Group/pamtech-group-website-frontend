@@ -59,7 +59,7 @@ We offer a fleet of premium vehicles for your personal or
 corporate needs, ensuring a stylish ride every time.
 
             </Text>
-            <ButtonMain linkHref="#ride" text="Talk to us" />
+            <ButtonMain linkHref="#ride" text="Read More" />
           </Flex>
         </Box>
         <Box my="6rem">

@@ -71,7 +71,7 @@ const Autoparts = () => {
               Get all the genuine OEM parts at the right price and without
               stress. 
             </Text>
-            <ButtonMain linkHref="#autoparts" text="Talk to us" />
+            <ButtonMain linkHref="#autoparts" text="Read More" />
           </Flex>
         </Box>
         <Box my="6rem">

@@ -55,11 +55,10 @@ const Foundation = () => {
               Pamtech Foundation
             </Heading>
             <Text fontWeight={500} width={{ base: "100%", md: "80%", xl: '60%' }} textAlign="justify" fontSize={textFontSize}>
-              Lorem ipsum dolor sit amet consectetur. Tincidunt ac elit
-              ullamcorper nibh in. Id pretium amet sem eli t nunc maecenas at
-              facilisi. nibh
+             The Pamtech Foundation is guided by a core vision: Giving hope and sharing love to humanity. 
+
             </Text>
-            <ButtonMain linkHref="#foundation" text="Talk to us" />
+            <ButtonMain linkHref="#foundation" text="Read More" />
           </Flex>
         </Box>
         <Box my="6rem">

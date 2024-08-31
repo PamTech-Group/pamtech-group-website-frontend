@@ -71,12 +71,11 @@ const Media = () => {
               textAlign="justify"
               fontSize={textFontSize}
             >
-              From content marketing to talent management and 
-media consulting, we help brands connect with their 
-audience and grow their presence online.
-
+              From content marketing to talent management and media consulting,
+              we help brands connect with their audience and grow their presence
+              online.
             </Text>
-            <ButtonMain linkHref="#media" text="Talk to us" />
+            <ButtonMain linkHref="#media" text="Read More" />
           </Flex>
         </Box>
         <Box my="6rem">
@@ -104,7 +103,8 @@ audience and grow their presence online.
           align="left"
           my="4rem"
           padding={contentPadding}
-          width={{ base: "100%", md: "70%", lg: "50%" }} id="media"
+          width={{ base: "100%", md: "70%", lg: "50%" }}
+          id="media"
         >
           <Text color="#171717" fontSize={headingFontSize} fontWeight={500}>
             Media
