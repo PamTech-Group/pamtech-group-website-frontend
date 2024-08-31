@@ -70,7 +70,7 @@ const AboutPage = () => {
 
   const headingFontSize = useBreakpointValue({ base: "2rem", md: "2.5rem", lg: "3rem" });
   const textFontSize = useBreakpointValue({ base: "1rem", md: "1.1rem", lg: "1.2rem" });
-  const imageHeight = useBreakpointValue({ base: 400, md: 500, lg: 600 });
+  // const imageHeight = useBreakpointValue({ base: 'auto', md: 300, lg: 400 });
 
   return (
     <Box bgColor="#FFFFFF" overflow="hidden">
@@ -121,16 +121,21 @@ const AboutPage = () => {
               width={{ base: "100%", md: "50%" }}
             >
               <Flex
+              alignItems='center'
               justifyContent='center'
                 className={`fade ${isFading ? "fade-out" : "fade-in"}`}
                 position="relative"
-                width={{ base: "100%", md: "100%" }}
+                width={{ base: "100%", }}
+                mt={{
+                  base: '3rem',
+                  xl: '0rem'
+                }}
               >
                 <Image
-                  height={imageHeight}
+                  // height={imageHeight}
                   src={heroImages[currentImageIndex].image}
                   alt={heroImages[currentImageIndex].alt}
-                  style={{ objectFit: "cover", width: "100%" }}
+                  style={{ objectFit: "cover", width: "100%", height: 'auto' }}
                 />
               </Flex>
             </Flex>

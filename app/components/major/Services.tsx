@@ -99,7 +99,7 @@ const Services = () => {
   const textFontSize = useBreakpointValue({ base: "1rem", md: "1.2rem" });
   return (
     <>
-      <Box marginTop="10rem" mb="4rem">
+      <Box marginTop="10rem" mb="4rem" id="services">
         {/* Service Icons */}
         <Flex
           gap={{ base: 4, md: 6, lg: 10 }}
