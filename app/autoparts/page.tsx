@@ -71,7 +71,7 @@ const Autoparts = () => {
               Get all the genuine OEM parts at the right price and without
               stress. 
             </Text>
-            <ButtonMain text="Talk to us" />
+            <ButtonMain linkHref="#autoparts" text="Talk to us" />
           </Flex>
         </Box>
         <Box my="6rem">
@@ -108,6 +108,7 @@ const Autoparts = () => {
           </Flex>
         </Box>
         <VStack
+        id="autoparts"
           align="left"
           my="4rem"
           padding={contentPadding}

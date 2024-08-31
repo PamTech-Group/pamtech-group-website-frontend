@@ -70,7 +70,7 @@ const OilGas = () => {
               zero downtime and low maintenance costs for your equipments and
               facilities.
             </Text>
-            <ButtonMain text="Read More" />
+            <ButtonMain linkHref="#oil-gas" text="Read More" />
           </Flex>
         </Box>
         <Box my="6rem">
@@ -111,7 +111,7 @@ const OilGas = () => {
           my="4rem"
           padding={contentPadding}
           width={{ base: "100%", md: "70%", lg: "50%" }}
-        >
+      id="oil-gas"  >
           <Text color="#171717" fontSize={headingFontSize} fontWeight={500}>
             Oil & Gas
           </Text>

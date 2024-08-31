@@ -43,37 +43,43 @@ const images = [
     title: "Oil & Gas",
     description:
       "Experience zero downtime and reduced maintenance costs with our pure petroleum products.",
+      linkHref:"/oilgas"
   },
   {
     image: service3,
     title: "Autoland",
     description:
       "Pamtech Autoland is your one-stop solution for quality auto repairs and maintenance.",
-  },
+   linkHref:"/autoland"
+    },
   {
     image: service4,
     title: "Autoparts",
     description:
       "Get all the genuine OEM parts at the right price and without stress.",
-  },
+   linkHref:"/autoparts"
+    },
   {
     image: service5,
     title: "Media",
     description:
       "Pamtech Media is your go-to hub for content creation and digital marketing, helping brands grow and connect with their audience online.",
-  },
+  linkHref:"/media"
+    },
   {
     image: service1,
     title: "Ride",
     description:
       "Experience luxury and comfort with Pamtech Luxury Ride's premium vehicles for all your personal and corporate needs.",
-  },
+   linkHref:"/ride"
+    },
   {
     image: service6,
     title: "Foundation",
     description:
       "The Pamtech Foundation is guided by a core vision: Giving hope and sharing love to humanity.",
-  },
+   linkHref:"/foundation"
+    },
 ];
 
 // Services component

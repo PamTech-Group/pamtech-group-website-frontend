@@ -106,7 +106,7 @@ const Sustainability = () => {
             contributions to the development of our host communities and society
             as a whole.
           </Text>
-          <ButtonMain text="Read More" />
+          <ButtonMain linkHref="/growth" text="Read More" />
         </Flex>
         <Box height={{ base: "1px", lg: "auto" }} width={{ base: "100%", lg: "1px" }} my={{ base: "2rem", lg: "0" }} mx={{ base: "0", lg: "3rem" }}  bgColor="#F7F7F7" />
         <Flex width={textWidth} flexDirection="column" gap="2rem">

@@ -59,7 +59,7 @@ We offer a fleet of premium vehicles for your personal or
 corporate needs, ensuring a stylish ride every time.
 
             </Text>
-            <ButtonMain text="Talk to us" />
+            <ButtonMain linkHref="#ride" text="Talk to us" />
           </Flex>
         </Box>
         <Box my="6rem">
@@ -77,7 +77,7 @@ corporate needs, ensuring a stylish ride every time.
             <Image src={ride3} alt="ride1" style={{ maxWidth: '100%', height: 'auto' }}/>
           </Flex>
         </Box>
-        <VStack align="left" my="4rem" padding={contentPadding} width={{ base: "100%", md: "70%", lg: "50%" }}>
+        <VStack id="ride" align="left" my="4rem" padding={contentPadding} width={{ base: "100%", md: "70%", lg: "50%" }}>
           <Text color="#171717" fontSize={headingFontSize}  fontWeight={500}>
             Luxury Ride
           </Text>

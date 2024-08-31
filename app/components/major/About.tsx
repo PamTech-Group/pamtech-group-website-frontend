@@ -39,7 +39,7 @@ const About = () => {
             Founded in 2016, Pamtech Group has grown from a small petroleum
             supply business to a multi-faceted organization.
           </Text>
-          <ButtonMain text="Read More" />
+          <ButtonMain linkHref="/about" text="Read More" />
         </VStack>
         <Box my="2rem" bgColor="#192140" height="1px" opacity=".6" />
         <Flex justifyContent="space-between" color="textGrey">

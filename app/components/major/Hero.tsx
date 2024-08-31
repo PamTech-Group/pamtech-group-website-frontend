@@ -20,6 +20,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { StaticImageData } from "next/image";
 import Nav from "./Nav";
 import ButtonMain from "../minor/ButtonMain";
+import { link } from "fs";
 
 // Array of carousel data
 const carouselData = [
@@ -27,41 +28,48 @@ const carouselData = [
     bg: bg,
     heading: "Excellence is a Way of Life at Pamtech Group",
     text: "We serve humanity with a diverse portfolio in oil and gas, media, and automotive industries.",
+    link: "#services"
   },
   {
     bg: bg2,
     heading: "Oil & Gas",
     text: "With our unadulterated and petroleum products, you will experience zero downtime and low maintenance costs for your equipment and facilities.",
+  link: '/oilgas'
   },
   {
     bg: bg3,
     heading: "Autoland",
     text: "Pamtech Autoland is your one-stop solution for quality auto repairs and maintenance.",
+ link: '/autoland'
   },
   {
     bg: bg4,
     heading: "Autoparts",
     text: "Get all the genuine OEM parts at the right price and without stress.",
+ link: '/autoparts'
   },
   {
     bg: bg5,
     heading: "Media",
     text: "From content marketing to talent management and media consulting, we help brands connect with their audience and grow their presence online.",
+  link: '/media'
   },
   {
     bg: bg6,
     heading: "Luxury Ride",
     text: "Experience luxury and comfort with Pamtech Luxury Ride. We offer a fleet of premium vehicles for your personal or corporate needs, ensuring a stylish ride every time.",
+ link: '/ride'
   },
 ];
 interface SlideContentProps {
   bg: StaticImageData; // Type for the imported images
   heading: string;
   text: string;
+  link: string;
 }
 
 // Reusable component for the slide content
-const SlideContent: React.FC<SlideContentProps> = ({ bg, heading, text }) => {
+const SlideContent: React.FC<SlideContentProps> = ({ bg, heading, text, link }) => {
   const headingFontSize = useBreakpointValue({
     base: "2rem",
     md: "2.5rem",
@@ -135,7 +143,7 @@ const SlideContent: React.FC<SlideContentProps> = ({ bg, heading, text }) => {
               lg: "left",
             }}
           >
-            <ButtonMain text="Read More" />
+            <ButtonMain linkHref={link} text="Read More" />
           </Box>
         </Flex>
       </Box>
@@ -160,6 +168,7 @@ const Hero = () => {
             bg={slide.bg}
             heading={slide.heading}
             text={slide.text}
+            link={slide.link}
           />
         ))}
       </Carousel>

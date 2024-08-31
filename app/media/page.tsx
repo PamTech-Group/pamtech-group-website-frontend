@@ -75,7 +75,7 @@ const Media = () => {
               ullamcorper nibh in. Id pretium amet sem eli t nunc maecenas at
               facilisi. nibh
             </Text>
-            <ButtonMain text="Talk to us" />
+            <ButtonMain linkHref="#media" text="Talk to us" />
           </Flex>
         </Box>
         <Box my="6rem">
@@ -103,7 +103,7 @@ const Media = () => {
           align="left"
           my="4rem"
           padding={contentPadding}
-          width={{ base: "100%", md: "70%", lg: "50%" }}
+          width={{ base: "100%", md: "70%", lg: "50%" }} id="media"
         >
           <Text color="#171717" fontSize={headingFontSize} fontWeight={500}>
             Media

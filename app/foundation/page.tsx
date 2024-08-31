@@ -59,7 +59,7 @@ const Foundation = () => {
               ullamcorper nibh in. Id pretium amet sem eli t nunc maecenas at
               facilisi. nibh
             </Text>
-            <ButtonMain text="Talk to us" />
+            <ButtonMain linkHref="#foundation" text="Talk to us" />
           </Flex>
         </Box>
         <Box my="6rem">
@@ -86,7 +86,7 @@ const Foundation = () => {
             </Box>
           </Flex>
         </Box>
-        <VStack align="left" my="4rem" padding={contentPadding} width={{ base: "100%", md: "70%", lg: "50%" }}>
+        <VStack id="foundation" align="left" my="4rem" padding={contentPadding} width={{ base: "100%", md: "70%", lg: "50%" }}>
           <Text color="#171717" fontSize={headingFontSize} fontWeight={500}>
             Foundation
           </Text>

@@ -35,6 +35,7 @@ import {
 
   FaXTwitter,
 } from "react-icons/fa6";
+import Link from "next/link";
 
 const images = [gallery1, gallery2, gallery3, gallery5, gallery6];
 const Socials = () => {
@@ -148,30 +149,34 @@ const Socials = () => {
         justifyContent={{ base: "center", md: "space-between" }}
         flexWrap="wrap"
         gap="2rem">
-        {[
-          { icon: FaWhatsapp, text: "Whatsapp", color: "#25D366" },
-          { icon: FaFacebookSquare, text: "Facebook", color: "#1877F2" },
-          { icon: FaYoutube, text: "Youtube", color: "#FF0000" },
-          { icon: FaTiktok, text: "Tiktok", color: "#171717" },
-          { icon: FaInstagram, text: "Instagram", color: "#C13584" },
-          { icon: FaXTwitter, text: "X", color: "#171717" },
-          { icon: FaLinkedin, text: "Linkedin", color: "#0762C8" },
+         {[
+          { icon: FaWhatsapp, text: "Whatsapp", color: "#25D366", link: "https://wa.me/+2347007268324" },
+          { icon: FaFacebookSquare, text: "Facebook", color: "#1877F2", link: "https://www.facebook.com/pamtechgroup/" },
+          { icon: FaYoutube, text: "Youtube", color: "#FF0000", link: "https://www.youtube.com/channel/UCjJ-fWJYIhpViYWr97-yWNw" },
+          { icon: FaTiktok, text: "Tiktok", color: "#171717", link: "https://www.tiktok.com/@pamtechgroup" },
+          { icon: FaInstagram, text: "Instagram", color: "#C13584", link: "https://www.instagram.com/pamtechgroup" },
+          { icon: FaXTwitter, text: "X", color: "#171717", link: "https://x.com/thepamtechgroup" },
+          { icon: FaLinkedin, text: "Linkedin", color: "#0762C8", link: "https://www.linkedin.com/company/pamtechgroup/" },
         ].map((social, index) => (
-          <Flex
-            key={index}
-            alignItems="center"
-            justifyContent="center"
-            fontWeight={400}
-            fontSize={socialTextSize}
-            borderRadius="2xl"
-            height="4rem"
-            minWidth={{ base: "6rem" }}
-            padding="1rem 2rem"
-            bgColor={social.color}
-            gap="1rem">
-            <social.icon fontSize={socialIconSize} />
-            <Text>{social.text}</Text>
-          </Flex>
+          <Link href={social.link} key={index} passHref target="_blank" rel="noopener noreferrer">
+            <Flex
+              alignItems="center"
+              justifyContent="center"
+              fontWeight={400}
+              fontSize={socialTextSize}
+              borderRadius="2xl"
+              height="4rem"
+              minWidth={{ base: "6rem" }}
+              padding="1rem 2rem"
+              bgColor={social.color}
+              gap="1rem"
+              cursor="pointer"
+              _hover={{ opacity: 0.8 }}
+              transition="opacity 0.2s">
+              <social.icon fontSize={socialIconSize} />
+              <Text>{social.text}</Text>
+            </Flex>
+          </Link>
         ))}
       </Flex>
       <Sustainability />

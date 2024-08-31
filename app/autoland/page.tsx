@@ -70,7 +70,7 @@ const Autoland = () => {
               Pamtech Autoland is your one-stop solution for quality auto
               repairs and maintenance. 
             </Text>
-            <ButtonMain text="Talk to us" />
+            <ButtonMain linkHref="autoland" text="Talk to us" />
           </Flex>
         </Box>
         <Box my="6rem">
@@ -107,6 +107,7 @@ const Autoland = () => {
           </Flex>
         </Box>
         <VStack
+        id="autoland"
           align="left"
           my="4rem"
           padding={contentPadding}

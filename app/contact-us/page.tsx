@@ -28,7 +28,7 @@ const ContactPage = () => {
   });
   const headingFontSize = useBreakpointValue({ base: "1.8rem", md: "2rem", lg: "2.5rem" });
   const textFontSize = useBreakpointValue({ base: "1rem", md: "1.1rem", lg: "1.2rem" });
-  const formWidth = useBreakpointValue({ base: "100%", md: "70%", lg: "60%" });
+  const formWidth = useBreakpointValue({ base: "100%", md: "85%", lg: "80%" });
 
   // State to handle form inputs
   const [formData, setFormData] = useState({
