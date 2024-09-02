@@ -15,7 +15,7 @@ const ButtonMain: React.FC<ButtonMainProps> = ({ text,linkHref }) => {
     <Button
       as='a'
       href={linkHref}
-      mt="4rem"
+      mt="3rem"
       width="fit-content"
       padding={theme.buttonPadding}
       bgColor="primaryOrange"

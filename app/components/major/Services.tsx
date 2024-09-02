@@ -31,7 +31,7 @@ import Marquee from "react-fast-marquee";
 const services = [
   { icon: autoland, title: "Autoland" },
   { icon: petrol, title: "Oil and Gas" },
-  { icon: repair, title: "Auto part" },
+  { icon: repair, title: "Autoparts" },
   { icon: media, title: "Media" },
   { icon: ride, title: "Luxury Ride" },
   { icon: petrolpadi, title: "Petrol Padi" },

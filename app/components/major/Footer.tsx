@@ -60,7 +60,7 @@ const Footer = () => {
               gap="2rem"
               textAlign={textAlign}
             >
-              <Text fontWeight={700} fontSize="1.5rem">
+              <Text fontWeight={700} fontSize="1rem">
                 DOWNLOAD NOW!
               </Text>
               <Text
@@ -72,17 +72,9 @@ const Footer = () => {
                 }}
               >
                 {" "}
-                Track Your Business Expenses Today
-              </Text>
-              <Text
-                fontSize={textFontSize}
-                width={{
-                  base: "100%",
-                  lg: "70%",
-                }}
-              >
                 Your Padi for Oil & Gas Market
               </Text>
+             
               <Flex
                 gap="1rem"
                 justifyContent={{ base: "center", md: "flex-start" }}
