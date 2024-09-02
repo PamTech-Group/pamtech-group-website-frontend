@@ -55,7 +55,7 @@ const AboutPage = () => {
         );
         setIsFading(false);
       }, 500);
-    }, 2000);
+    }, 1000);
 
     return () => clearInterval(interval);
   }, [heroImages.length]);
@@ -96,7 +96,7 @@ const AboutPage = () => {
           >
             <Flex
             mt={{
-              base: '1.5rem',
+              base: '3.5rem',
               md: '0rem'
             }}
               flexDir="column"

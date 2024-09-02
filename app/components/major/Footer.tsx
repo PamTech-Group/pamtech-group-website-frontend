@@ -207,7 +207,7 @@ const Footer = () => {
               <Link fontWeight={300} href="/growth">
                 Our Growth
               </Link>
-              <Link fontWeight={300} href="/e-solution">
+              <Link fontWeight={300} href="/e-Solution">
                 e-solutions
               </Link>
             </Flex>
@@ -251,9 +251,10 @@ const Footer = () => {
               <Flex justify="start" gap="1rem">
                 <IconButton
                   as="a"
+                  padding='1rem'
                   href="https://www.facebook.com/pamtechgroup/"
                   aria-label="Facebook"
-                  icon={<FaFacebook fontSize="1.5rem" />}
+                  icon={<FaFacebook fontSize="1.2rem" />}
                   bg="gray.100"
                   color="black"
                   rounded="5px"
@@ -263,7 +264,7 @@ const Footer = () => {
                   as="a"
                   href="https://www.instagram.com/pamtechgroup"
                   aria-label="Instagram"
-                  icon={<FaInstagram fontSize="1.5rem" />}
+                  icon={<FaInstagram fontSize="1.2rem" />}
                   bg="gray.100"
                   color="black"
                   rounded="5px"
@@ -273,7 +274,7 @@ const Footer = () => {
                   as="a"
                   href="https://www.linkedin.com/company/pamtechgroup/"
                   aria-label="LinkedIn"
-                  icon={<FaLinkedin fontSize="1.5rem" />}
+                  icon={<FaLinkedin fontSize="1.2rem" />}
                   bg="gray.100"
                   color="black"
                   rounded="5px"
@@ -283,7 +284,7 @@ const Footer = () => {
                   as="a"
                   href="https://x.com/thepamtechgroup"
                   aria-label="Twitter"
-                  icon={<FaXTwitter fontSize="1.5rem" />}
+                  icon={<FaXTwitter fontSize="1.2rem" />}
                   bg="gray.100"
                   color="black"
                   rounded="5px"
@@ -291,9 +292,10 @@ const Footer = () => {
                 />
                 <IconButton
                   as="a"
+                  
                   href="https://www.youtube.com/channel/UCjJ-fWJYIhpViYWr97-yWNw"
                   aria-label="YouTube"
-                  icon={<FaYoutube fontSize="1.5rem" />}
+                  icon={<FaYoutube fontSize="1.2rem" />}
                   bg="gray.100"
                   color="black"
                   rounded="5px"
