@@ -51,7 +51,7 @@ const Nav = () => {
   useEffect(() => {
     const handleScroll = () => {
       setScrollY(window.scrollY);
-      setIsScrolled(window.scrollY > (window.innerHeight * 0.2) ); // When past the hero section
+      setIsScrolled(window.scrollY > window.innerHeight * 0.2); // When past the hero section
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -73,13 +73,20 @@ const Nav = () => {
       transition="background-color 0.3s ease-in-out"
       boxShadow={isScrolled ? "md" : "none"}
       padding={{
-        base: "0.5rem 1rem",
+        base: "0.5rem 0.5rem",
         sm: "0.75rem 2rem",
         md: "1rem 4rem",
         lg: "1rem 6rem",
       }}
     >
-      <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
+      <Flex
+        h={{
+          base: 10,
+          md: 16,
+        }}
+        alignItems={"center"}
+        justifyContent={"space-between"}
+      >
         {/* Logo */}
         <Box>
           <Link href="/">
@@ -213,28 +220,37 @@ const Nav = () => {
                 <Link href="/about" onClick={onMobileMenuClose}>
                   About Us
                 </Link>
-                <Menu >
-                  <MenuButton variant='flushed' padding={0} fontWeight={400} fontSize='1rem' as={Button} rightIcon={<ChevronDownIcon alignSelf='center' />}>
+                <Menu>
+                  <MenuButton
+                    variant="flushed"
+                    padding={0}
+                    fontWeight={400}
+                    fontSize="1rem"
+                    as={Button}
+                    rightIcon={<ChevronDownIcon alignSelf="center" />}
+                  >
                     Our Business
                   </MenuButton>
-                  <MenuList bg='rgba(20, 20, 20, 0.4)'>
+                  <MenuList bg="rgba(20, 20, 20, 0.4)">
                     <Link href="/oilgas">
-                      <MenuItem bg='rgba(20, 20, 20, 0.9)'>Oil & Gas</MenuItem>
+                      <MenuItem bg="rgba(20, 20, 20, 0.9)">Oil & Gas</MenuItem>
                     </Link>
                     <Link href="/autoland">
-                      <MenuItem bg='rgba(20, 20, 20, 0.9)'>Autoland</MenuItem>
+                      <MenuItem bg="rgba(20, 20, 20, 0.9)">Autoland</MenuItem>
                     </Link>
                     <Link href="/autoparts">
-                      <MenuItem bg='rgba(20, 20, 20, 0.9)'>Autoparts</MenuItem>
+                      <MenuItem bg="rgba(20, 20, 20, 0.9)">Autoparts</MenuItem>
                     </Link>
                     <Link href="/ride">
-                      <MenuItem bg='rgba(20, 20, 20, 0.9)'>Luxury Ride</MenuItem>
+                      <MenuItem bg="rgba(20, 20, 20, 0.9)">
+                        Luxury Ride
+                      </MenuItem>
                     </Link>
                     <Link href="/media">
-                      <MenuItem bg='rgba(20, 20, 20, 0.9)'>Media</MenuItem>
+                      <MenuItem bg="rgba(20, 20, 20, 0.9)">Media</MenuItem>
                     </Link>
                     <Link href="/foundation">
-                      <MenuItem bg='rgba(20, 20, 20, 0.9)'>Foundation</MenuItem>
+                      <MenuItem bg="rgba(20, 20, 20, 0.9)">Foundation</MenuItem>
                     </Link>
                   </MenuList>
                 </Menu>

@@ -33,7 +33,7 @@ const services = [
   { icon: petrol, title: "Oil and Gas" },
   { icon: repair, title: "Auto part" },
   { icon: media, title: "Media" },
-  { icon: ride, title: "Ride" },
+  { icon: ride, title: "Luxury Ride" },
   { icon: petrolpadi, title: "Petrol Padi" },
 ];
 
@@ -153,10 +153,10 @@ const Services = () => {
           width={descriptionWidth}
         >
           <Text fontWeight={500} fontSize={textFontSize} color="primaryOrange">
-            Our Services
+            Our Businesses
           </Text>
           <Text color="#171717" fontSize={headingFontSize} fontWeight={500}>
-            Explore Our Services
+            Explore Our Businesses
           </Text>
           <Text color="textGrey" fontSize={textFontSize}>
             As a diversified and fully integrated conglomerate, our interest in
