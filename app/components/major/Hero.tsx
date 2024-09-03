@@ -98,10 +98,7 @@ const SlideContent: React.FC<SlideContentProps> = ({ bg, heading, text, link }) 
         backgroundImage={`url(${bg.src})`}
         bgSize="cover"
         bgPosition="center"
-        height={{
-          base:'80vh',
-          xl: '100vh'
-        }}
+        height='100svh'
         color="#F7F7F7"
       >
         <Flex
@@ -155,12 +152,14 @@ const Hero = () => {
     <Box>
       <Nav />
       <Carousel
-        showArrows={false}
+        showArrows={true}
         infiniteLoop={true}
         showStatus={false}
         showThumbs={false}
         autoPlay={true}
-        interval={4500}
+        interval={3000}
+        swipeScrollTolerance={100}
+        swipeable={false}
       >
         {carouselData.map((slide, index) => (
           <SlideContent
