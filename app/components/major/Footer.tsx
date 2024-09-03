@@ -51,31 +51,36 @@ const Footer = () => {
       <Flex
         justify="center"
         align="center"
-        flexDirection={{ base: "column", md: "column" }} // Responsive direction
+        flexDirection='column' // Responsive direction
         gap="1rem"
       >
         <SimpleGrid 
+        placeItems='center'
           columns={{ base: 2, sm: 3, md: 6 }} // Responsive columns
           spacing={5}
         >
-          <Link fontSize='.8rem' href="/about">About Us</Link>
-          <Link fontSize='.8rem' href="/investments">Our Growth</Link>
-          <Link fontSize='.8rem' href="/philanthropy">Philanthropy</Link>
-          <Link fontSize='.8rem' href="/media">e-Solutions</Link>
-          <Link fontSize='.8rem' href="/careers">Socials</Link>
-          <Link fontSize='.8rem' href="/contact">Contact Us</Link>
+          <Link fontSize='.8rem' href="/about">ABOUT US</Link>
+          <Link fontSize='.8rem' href="/investments">OUR GROWTH</Link>
+          {/* <Link fontSize='.8rem' href="/philanthropy"></Link> */}
+          <Link fontSize='.8rem' href="/media">e-SOLUTIONS</Link>
+          <Link fontSize='.8rem' href="/careers">SOCIALS</Link>
+          <Link fontSize='.8rem' href="/contact">CONTACT US</Link>
         </SimpleGrid>
        
-        <Flex 
-          direction={{ base: "row", md: "row" }} // Responsive direction for links
+        <SimpleGrid
+        mt='1.5rem'
+          columns={3}
           gap="2rem"
+            placeItems='center'
+            placeContent='center'
+          
         >
-           <Text color="white" fontSize={{ base: ".6rem", md: ".7rem" }}> 
+           <Text textAlign='center' color="white" fontSize={{ base: ".6rem", md: ".7rem" }}> 
           ©2024 Pamtech Group 
         </Text>
           <Link fontSize='.7rem' href="/privacy" color="white">Privacy Policy</Link>
-          <Link fontSize='.7rem' href="/terms" color="white">Terms & Conditions</Link>
-        </Flex>
+          <Link fontSize='.7rem' href="/terms" color="white">Terms&Condition</Link>
+        </SimpleGrid>
       </Flex>
     </Box>
 
