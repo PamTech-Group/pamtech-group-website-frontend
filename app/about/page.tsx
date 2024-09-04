@@ -70,7 +70,7 @@ const AboutPage = () => {
 
   const headingFontSize = useBreakpointValue({ base: "2rem", md: "2.5rem", lg: "3rem" });
   const textFontSize = useBreakpointValue({ base: "1rem", md: "1.1rem", lg: "1.2rem" });
-  // const imageHeight = useBreakpointValue({ base: 'auto', md: 300, lg: 400 });
+   const imageHeight = useBreakpointValue({ base: 'auto', md: 300, lg: 400 });
 
   return (
     <Box bgColor="#FFFFFF" overflow="hidden">
@@ -78,34 +78,31 @@ const AboutPage = () => {
       <Box
         bgPosition="center"
         bgColor="#0F1010"
-        height={{
-          base:'100vh',
-          md: '70vh',
-          myxl: '80vh'
-        }}
+        height={{ base: "auto", lg: "80vh" }}
+
         width="100vw"
         color="#F7F7F7"
         position="relative"
       >
-        <Box height="inherit" width="inherit" padding={contentPadding}>
+        <Box height="100%" width="inherit" padding={contentPadding}>
           <Nav />
           <Flex
             height="100%"
             width="100%"
             alignItems="center"
-            justifyContent={{ base: "center", md: "space-around" }}
             flexDirection={{ base: "column", md: "row" }}
+            justifyContent={{ base: "center", md: "space-around" }}
             gap={{ base: "2rem", md: "0" }}
-            paddingY={{ base: "2rem", md: "0" }}
+            // paddingY={{ base: "2rem", md: "0" }}
           >
             <Flex
             mt={{
-              base: '3.5rem',
-              md: '0rem'
+              base: '5rem',
+              md: '3rem'
             }}
               flexDir="column"
               justifyContent="center"
-              gap="2rem"
+              gap="1.5rem"
               width={{ base: "100%", md: "50%" }}
               textAlign={{ base: "center", md: "left" }}
             >
@@ -120,7 +117,7 @@ const AboutPage = () => {
             </Flex>
 
             <Flex
-              marginTop={{ base: "2rem", md: "0" }}
+              marginTop={{ base: "1rem", md: "2rem" }}
               justifyContent={{ base: "center", md: "flex-end" }}
               width={{ base: "100%", md: "50%" }}
             >
@@ -130,16 +127,17 @@ const AboutPage = () => {
                 className={`fade ${isFading ? "fade-out" : "fade-in"}`}
                 position="relative"
                 width={{ base: "100%", }}
+               height='0%'
                 mt={{
-                  base: '3rem',
-                  xl: '0rem'
+                  base: '1rem',
+                  xl: '1rem'
                 }}
               >
                 <Image
                   // height={imageHeight}
                   src={heroImages[currentImageIndex].image}
                   alt={heroImages[currentImageIndex].alt}
-                  style={{ objectFit: "cover", width: "100%", height: 'auto' }}
+                  style={{ objectFit: "cover", width: "100%", height:imageHeight  }}
                 />
               </Flex>
             </Flex>
@@ -159,7 +157,7 @@ const AboutPage = () => {
         justifyContent="space-around"
         alignItems="center"
         flexDirection={{ base: "column", md: "row" }}
-        gap={{ base: "2rem", md: "3rem" }}
+        gap={{ base: "2rem", md: "0" }}
       >
         <Flex justifyContent={{
           base: 'center',
