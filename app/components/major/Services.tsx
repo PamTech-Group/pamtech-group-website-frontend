@@ -2,6 +2,7 @@ import { Image } from "@chakra-ui/next-js";
 import {
   Box,
   Flex,
+  Grid,
   SimpleGrid,
   Text,
   useBreakpointValue,
@@ -26,6 +27,7 @@ import Sustainability from "../minor/Sustainability";
 import Link from "next/link";
 import Industries from "../minor/Industries";
 import Marquee from "react-fast-marquee";
+import Aos from "aos";
 
 // Data for services, images, and industries
 const services = [
@@ -42,7 +44,7 @@ const images = [
     image: service4,
     title: "Oil & Gas",
     description:
-      "Experience zero downtime and reduced maintenance costs with our pure petroleum products.",
+      "Experience zero downtime and reduced maintenance with our high-quality petroleum products.",
     linkHref: "/oilgas",
   },
   {
@@ -63,21 +65,20 @@ const images = [
     image: service5,
     title: "Media",
     description:
-      "Pamtech Media is your go-to hub for content creation and digital marketing, helping brands grow and connect with their audience online.",
+      "Pamtech Media enhances brand engagement with key content and marketing services.",
     linkHref: "/media",
   },
   {
     image: service1,
     title: "Ride",
     description:
-      "Experience luxury and comfort with Pamtech Luxury Ride's premium vehicles for all your personal and corporate needs.",
+      "Pamtech Luxury Ride: Premium vehicles for personal and corporate needs.",
     linkHref: "/ride",
   },
   {
     image: service6,
     title: "Foundation",
-    description:
-      "The Pamtech Foundation is guided by a core vision: Giving hope and sharing love to humanity.",
+    description: `The Pamtech Foundation’s core vision is to give hope and share love with humanity.`,
     linkHref: "/foundation",
   },
 ];
@@ -95,7 +96,6 @@ const Services = () => {
   const descriptionWidth = useBreakpointValue({
     base: "100%",
     md: "70%",
-   
   });
   const headingFontSize = useBreakpointValue({
     base: "1.5rem",
@@ -103,24 +103,33 @@ const Services = () => {
     lg: "2.5rem",
   });
   const textFontSize = useBreakpointValue({ base: "1rem", md: "1.2rem" });
+
   return (
     <>
-      <Box marginTop={{
-        base: "2rem",
-        md: "2.5rem",
-        xl: '8rem',
-        dxl: '10rem'
-      }} mb={{
-        base: "2rem",
-        myxl: '4rem'
-      }} id="services">
+      <Box
+        marginTop={{
+          base: "2rem",
+          md: "2.5rem",
+          xl: "8rem",
+          dxl: "10rem",
+        }}
+        mb={{
+          base: "2rem",
+          myxl: "4rem",
+        }}
+        id="services"
+      >
         {/* Service Icons */}
-        <Flex
-          gap={{ base: 4, md: 6, lg: 10 }}
-          justifyContent="space-between"
+        <Grid
+        data-aos ='fade-left'
+          templateColumns={{
+            base: "repeat(2, 1fr)",
+            md: "repeat(3, 1fr)",
+            lg: "repeat(4, 1fr)",
+          }} // Responsive grid
+          gap={{ base: 4, md: 6, lg: 10 }} // Responsive gap
           padding={contentPadding}
-          display={serviceIconsDisplay}
-          flexWrap="wrap"
+          mb={{ base: 4, lg: 0 }}
         >
           {services.map((service) => (
             <Flex
@@ -137,8 +146,6 @@ const Services = () => {
                 lg: "1rem 3rem",
               }}
               borderRadius="lg"
-              flex={{ base: "0 0 45%", md: "0 0 30%", lg: "0 0 auto" }}
-              mb={{ base: 4, lg: 0 }}
             >
               <Image height={50} src={service.icon} alt={service.title} />
               <Text
@@ -151,14 +158,14 @@ const Services = () => {
               </Text>
             </Flex>
           ))}
-        </Flex>
+        </Grid>
 
         {/* Services Description */}
         <VStack
           align="left"
           my={{
-            base: '2rem',
-            myxl: '4rem'
+            base: "2rem",
+            myxl: "4rem",
           }}
           padding={contentPadding}
           width={descriptionWidth}
@@ -179,10 +186,14 @@ const Services = () => {
         {/* Services Image Grid */}
         <Box padding={contentPadding}>
           <Marquee gradientWidth={50}>
-            <Flex my={{
-            base: '1rem',
-            myxl: '4rem'
-          }} gap={5} padding={5}>
+            <Flex
+              my={{
+                base: "1rem",
+                myxl: "4rem",
+              }}
+              gap={5}
+              padding={5}
+            >
               {images.map((image) => (
                 <Box
                   key={image.title}
@@ -191,7 +202,7 @@ const Services = () => {
                   borderRadius="lg"
                   bgSize="cover"
                   bgPosition="center"
-                  height={{ base: "400px",  lg: "450px" }}
+                  height={{ base: "400px", lg: "450px" }}
                   width={{ base: "275px", lg: "300px" }}
                   display="flex"
                   flexDirection="column"
@@ -200,19 +211,25 @@ const Services = () => {
                   color="white"
                   _hover={{ transform: "scale(1.05)", transition: "0.3s ease" }}
                 >
-                  <Text
-                    fontSize={{ base: "1.2rem", md: "1.5rem" }}
-                    fontWeight={500}
-                    mb="2.5rem"
-                  >
-                    {image.title}
-                  </Text>
-                  <Text fontSize={{ base: "0.9rem", md: "1rem" }}>
-                    {image.description}
-                  </Text>
-                  <Link href={image.linkHref} color="#F7F7F7" className="read-more">
-                    Read More <BsArrowRight fontSize="1.5rem" />
-                  </Link>
+                  <Box height="60%">
+                    <Text
+                      fontSize={{ base: "1.2rem", md: "1.5rem" }}
+                      fontWeight={500}
+                      mb="2.5rem"
+                    >
+                      {image.title}
+                    </Text>
+                    <Text fontSize={{ base: "0.9rem", md: "1rem" }}>
+                      {image.description}
+                    </Text>
+                    <Link
+                      href={image.linkHref}
+                      color="#F7F7F7"
+                      className="read-more"
+                    >
+                      Read More <BsArrowRight fontSize="1.5rem" />
+                    </Link>
+                  </Box>
                 </Box>
               ))}
             </Flex>

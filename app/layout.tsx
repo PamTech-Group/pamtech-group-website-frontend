@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
 import "./globals.css";
 import { Providers } from "./providers";
+import { useEffect } from "react";
 
 const roboto = Roboto({
   weight: ["100", "300", "400", "500", "700"],
@@ -11,7 +12,7 @@ const roboto = Roboto({
 });
 export const metadata: Metadata = {
   title: "Pamtech Group",
-  description: "Pamtech group webite",
+  description: "Pamtech Group webite",
 };
 
 export default function RootLayout({
@@ -19,6 +20,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
   return (
     <html lang="en">
       <body className={roboto.className}>

@@ -60,7 +60,11 @@ const OilGas = () => {
             flexDir="column"
             justifyContent="center"
             gap="2rem"
-            width={{ base: "100%", md: "80%"}}
+            width={{ base: "100%", md: "80%" }}
+            pl={{
+              base: 'unset',
+              myxl: '3.5rem'
+            }}
           >
             <Heading fontSize={headingFontSize} fontWeight={500}>
               Pamtech Oil and Gas
@@ -73,14 +77,16 @@ const OilGas = () => {
             <ButtonMain linkHref="#oil-gas" text="Read More" />
           </Flex>
         </Box>
-        <Box  my={{
-            base:'3rem',
-            myxl: '6rem'
-          }}>
+        <Box
+          my={{
+            base: "3rem",
+            myxl: "6rem",
+          }}
+        >
           <Heading
             my={{
-              base:'2rem',
-              myxl: '4rem'
+              base: "2rem",
+              myxl: "4rem",
             }}
             textAlign="center"
             fontSize={headingFontSize}
@@ -116,8 +122,9 @@ const OilGas = () => {
           align="left"
           my="4rem"
           padding={contentPadding}
-          width={{ base: "100%", md: "70%"}}
-      id="oil-gas"  >
+          width={{ base: "100%", md: "70%" }}
+          id="oil-gas"
+        >
           <Text color="#171717" fontSize={headingFontSize} fontWeight={500}>
             Oil & Gas
           </Text>

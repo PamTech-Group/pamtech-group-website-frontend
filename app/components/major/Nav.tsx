@@ -31,6 +31,7 @@ import { useState, useEffect } from "react";
 import Dropdown from "../minor/dropdown";
 import { BiChevronDown } from "react-icons/bi";
 import Link from "next/link";
+import Aos from "aos";
 
 const Nav = () => {
   const [scrollY, setScrollY] = useState(0);
@@ -61,8 +62,12 @@ const Nav = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-
+ 
   return (
+    <Box data-aos='zoom-in-down'>
+
+   
+    
     <Box
       position="fixed"
       top={0}
@@ -285,6 +290,7 @@ const Nav = () => {
           }
         }
       `}</style>
+    </Box>
     </Box>
   );
 };

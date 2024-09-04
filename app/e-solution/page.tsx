@@ -74,7 +74,10 @@ const Solution = () => {
           }}
           gap="2rem"
           width={{ base: "100%", md: "70%" }}
-          paddingY={{ base: "4rem", md: "0" }}>
+          paddingY={{ base: "4rem", md: "0" }}   pl={{
+            base: 'unset',
+            myxl: '3.5rem'
+          }}>
           <Heading fontSize={headingFontSize} fontWeight={500}>
             e-Solutions
           </Heading>

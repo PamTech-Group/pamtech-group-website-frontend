@@ -78,7 +78,11 @@ const AboutPage = () => {
       <Box
         bgPosition="center"
         bgColor="#0F1010"
-        height={{ base: "auto", md: "100vh" }}
+        height={{
+          base:'100vh',
+          md: '70vh',
+          myxl: '80vh'
+        }}
         width="100vw"
         color="#F7F7F7"
         position="relative"
@@ -152,18 +156,18 @@ const AboutPage = () => {
           base: '2rem',
           myxl: '4rem'
         }}
-        justifyContent="space-between"
+        justifyContent="space-around"
         alignItems="center"
         flexDirection={{ base: "column", md: "row" }}
-        gap={{ base: "2rem", md: "0" }}
+        gap={{ base: "2rem", md: "3rem" }}
       >
         <Flex justifyContent={{
           base: 'center',
           md: 'initial'
-        }} width={{ base: "35%", md: "100%" }}>
+        }} >
           <Image src={pamtech} alt="pamtech way" style={{ width: "100%", height: "auto" }} />
         </Flex>
-        <Box width={{ base: "100%", md: "70%" }}>
+        <Box width={{ base: "100%", md: "65%" }}>
           <Text  fontWeight={500} fontSize={textFontSize}>
             Our culture is built on the biblical cornerstones and
             principles of doing business in accordance with the ways

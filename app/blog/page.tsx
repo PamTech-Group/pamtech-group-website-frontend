@@ -30,6 +30,91 @@ type BlogPost = {
 const blogPosts: BlogPost[] = [
   {
     id: "66c720427e820316498b316a",
+    title: "Pamtech Autoland is Coming to Port Harcourt Soon",
+    excerpt:
+      "amtech Autoland is Coming to Port Harcourt Soon: A New Destination for Auto Enthusiasts",
+    imageUrl:
+      "https://res.cloudinary.com/dye76dtzn/image/upload/v1725462401/blog_images/l0vyrlnqcdlaakqxuu5a.png",
+    date: "2024-08-22",
+    paragraphs: [
+      "Pamtech Autoland is set to expand its footprint with the upcoming launch of its newest location in Port Harcourt. This exciting development marks a significant milestone for Pamtech Autoland as it continues to bring its comprehensive auto services and products closer to customers across Nigeria. Known for its commitment to quality and customer satisfaction, Pamtech Autoland’s new facility promises to be a game-changer for automotive enthusiasts and everyday drivers alike in the region.",
+      "The new Port Harcourt location will serve as a one-stop destination for all automotive needs, offering an extensive range of services from routine maintenance to advanced repairs. The state-of-the-art facility is designed to cater to both individual vehicle owners and fleet operators, with a dedicated team of experts ready to provide top-notch service. In addition to repair and maintenance, the location will feature a retail section stocked with a wide variety of auto parts and accessories, ensuring that customers have access to everything they need under one roof.",
+      "Pamtech Autoland's expansion into Port Harcourt reflects its strategic vision of enhancing accessibility and convenience for its customers. The new location is expected to play a crucial role in addressing the growing demand for high-quality automotive services in the region. By providing local access to its renowned services and products, Pamtech Autoland is not only strengthening its presence in Nigeria but also contributing to the overall growth of the automotive sector in Port Harcourt.",
+      "As the opening date approaches, anticipation is building among local auto enthusiasts and businesses. Pamtech Autoland’s commitment to excellence and customer-centric approach is poised to make a lasting impact on the Port Harcourt automotive market. With its new location, Pamtech Autoland is set to become an integral part of the community, offering unparalleled service and convenience to drivers across the region.",
+    ],
+  },
+  {
+    id: "66c720427e820316498b316a",
+    title: "Pamtech Group Unveils Game-Changing Auto-Parts E-Commerce Platform",
+    excerpt:
+      "Pamtech Group Unveils Game-Changing Auto-Parts E-Commerce Platform for her customers",
+    imageUrl:
+      "https://res.cloudinary.com/dye76dtzn/image/upload/v1725461904/blog_images/klbcnxi5fbswneuntcck.png",
+    date: "2024-08-22",
+    paragraphs: [
+      "Pamtech Group is proud to announce the launch of its latest innovation, the Pamtech Autoparts app, designed to revolutionize the auto-parts shopping experience. This state-of-the-art e-commerce platform is set to become a one-stop-shop for all automotive needs, providing consumers and businesses with easy access to a vast inventory of top-quality auto parts. The app is engineered to streamline the often cumbersome process of sourcing and purchasing auto parts, offering a user-centric interface that simplifies the search and purchase process.",
+      "In his awe-inspiring keynote address, Engr. Chidomere Ndubuisi drew an ingenious analogy between the human body and the elements that compose a thriving business. He expounded on how the “3 Gifts” – Body, Soul, and Spirit – mirror the essential components of a flourishing enterprise.\nEngr. Chidomere Ndubuisi likened the departments of a company to the human body, highlighting their vital role in establishing a strong foundation. Just as the body’s various systems collaborate to sustain life, departments work in harmony to ensure the smooth operation of a business.",
+      "One of the standout features of the Pamtech Autoparts app is its advanced search functionality, which allows users to find the exact parts they need with just a few clicks. By integrating detailed product descriptions, compatibility checks, and high-resolution images, the platform ensures that customers can make informed decisions quickly. Additionally, the app supports real-time inventory updates and price comparisons, helping users secure the best deals available in the market without the hassle of visiting multiple stores.",
+      "The Pamtech Autoparts app also emphasizes convenience through its seamless integration of payment and delivery options. With a variety of secure payment methods and flexible delivery choices, including same-day and next-day options, the app caters to both urgent and routine auto parts needs. Businesses can also benefit from bulk purchasing options and specialized accounts, making it easier for them to manage large orders and track shipments effectively.",
+      "Pamtech Group’s latest venture is more than just a technological upgrade; it represents a significant shift in how auto parts are bought and sold. By focusing on user experience, efficiency, and comprehensive service, the Pamtech Autoparts app sets a new standard in the e-commerce landscape for automotive parts. As it rolls out to a wider audience, it promises to reshape the industry, making auto parts procurement faster, smarter, and more accessible than ever before.",
+    ],
+  },
+  {
+    id: "66c720427e820316498b316a",
+    title: "Petrol Padi App Featured on Tech Cabal",
+    excerpt:
+      "Petrol Padi App Featured on Tech Cabal: A Game-Changer in Fuel Retail",
+    imageUrl:
+      "https://res.cloudinary.com/dye76dtzn/image/upload/v1725461614/blog_images/npctb8qm5bez19f0b5yi.png",
+    date: "2024-08-22",
+    paragraphs: [
+      "Pamtech Group is proud to announce the launch of its latest innovation, the Pamtech Autoparts app, designed to revolutionize the auto-parts shopping experience. This state-of-the-art e-commerce platform is set to become a one-stop-shop for all automotive needs, providing consumers and businesses with easy access to a vast inventory of top-quality auto parts. The app is engineered to streamline the often cumbersome process of sourcing and purchasing auto parts, offering a user-centric interface that simplifies the search and purchase process.",
+      "One of the standout features of the Pamtech Autoparts app is its advanced search functionality, which allows users to find the exact parts they need with just a few clicks. By integrating detailed product descriptions, compatibility checks, and high-resolution images, the platform ensures that customers can make informed decisions quickly. Additionally, the app supports real-time inventory updates and price comparisons, helping users secure the best deals available in the market without the hassle of visiting multiple stores.",
+      "The Pamtech Autoparts app also emphasizes convenience through its seamless integration of payment and delivery options. With a variety of secure payment methods and flexible delivery choices, including same-day and next-day options, the app caters to both urgent and routine auto parts needs. Businesses can also benefit from bulk purchasing options and specialized accounts, making it easier for them to manage large orders and track shipments effectively.",
+      "Pamtech Group’s latest venture is more than just a technological upgrade; it represents a significant shift in how auto parts are bought and sold. By focusing on user experience, efficiency, and comprehensive service, the Pamtech Autoparts app sets a new standard in the e-commerce landscape for automotive parts. As it rolls out to a wider audience, it promises to reshape the industry, making auto parts procurement faster, smarter, and more accessible than ever before.",
+    ],
+  },
+  {
+    id: "66c720427e820316498b316a",
+    title: "Pamtech Oil & Gas Unveils Petrol Padi",
+    excerpt:
+      "Pamtech Oil & Gas Unveils Petrol Padi: The Future of Fuel Retail is Here.",
+    imageUrl:
+      "https://res.cloudinary.com/dye76dtzn/image/upload/v1724968903/blog_images/tfhiolwj35k4tlo0gn2x.png",
+    date: "2024-08-22",
+    paragraphs: [
+      "In a move poised to transform the fuel retail landscape, Pamtech Oil & Gas has announced the launch of Petrol Padi, a groundbreaking fuel e-commerce app designed to make refueling simpler, faster, and more efficient than ever before. With the rise of digital solutions across industries, Petrol Padi is set to lead the charge in modernizing how consumers interact with fuel services. Here’s everything you need to know about this innovative platform.",
+      "What is Petrol Padi?  Petrol Padi is an advanced fuel e-commerce app developed by Pamtech Oil & Gas to streamline the process of buying and managing fuel. Available on both Android and iOS, the app integrates cutting-edge technology to provide a seamless user experience for both individuals and businesses. By leveraging the power of digital innovation, Petrol Padi aims to make fuel retail as effortless as a few taps on your smartphone.",
+      `Key Features of Petrol Padi
+User-Friendly Interface: Petrol Padi boasts an intuitive design that simplifies navigation. Users can easily find nearby fuel stations, compare prices, and choose the best option that suits their needs.
+`,
+      "Seamless Transactions: With Petrol Padi, transactions are quick and secure. Users can pay for fuel directly through the app, avoiding long queues and making the process more efficient.",
+      `Fuel Delivery Services: One of the standout features of Petrol Padi is its fuel delivery service. Users can schedule deliveries to their location, ensuring they never run out of fuel even in the most inconvenient situations.
+
+Real-Time Updates: The app provides real-time information on fuel prices and availability, allowing users to make informed decisions and save money.
+
+Loyalty Programs and Discounts: Petrol Padi offers various loyalty programs and discounts to reward frequent users. These programs are designed to provide additional value and savings on fuel purchases.
+
+Comprehensive Station Information: The app includes detailed information about fuel stations, including services offered, operating hours, and customer reviews, helping users make better choices.
+
+Why Petrol Padi is a Game-Changer
+In an era where convenience and efficiency are paramount, Petrol Padi is setting a new standard for the fuel retail industry. Traditional fuel purchasing methods often involve time-consuming processes and inconveniences, but Petrol Padi addresses these issues head-on.
+
+By digitizing fuel transactions and integrating advanced features, Petrol Padi not only enhances user experience but also promotes transparency and competitiveness within the fuel market. Consumers can now enjoy a hassle-free fuel experience that aligns with their fast-paced lifestyles.
+
+The Vision Behind Petrol Padi
+Pamtech Oil & Gas has always been at the forefront of innovation in the energy sector. With Petrol Padi, the company continues its commitment to improving customer experiences and leveraging technology to meet evolving market demands. The launch of this app is a testament to Pamtech's vision of a more connected and efficient fuel retail environment.
+
+How to Get Started
+Getting started with Petrol Padi is simple. Download the app from the Google Play Store or Apple App Store, register your account, and start exploring the myriad of features designed to make fuel management a breeze. Whether you’re looking to refuel your vehicle, schedule a delivery, or simply find the best fuel prices, Petrol Padi is your one-stop solution.
+
+Conclusion
+Pamtech Oil & Gas’s Petrol Padi is set to revolutionize the fuel retail industry with its innovative approach and user-centric features. By bringing the convenience of e-commerce to fuel purchasing, Petrol Padi is not just enhancing the way we buy fuel but also paving the way for a more efficient and connected future. Embrace the future of fuel retail with Petrol Padi—where technology meets convenience.
+`,
+    ],
+  },
+  {
+    id: "66c720427e820316498b316a",
     title:
       "Pamtech CEO Chidomere Ndubuisi Awarded, & Inspires At Owerri Business Week 2023",
     excerpt:
@@ -98,73 +183,77 @@ const Blog = () => {
 
   return (
     <Box bg="#ffffff">
-    <NavWhite />
-    <Container maxW="container.xl" py={16}>
-      <VStack spacing={12}>
-        <Heading
-          as="h1"
-          fontSize={headingFontSize}
-          textAlign="center"
-          color="gray.800"
-        >
-          Our Blog
-        </Heading>
-        <Stack spacing={8} width="100%"> {/* Stack for vertical alignment */}
-          {blogPosts.map((post) => (
-            <Box
-              key={post.id}
-              borderWidth="1px"
-              borderRadius="lg"
-              overflow="hidden"
-              _hover={{ boxShadow: "lg", transform: "translateY(-5px)" }}
-              transition="all 0.3s"
-            >
-              <Box position="relative" height="300px"> {/* Adjusted height for images */}
-                <Image
-                  src={post.imageUrl}
-                  alt={post.title}
-                  layout="fill"
-                  objectFit="cover"
-                  priority // Optional: Load images faster
-                />
+      <NavWhite />
+      <Container maxW="container.xl" py={16}>
+        <VStack spacing={12}>
+          <Heading
+            as="h1"
+            fontSize={headingFontSize}
+            textAlign="center"
+            color="gray.800"
+          >
+            Our Blog
+          </Heading>
+          <Stack spacing={8} width="100%">
+            {" "}
+            {/* Stack for vertical alignment */}
+            {blogPosts.map((post) => (
+              <Box
+                key={post.id}
+                borderWidth="1px"
+                borderRadius="lg"
+                overflow="hidden"
+                _hover={{ boxShadow: "lg", transform: "translateY(-5px)" }}
+                transition="all 0.3s"
+              >
+                <Box position="relative" height="300px">
+                  {" "}
+                  {/* Adjusted height for images */}
+                  <Image
+                    src={post.imageUrl}
+                    alt={post.title}
+                    layout="fill"
+                    objectFit="cover"
+                    priority // Optional: Load images faster
+                  />
+                </Box>
+                <Box p="6" color="textGrey">
+                  <Text fontSize="sm" color="gray.500" mb="2">
+                    {new Date(post.date).toLocaleDateString()}
+                  </Text>
+                  <Heading as="h2" size="lg" mb="2" noOfLines={2}>
+                    {post.title}
+                  </Heading>
+                  <Text fontSize={textFontSize} mb="4" noOfLines={3}>
+                    {post.excerpt}
+                  </Text>
+
+                  {/* Read More Section */}
+                  <Collapse in={expandedPost === post.id} animateOpacity>
+                    {post.paragraphs.map((paragraph, index) => (
+                      <Text key={index} mb={4}>
+                        {paragraph}
+                      </Text>
+                    ))}
+                  </Collapse>
+
+                  <Button
+                    variant="link"
+                    color="blue.500"
+                    fontWeight="bold"
+                    onClick={() => toggleExpand(post.id)}
+                  >
+                    {expandedPost === post.id ? "Show less" : "Read more"}
+                  </Button>
+                </Box>
               </Box>
-              <Box p="6" color="textGrey">
-                <Text fontSize="sm" color="gray.500" mb="2">
-                  {new Date(post.date).toLocaleDateString()}
-                </Text>
-                <Heading as="h2" size="lg" mb="2" noOfLines={2}>
-                  {post.title}
-                </Heading>
-                <Text fontSize={textFontSize} mb="4" noOfLines={3}>
-                  {post.excerpt}
-                </Text>
-  
-                {/* Read More Section */}
-                <Collapse in={expandedPost === post.id} animateOpacity>
-                  {post.paragraphs.map((paragraph, index) => (
-                    <Text key={index} mb={4}>
-                      {paragraph}
-                    </Text>
-                  ))}
-                </Collapse>
-  
-                <Button
-                  variant="link"
-                  color="blue.500"
-                  fontWeight="bold"
-                  onClick={() => toggleExpand(post.id)}
-                >
-                  {expandedPost === post.id ? "Show less" : "Read more"}
-                </Button>
-              </Box>
-            </Box>
-          ))}
-        </Stack>
-      </VStack>
-    </Container>
-    <Sustainability />
-    <Footer />
-  </Box>
+            ))}
+          </Stack>
+        </VStack>
+      </Container>
+      <Sustainability />
+      <Footer />
+    </Box>
   );
 };
 

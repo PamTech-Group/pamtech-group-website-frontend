@@ -106,10 +106,15 @@ const SlideContent: React.FC<SlideContentProps> = ({ bg, heading, text, link }) 
         color="#F7F7F7"
       >
         <Flex
-          mt={{ base: "5rem", md: "3rem" }}
+          mt={{ base: "2rem", md: "3rem" }}
           height={{
             base: '100%',
             xl: '100%'
+          }}
+
+          pl={{
+            base: 'unset',
+            myxl: '3.5rem'
           }}
           flexDir="column"
           justifyContent="center"

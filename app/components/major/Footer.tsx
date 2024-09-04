@@ -46,11 +46,12 @@ const Footer = () => {
 
   return (
     <>
-      <Box bgColor="primaryOrange" padding={contentPadding} paddingBottom="0">
+      <Box bgColor='primaryOrange'  padding={contentPadding} paddingBottom="0">
         <SimpleGrid
           spacing={8}
           alignItems="center"
           columns={{ base: 1, md: 2 }}
+        
         >
           <Box>
             <Flex
@@ -108,35 +109,36 @@ const Footer = () => {
           </Flex>
         </SimpleGrid>
       </Box>
-      <Box bgColor="primaryOrange" padding={contentPadding}>
+      <Box bgColor="#0F1010"  padding={contentPadding}>
         <Flex
           justify="center"
           align="center"
           flexDirection="column" // Responsive direction
           gap="1rem"
+          py='1.5rem'
         >
           <SimpleGrid
             placeItems="center"
             columns={{ base: 2, sm: 3, md: 6 }} // Responsive columns
             spacing={5}
           >
-            <Link fontSize=".8rem" href="/about">
+            <Link fontSize=".9rem" href="/about">
               ABOUT US
             </Link>
-            <Link fontSize=".8rem" href="/investments">
+            <Link fontSize=".9rem" href="/growth">
               OUR GROWTH
             </Link>
-            {/* <Link fontSize='.8rem' href="/philanthropy"></Link> */}
-            <Link fontSize=".8rem" href="/media">
+            {/* <Link fontSize='.9rem' href="/philanthropy"></Link> */}
+            <Link fontSize=".9rem" href="/e-solution">
               e-SOLUTIONS
             </Link>
-            <Link fontSize=".8rem" href="/careers">
+            <Link fontSize=".9rem" href="/socials">
               SOCIALS
             </Link>
-            <Link fontSize=".8rem" href="/contact">
+            <Link fontSize=".9rem" href="/contact-us">
               CONTACT US
             </Link>
-            <Link fontSize=".8rem" href="/">
+            <Link fontSize=".9rem" href="/blog">
               BLOG
             </Link>
           </SimpleGrid>

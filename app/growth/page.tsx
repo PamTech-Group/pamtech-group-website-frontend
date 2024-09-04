@@ -31,8 +31,45 @@ const yearContent = {
     "As part of our growth strategy, Pamtech Autoland, a state-of-the-art facility for car maintenance and repairs was established in Owerri, Imo State to address the challenges of car owners in accessing reliable maintenance and repair services.",
   "2022":
     "The Pamtech Autoparts Plaza, a reliable source for genuine motor spare parts was built to solve the problems of trust in the automobile spare parts industry by providing car owners with OEM standard parts.",
-  "2023": `With the desire to live up to our mantra - “committed service to humanity”, we ventured into the social media space, providing educative and entertaining content to our community through the establishment of the Pamtech Media.`,
+  "2023": `With the desire to live up to our mantra - “committed service to humanity”, we ventured into the social media and luxury ride space, providing educative and entertaining content as well as luxury ride services to our community through the establishment of the Pamtech Media and Pamtech Luxury Ride.`,
 };
+const BlogCard = ({ image, date, title }: any) => (
+  <Link href="/blog" passHref>
+    <Card
+      bgColor="#fde8e7"
+      as="a"
+      width={{ base: "90%", sm: "80%", md: "24rem" }}
+      height="100%"
+      mx="auto"
+      mb="4rem"
+      borderRadius="xl"
+      boxShadow="md"
+      transition="all 0.3s"
+      _hover={{ transform: "translateY(-5px)", boxShadow: "lg" }}
+    >
+      <CardBody height='100%'>
+        <Flex justify="center" height='60%'>
+          <Image src={image} alt="Blog post image" width={300} height={200} objectFit="cover" />
+        </Flex>
+        <Flex flexDirection='column' justifyContent='center' height='35%'>
+
+        <Text color="#171717" fontWeight={500} fontSize="1.2rem" mt={4}>
+          {date}
+        </Text>
+        <Text color="textGrey" fontSize="1rem" mt={2} noOfLines={3}>
+          {title}
+        </Text>
+        </Flex>
+      </CardBody>
+      <CardFooter height='5%'>
+        <Flex alignItems="center" color="primaryOrange">
+          <Text fontWeight={500} mr={2}>Read More</Text>
+          <ArrowForwardIcon />
+        </Flex>
+      </CardFooter>
+    </Card>
+  </Link>
+);
 const Growth = () => {
   const contentPadding = useBreakpointValue({
     base: "2rem 1rem",
@@ -77,6 +114,10 @@ const Growth = () => {
             width="100%"
             alignItems="center"
             paddingY={{ base: "4rem", md: "0" }}
+            pl={{
+              base: "unset",
+              myxl: "3.5rem",
+            }}
           >
             <Flex
               flexDir="column"
@@ -213,161 +254,19 @@ const Growth = () => {
         }}
         gap="2rem"
         padding={contentPadding}
-        wrap='wrap'
-      justifyContent='center'
+        wrap="wrap"
+        justifyContent="center"
       >
-        <Link href="/blog" passHref>
-          <Card
-            bgColor="#fde8e7"
-            as="a"
-            width={{ base: "90%", sm: "80%", md: "24rem" }}
-            height="auto"
-            mx="auto"
-            mb="4rem"
-            borderRadius="xl"
-            boxShadow="md"
-            transition="all 0.3s"
-            _hover={{ transform: "translateY(-5px)", boxShadow: "lg" }}
-          >
-            <CardBody>
-              <Flex justify="center">
-                <Image
-                  src={news1}
-                  alt="Blog post image"
-                  width={300}
-                  height={200}
-                  objectFit="cover"
-                />
-              </Flex>
-              <Text
-                color="#171717"
-                fontWeight={500}
-                fontSize={yearFontSize}
-                mt={4}
-              >
-                August 31st, 2023
-              </Text>
-              <Text
-                color="textGrey"
-                fontSize={textFontSize}
-                mt={2}
-                noOfLines={3}
-              >
-                Pamtech CEO Chidomere Ndubuisi Awarded, at Owerri Business Week
-                2023{" "}
-              </Text>
-            </CardBody>
-            <CardFooter>
-              <Flex alignItems="center" color="primaryOrange">
-                <Text fontWeight={500} mr={2}>
-                  Read More
-                </Text>
-                <ArrowForwardIcon />
-              </Flex>
-            </CardFooter>
-          </Card>
-        </Link>
-        <Link href="/blog" passHref>
-          <Card
-            bgColor="#fde8e7"
-            as="a"
-            width={{ base: "90%", sm: "80%", md: "24rem" }}
-            height="auto"
-            mx="auto"
-            mb="4rem"
-            borderRadius="xl"
-            boxShadow="md"
-            transition="all 0.3s"
-            _hover={{ transform: "translateY(-5px)", boxShadow: "lg" }}
-          >
-            <CardBody>
-              <Flex justify="center">
-                <Image
-                  src={news2}
-                  alt="Blog post image"
-                  width={300}
-                  height={200}
-                  objectFit="cover"
-                />
-              </Flex>
-              <Text
-                color="#171717"
-                fontWeight={500}
-                fontSize={yearFontSize}
-                mt={4}
-              >
-                May 31st, 2024
-              </Text>
-              <Text
-                color="textGrey"
-                fontSize={textFontSize}
-                mt={2}
-                noOfLines={3}
-              >
-                Pamtech CEO Chidomere Ndubuisi Bags International Business
-                Leader Award{" "}
-              </Text>
-            </CardBody>
-            <CardFooter>
-              <Flex alignItems="center" color="primaryOrange">
-                <Text fontWeight={500} mr={2}>
-                  Read More
-                </Text>
-                <ArrowForwardIcon />
-              </Flex>
-            </CardFooter>
-          </Card>
-        </Link>
-        <Link href="/blog" passHref>
-          <Card
-            bgColor="#fde8e7"
-            as="a"
-            width={{ base: "90%", sm: "80%", md: "24rem" }}
-            height="auto"
-            mx="auto"
-            mb="4rem"
-            borderRadius="xl"
-            boxShadow="md"
-            transition="all 0.3s"
-            _hover={{ transform: "translateY(-5px)", boxShadow: "lg" }}
-          >
-            <CardBody>
-              <Flex justifyContent="center">
-                <Image
-                  src={news3}
-                  alt="Blog post image"
-                  width={300}
-                  height={200}
-                  objectFit="cover"
-                />
-              </Flex>
-              <Text
-                color="#171717"
-                fontWeight={500}
-                fontSize={yearFontSize}
-                mt={4}
-              >
-                December 20th, 2022
-              </Text>
-              <Text
-                color="textGrey"
-                fontSize={textFontSize}
-                mt={2}
-                noOfLines={3}
-              >
-                Pamtech CEO Chidomere Accepted Into Forbes Business Council{" "}
-              </Text>
-            </CardBody>
-            <CardFooter>
-              <Flex alignItems="center" color="primaryOrange">
-                <Text fontWeight={500} mr={2}>
-                  Read More
-                </Text>
-                <ArrowForwardIcon />
-              </Flex>
-            </CardFooter>
-          </Card>
-        </Link>
+      
+      <BlogCard image={'https://res.cloudinary.com/dye76dtzn/image/upload/v1724322976/blog_images/lpkv2mewrchsdbtpfhes.jpg'} date="August 31st, 2023" title="Pamtech CEO Chidomere Accepted Into Forbes Business Council" />
+        <BlogCard image={'https://res.cloudinary.com/dye76dtzn/image/upload/v1725462401/blog_images/l0vyrlnqcdlaakqxuu5a.png'} date="May 31st, 2024" title="Pamtech Autoland is Coming to Port Harcourt Soon: A New Destination for Auto Enthusiasts" />
+        <BlogCard image={'https://res.cloudinary.com/dye76dtzn/image/upload/v1725461904/blog_images/klbcnxi5fbswneuntcck.png'} date="December 20th, 2022" title="Pamtech Group Unveils Game-Changing Auto-Parts E-Commerce Platform" />
+        <BlogCard image={'https://res.cloudinary.com/dye76dtzn/image/upload/v1725461614/blog_images/npctb8qm5bez19f0b5yi.png'} date="August 31st, 2023" title="Petrol Padi App Featured on Tech Cabal: A Game-Changer in Fuel Retail" />
+        <BlogCard image={'https://res.cloudinary.com/dye76dtzn/image/upload/v1724968903/blog_images/tfhiolwj35k4tlo0gn2x.png'} date="May 31st, 2024" title="Pamtech Oil & Gas Unveils Petrol Padi: The Future of Fuel Retail is Here" />
+        <BlogCard image={'https://res.cloudinary.com/dye76dtzn/image/upload/v1724325955/blog_images/rzyb1cddnuurtdphzsnr.jpg'} date="December 20th, 2022" title="Pamtech CEO Chidomere Ndubuisi Awarded, & Inspires At Owerri Business Week 2023" />
+        <BlogCard image={'https://res.cloudinary.com/dye76dtzn/image/upload/v1724324942/blog_images/twadcvmickahuknz0jtr.jpg'} date="August 31st, 2023" title="Pamtech CEO Chidomere Ndubuisi Bags International Business Leader Award" />
+       
+
       </Flex>
 
       <Sustainability />
