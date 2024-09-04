@@ -50,7 +50,7 @@ const blogPosts: BlogPost[] = [
       "Pamtech Group Unveils Game-Changing Auto-Parts E-Commerce Platform for her customers",
     imageUrl:
       "https://res.cloudinary.com/dye76dtzn/image/upload/v1725461904/blog_images/klbcnxi5fbswneuntcck.png",
-    date: "2024-08-22",
+    date: "2024-09-03",
     paragraphs: [
       "Pamtech Group is proud to announce the launch of its latest innovation, the Pamtech Autoparts app, designed to revolutionize the auto-parts shopping experience. This state-of-the-art e-commerce platform is set to become a one-stop-shop for all automotive needs, providing consumers and businesses with easy access to a vast inventory of top-quality auto parts. The app is engineered to streamline the often cumbersome process of sourcing and purchasing auto parts, offering a user-centric interface that simplifies the search and purchase process.",
       "In his awe-inspiring keynote address, Engr. Chidomere Ndubuisi drew an ingenious analogy between the human body and the elements that compose a thriving business. He expounded on how the “3 Gifts” – Body, Soul, and Spirit – mirror the essential components of a flourishing enterprise.\nEngr. Chidomere Ndubuisi likened the departments of a company to the human body, highlighting their vital role in establishing a strong foundation. Just as the body’s various systems collaborate to sustain life, departments work in harmony to ensure the smooth operation of a business.",
@@ -66,7 +66,7 @@ const blogPosts: BlogPost[] = [
       "Petrol Padi App Featured on Tech Cabal: A Game-Changer in Fuel Retail",
     imageUrl:
       "https://res.cloudinary.com/dye76dtzn/image/upload/v1725461614/blog_images/npctb8qm5bez19f0b5yi.png",
-    date: "2024-08-22",
+    date: "2024-08-30",
     paragraphs: [
       "Pamtech Group is proud to announce the launch of its latest innovation, the Pamtech Autoparts app, designed to revolutionize the auto-parts shopping experience. This state-of-the-art e-commerce platform is set to become a one-stop-shop for all automotive needs, providing consumers and businesses with easy access to a vast inventory of top-quality auto parts. The app is engineered to streamline the often cumbersome process of sourcing and purchasing auto parts, offering a user-centric interface that simplifies the search and purchase process.",
       "One of the standout features of the Pamtech Autoparts app is its advanced search functionality, which allows users to find the exact parts they need with just a few clicks. By integrating detailed product descriptions, compatibility checks, and high-resolution images, the platform ensures that customers can make informed decisions quickly. Additionally, the app supports real-time inventory updates and price comparisons, helping users secure the best deals available in the market without the hassle of visiting multiple stores.",
@@ -81,7 +81,7 @@ const blogPosts: BlogPost[] = [
       "Pamtech Oil & Gas Unveils Petrol Padi: The Future of Fuel Retail is Here.",
     imageUrl:
       "https://res.cloudinary.com/dye76dtzn/image/upload/v1724968903/blog_images/tfhiolwj35k4tlo0gn2x.png",
-    date: "2024-08-22",
+    date: "2024-08-30",
     paragraphs: [
       "In a move poised to transform the fuel retail landscape, Pamtech Oil & Gas has announced the launch of Petrol Padi, a groundbreaking fuel e-commerce app designed to make refueling simpler, faster, and more efficient than ever before. With the rise of digital solutions across industries, Petrol Padi is set to lead the charge in modernizing how consumers interact with fuel services. Here’s everything you need to know about this innovative platform.",
       "What is Petrol Padi?  Petrol Padi is an advanced fuel e-commerce app developed by Pamtech Oil & Gas to streamline the process of buying and managing fuel. Available on both Android and iOS, the app integrates cutting-edge technology to provide a seamless user experience for both individuals and businesses. By leveraging the power of digital innovation, Petrol Padi aims to make fuel retail as effortless as a few taps on your smartphone.",
@@ -121,7 +121,7 @@ Pamtech Oil & Gas’s Petrol Padi is set to revolutionize the fuel retail indust
       "The Owerri Business Week, convened by the Bedrock Initiative culminated in a spectacular event as it awarded Engr. Chidomere Ndubuisi, the visionary CEO of Pamtech Group, for his outstanding contributions to the world of business and his compelling insights on fostering lasting success.",
     imageUrl:
       "https://res.cloudinary.com/dye76dtzn/image/upload/v1724325955/blog_images/rzyb1cddnuurtdphzsnr.jpg",
-    date: "2024-08-22",
+    date: "2023-06-21",
     paragraphs: [
       "The Owerri Business Week, convened by the Bedrock Initiative culminated in a spectacular event as it awarded Engr. Chidomere Ndubuisi, the visionary CEO of Pamtech Group, for his outstanding contributions to the world of business and his compelling insights on fostering lasting success.\n\nThe event, held at the prestigious Swiss Beland International Hotel, Owerri showcased Engr. Ndubuisi’s remarkable journey and his profound talk on “Building a Lasting Business with 3 Gifts”.\n\nThe award ceremony was a fitting recognition of Engr. Ndubuisi’s remarkable leadership, innovative mindset, and dedication to building a thriving enterprise. His stewardship of Pamtech Group has not only transformed it into a global powerhouse but also set new benchmarks for sustainable business practices.",
       "In his awe-inspiring keynote address, Engr. Chidomere Ndubuisi drew an ingenious analogy between the human body and the elements that compose a thriving business. He expounded on how the “3 Gifts” – Body, Soul, and Spirit – mirror the essential components of a flourishing enterprise.\nEngr. Chidomere Ndubuisi likened the departments of a company to the human body, highlighting their vital role in establishing a strong foundation. Just as the body’s various systems collaborate to sustain life, departments work in harmony to ensure the smooth operation of a business.",
@@ -137,7 +137,7 @@ Pamtech Oil & Gas’s Petrol Padi is set to revolutionize the fuel retail indust
       "In a momentous recognition of visionary leadership and exceptional business acumen, Engr. Chidomere Ndubuisi, the CEO of Pamtech Group, was bestowed with the prestigious International Business Leader Award by Jamie Pajoel International (JPI).",
     imageUrl:
       "https://res.cloudinary.com/dye76dtzn/image/upload/v1724324942/blog_images/twadcvmickahuknz0jtr.jpg",
-    date: "2024-08-22",
+    date: "2023-07-12",
     paragraphs: [
       "In a momentous recognition of visionary leadership and exceptional business acumen, Engr. Chidomere Ndubuisi, the CEO of Pamtech Group, was bestowed with the prestigious International Business Leader Award by Jamie Pajoel International (JPI).\nThe award ceremony took place during the 2023 Edition of the JPI Annual Leadership Conference held in the heart of Rwanda’s capital, Kigali.\nThe International Business Leader Award, presented by Jamie Pajoel, Founder and President of JPI, is a testament to Engr. Ndubuisi’s exemplary contributions to the global business landscape.",
       "With a track record of innovative strategies and ethical leadership, Ndubuisi’s stewardship of Pamtech Group has propelled the company to unprecedented heights.\nThe JPI Annual Leadership Conference, known for bringing together thought leaders, industry experts, and innovators from around the world, served as the ideal platform for Engr. Chidomere Ndubuisi to share his insights on the theme, “Thriving in a Competitive Business Environment.” \nA captivated audience listened intently as he elucidated the 6A Strategy in an ever-evolving marketplace. \nHis speech touched upon arena, assets, advantage, access, activities and anointing as key concepts he has employed in growing the Pamtech Group from a business of three team members to over 200 in about seven years.",
@@ -152,7 +152,7 @@ Pamtech Oil & Gas’s Petrol Padi is set to revolutionize the fuel retail indust
       "CEO and MD of Pamtech Group, Engr. Chidomere Ndubuisi has been accepted into the Forbes Business Council, the foremost growth and networking organization for successful business owners and leaders worldwide.",
     imageUrl:
       "https://res.cloudinary.com/dye76dtzn/image/upload/v1724322976/blog_images/lpkv2mewrchsdbtpfhes.jpg",
-    date: "2024-08-22",
+    date: "2023-01-22",
     paragraphs: [
       "CEO and MD of Pamtech Group, Engr. Chidomere Ndubuisi has been accepted into the Forbes Business Council, the foremost growth and networking organization for successful business owners and leaders worldwide.\nNdubuisi was vetted and selected by a review committee based on the depth and diversity of his experience. Criteria for acceptance include a track record of successfully impacting business growth metrics, as well as personal and professional achievements and honours.",
       "“We are honoured to welcome Engr. Chidomere into the community,” said Scott Gerber, founder of Forbes Councils, the collective that includes Forbes Business Council.\n“Our mission with Forbes Councils is to bring together proven leaders from every industry, creating a curated, social capital-driven network that helps every member grow professionally and make an even greater impact on the business world,” he said.",
