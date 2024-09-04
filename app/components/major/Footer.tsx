@@ -160,7 +160,7 @@ const Footer = () => {
             <Link fontSize=".7rem" href="/privacy" color="white">
               Privacy Policy
             </Link>
-            <Link fontSize=".7rem" href="/terms" color="white">
+            <Link fontSize=".7rem" href="/privacy" color="white">
               Terms&Condition
             </Link>
           </SimpleGrid>
