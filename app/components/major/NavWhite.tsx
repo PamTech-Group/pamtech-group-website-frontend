@@ -9,6 +9,7 @@ import Dropdown from '../minor/dropdown'
 const NavWhite = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const navSpacing = useBreakpointValue({ base: 2, sm: 4, md: 6, lg: 8 });
+  const logoSize = useBreakpointValue({ base: 25, sm: 30 });
 
   const {
     isOpen: isMobileMenuOpen,
@@ -30,7 +31,7 @@ const NavWhite = () => {
       {/* Logo */}
       <Box>
         <Link href="/">
-          <Image src={logoBlue} alt="Pamtech Logo" height={35} />
+          <Image src={logoBlue} alt="Pamtech Logo" height={logoSize} />
         </Link>
       </Box>
 
@@ -151,7 +152,7 @@ const NavWhite = () => {
               </Link>
               <Menu >
                   <MenuButton variant='flushed' padding={0} fontWeight={400} fontSize='1rem' as={Button} rightIcon={<ChevronDownIcon alignSelf='center' />}>
-                    Our Business
+                    Our Businesses
                   </MenuButton>
                   <MenuList bg='rgba(20, 20, 20, 0.4)'>
                     <Link href="/oilgas">

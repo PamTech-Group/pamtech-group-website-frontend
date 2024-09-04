@@ -55,7 +55,7 @@ const Autoland = () => {
             flexDir="column"
             justifyContent="center"
             gap="2rem"
-            width={{ base: "100%", md: "80%", xl: "60%" }}
+            width={{ base: "100%", md: "80%" }}
             paddingY={{ base: "4rem", md: "0" }}
           >
             <Heading fontSize={headingFontSize} fontWeight={500}>
@@ -63,7 +63,7 @@ const Autoland = () => {
             </Heading>
             <Text
               fontWeight={500}
-              width={{ base: "100%", md: "80%", xl: "50%" }}
+              width={{ base: "100%", xl: "80%" }}
               textAlign="justify"
               fontSize={textFontSize}
             >
@@ -73,9 +73,15 @@ const Autoland = () => {
             <ButtonMain linkHref="autoland" text="Read More" />
           </Flex>
         </Box>
-        <Box my="6rem">
+        <Box  my={{
+            base:'3rem',
+            myxl: '6rem'
+          }}>
           <Heading
-            mb="4rem"
+            my={{
+              base:'2rem',
+              myxl: '4rem'
+            }}
             textAlign="center"
             fontSize={headingFontSize}
             fontWeight={500}
@@ -111,7 +117,7 @@ const Autoland = () => {
           align="left"
           my="4rem"
           padding={contentPadding}
-          width={{ base: "100%", md: "70%", lg: "50%" }}
+          width={{ base: "100%", md: "70%" }}
         >
           <Text color="#171717" fontSize={headingFontSize} fontWeight={500}>
             Autoland

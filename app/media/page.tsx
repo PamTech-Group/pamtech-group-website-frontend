@@ -59,7 +59,7 @@ const Media = () => {
             flexDir="column"
             gap="1rem"
             justifyContent="center"
-            width={{ base: "100%", md: "70%", lg: "50%" }}
+            width={{ base: "100%", lg: "70%", }}
             paddingY={{ base: "4rem", md: "0" }}
           >
             <Heading fontSize={headingFontSize} fontWeight={500}>
@@ -67,7 +67,7 @@ const Media = () => {
             </Heading>
             <Text
               fontWeight={500}
-              width={{ base: "100%", md: "80%", xl: "60%" }}
+              width={{ base: "100%", md: "70%"}}
               textAlign="justify"
               fontSize={textFontSize}
             >
@@ -78,7 +78,10 @@ const Media = () => {
             <ButtonMain linkHref="#media" text="Read More" />
           </Flex>
         </Box>
-        <Box my="6rem">
+        <Box  my={{
+            base:'2rem',
+            myxl: '4rem'
+          }}>
           <Heading
             mb="4rem"
             textAlign="center"
@@ -101,9 +104,12 @@ const Media = () => {
         </Box>
         <VStack
           align="left"
-          my="4rem"
+          my={{
+            base:'2rem',
+            myxl: '4rem'
+          }}
           padding={contentPadding}
-          width={{ base: "100%", md: "70%", lg: "50%" }}
+          width={{ base: "100%", md: "70%" }}
           id="media"
         >
           <Text color="#171717" fontSize={headingFontSize} fontWeight={500}>

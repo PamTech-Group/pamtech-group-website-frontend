@@ -100,15 +100,15 @@ const SlideContent: React.FC<SlideContentProps> = ({ bg, heading, text, link }) 
         bgPosition="center"
         height={{
           base:'100vh',
-          md: '60vh',
-          myxl: '55vh'
+          md: '65vh',
+          myxl: '70vh'
         }}
         color="#F7F7F7"
       >
         <Flex
           mt={{ base: "5rem", md: "3rem" }}
           height={{
-            base: '90%',
+            base: '100%',
             xl: '100%'
           }}
           flexDir="column"
@@ -121,8 +121,8 @@ const SlideContent: React.FC<SlideContentProps> = ({ bg, heading, text, link }) 
           width={{
             base: "100%",
             md: "90%",
-            xl: "60%",
-            myxl: "50%",
+            xl: "75%",
+            myxl: "60%",
           }}
         >
           <Heading fontSize={headingFontSize} fontWeight={500}>

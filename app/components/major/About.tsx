@@ -5,8 +5,16 @@ import theme from "@/app/theme";
 
 const About = () => {
   const isXlScreen = useBreakpointValue({ base: false, xl: true });
-  const contentWidth = useBreakpointValue({ base: "100%", md: "80%", xl: "40%" });
-  const contentPadding = useBreakpointValue({ base: "2rem", md: "2rem 3rem", xl: "2rem 5rem" });
+  const contentWidth = useBreakpointValue({
+    base: "100%",
+    md: "80%",
+    xl: "40%",
+  });
+  const contentPadding = useBreakpointValue({
+    base: "2rem",
+    md: "2rem 3rem",
+    xl: "2rem 5rem",
+  });
   const headingFontSize = useBreakpointValue({ base: "1.5rem", md: "2rem" });
   const textFontSize = useBreakpointValue({ base: "1rem", md: "1.2rem" });
 
@@ -16,7 +24,8 @@ const About = () => {
       justifyContent="center"
       minHeight={{ base: "auto", xl: "60svh" }}
       position="relative"
-      bgImage={{ base: "none", xl: `url(${bg.src})` }}
+      bgImage={{ base: "none", myxl: `url(${bg.src})` }}
+      backdropFilter="brightness(0%)"
       bgSize="cover"
       bgPosition="center"
     >
@@ -28,11 +37,19 @@ const About = () => {
         padding={contentPadding}
         position={isXlScreen ? "absolute" : "relative"}
         right={isXlScreen ? "6%" : "auto"}
-        top={isXlScreen ? { xl: "5%", dxl: "10%", ddxl:'20%', dddxl: '25%' } : "auto"}
-        mt={isXlScreen ? 'auto' : "4rem"}
+        top={
+          isXlScreen
+            ? { xl: "5%", dxl: "10%", ddxl: "20%", dddxl: "25%" }
+            : "auto"
+        }
+        mt={isXlScreen ? "auto" : "4rem"}
       >
         <VStack spacing="1.5rem" align="start">
-          <Text fontWeight={500} fontSize={headingFontSize} color="primaryOrange">
+          <Text
+            fontWeight={500}
+            fontSize={headingFontSize}
+            color="primaryOrange"
+          >
             About Us
           </Text>
           <Text fontSize={textFontSize} color="textGrey">
@@ -44,9 +61,19 @@ const About = () => {
         <Box my="2rem" bgColor="#192140" height="1px" opacity=".6" />
         <Flex justifyContent="space-between" color="textGrey">
           {["Shareholders", "Years", "Awards"].map((item, index) => (
-            <Flex key={item} flexDir="column" gap="1rem" fontWeight={500} fontSize={textFontSize}>
+            <Flex
+              key={item}
+              flexDir="column"
+              gap="1rem"
+              fontWeight={500}
+              fontSize={textFontSize}
+            >
               <Text>{item}</Text>
-              <Text color="primaryOrange" fontWeight={700} fontSize={{ base: "2rem", md: "3rem" }}>
+              <Text
+                color="primaryOrange"
+                fontWeight={700}
+                fontSize={{ base: "2rem", md: "3rem" }}
+              >
                 {index === 0 ? "250+" : index === 1 ? "08" : "15+"}
               </Text>
             </Flex>

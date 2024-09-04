@@ -37,7 +37,7 @@ const Nav = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const { isOpen, onOpen, onClose } = useDisclosure();
   // Use breakpoints for responsive design
-  const logoSize = useBreakpointValue({ base: 25, sm: 30, md: 35 });
+  const logoSize = useBreakpointValue({ base: 25, sm: 30 });
   const buttonFontSize = useBreakpointValue({ base: "xs", sm: "sm", md: "md" });
   const navSpacing = useBreakpointValue({ base: 2, sm: 4, md: 6, lg: 8 });
 
@@ -215,7 +215,7 @@ const Nav = () => {
           <DrawerContent bgColor="#0F1010">
             <DrawerCloseButton />
 
-            <DrawerBody py="3rem">
+            <DrawerBody pt="6rem">
               <VStack spacing={4} align="start">
                 <Link href="/about" onClick={onMobileMenuClose}>
                   About Us
@@ -229,7 +229,7 @@ const Nav = () => {
                     as={Button}
                     rightIcon={<ChevronDownIcon alignSelf="center" />}
                   >
-                    Our Business
+                    Our Businesses
                   </MenuButton>
                   <MenuList bg="rgba(20, 20, 20, 0.4)">
                     <Link href="/oilgas">

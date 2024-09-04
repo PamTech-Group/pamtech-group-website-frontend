@@ -65,7 +65,10 @@ const Industries = () => {
   return (
     <>
       {/* Industries Section */}
-      <VStack align="left" my="4rem" padding={contentPadding} width={{ base: "100%", md: "80%", lg: "50%" }}>
+      <VStack align="left" my={{
+        base: "2rem",
+        myxl: '4rem'
+      }} padding={contentPadding} width={{ base: "100%", md: "80%", xl: "60%" }}>
         <Text fontWeight={500} fontSize={textFontSize} color="primaryOrange">
           Industries We Serve
         </Text>

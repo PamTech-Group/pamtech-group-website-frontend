@@ -60,12 +60,12 @@ const OilGas = () => {
             flexDir="column"
             justifyContent="center"
             gap="2rem"
-            width={{ base: "100%", md: "80%", xl: "60%" }}
+            width={{ base: "100%", md: "80%"}}
           >
             <Heading fontSize={headingFontSize} fontWeight={500}>
               Pamtech Oil and Gas
             </Heading>
-            <Text fontWeight={500} width="60%" textAlign="justify">
+            <Text fontWeight={500} width="80%" textAlign="justify">
               With our unadulterated and petroleum products, you will experience
               zero downtime and low maintenance costs for your equipments and
               facilities.
@@ -73,9 +73,15 @@ const OilGas = () => {
             <ButtonMain linkHref="#oil-gas" text="Read More" />
           </Flex>
         </Box>
-        <Box my="6rem">
+        <Box  my={{
+            base:'3rem',
+            myxl: '6rem'
+          }}>
           <Heading
-            mb="4rem"
+            my={{
+              base:'2rem',
+              myxl: '4rem'
+            }}
             textAlign="center"
             fontSize={headingFontSize}
             fontWeight={500}
@@ -110,7 +116,7 @@ const OilGas = () => {
           align="left"
           my="4rem"
           padding={contentPadding}
-          width={{ base: "100%", md: "70%", lg: "50%" }}
+          width={{ base: "100%", md: "70%"}}
       id="oil-gas"  >
           <Text color="#171717" fontSize={headingFontSize} fontWeight={500}>
             Oil & Gas

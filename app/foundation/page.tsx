@@ -54,14 +54,17 @@ const Foundation = () => {
             <Heading fontSize={headingFontSize} fontWeight={500}>
               Pamtech Foundation
             </Heading>
-            <Text fontWeight={500} width={{ base: "100%", md: "80%", xl: '60%' }} textAlign="justify" fontSize={textFontSize}>
+            <Text fontWeight={500} width={{ base: "100%", md: "70%", }} textAlign="justify" fontSize={textFontSize}>
              The Pamtech Foundation is guided by a core vision: Giving hope and sharing love to humanity. 
 
             </Text>
             <ButtonMain linkHref="#foundation" text="Read More" />
           </Flex>
         </Box>
-        <Box my="6rem">
+        <Box my={{
+          base: '3rem',
+          myxl: '6rem'
+        }}>
           <Heading
             mb="4rem"
             textAlign="center"
@@ -85,7 +88,10 @@ const Foundation = () => {
             </Box>
           </Flex>
         </Box>
-        <VStack id="foundation" align="left" my="4rem" padding={contentPadding} width={{ base: "100%", md: "70%", lg: "50%" }}>
+        <VStack id="foundation" align="left"  my={{
+            base:'2rem',
+            myxl: '4rem'
+          }} padding={contentPadding} width={{ base: "100%", md: "70%" }}>
           <Text color="#171717" fontSize={headingFontSize} fontWeight={500}>
             Foundation
           </Text>

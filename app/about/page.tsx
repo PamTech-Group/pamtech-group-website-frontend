@@ -148,7 +148,10 @@ const AboutPage = () => {
         width="100%"
         padding={contentPadding}
         color="textGrey"
-        my="4rem"
+        my={{
+          base: '2rem',
+          myxl: '4rem'
+        }}
         justifyContent="space-between"
         alignItems="center"
         flexDirection={{ base: "column", md: "row" }}
@@ -157,11 +160,11 @@ const AboutPage = () => {
         <Flex justifyContent={{
           base: 'center',
           md: 'initial'
-        }} width={{ base: "50%", md: "100%" }}>
+        }} width={{ base: "35%", md: "100%" }}>
           <Image src={pamtech} alt="pamtech way" style={{ width: "100%", height: "auto" }} />
         </Flex>
-        <Box width={{ base: "100%", md: "50%" }}>
-          <Text textAlign="justify" fontWeight={500} fontSize={textFontSize}>
+        <Box width={{ base: "100%", md: "70%" }}>
+          <Text  fontWeight={500} fontSize={textFontSize}>
             Our culture is built on the biblical cornerstones and
             principles of doing business in accordance with the ways
             of God. We strive to be a beacon of light; bringing value
@@ -170,7 +173,10 @@ const AboutPage = () => {
         </Box>
       </Flex>
 
-      <Box padding={contentPadding} color="textGrey" my="4rem">
+      <Box padding={contentPadding} color="textGrey" my={{
+          base: '2rem',
+          myxl: '4rem'
+        }}>
         {/* Vision and Mission Section */}
         <Flex
           direction={{ base: "column", md: "row" }}
@@ -221,7 +227,10 @@ const AboutPage = () => {
         </Flex>
 
         {/* Core Values Section */}
-        <Box textAlign="center" my="4rem">
+        <Box textAlign="center"  my={{
+          base: '2rem',
+          myxl: '4rem'
+        }}>
           <Heading fontSize={headingFontSize} fontWeight={500}>
             Core Values
           </Heading>

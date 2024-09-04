@@ -29,8 +29,8 @@ import Marquee from "react-fast-marquee";
 
 // Data for services, images, and industries
 const services = [
-  { icon: autoland, title: "Autoland" },
   { icon: petrol, title: "Oil and Gas" },
+  { icon: autoland, title: "Autoland" },
   { icon: repair, title: "Autoparts" },
   { icon: media, title: "Media" },
   { icon: ride, title: "Luxury Ride" },
@@ -95,7 +95,7 @@ const Services = () => {
   const descriptionWidth = useBreakpointValue({
     base: "100%",
     md: "70%",
-    lg: "50%",
+   
   });
   const headingFontSize = useBreakpointValue({
     base: "1.5rem",
@@ -105,7 +105,15 @@ const Services = () => {
   const textFontSize = useBreakpointValue({ base: "1rem", md: "1.2rem" });
   return (
     <>
-      <Box marginTop="10rem" mb="4rem" id="services">
+      <Box marginTop={{
+        base: "2rem",
+        md: "2.5rem",
+        xl: '8rem',
+        dxl: '10rem'
+      }} mb={{
+        base: "2rem",
+        myxl: '4rem'
+      }} id="services">
         {/* Service Icons */}
         <Flex
           gap={{ base: 4, md: 6, lg: 10 }}
@@ -148,7 +156,10 @@ const Services = () => {
         {/* Services Description */}
         <VStack
           align="left"
-          my="4rem"
+          my={{
+            base: '2rem',
+            myxl: '4rem'
+          }}
           padding={contentPadding}
           width={descriptionWidth}
         >
@@ -168,7 +179,10 @@ const Services = () => {
         {/* Services Image Grid */}
         <Box padding={contentPadding}>
           <Marquee gradientWidth={50}>
-            <Flex my="4rem" gap={5} padding={5}>
+            <Flex my={{
+            base: '1rem',
+            myxl: '4rem'
+          }} gap={5} padding={5}>
               {images.map((image) => (
                 <Box
                   key={image.title}
@@ -177,8 +191,8 @@ const Services = () => {
                   borderRadius="lg"
                   bgSize="cover"
                   bgPosition="center"
-                  height={{ base: "350px", md: "400px", lg: "450px" }}
-                  width={{ base: "250px", md: "275px", lg: "300px" }}
+                  height={{ base: "400px",  lg: "450px" }}
+                  width={{ base: "275px", lg: "300px" }}
                   display="flex"
                   flexDirection="column"
                   justifyContent="flex-end"

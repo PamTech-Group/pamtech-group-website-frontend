@@ -28,7 +28,7 @@ import theme from "../theme";
 import Link from "next/link";
 import Image from "next/image";
 import logoBlue from "../../public/logoBlue.png";
-import esolution from "../../public/esolution.webp";
+import esolution from "../../public/phoneSolution.webp";
 import Dropdown from "../components/minor/dropdown";
 import { HamburgerIcon } from "@chakra-ui/icons";
 import { GrApple } from "react-icons/gr";
@@ -61,20 +61,27 @@ const Solution = () => {
         background="#00030C"
         bgSize="cover"
         bgPosition="center"
-        minHeight={{ base: "auto", md: "100vh" }}
+       
         color="#F7F7F7">
         <Nav />
         <Flex
           height={{ base: "auto", md: "calc(100vh - 80px)" }}
           flexDir="column"
           justifyContent="center"
+          alignItems={{
+            base: 'center',
+            md: 'initial'
+          }}
           gap="2rem"
-          width={{ base: "100%", md: "70%", lg: "50%" }}
+          width={{ base: "100%", md: "70%" }}
           paddingY={{ base: "4rem", md: "0" }}>
           <Heading fontSize={headingFontSize} fontWeight={500}>
             e-Solutions
           </Heading>
-          <Text fontWeight={500} width={{ base: "100%", md: "80%" }} textAlign="justify" fontSize={textFontSize}>
+          <Text fontWeight={500} width={{ base: "100%"}} textAlign={{
+            base: 'center',
+            md: 'left'
+          }} fontSize={textFontSize}>
             Pamtech Group is at the forefront of innovation, consistently
             developing cutting-edge e-solutions that drive efficiency, enhance
             user experience, and transform industries.
@@ -85,9 +92,18 @@ const Solution = () => {
 
       <Box color=" textGrey" padding={contentPadding} fontWeight={500}>
         {/* Petrol Padi Section */}
-        <Flex my="4rem" bg="white" borderRadius="lg" boxShadow="md" flexDirection={{ base: "column", md: "row" }} wrap='wrap'>
+        <Flex my={{
+          base: '2rem',
+          xl: '4rem'
+        }} bg="white" borderRadius="lg" boxShadow="md" flexDirection={{ base: "column", xl: "row" }} wrap='wrap' justifyContent={{
+         
+          
+        }}>
           {/* Text Section */}
-          <Box padding="2.5rem 3rem" flex="1" bg="rgba(100, 94, 94, .1)">
+          <Box padding="2.5rem 3rem"  bg="rgba(100, 94, 94, .1)" width={{
+            base: '100%',
+            xl: "50%"
+          }}>
             <Heading fontSize="2xl" color="primaryOrange" mb="1rem">
               Petrol Padi
             </Heading>
@@ -149,22 +165,28 @@ const Solution = () => {
           <Flex
             padding="2.5rem 3rem"
             justifyContent="center"
-            flex="1"
+            alignItems='center'
+            flex={1}
+             width='100%'
             textAlign="center"
             bgColor="primaryOrange">
-            <Image src={esolution} alt="Phone Mockup" style={{ maxWidth: '100%', height: 'auto' }}/>
+            <Image src={esolution} alt="Phone Mockup" style={{backgroundSize: 'cover', height:'50%'}} />
           </Flex>
         </Flex>
 
         {/* Autoland Section */}
         <Flex
-          my="4rem"
-          padding={contentPadding}          bg="rgba(100, 94, 94, .1)"
+          my={{
+            base:'2rem',
+            myxl: '4rem'
+          }}
+          padding={contentPadding}         
+           bg="rgba(100, 94, 94, .1)"
           borderRadius="lg"
           boxShadow="md"
           gap="4rem"
           alignItems="center"
-          flexDirection={{ base: "column", md: "row" }} wrap='wrap'>
+          flexDirection={{ base: "column", xl: "row" }} wrap='wrap'>
           {/* Text Section */}
           <Box flex="1">
             <Heading fontSize="2xl" color="primaryOrange" mb="1rem">
@@ -176,10 +198,11 @@ const Solution = () => {
             </Text>
 
             {/* Coming Soon Button */}
-            <Button
+            <Box
               width="fit-content"
-              padding="1.5rem"
+              padding="1rem"
               bgColor="primaryOrange"
+              color='white'
               _hover={{
                 bgColor: "#961615",
               }}
@@ -189,7 +212,7 @@ const Solution = () => {
               borderRadius="lg"  
               fontSize={buttonFontSize}>
               Comming Soon...
-            </Button>
+            </Box>
           </Box>
 
           {/* Placeholder for phone mockup image or extra content */}
@@ -218,14 +241,17 @@ const Solution = () => {
           </Flex>
         </Flex>
         <Flex
-          my="4rem"
+          my={{
+            base:'2rem',
+            myxl: '4rem'
+          }}
           padding={contentPadding}
           bg="rgba(100, 94, 94, .1)"
           borderRadius="lg"
           boxShadow="md"
           gap="4rem"
           alignItems="center"
-          flexDirection={{ base: "column", md: "row" }}
+          flexDirection={{ base: "column", xl: "row" }}
           wrap="wrap">
           {/* Text Section */}
           <Box flex="1">
@@ -239,9 +265,10 @@ const Solution = () => {
             </Text>
 
             {/* Coming Soon Button */}
-            <Button
+            <Box
               width="fit-content"
-              padding="1.5rem"
+              padding="1rem"
+              color='white'
               bgColor="primaryOrange"
               _hover={{
                 bgColor: "#961615",
@@ -251,7 +278,7 @@ const Solution = () => {
               }}
               fontSize={buttonFontSize}              borderRadius={theme.buttonRadius.radius}>
               Comming Soon...
-            </Button>
+            </Box>
           </Box>
 
           {/* Placeholder for phone mockup image or extra content */}

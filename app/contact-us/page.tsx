@@ -14,14 +14,14 @@ import {
   useToast,
 } from "@chakra-ui/react";
 import { useState } from "react";
-import axios from 'axios';
+import axios from "axios";
 
 import Footer from "../components/major/Footer";
 import Sustainability from "../components/minor/Sustainability";
 import NavWhite from "../components/major/NavWhite";
 
 const ContactPage = () => {
-  const toast = useToast()
+  const toast = useToast();
   const contentPadding = useBreakpointValue({
     base: "1rem",
     sm: "2rem",
@@ -29,8 +29,16 @@ const ContactPage = () => {
     lg: "6rem",
     xl: "8rem",
   });
-  const headingFontSize = useBreakpointValue({ base: "1.8rem", md: "2rem", lg: "2.5rem" });
-  const textFontSize = useBreakpointValue({ base: "1rem", md: "1.1rem", lg: "1.2rem" });
+  const headingFontSize = useBreakpointValue({
+    base: "1.8rem",
+    md: "2rem",
+    lg: "2.5rem",
+  });
+  const textFontSize = useBreakpointValue({
+    base: "1rem",
+    md: "1.1rem",
+    lg: "1.2rem",
+  });
   const formWidth = useBreakpointValue({ base: "100%", md: "85%", lg: "80%" });
 
   // State to handle form inputs
@@ -65,41 +73,43 @@ const ContactPage = () => {
   // Handle form submission
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-  
+
     // Prepare the data to be sent
     const data = {
-      firstName: formData.name.split(" ")[0], 
+      firstName: formData.name.split(" ")[0],
       lastName: formData.name.split(" ")[1] || "", // Assuming last name is the second part of the name
       email: formData.email,
       phoneNumber: formData.phoneNumber,
-      subject: "General Inquiry", 
+      subject: "General Inquiry",
       message: formData.message,
     };
-  
-    try {
-      const response = await axios.post('https://pamtech-group-website-backend.onrender.com/api/users/contact', data);
-      if (response.status==200) {
 
+    try {
+      const response = await axios.post(
+        "https://pamtech-group-website-backend.onrender.com/api/users/contact",
+        data
+      );
+      if (response.status == 200) {
         toast({
-          title: 'Sent Successfully.',
+          title: "Sent Successfully.",
           description: "Thank  you for reaching out to us",
-          status: 'success',
+          status: "success",
           duration: 5000,
           isClosable: true,
-          position: 'top-right'
-        })
+          position: "top-right",
+        });
       }
       // Handle success (e.g., show a success message)
     } catch (error) {
-      console.error('Error submitting form:', error);
+      console.error("Error submitting form:", error);
       toast({
-        title: 'Error.',
+        title: "Error.",
         description: "An error ocurred",
-        status: 'error',
+        status: "error",
         duration: 5000,
         isClosable: true,
-        position: 'top-right'
-      })
+        position: "top-right",
+      });
       // Handle error (e.g., show an error message)
     }
   };
@@ -108,7 +118,14 @@ const ContactPage = () => {
     <Box bgColor="#FFFFFF">
       <NavWhite />
       <Box padding={contentPadding} color="textGrey">
-        <VStack align="left" my="4rem" width={{ base: "100%", md: "70%", lg: "50%" }}>
+        <VStack
+          align="left"
+          mb={{
+            base: "2rem",
+            myxl: "4rem",
+          }}
+          width={{ base: "100%", md: "70%" }}
+        >
           <Text fontWeight={500} fontSize="1.5rem" color="primaryOrange">
             Contact Us
           </Text>
@@ -125,14 +142,16 @@ const ContactPage = () => {
           color="#333333"
           gap="2rem"
           flexDirection={{ base: "column", lg: "row" }}
-          justifyContent="space-between">
+          justifyContent="space-between"
+        >
           <Flex
             flexDirection="column"
             bgColor="#F1F1F1"
             padding="4rem 2rem"
             boxShadow="sm"
             width={{ base: "100%", lg: "40%" }}
-            fontSize={textFontSize}>
+            fontSize={textFontSize}
+          >
             <Flex flexDirection="column" gap=".4rem">
               <Text fontWeight={500}>Contact</Text>
               <Text>+2348115004000</Text>
@@ -171,13 +190,15 @@ const ContactPage = () => {
             width={{ base: "100%", lg: "60%" }}
             padding="4rem 2rem"
             gap="2rem"
-            borderRadius="md">
+            borderRadius="md"
+          >
             <FormControl width={formWidth}>
               <FormLabel
                 fontWeight={500}
                 fontSize={textFontSize}
                 htmlFor="name"
-                color="#333333">
+                color="#333333"
+              >
                 Name
               </FormLabel>
               <Input
@@ -199,7 +220,11 @@ const ContactPage = () => {
               />
             </FormControl>
             <FormControl width={formWidth}>
-              <FormLabel fontWeight={500} fontSize={textFontSize} htmlFor="email">
+              <FormLabel
+                fontWeight={500}
+                fontSize={textFontSize}
+                htmlFor="email"
+              >
                 Email
               </FormLabel>
               <Input
@@ -221,7 +246,11 @@ const ContactPage = () => {
               />
             </FormControl>
             <FormControl width={formWidth}>
-              <FormLabel fontWeight={500} fontSize={textFontSize} htmlFor="phoneNumber">
+              <FormLabel
+                fontWeight={500}
+                fontSize={textFontSize}
+                htmlFor="phoneNumber"
+              >
                 Phone Number
               </FormLabel>
               <Input
@@ -243,7 +272,11 @@ const ContactPage = () => {
               />
             </FormControl>
             <FormControl width={formWidth}>
-              <FormLabel fontWeight={500} fontSize={textFontSize} htmlFor="message">
+              <FormLabel
+                fontWeight={500}
+                fontSize={textFontSize}
+                htmlFor="message"
+              >
                 Message
               </FormLabel>
               <Textarea
@@ -266,7 +299,7 @@ const ContactPage = () => {
               />
             </FormControl>
             <Button
-            fontSize='1rem'
+              fontSize="1rem"
               type="submit"
               bgColor="primaryOrange"
               color="white"
@@ -277,7 +310,8 @@ const ContactPage = () => {
               _active={{
                 bgColor: "#bf1e1d",
               }}
-              onClick={handleSubmit}>
+              onClick={handleSubmit}
+            >
               Send Message
             </Button>
           </Flex>

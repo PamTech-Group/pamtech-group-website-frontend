@@ -79,17 +79,17 @@ const Sustainability = () => {
 
   return (
     <Flex
-      mt="4rem"
+      mt={{
+        base: '2rem',
+        myxl: '4rem'
+      }}
       padding={contentPadding}
       gap="2rem"
       bgImage={`url(${bg3.src})`}
       bgSize="cover"
       bgPosition="center"
       color="#F7F7F7" 
-      flexDirection={{
-        base: 'column',
-        lg: 'row'
-      }}>
+     >
       <Flex  flexDirection={{
         base: 'column',
         lg: 'row'
@@ -110,7 +110,10 @@ const Sustainability = () => {
         </Flex>
         <Box height={{ base: "1px", lg: "auto" }} width={{ base: "100%", lg: "1px" }} my={{ base: "2rem", lg: "0" }} mx={{ base: "0", lg: "3rem" }}  bgColor="#F7F7F7" />
         <Flex width={textWidth} flexDirection="column" gap="2rem">
-          <Text textAlign="center" fontWeight={400} fontSize={textFontSize}>
+          <Text textAlign={{
+            base: 'left',
+            lg: 'center',
+          }} fontWeight={400} fontSize={textFontSize}>
             7 Sustainability Pillars
           </Text>
           <SimpleGrid columns={gridColumns} rowGap="5" columnGap={2}>
@@ -124,9 +127,9 @@ const Sustainability = () => {
                   outline="1px solid #F7F7F7"
                   borderRadius="md"
                   justifyContent="center"
-                  padding="1rem 2.5rem"
+                  padding="1.5rem 2.5rem"
                   position="relative">
-                  <Image src={pillar.image} alt={pillar.text} />
+                  <Image height={40} width={30}  src={pillar.image} alt={pillar.text} />
                 </Box>
                 <Text fontWeight={300} fontSize={textFontSize}>{pillar.text}</Text>
               </Flex>
