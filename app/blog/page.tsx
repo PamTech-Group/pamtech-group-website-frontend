@@ -198,7 +198,7 @@ const Blog = () => {
             {" "}
             {/* Stack for vertical alignment */}
             {blogPosts.map((post) => (
-              <Box
+              <Box data-aos="zoom-in-up"
                 key={post.id}
                 borderWidth="1px"
                 borderRadius="lg"

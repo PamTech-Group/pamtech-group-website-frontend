@@ -64,7 +64,7 @@ const Nav = () => {
   }, []);
  
   return (
-    <Box data-aos='zoom-in-down'>
+   
 
    
     
@@ -291,7 +291,7 @@ const Nav = () => {
         }
       `}</style>
     </Box>
-    </Box>
+
   );
 };
 

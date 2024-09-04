@@ -65,6 +65,8 @@ const Media = () => {
               base: 'unset',
               myxl: '3.5rem'
             }}
+            data-aos="zoom-in"
+
           >
             <Heading fontSize={headingFontSize} fontWeight={500}>
               Pamtech Media
@@ -95,16 +97,16 @@ const Media = () => {
           >
             Brand Showcase
           </Heading>
-          <Flex
+          <SimpleGrid
             gap=".5rem"
-            justifyContent="center"
-            flexWrap="wrap"
+            placeItems="center"
+            columns={{base:1, lg:2, xl:3}}
             padding={contentPadding}
           >
-            <Image src={media1} alt="ride1" />
-            <Image src={media2} alt="ride1" />
-            <Image src={media3} alt="ride1" />
-          </Flex>
+            <Image src={media1} alt="ride1"  data-aos='zoom-in' />
+            <Image src={media2} alt="ride1" data-aos='zoom-in' />
+            <Image src={media3} alt="ride1"  data-aos='zoom-in'/>
+          </SimpleGrid>
         </Box>
         <VStack
           align="left"
@@ -115,6 +117,7 @@ const Media = () => {
           padding={contentPadding}
           width={{ base: "100%", md: "70%" }}
           id="media"
+          data-aos="zoom-in-right"
         >
           <Text color="#171717" fontSize={headingFontSize} fontWeight={500}>
             Media

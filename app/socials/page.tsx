@@ -117,8 +117,9 @@ const Socials = () => {
           gap={4}
         >
           {/* Large image that spans 2 rows and 2 columns on larger screens */}
-          <GridItem rowSpan={{ base: 1, md: 2 }} colSpan={{ base: 1, md: 2 }}>
+          <GridItem data-aos="zoom-in" rowSpan={{ base: 1, md: 2 }} colSpan={{ base: 1, md: 2 }}>
             <Image
+           
               src={gallery1}
               alt="Gallery Image 1"
               style={{ width: "100%", height: "auto", objectFit: "cover" }}
@@ -127,7 +128,7 @@ const Socials = () => {
 
           {/* Small images */}
           {[gallery2, gallery3, gallery5, gallery6].map((img, index) => (
-            <GridItem key={index} colSpan={1}>
+            <GridItem data-aos="zoom-in" key={index} colSpan={1}>
               <Image
                 src={img}
                 alt={`Gallery Image ${index + 2}`}
@@ -145,6 +146,7 @@ const Socials = () => {
         }}
         padding={`2rem ${contentPadding}`}
         width={{ base: "100%", md: "70%" }}
+        data-aos="zoom-in-right"
       >
         <Text color="#171717" fontSize={headingFontSize} fontWeight={500}>
           Explore our social media platforms
@@ -156,93 +158,7 @@ const Socials = () => {
           and engage with our vibrant community.
         </Text>
       </VStack>
-      {/* <Flex
-        my={{
-          base: "2rem",
-          myxl: "4rem",
-        }}
-        flexDirection={{
-          base: "column",
-          md: "row",
-        }}
-        padding={`2rem ${contentPadding}`}
-        justifyContent={{ base: "center", md: "space-between" }}
-        flexWrap="wrap"
-        gap="2rem"
-      >
-        {[
-          {
-            icon: FaWhatsapp,
-            text: "Whatsapp",
-            color: "#25D366",
-            link: "https://wa.me/+2347007268324",
-          },
-          {
-            icon: FaFacebookSquare,
-            text: "Facebook",
-            color: "#1877F2",
-            link: "https://www.facebook.com/pamtechgroup/",
-          },
-          {
-            icon: FaYoutube,
-            text: "Youtube",
-            color: "#FF0000",
-            link: "https://www.youtube.com/channel/UCjJ-fWJYIhpViYWr97-yWNw",
-          },
-          {
-            icon: FaTiktok,
-            text: "Tiktok",
-            color: "#171717",
-            link: "https://www.tiktok.com/@pamtechgroup",
-          },
-          {
-            icon: FaInstagram,
-            text: "Instagram",
-            color: "#C13584",
-            link: "https://www.instagram.com/pamtechgroup",
-          },
-          {
-            icon: FaXTwitter,
-            text: "X",
-            color: "#171717",
-            link: "https://x.com/thepamtechgroup",
-          },
-          {
-            icon: FaLinkedin,
-            text: "Linkedin",
-            color: "#0762C8",
-            link: "https://www.linkedin.com/company/pamtechgroup/",
-          },
-        ].map((social, index) => (
-          <Link
-            href={social.link}
-            key={index}
-            passHref
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Flex
-              alignItems="center"
-              justifyContent="center"
-              fontWeight={400}
-              fontSize={socialTextSize}
-              borderRadius="2xl"
-              height="4rem"
-              minWidth={{ base: "6rem" }}
-              padding="1rem 2rem"
-              bgColor={social.color}
-              gap="1rem"
-              cursor="pointer"
-              _hover={{ opacity: 0.8 }}
-              transition="opacity 0.2s"
-            >
-              <social.icon fontSize={socialIconSize} />
-              <Text>{social.text}</Text>
-            </Flex>
-          </Link>
-        ))}
-      </Flex>
-       */}
+    
       <Box
         my={{
           base: "2rem",

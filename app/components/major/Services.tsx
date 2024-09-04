@@ -9,7 +9,6 @@ import {
   VStack,
 } from "@chakra-ui/react";
 import { BsArrowRight } from "react-icons/bs";
-
 // Images
 import autoland from "../../../public/autoland.webp";
 import petrolpadi from "../../../public/petrolPadi.webp";
@@ -27,7 +26,6 @@ import Sustainability from "../minor/Sustainability";
 import Link from "next/link";
 import Industries from "../minor/Industries";
 import Marquee from "react-fast-marquee";
-import Aos from "aos";
 
 // Data for services, images, and industries
 const services = [
@@ -121,7 +119,7 @@ const Services = () => {
       >
         {/* Service Icons */}
         <Grid
-        data-aos ='fade-left'
+          data-aos="zoom-in"
           templateColumns={{
             base: "repeat(2, 1fr)",
             md: "repeat(3, 1fr)",
@@ -162,6 +160,7 @@ const Services = () => {
 
         {/* Services Description */}
         <VStack
+        data-aos="zoom-in-right"
           align="left"
           my={{
             base: "2rem",
@@ -184,7 +183,7 @@ const Services = () => {
         </VStack>
 
         {/* Services Image Grid */}
-        <Box padding={contentPadding}>
+        <Box padding={contentPadding} data-aos="zoom-in" >
           <Marquee gradientWidth={50}>
             <Flex
               my={{

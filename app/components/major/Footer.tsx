@@ -46,7 +46,7 @@ const Footer = () => {
 
   return (
     <>
-      <Box bgColor='primaryOrange'  padding={contentPadding} paddingBottom="0">
+      <Box bgColor='primaryOrange' data-aos="zoom-in-up"  padding={contentPadding} paddingBottom="0">
         <SimpleGrid
           spacing={8}
           alignItems="center"
@@ -109,7 +109,7 @@ const Footer = () => {
           </Flex>
         </SimpleGrid>
       </Box>
-      <Box bgColor="#0F1010"  padding={contentPadding}>
+      <Box bgColor="#0F1010"  padding={contentPadding} data-aos="zoom-in-up">
         <Flex
           justify="center"
           align="center"

@@ -18,6 +18,7 @@ import {
   ListItem,
   OrderedList,
   Text,
+  UnorderedList,
   useBreakpointValue,
   useDisclosure,
   VStack,
@@ -43,9 +44,21 @@ const Solution = () => {
     lg: "2rem 6rem",
     xl: "2rem 8rem",
   });
-  const headingFontSize = useBreakpointValue({ base: "2rem", md: "2.5rem", lg: "3rem" });
-  const textFontSize = useBreakpointValue({ base: "1rem", md: "1.1rem", lg: "1.2rem" });
-  const buttonFontSize = useBreakpointValue({ base: "0.8rem", md: "1rem", lg: "1.2rem" });
+  const headingFontSize = useBreakpointValue({
+    base: "2rem",
+    md: "2.5rem",
+    lg: "3rem",
+  });
+  const textFontSize = useBreakpointValue({
+    base: "1rem",
+    md: "1.1rem",
+    lg: "1.2rem",
+  });
+  const buttonFontSize = useBreakpointValue({
+    base: "0.8rem",
+    md: "1rem",
+    lg: "1.2rem",
+  });
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   const {
@@ -57,94 +70,128 @@ const Solution = () => {
   return (
     <Box bgColor="#FFFFFF">
       <Box
-      padding={contentPadding}
+        padding={contentPadding}
         background="#00030C"
         bgSize="cover"
         bgPosition="center"
-       
-        color="#F7F7F7">
+        color="#F7F7F7"
+      >
         <Nav />
         <Flex
           height={{ base: "auto", md: "calc(100vh - 80px)" }}
           flexDir="column"
           justifyContent="center"
           alignItems={{
-            base: 'center',
-            md: 'initial'
+            base: "center",
+            md: "initial",
           }}
           gap="2rem"
           width={{ base: "100%", md: "70%" }}
-          paddingY={{ base: "4rem", md: "0" }}   pl={{
-            base: 'unset',
-            myxl: '3.5rem'
-          }}>
+          paddingY={{ base: "4rem", md: "0" }}
+          pl={{
+            base: "unset",
+            myxl: "3.5rem",
+          }}
+        >
           <Heading fontSize={headingFontSize} fontWeight={500}>
             e-Solutions
           </Heading>
-          <Text fontWeight={500} width={{ base: "100%"}} textAlign={{
-            base: 'center',
-            md: 'left'
-          }} fontSize={textFontSize}>
+          <Text
+            fontWeight={500}
+            width={{ base: "100%" }}
+            textAlign={{
+              base: "center",
+              md: "left",
+            }}
+            fontSize={textFontSize}
+          >
             Pamtech Group is at the forefront of innovation, consistently
             developing cutting-edge e-solutions that drive efficiency, enhance
             user experience, and transform industries.
           </Text>
-          <ButtonMain linkHref="https://wa.me/+2347007268324"   text="Talk to us" />
+          <ButtonMain
+            linkHref="https://wa.me/+2347007268324"
+            text="Talk to us"
+          />
         </Flex>
       </Box>
 
       <Box color=" textGrey" padding={contentPadding} fontWeight={500}>
         {/* Petrol Padi Section */}
-        <Flex my={{
-          base: '2rem',
-          xl: '4rem'
-        }} bg="white" borderRadius="lg" boxShadow="md" flexDirection={{ base: "column", xl: "row" }} wrap='wrap' justifyContent={{
-         
-          
-        }}>
+        <Flex
+          my={{
+            base: "2rem",
+            xl: "4rem",
+          }}
+          bg="white"
+          borderRadius="lg"
+          boxShadow="md"
+          flexDirection={{ base: "column", xl: "row" }}
+          wrap="wrap"
+          justifyContent={{}}
+          data-aos="zoom-in"
+        >
           {/* Text Section */}
-          <Box padding="2.5rem 3rem"  bg="rgba(100, 94, 94, .1)" width={{
-            base: '100%',
-            xl: "50%"
-          }}>
+          <Box
+            padding="2.5rem 3rem"
+            bg="rgba(100, 94, 94, .1)"
+            width={{
+              base: "100%",
+              xl: "50%",
+            }}
+          >
             <Heading fontSize="2xl" color="primaryOrange" mb="1rem">
               Petrol Padi
             </Heading>
             <Text mb="1.5rem" fontWeight={500} fontSize={textFontSize}>
-              This innovative platform is designed to transform the way
-              customers purchase fuel, offering a seamless and convenient
-              experience.
+              Petrol Padi is a mobile app that simplifies fuel access in
+              Nigeria. It offers real-time fuel prices and enables seamless
+              ordering and delivery, making it convenient for both oil marketers
+              and suppliers.
             </Text>
-            <OrderedList my="2rem" spacing="1rem" fontWeight={500} fontSize={textFontSize}>
+            <UnorderedList
+              my="2rem"
+              spacing="1rem"
+              fontWeight={500}
+              fontSize={textFontSize}
+            >
               <ListItem>
-                Convenience: Buy fuel from the comfort of your own home, 24/7.
+                Petrol Padi is a mobile app that lets you easily check fuel
+                prices and order petroleum products from anywhere in Nigeria.
               </ListItem>
               <ListItem>
-                Time-saving: No more waiting in lines or queues at fuel
-                stations.
+                Petrol Padi provides real-time fuel prices at various depots,
+                ensuring you always know the current cost.
               </ListItem>
               <ListItem>
-                Easy Payment: Secure and hassle-free payment options.
-              </ListItem>
-
-              <ListItem>
-                Fuel Price Comparison: Compare prices across different fuel
-                stations.
-              </ListItem>
-
-              <ListItem>
-                Real-time Updates: Get updates on fuel availability and prices.
+                Petrol Padi lets you browse depots and products, placing orders
+                directly from the app.
               </ListItem>
 
               <ListItem>
-                Safety: Avoid handling cash and reduce risk of fuel theft.
+                Petrol Padi allows you to track your fuel delivery status
+                seamlessly.
               </ListItem>
 
               <ListItem>
-                Station information: Access information about fuel stations,
-                including hours, amenities, and reviews.
+                Petrol Padi partners with trusted truck owners to ensure safe
+                and timely fuel delivery.
               </ListItem>
-            </OrderedList>
+
+              <ListItem>
+                Petrol Padi simplifies fuel buying for businesses and filling
+                stations alike.
+              </ListItem>
+
+              <ListItem>
+                Petrol Padi provides customer support to ensure a smooth and
+                hassle-free experience.
+              </ListItem>
+              <ListItem>
+                Petrol Padi is revolutionizing fuel buying in Nigeria, making it
+                easier, faster, and more reliable.
+              </ListItem>
+            </UnorderedList>
 
             {/* App Store and Google Play Buttons */}
             <Flex gap="1rem" flexDirection={{ base: "column", sm: "row" }}>
@@ -152,13 +199,17 @@ const Solution = () => {
                 bgColor="#0e0e0e"
                 colorScheme="gray"
                 leftIcon={<BiLogoPlayStore fontSize="1.5rem" />}
-                variant="solid" fontSize={buttonFontSize}>
+                variant="solid"
+                fontSize={buttonFontSize}
+              >
                 Google Play
               </Button>
               <Button
                 leftIcon={<GrApple fontSize="1.5rem" />}
                 bgColor="#0e0e0e"
-                variant="solid" fontSize={buttonFontSize}>
+                variant="solid"
+                fontSize={buttonFontSize}
+              >
                 App Store{" "}
               </Button>
             </Flex>
@@ -168,28 +219,36 @@ const Solution = () => {
           <Flex
             padding="2.5rem 3rem"
             justifyContent="center"
-            alignItems='center'
+            alignItems="center"
             flex={1}
-             width='100%'
+            width="100%"
             textAlign="center"
-            bgColor="primaryOrange">
-            <Image src={esolution} alt="Phone Mockup" style={{backgroundSize: 'cover', height:'50%'}} />
+            bgColor="primaryOrange"
+          >
+            <Image
+              src={esolution}
+              alt="Phone Mockup"
+              style={{ backgroundSize: "cover", height: "50%" }}
+            />
           </Flex>
         </Flex>
 
         {/* Autoland Section */}
         <Flex
           my={{
-            base:'2rem',
-            myxl: '4rem'
+            base: "2rem",
+            myxl: "4rem",
           }}
-          padding={contentPadding}         
-           bg="rgba(100, 94, 94, .1)"
+          padding="2rem"
+          bg="rgba(100, 94, 94, .1)"
           borderRadius="lg"
           boxShadow="md"
           gap="4rem"
           alignItems="center"
-          flexDirection={{ base: "column", xl: "row" }} wrap='wrap'>
+          flexDirection={{ base: "column", xl: "row" }}
+          wrap="wrap"
+          data-aos="zoom-in"
+        >
           {/* Text Section */}
           <Box flex="1">
             <Heading fontSize="2xl" color="primaryOrange" mb="1rem">
@@ -205,57 +264,64 @@ const Solution = () => {
               width="fit-content"
               padding="1rem"
               bgColor="primaryOrange"
-              color='white'
+              color="white"
               _hover={{
                 bgColor: "#961615",
               }}
               _active={{
                 bgColor: "#bf1e1d",
               }}
-              borderRadius="lg"  
-              fontSize={buttonFontSize}>
+              borderRadius="lg"
+              fontSize={buttonFontSize}
+            >
               Comming Soon...
             </Box>
           </Box>
 
           {/* Placeholder for phone mockup image or extra content */}
           <Flex flex="1">
-            <OrderedList color="textGrey" spacing="1rem" fontSize={textFontSize}>
+            <UnorderedList
+              color="textGrey"
+              spacing="1rem"
+              fontSize={textFontSize}
+            >
               {" "}
               <ListItem>
-                {" "}
-                Convenience: Buy fuel from the comfort of your own home, 24/7.
+                <strong>Seamless Repair Booking:</strong> Schedule car repairs
+                with trusted mechanics right from your phone—no calls or long
+                waits required.{" "}
               </ListItem>
               <ListItem>
-                Time-saving: No more waiting in lines or queues at fuel
-                stations.
+                <strong>
+                  Service Reminders:</strong> Never miss a service again with automated
+                  reminders that keep your vehicle in top condition.
+                
               </ListItem>
               <ListItem>
-                Easy Payment: Secure and hassle-free payment options.
+                <strong>
+                  Car Care Tips: </strong> Stay informed with expert tips on vehicle
+                  maintenance, helping you extend the life of your car and drive
+                  safely.
+               
               </ListItem>
-              <ListItem>
-                . Fuel Price Comparison: Compare prices across different fuel
-                stations.
-              </ListItem>
-              <ListItem>
-                Real-time Updates: Get updates on fuel availability and prices.{" "}
-              </ListItem>
-            </OrderedList>
+            </UnorderedList>
           </Flex>
         </Flex>
         <Flex
           my={{
-            base:'2rem',
-            myxl: '4rem'
+            base: "2rem",
+            myxl: "4rem",
           }}
-          padding={contentPadding}
+          padding="2rem"
           bg="rgba(100, 94, 94, .1)"
           borderRadius="lg"
           boxShadow="md"
           gap="4rem"
           alignItems="center"
           flexDirection={{ base: "column", xl: "row" }}
-          wrap="wrap">
+          wrap="wrap"
+          data-aos="zoom-in"
+        >
           {/* Text Section */}
           <Box flex="1">
             <Heading fontSize="2xl" color="primaryOrange" mb="1rem">
@@ -271,7 +337,7 @@ const Solution = () => {
             <Box
               width="fit-content"
               padding="1rem"
-              color='white'
+              color="white"
               bgColor="primaryOrange"
               _hover={{
                 bgColor: "#961615",
@@ -279,34 +345,34 @@ const Solution = () => {
               _active={{
                 bgColor: "#bf1e1d",
               }}
-              fontSize={buttonFontSize}              borderRadius={theme.buttonRadius.radius}>
+              fontSize={buttonFontSize}
+              borderRadius={theme.buttonRadius.radius}
+            >
               Comming Soon...
             </Box>
           </Box>
 
           {/* Placeholder for phone mockup image or extra content */}
           <Flex flex="1">
-            <OrderedList color="textGrey" spacing="1rem" fontSize={textFontSize}>
+            <UnorderedList
+              color="textGrey"
+              spacing="1rem"
+              fontSize={textFontSize}
+            >
               {" "}
               <ListItem>
                 {" "}
-                Convenience: Buy fuel from the comfort of your own home, 24/7.
-              </ListItem>
+            <strong>Convenience:</strong>Shop for auto parts from the comfort of your own home, 24/7, and have them delivered to your doorstep.              </ListItem>
               <ListItem>
-                Time-saving: No more waiting in lines or queues at fuel
-                stations.
+              <strong>Wide Selection: </strong> Access a vast inventory of auto parts from various manufacturers and suppliers, all in one place.
               </ListItem>
+            
+          
               <ListItem>
-                Easy Payment: Secure and hassle-free payment options.
+                {/*  eslint-disable-next-line react/no-unescaped-entities */}
+                <strong>Easy Search:</strong>`Quickly find the right parts for your vehicle using the app's intuitive search function, filtering by make, model, year, and more.``
               </ListItem>
-              <ListItem>
-                . Fuel Price Comparison: Compare prices across different fuel
-                stations.
-              </ListItem>
-              <ListItem>
-                Real-time Updates: Get updates on fuel availability and prices.{" "}
-              </ListItem>
-            </OrderedList>
+            </UnorderedList>
           </Flex>
         </Flex>
       </Box>

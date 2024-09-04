@@ -10,6 +10,7 @@ import {
   Box,
   Flex,
   Heading,
+  SimpleGrid,
   Text,
   VStack,
   useBreakpointValue,
@@ -61,6 +62,7 @@ const Autoland = () => {
               base: 'unset',
               myxl: '3.5rem'
             }}
+            data-aos="zoom-in"
           >
             <Heading fontSize={headingFontSize} fontWeight={500}>
               Pamtech Autoland
@@ -93,28 +95,31 @@ const Autoland = () => {
           >
             Brand Showcase
           </Heading>
-          <Flex
+          <SimpleGrid
             gap=".5rem"
-            justifyContent="center"
-            flexWrap="wrap"
+            placeItems="center"
+            columns={{base:1, lg:2, xl:3}}
             padding={contentPadding}
           >
             <Image
               src={land1}
               alt="land1"
               style={{ maxWidth: "100%", height: "auto" }}
+              data-aos="zoom-in"
             />
             <Image
               src={land2}
               alt="land2"
               style={{ maxWidth: "100%", height: "auto" }}
+              data-aos="zoom-in"
             />
             <Image
               src={land3}
               alt="land3"
               style={{ maxWidth: "100%", height: "auto" }}
+              data-aos="zoom-in"
             />
-          </Flex>
+          </SimpleGrid>
         </Box>
         <VStack
         id="autoland"
@@ -122,6 +127,7 @@ const Autoland = () => {
           my="4rem"
           padding={contentPadding}
           width={{ base: "100%", md: "70%" }}
+          data-aos="zoom-in-right"
         >
           <Text color="#171717" fontSize={headingFontSize} fontWeight={500}>
             Autoland

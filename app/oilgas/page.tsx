@@ -11,6 +11,7 @@ import {
   Box,
   Flex,
   Heading,
+  SimpleGrid,
   Text,
   useBreakpointValue,
   VStack,
@@ -65,6 +66,8 @@ const OilGas = () => {
               base: 'unset',
               myxl: '3.5rem'
             }}
+            data-aos="zoom-in"
+
           >
             <Heading fontSize={headingFontSize} fontWeight={500}>
               Pamtech Oil and Gas
@@ -95,10 +98,10 @@ const OilGas = () => {
           >
             Brand Showcase
           </Heading>
-          <Flex
+          <SimpleGrid
             gap=".5rem"
-            justifyContent="center"
-            flexWrap="wrap"
+            placeItems="center"
+            columns={{base:1, lg:2, xl:3}}
             padding={contentPadding}
           >
             <Image
@@ -116,7 +119,7 @@ const OilGas = () => {
               alt="ride1"
               style={{ maxWidth: "100%", height: "auto" }}
             />
-          </Flex>
+          </SimpleGrid>
         </Box>
         <VStack
           align="left"
@@ -124,6 +127,7 @@ const OilGas = () => {
           padding={contentPadding}
           width={{ base: "100%", md: "70%" }}
           id="oil-gas"
+           data-aos="zoom-in-right"
         >
           <Text color="#171717" fontSize={headingFontSize} fontWeight={500}>
             Oil & Gas

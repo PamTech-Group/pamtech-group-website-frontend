@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
 import "./globals.css";
 import { Providers } from "./providers";
-import { useEffect } from "react";
 
 const roboto = Roboto({
   weight: ["100", "300", "400", "500", "700"],

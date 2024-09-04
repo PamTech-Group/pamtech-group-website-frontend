@@ -125,6 +125,7 @@ const ContactPage = () => {
             myxl: "4rem",
           }}
           width={{ base: "100%", md: "70%" }}
+          data-aos="zoom-in-right"
         >
           <Text fontWeight={500} fontSize="1.5rem" color="primaryOrange">
             Contact Us

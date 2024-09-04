@@ -93,8 +93,8 @@ const Sustainability = () => {
       <Flex  flexDirection={{
         base: 'column',
         lg: 'row'
-      }} width="100%" alignItems="center" justifyContent="space-between">
-        <Flex width={textWidth} flexDirection="column" gap="2rem">
+      }} width="100%" alignItems="center" justifyContent="space-between" data-aos="zoom-in">
+        <Flex width={textWidth} flexDirection="column" gap="2rem" >
           <Text fontWeight={400}  fontSize={textFontSize}>
             Sustainability
           </Text>

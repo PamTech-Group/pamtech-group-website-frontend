@@ -11,6 +11,7 @@ import {
   Box,
   Flex,
   Heading,
+  SimpleGrid,
   Text,
   useBreakpointValue,
   VStack,
@@ -62,6 +63,7 @@ const Autoparts = () => {
               base: 'unset',
               myxl: '3.5rem'
             }}
+             data-aos="zoom-in"
           >
             <Heading fontSize={headingFontSize} fontWeight={500}>
               Pamtech Autoparts
@@ -88,9 +90,10 @@ const Autoparts = () => {
           >
             Brand Showcase
           </Heading>
-          <Flex
+          <SimpleGrid
             gap=".5rem"
-            justifyContent="center"
+            placeItems="center"
+            columns={{base:1, lg:2, xl:3}}
             flexWrap="wrap"
             padding={contentPadding}
           >
@@ -98,25 +101,29 @@ const Autoparts = () => {
               src={parts1}
               alt="parts1"
               style={{ maxWidth: "100%", height: "auto" }}
+              data-aos="zoom-in"
             />
             <Image
               src={parts2}
               alt="parts2"
               style={{ maxWidth: "100%", height: "auto" }}
+              data-aos="zoom-in"
+
             />
             <Image
               src={parts3}
               alt="parts3"
               style={{ maxWidth: "100%", height: "auto" }}
+              data-aos="zoom-in"
             />
-          </Flex>
+          </SimpleGrid>
         </Box>
         <VStack
         id="autoparts"
           align="left"
           my="4rem"
           padding={contentPadding}
-          width={{ base: "100%", md: "70%", lg: "50%" }}
+          width={{ base: "100%", md: "70%", lg: "70%" }}
         >
           <Text color="#171717" fontSize={headingFontSize} fontWeight={500}>
             Autoparts

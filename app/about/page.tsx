@@ -78,7 +78,7 @@ const AboutPage = () => {
       <Box
         bgPosition="center"
         bgColor="#0F1010"
-        height={{ base: "auto", lg: "80vh" }}
+        height={{ base: "auto", lg: "80vh", myxl: "auto" }}
 
         width="100vw"
         color="#F7F7F7"
@@ -162,11 +162,11 @@ const AboutPage = () => {
         <Flex justifyContent={{
           base: 'center',
           md: 'initial'
-        }} >
-          <Image src={pamtech} alt="pamtech way" style={{ width: "100%", height: "auto" }} />
+        }}  >
+          <Image data-aos="zoom-in-right" src={pamtech} alt="pamtech way" style={{ width: "100%", height: "auto" }} />
         </Flex>
-        <Box width={{ base: "100%", md: "65%" }}>
-          <Text  fontWeight={500} fontSize={textFontSize}>
+        <Box  data-aos="zoom-in-left" width={{ base: "100%", md: "65%" }}>
+          <Text fontWeight={500} fontSize={textFontSize}>
             Our culture is built on the biblical cornerstones and
             principles of doing business in accordance with the ways
             of God. We strive to be a beacon of light; bringing value
@@ -189,6 +189,7 @@ const AboutPage = () => {
         >
           {/* Vision Card */}
           <Box
+          data-aos="zoom-in"
             width={{ base: "100%", md: "45%" }}
             bg="#F1F1F1"
             padding="2rem"
@@ -210,6 +211,7 @@ const AboutPage = () => {
 
           {/* Mission Card */}
           <Box
+          data-aos="zoom-in"
             width={{ base: "100%", md: "45%" }}
             bg="#F1F1F1"
             padding="2rem"
@@ -249,6 +251,7 @@ const AboutPage = () => {
         >
           {values.map((value, index) => (
             <Flex
+            data-aos="zoom-in"
               key={index}
               bg={
                 value.text === "Excellence" || value.text === "Team Work"
@@ -301,6 +304,7 @@ const AboutPage = () => {
           padding="2.5rem 3rem"
           color="#F1F1F1"
           height="100%"
+          data-aos="zoom-in-up"
         >
           <Heading my="2rem" fontSize={headingFontSize}>Our History</Heading>
           <Flex justifyContent="space-between" gap="3rem" flexDirection={{ base: "column", md: "row" }}>

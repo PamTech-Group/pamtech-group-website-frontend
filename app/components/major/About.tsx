@@ -62,6 +62,7 @@ const About = () => {
         <Flex justifyContent="space-between" color="textGrey">
           {["Shareholders", "Years", "Awards"].map((item, index) => (
             <Flex
+            data-aos="zoom-in"
               key={item}
               flexDir="column"
               gap="1rem"

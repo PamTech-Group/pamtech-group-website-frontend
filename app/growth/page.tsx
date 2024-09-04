@@ -17,11 +17,7 @@ import Sustainability from "../components/minor/Sustainability";
 import Footer from "../components/major/Footer";
 import theme from "../theme";
 import Image from "next/image";
-import news1 from "../../public/news1.webp";
 
-import news2 from "../../public/news2.jpg";
-
-import news3 from "../../public/news3.jpeg";
 import Link from "next/link";
 import { ArrowForwardIcon } from "@chakra-ui/icons";
 const yearContent = {
@@ -34,7 +30,7 @@ const yearContent = {
   "2023": `With the desire to live up to our mantra - “committed service to humanity”, we ventured into the social media and luxury ride space, providing educative and entertaining content as well as luxury ride services to our community through the establishment of the Pamtech Media and Pamtech Luxury Ride.`,
 };
 const BlogCard = ({ image, date, title }: any) => (
-  <Link href="/blog" passHref>
+  <Link href="/blog" passHref data-aos="zoom-in-down">
     <Card
       bgColor="#fde8e7"
       as="a"
@@ -134,7 +130,7 @@ const Growth = () => {
                 myxl: "60%",
               }}
             >
-              <Heading fontSize={headingFontSize} fontWeight={500}>
+              <Heading fontSize={headingFontSize} fontWeight={500} data-aos="zoom-in-right">
                 Identifying Opportunities, <br />
                 creating value
               </Heading>
@@ -163,6 +159,7 @@ const Growth = () => {
             key={year}
             flexDirection="column"
             marginBottom={{ base: "2rem", md: "0" }}
+            data-aos="zoom-in-up"
           >
             <Text fontWeight={500} fontSize={yearFontSize} marginBottom="1rem">
               {year}
@@ -194,10 +191,11 @@ const Growth = () => {
           fontWeight={500}
           fontSize={headingFontSize}
           marginBottom={{ base: "2rem", md: "0" }}
+          data-aos="zoom-in-right"
         >
           Why you should partner with pamtech group
         </Heading>
-        <Flex flexDirection="column" gap="1.5rem">
+        <Flex flexDirection="column" gap="1.5rem" data-aos="zoom-in-left">
           <Text>
             Partnering with Pamtech Group means aligning with a leader in
             technological innovation and strategic solutions. Our expertise
@@ -234,8 +232,8 @@ const Growth = () => {
         }}
         padding={contentPadding}
         width={{ base: "100%", lg: "70%" }}
-      >
-        <Text fontWeight={500} fontSize={headingFontSize} color="primaryOrange">
+        data-aos="zoom-in-right" >
+        <Text fontWeight={500} fontSize={headingFontSize} color="primaryOrange" >
           News Room
         </Text>
         <Text color="#171717" fontSize={yearFontSize} fontWeight={500}>

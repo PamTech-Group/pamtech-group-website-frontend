@@ -63,6 +63,8 @@ const Ride = () => {
               base: 'unset',
               myxl: '3.5rem'
             }}
+            data-aos="zoom-in"
+
           >
             <Heading fontSize={headingFontSize} fontWeight={500}>
               Pamtech Luxury Ride
@@ -96,28 +98,28 @@ const Ride = () => {
           >
             Brand Showcase
           </Heading>
-          <Flex
+          <SimpleGrid
             gap=".5rem"
-            justifyContent="center"
-            flexWrap="wrap"
+            placeItems="center"
+            columns={{base:1, lg:2, xl:3}}
             padding={contentPadding}
           >
             <Image
               src={ride1}
               alt="ride1"
-              style={{ maxWidth: "100%", height: "auto" }}
+              style={{ maxWidth: "100%", height: "auto" }}  data-aos="zoom-in"
             />
             <Image
               src={ride2}
               alt="ride1"
-              style={{ maxWidth: "100%", height: "auto" }}
+              style={{ maxWidth: "100%", height: "auto" }}  data-aos="zoom-in"
             />
             <Image
               src={ride3}
               alt="ride1"
-              style={{ maxWidth: "100%", height: "auto" }}
+              style={{ maxWidth: "100%", height: "auto" }}  data-aos="zoom-in"
             />
-          </Flex>
+          </SimpleGrid>
         </Box>
         <VStack
           id="ride"
@@ -125,7 +127,7 @@ const Ride = () => {
           my="4rem"
           padding={contentPadding}
           width={{ base: "100%", md: "70%"}}
-        >
+          data-aos="zoom-in-right" >
           <Text color="#171717" fontSize={headingFontSize} fontWeight={500}>
             Luxury Ride
           </Text>
