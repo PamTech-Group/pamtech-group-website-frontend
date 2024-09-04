@@ -63,9 +63,9 @@ const Growth = () => {
         bgPosition="center"
         bgColor="#0F1010"
         height={{
-          base:'65vh',
-          
-          myxl: '70vh'
+          base: "65vh",
+
+          myxl: "70vh",
         }}
         width="100%"
         color="#F7F7F7"
@@ -73,7 +73,7 @@ const Growth = () => {
         <Box height="100%" width="100%" padding={contentPadding}>
           <Nav />
           <Flex
-             height={{ base: "100%"}}
+            height={{ base: "100%" }}
             width="100%"
             alignItems="center"
             paddingY={{ base: "4rem", md: "0" }}
@@ -97,7 +97,7 @@ const Growth = () => {
                 Identifying Opportunities, <br />
                 creating value
               </Heading>
-              <Text  fontSize={textFontSize}>
+              <Text fontSize={textFontSize}>
                 {`We are in the business of making our products viable for our
                 stakeholders at various levels. By being part of the Pamtech
                 Group, you're putting yourself on the path of profit.`}
@@ -113,8 +113,8 @@ const Growth = () => {
         color="textGrey"
         padding={contentPadding}
         my={{
-          base: '2rem',
-          myxl: '4rem'
+          base: "2rem",
+          myxl: "4rem",
         }}
       >
         {Object.entries(yearContent).map(([year, text]) => (
@@ -133,7 +133,10 @@ const Growth = () => {
         ))}
       </SimpleGrid>
       <Box
-        mb="4rem"
+        mb={{
+          base: "2rem",
+          myxl: "4rem",
+        }}
         height="12vh"
         bgColor="#F7F7F7"
         outline=".2px solid rgba(51, 51, 51, 0.2)"
@@ -184,7 +187,10 @@ const Growth = () => {
       </SimpleGrid>
       <VStack
         align="left"
-        my="4rem"
+        my={{
+          base: "2rem",
+          myxl: "4rem",
+        }}
         padding={contentPadding}
         width={{ base: "100%", lg: "70%" }}
       >
@@ -200,7 +206,16 @@ const Growth = () => {
           of empowering success through committed service to humanity.
         </Text>
       </VStack>
-      <Flex my="4rem" gap="2rem" padding={contentPadding} wrap="wrap">
+      <Flex
+        my={{
+          base: "2rem",
+          myxl: "4rem",
+        }}
+        gap="2rem"
+        padding={contentPadding}
+        wrap='wrap'
+      justifyContent='center'
+      >
         <Link href="/blog" passHref>
           <Card
             bgColor="#fde8e7"

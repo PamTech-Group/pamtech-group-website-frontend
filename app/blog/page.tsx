@@ -11,6 +11,7 @@ import {
   VStack,
   Collapse,
   Button,
+  Stack,
 } from "@chakra-ui/react";
 import Image from "next/image";
 import Sustainability from "../components/minor/Sustainability";
@@ -97,76 +98,73 @@ const Blog = () => {
 
   return (
     <Box bg="#ffffff">
-      <NavWhite />
-      <Container maxW="container.xl" py={16}>
-        <VStack spacing={12}>
-          <Heading
-            as="h1"
-            fontSize={headingFontSize}
-            textAlign="center"
-            color="gray.800"
-          >
-            Our Blog
-          </Heading>
-          <SimpleGrid
-            columns={{ base: 1, md: 2, lg: 3 }}
-            spacing="8"
-            width="100%"
-          >
-            {blogPosts.map((post) => (
-              <Box
-                key={post.id}
-                borderWidth="1px"
-                borderRadius="lg"
-                overflow="hidden"
-                _hover={{ boxShadow: "lg", transform: "translateY(-5px)" }}
-                transition="all 0.3s"
-              >
-                <Box position="relative" height="200px">
-                  <Image
-                    src={post.imageUrl}
-                    alt={post.title}
-                    layout="fill"
-                    objectFit="cover"
-                  />
-                </Box>
-                <Box p="6" color="textGrey">
-                  <Text fontSize="sm" color="gray.500" mb="2">
-                    {new Date(post.date).toLocaleDateString()}
-                  </Text>
-                  <Heading as="h2" size="lg" mb="2" noOfLines={2}>
-                    {post.title}
-                  </Heading>
-                  <Text fontSize={textFontSize} mb="4" noOfLines={3}>
-                    {post.excerpt}
-                  </Text>
-
-                  {/* Read More Section */}
-                  <Collapse in={expandedPost === post.id} animateOpacity>
-                    {post.paragraphs.map((paragraph, index) => (
-                      <Text key={index} mb={4}>
-                        {paragraph}
-                      </Text>
-                    ))}
-                  </Collapse>
-
-                  <Button
-                    variant="link"
-                    color="blue.500"
-                    fontWeight="bold"
-                    onClick={() => toggleExpand(post.id)}
-                  >
-                    {expandedPost === post.id ? "Show less" : "Read more"}
-                  </Button>
-                </Box>
+    <NavWhite />
+    <Container maxW="container.xl" py={16}>
+      <VStack spacing={12}>
+        <Heading
+          as="h1"
+          fontSize={headingFontSize}
+          textAlign="center"
+          color="gray.800"
+        >
+          Our Blog
+        </Heading>
+        <Stack spacing={8} width="100%"> {/* Stack for vertical alignment */}
+          {blogPosts.map((post) => (
+            <Box
+              key={post.id}
+              borderWidth="1px"
+              borderRadius="lg"
+              overflow="hidden"
+              _hover={{ boxShadow: "lg", transform: "translateY(-5px)" }}
+              transition="all 0.3s"
+            >
+              <Box position="relative" height="300px"> {/* Adjusted height for images */}
+                <Image
+                  src={post.imageUrl}
+                  alt={post.title}
+                  layout="fill"
+                  objectFit="cover"
+                  priority // Optional: Load images faster
+                />
               </Box>
-            ))}
-          </SimpleGrid>
-        </VStack>
-      </Container>
-      <Sustainability />
-      <Footer />
-    </Box>
+              <Box p="6" color="textGrey">
+                <Text fontSize="sm" color="gray.500" mb="2">
+                  {new Date(post.date).toLocaleDateString()}
+                </Text>
+                <Heading as="h2" size="lg" mb="2" noOfLines={2}>
+                  {post.title}
+                </Heading>
+                <Text fontSize={textFontSize} mb="4" noOfLines={3}>
+                  {post.excerpt}
+                </Text>
+  
+                {/* Read More Section */}
+                <Collapse in={expandedPost === post.id} animateOpacity>
+                  {post.paragraphs.map((paragraph, index) => (
+                    <Text key={index} mb={4}>
+                      {paragraph}
+                    </Text>
+                  ))}
+                </Collapse>
+  
+                <Button
+                  variant="link"
+                  color="blue.500"
+                  fontWeight="bold"
+                  onClick={() => toggleExpand(post.id)}
+                >
+                  {expandedPost === post.id ? "Show less" : "Read more"}
+                </Button>
+              </Box>
+            </Box>
+          ))}
+        </Stack>
+      </VStack>
+    </Container>
+    <Sustainability />
+    <Footer />
+  </Box>
   );
 };
 
