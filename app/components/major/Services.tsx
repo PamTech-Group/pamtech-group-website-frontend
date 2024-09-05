@@ -135,7 +135,7 @@ const Services = () => {
               flexDirection="column"
               alignItems="center"
               justifyContent="center"
-              gap="1rem"
+              gap=".5rem"
               bgColor="#F7F7F7"
               boxShadow="md"
               padding={{
