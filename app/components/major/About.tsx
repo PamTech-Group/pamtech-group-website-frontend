@@ -38,7 +38,7 @@ const About = () => {
         right={isXlScreen ? "6%" : "auto"}
         top={
           isXlScreen
-            ? { lg: '20%', xl: "10%", dxl: "10%", ddxl: "20%", dddxl: "25%" }
+            ? { lg: '10%', xl: "10%", dxl: "10%", ddxl: "20%", dddxl: "25%" }
             : "auto"
         }
         mt={isXlScreen ? "auto" : "4rem"}

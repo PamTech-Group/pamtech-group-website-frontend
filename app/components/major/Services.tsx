@@ -122,8 +122,8 @@ const Services = () => {
           data-aos="zoom-in"
           templateColumns={{
             base: "repeat(2, 1fr)",
-            md: "repeat(3, 1fr)",
-            lg: "repeat(4, 1fr)",
+            md: "repeat(4, 1fr)",
+            lg: "repeat(6, 1fr)",
           }} // Responsive grid
           gap={{ base: 4, md: 6, lg: 10 }} // Responsive gap
           padding={contentPadding}
@@ -210,11 +210,11 @@ const Services = () => {
                   color="white"
                   _hover={{ transform: "scale(1.05)", transition: "0.3s ease" }}
                 >
-                  <Box height="60%">
+                  <Flex flexDirection='column'  height="50%">
                     <Text
                       fontSize={{ base: "1.2rem", md: "1.5rem" }}
                       fontWeight={500}
-                      mb="2.5rem"
+                      mb=".5rem"
                     >
                       {image.title}
                     </Text>
@@ -228,7 +228,7 @@ const Services = () => {
                     >
                       Read More <BsArrowRight fontSize="1.5rem" />
                     </Link>
-                  </Box>
+                  </Flex>
                 </Box>
               ))}
             </Flex>
