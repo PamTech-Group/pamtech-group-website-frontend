@@ -221,7 +221,7 @@ const Nav = () => {
             <DrawerCloseButton />
 
             <DrawerBody pt="6rem">
-              <VStack spacing={4} align="start">
+              <VStack spacing={8} align="start">
                 <Link href="/about" onClick={onMobileMenuClose}>
                   About Us
                 </Link>
