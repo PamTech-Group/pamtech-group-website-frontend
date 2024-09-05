@@ -20,7 +20,6 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { StaticImageData } from "next/image";
 import Nav from "./Nav";
 import ButtonMain from "../minor/ButtonMain";
-import { link } from "fs";
 
 // Array of carousel data
 const carouselData = [

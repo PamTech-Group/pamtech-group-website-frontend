@@ -24,7 +24,7 @@ const About = () => {
       justifyContent="center"
       minHeight={{ base: "auto", xl: "60svh" }}
       position="relative"
-      bgImage={{ base: "none", myxl: `url(${bg.src})` }}
+      bgImage={{ base: "none", lg: `url(${bg.src})` }}
       bgSize="cover"
       bgPosition="center"
     >
@@ -38,7 +38,7 @@ const About = () => {
         right={isXlScreen ? "6%" : "auto"}
         top={
           isXlScreen
-            ? { xl: "10%", dxl: "10%", ddxl: "20%", dddxl: "25%" }
+            ? { lg: '10%', xl: "10%", dxl: "10%", ddxl: "20%", dddxl: "25%" }
             : "auto"
         }
         mt={isXlScreen ? "auto" : "4rem"}
