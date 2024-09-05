@@ -59,7 +59,7 @@ const About = () => {
         </VStack>
         <Box my="2rem" bgColor="#192140" height="1px" opacity=".6" />
         <Flex justifyContent="space-between" color="textGrey">
-          {["Shareholders", "Years", "Awards"].map((item, index) => (
+          {["Stakeholder", "Years", "Awards"].map((item, index) => (
             <Flex
             data-aos="zoom-in"
               key={item}
