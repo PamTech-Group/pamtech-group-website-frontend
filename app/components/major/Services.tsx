@@ -140,12 +140,12 @@ const Services = () => {
               boxShadow="md"
               padding={{
                 base: "0.5rem 1rem",
-                md: "1rem 2rem",
-                lg: "1rem 3rem",
+                md: "1rem ",
+                lg: "1rem",
               }}
               borderRadius="lg"
             >
-              <Image height={50} src={service.icon} alt={service.title} />
+              <Image height={30} src={service.icon} alt={service.title} />
               <Text
                 textAlign="center"
                 color="#0E0E0F"
