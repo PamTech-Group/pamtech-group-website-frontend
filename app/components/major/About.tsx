@@ -25,7 +25,6 @@ const About = () => {
       minHeight={{ base: "auto", xl: "60svh" }}
       position="relative"
       bgImage={{ base: "none", myxl: `url(${bg.src})` }}
-      backdropFilter="brightness(0%)"
       bgSize="cover"
       bgPosition="center"
     >
@@ -39,7 +38,7 @@ const About = () => {
         right={isXlScreen ? "6%" : "auto"}
         top={
           isXlScreen
-            ? { xl: "5%", dxl: "10%", ddxl: "20%", dddxl: "25%" }
+            ? { xl: "10%", dxl: "10%", ddxl: "20%", dddxl: "25%" }
             : "auto"
         }
         mt={isXlScreen ? "auto" : "4rem"}
