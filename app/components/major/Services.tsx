@@ -122,7 +122,7 @@ const Services = () => {
           data-aos="zoom-in"
           templateColumns={{
             base: "repeat(2, 1fr)",
-            md: "repeat(4, 1fr)",
+            md: "repeat(6, 1fr)",
             lg: "repeat(6, 1fr)",
           }} // Responsive grid
           gap={{ base: 4, md: 6, lg: 10 }} // Responsive gap
