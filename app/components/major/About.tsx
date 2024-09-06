@@ -4,7 +4,7 @@ import ButtonMain from "../minor/ButtonMain";
 import theme from "@/app/theme";
 
 const About = () => {
-  const isXlScreen = useBreakpointValue({ base: false, xl: true });
+  const isXlScreen = useBreakpointValue({ base: false, lg: true });
   const contentWidth = useBreakpointValue({
     base: "100%",
     md: "80%",
@@ -22,7 +22,7 @@ const About = () => {
     <Flex
       alignItems="center"
       justifyContent="center"
-      minHeight={{ base: "auto", xl: "60svh" }}
+      minHeight={{ base: "auto", lg: "60svh" }}
       position="relative"
       bgImage={{ base: "none", lg: `url(${bg.src})` }}
       bgSize="cover"
@@ -38,7 +38,7 @@ const About = () => {
         right={isXlScreen ? "6%" : "auto"}
         top={
           isXlScreen
-            ? { md: '10%', lg: '10%', xl: "10%", dxl: "10%", ddxl: "20%", dddxl: "30%" }
+            ? { lg: "10%", xl: "10%", ddxl: "20%", dddxl: "30%" }
             : "auto"
         }
         mt={isXlScreen ? "auto" : "4rem"}
