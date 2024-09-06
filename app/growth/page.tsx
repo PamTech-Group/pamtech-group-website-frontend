@@ -97,7 +97,6 @@ const Growth = () => {
         bgColor="#0F1010"
         height={{
           base: "65vh",
-
           myxl: "70vh",
         }}
         width="100%"
@@ -164,7 +163,7 @@ const Growth = () => {
             <Text fontWeight={500} fontSize={yearFontSize} marginBottom="1rem">
               {year}
             </Text>
-            <Text fontWeight={300} fontSize={textFontSize}>
+            <Text fontWeight={400} fontSize={textFontSize}>
               {text}
             </Text>
           </Flex>
@@ -172,10 +171,15 @@ const Growth = () => {
       </SimpleGrid>
       <Box
         mb={{
-          base: "2rem",
+          base: "1.5rem",
           myxl: "4rem",
         }}
-        height="12vh"
+        height={{
+          base: '5vh',
+          md: '8vh',
+          lg: '10vh',
+          myxl: '12vh',
+        }}
         bgColor="#F7F7F7"
         outline=".2px solid rgba(51, 51, 51, 0.2)"
       />
@@ -190,7 +194,7 @@ const Growth = () => {
         <Heading
           fontWeight={500}
           fontSize={headingFontSize}
-          marginBottom={{ base: "2rem", md: "0" }}
+          marginBottom={{ base: "1rem", md: "0" }}
           data-aos="zoom-in-right"
         >
           Why you should partner with pamtech group
