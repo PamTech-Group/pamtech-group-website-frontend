@@ -47,7 +47,8 @@ const Autoland = () => {
           backgroundImage={`url(${landBg.src})`}
           bgSize="cover"
           bgPosition="center"
-          minHeight={{ base: "100vh", md: "65vh", xl: "100vh" }}
+          height={{ base: "100vh", md: "80vh", myxl:'100vh' }}
+
           color="#F7F7F7"
         >
           <Nav />

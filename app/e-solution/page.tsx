@@ -78,7 +78,7 @@ const Solution = () => {
       >
         <Nav />
         <Flex
-          height={{ base: "100vh", md: "calc(100vh - 80px)", xl:'100vh' }}
+          height={{ base: "100vh", md: "80vh", myxl:'100vh' }}
           flexDir="column"
           justifyContent="center"
           alignItems={{

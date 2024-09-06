@@ -108,8 +108,9 @@ const Services = () => {
         marginTop={{
           base: "2rem",
           md: "2.5rem",
-          lg: '12rem',
+          lg: '14rem',
           // xl:'12rem',
+          myxl: '8rem',
           ddxl: "10rem",
         }}
         mb={{

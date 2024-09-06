@@ -59,7 +59,7 @@ const Socials = () => {
       <Box
         bgPosition="center"
         bgColor="#0F1010"
-        minHeight={{ base: "auto", md: "100vh" }}
+        height={{ base: "100vh", md: "80vh", myxl:'100vh' }}
         width="100%"
         color="#F7F7F7"
       >

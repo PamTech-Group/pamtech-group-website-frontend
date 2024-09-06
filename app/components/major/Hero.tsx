@@ -102,11 +102,8 @@ const SlideContent: React.FC<SlideContentProps> = ({
         backgroundImage={`url(${bg.src})`}
         bgSize="cover"
         bgPosition="center"
-        height={{
-          base: "100vh",
-          md: "65vh",
-          xl: "100vh",
-        }}
+        height={{ base: "100vh", md: "80vh", myxl:'100vh' }}
+
         color="#F7F7F7"
       >
         <Flex

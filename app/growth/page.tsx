@@ -97,8 +97,8 @@ const Growth = () => {
         bgColor="#0F1010"
         height={{
           base: "100vh",
-          md: '70vh',
-          xl: "100vh",
+          md: '80vh',
+          myxl: "100vh",
         }}
         width="100%"
         color="#F7F7F7"

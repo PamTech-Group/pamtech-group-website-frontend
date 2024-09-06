@@ -49,12 +49,12 @@ const Foundation = () => {
           backgroundImage={`url(${foundationBg.src})`}
           bgSize="cover"
           bgPosition="center"
-          minHeight={{ base: "100vh", md: "65vh", xl: "100vh" }}
+          minHeight={{ base: "100vh", md: "80vh", myxl: "100vh" }}
           color="#F7F7F7"
         >
           <Nav />
           <Flex
-            height={{ base: "100vh", md: "65vh", xl: "100vh" }}
+            height={{ base: "100vh", md: "80vh", myxl: "100vh" }}
             flexDir="column"
             justifyContent="center"
             gap="2rem"
