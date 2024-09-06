@@ -263,7 +263,7 @@ const Nav = () => {
                   Our Growth
                 </Link>
                 <Link href="/e-solution" onClick={onMobileMenuClose}>
-                  e-Solution
+                  e-Solutions
                 </Link>
                 <Link href="/contact-us" onClick={onMobileMenuClose}>
                   Contact us

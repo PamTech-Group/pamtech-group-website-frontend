@@ -51,7 +51,6 @@ const Media = () => {
           bgSize="cover"
           bgPosition="center"
           minHeight={{   base:'100vh', md: '65vh', xl: "100vh" }}
-
           color="#F7F7F7"
         >
           <Nav />
@@ -123,7 +122,7 @@ const Media = () => {
             myxl: "4rem",
           }}
           padding={contentPadding}
-          width={{ base: "100%", md: "80%" }}
+          width={{ base: "100%", md: "75%" }}
           id="media"
           data-aos="zoom-in-right"
         >

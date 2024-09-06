@@ -134,7 +134,7 @@ const Ride = () => {
             myxl: "4rem",
           }}
           padding={contentPadding}
-          width={{ base: "100%", md: "80%"}}
+          width={{ base: "100%", md: "75%"}}
           data-aos="zoom-in-right" >
           <Text color="#171717" fontSize={headingFontSize} fontWeight={500}>
             Luxury Ride

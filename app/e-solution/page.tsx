@@ -78,7 +78,7 @@ const Solution = () => {
       >
         <Nav />
         <Flex
-          height={{ base: "auto", md: "calc(100vh - 80px)" }}
+          height={{ base: "auto", md: "calc(100vh - 80px)", xl:'100vh' }}
           flexDir="column"
           justifyContent="center"
           alignItems={{
@@ -283,7 +283,7 @@ const Solution = () => {
               borderRadius="lg"
               fontSize={buttonFontSize}
             >
-              Comming Soon...
+              Coming Soon...
             </Box>
           </Box>
 
@@ -358,7 +358,7 @@ const Solution = () => {
               fontSize={buttonFontSize}
               borderRadius={theme.buttonRadius.radius}
             >
-              Comming Soon...
+              Coming Soon...
             </Box>
           </Box>
 
@@ -372,15 +372,15 @@ const Solution = () => {
               {" "}
               <ListItem>
                 {" "}
-            <strong>Convenience:</strong>Shop for auto parts from the comfort of your own home, 24/7, and have them delivered to your doorstep.              </ListItem>
+            <strong>Convenience:</strong> Shop for auto parts from the comfort of your own home, 24/7, and have them delivered to your doorstep.              </ListItem>
               <ListItem>
-              <strong>Wide Selection: </strong> Access a vast inventory of auto parts from various manufacturers and suppliers, all in one place.
+              <strong>Wide Selection:</strong> Access a vast inventory of auto parts from various manufacturers and suppliers, all in one place.
               </ListItem>
             
           
               <ListItem>
                 {/*  eslint-disable-next-line react/no-unescaped-entities */}
-                <strong>Easy Search:</strong>`Quickly find the right parts for your vehicle using the app's intuitive search function, filtering by make, model, year, and more.``
+                <strong>Easy Search:</strong> Quickly find the right parts for your vehicle using the app's intuitive search function, filtering by make, model, year, and more.
               </ListItem>
             </UnorderedList>
           </Flex>

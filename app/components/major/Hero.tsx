@@ -100,7 +100,7 @@ const SlideContent: React.FC<SlideContentProps> = ({ bg, heading, text, link }) 
         height={{
           base:'100vh',
           md: '65vh',
-          myxl: '70vh'
+          xl: '100vh'
         }}
         color="#F7F7F7"
       >

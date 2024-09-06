@@ -145,8 +145,8 @@ const NavWhite = () => {
         <DrawerContent bgColor="#0F1010">
           <DrawerCloseButton />
          
-          <DrawerBody py="3rem">
-            <VStack spacing={4} align="start">
+          <DrawerBody pt="6rem">
+            <VStack spacing={6} align="start">
               <Link href="/about" onClick={onMobileMenuClose}>
                 About Us
               </Link>
@@ -154,7 +154,7 @@ const NavWhite = () => {
                   <MenuButton variant='flushed' padding={0} fontWeight={400} fontSize='1rem' as={Button} rightIcon={<ChevronDownIcon alignSelf='center' />}>
                     Our Businesses
                   </MenuButton>
-                  <MenuList bg='rgba(20, 20, 20, 0.4)'>
+                  <MenuList gap={5} bg='rgba(20, 20, 20, 0.4)'>
                     <Link href="/oilgas">
                       <MenuItem bg='rgba(20, 20, 20, 0.9)'>Oil & Gas</MenuItem>
                     </Link>
@@ -179,7 +179,7 @@ const NavWhite = () => {
                 Our Growth
               </Link>
               <Link href="/e-solution" onClick={onMobileMenuClose}>
-                e-Solution
+                e-Solutions
               </Link>
               <Link href="/contact-us" onClick={onMobileMenuClose}>
                   Contact us

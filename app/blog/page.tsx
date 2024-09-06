@@ -32,7 +32,7 @@ const blogPosts: BlogPost[] = [
     id: "66c720427e820316498b316a",
     title: "Pamtech Autoland is Coming to Port Harcourt Soon",
     excerpt:
-      "amtech Autoland is Coming to Port Harcourt Soon: A New Destination for Auto Enthusiasts",
+      "Pamtech Autoland is Coming to Port Harcourt Soon: A New Destination for Auto Enthusiasts",
     imageUrl:
       "https://res.cloudinary.com/dye76dtzn/image/upload/v1725462401/blog_images/l0vyrlnqcdlaakqxuu5a.png",
     date: "2024-08-22",

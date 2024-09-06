@@ -78,7 +78,7 @@ const AboutPage = () => {
       <Box
         bgPosition="center"
         bgColor="#0F1010"
-        height={{ base: "auto", lg: "80vh", myxl: "auto" }}
+        height={{ base: "auto", lg: "100vh", myxl: "auto" }}
 
         width="100vw"
         color="#F7F7F7"

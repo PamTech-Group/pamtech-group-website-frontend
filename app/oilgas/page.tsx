@@ -132,7 +132,7 @@ const OilGas = () => {
             myxl: "4rem",
           }}
           padding={contentPadding}
-          width={{ base: "100%", md: "80%"  }}
+          width={{ base: "100%", md: "75%"  }}
           id="oil-gas"
            data-aos="zoom-in-right"
         >
