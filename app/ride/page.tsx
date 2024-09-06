@@ -72,7 +72,7 @@ const Ride = () => {
             <Text
               fontWeight={500}
               width={{ base: "100%", md: "80%" }}
-              textAlign="justify"
+              textAlign="left"
               fontSize={textFontSize}
             >
               Experience luxury and comfort with Pamtech Luxury Ride. We offer a
@@ -131,7 +131,7 @@ const Ride = () => {
           <Text color="#171717" fontSize={headingFontSize} fontWeight={500}>
             Luxury Ride
           </Text>
-          <Flex flexDirection="column" gap="1.5rem" textAlign="justify">
+          <Flex flexDirection="column" gap="1.5rem" textAlign="left">
             <Text color="textGrey" fontSize={textFontSize}>
               {` Pamtech Luxury Ride redefines elegance and comfort with our
               exclusive fleet of premium vehicles, tailored for both personal

@@ -72,7 +72,7 @@ const OilGas = () => {
             <Heading fontSize={headingFontSize} fontWeight={500}>
               Pamtech Oil and Gas
             </Heading>
-            <Text fontWeight={500} width="80%" textAlign="justify">
+            <Text fontWeight={500} width="80%" textAlign="left">
               With our unadulterated and petroleum products, you will experience
               zero downtime and low maintenance costs for your equipments and
               facilities.
@@ -132,7 +132,7 @@ const OilGas = () => {
           <Text color="#171717" fontSize={headingFontSize} fontWeight={500}>
             Oil & Gas
           </Text>
-          <Flex flexDirection="column" gap="1.5rem" textAlign="justify">
+          <Flex flexDirection="column" gap="1.5rem" textAlign="left">
             <Text color="textGrey" fontSize={textFontSize}>
               {`With diversified interests in the Nigerian economy, Pamtech Oil &
               Gas was incorporated in May 2016 as a direct answer to the

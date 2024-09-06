@@ -70,7 +70,7 @@ const Autoland = () => {
             <Text
               fontWeight={500}
               width={{ base: "100%", xl: "80%" }}
-              textAlign="justify"
+              textAlign="left"
               fontSize={textFontSize}
             >
               Pamtech Autoland is your one-stop solution for quality auto
@@ -132,7 +132,7 @@ const Autoland = () => {
           <Text color="#171717" fontSize={headingFontSize} fontWeight={500}>
             Autoland
           </Text>
-          <Flex flexDirection="column" gap="1.5rem" textAlign="justify">
+          <Flex flexDirection="column" gap="1.5rem" textAlign="left">
             <Text color="textGrey" fontSize={textFontSize}>
               Pamtech Autoland is your one-stop solution for quality autoparts,
               auto maintenance, and repairs. We take extra care of your car to

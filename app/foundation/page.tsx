@@ -73,7 +73,7 @@ const Foundation = () => {
             <Text
               fontWeight={500}
               width={{ base: "100%", md: "70%" }}
-              textAlign="justify"
+              textAlign="left"
               fontSize={textFontSize}
             >
               The Pamtech Foundation is guided by a core vision: Giving hope and
@@ -148,7 +148,7 @@ const Foundation = () => {
           <Text color="#171717" fontSize={headingFontSize} fontWeight={500}>
             Foundation
           </Text>
-          <Flex flexDirection="column" gap="1.5rem" textAlign="justify">
+          <Flex flexDirection="column" gap="1.5rem" textAlign="left">
             <Text color="textGrey" fontSize={textFontSize}>
               The Pamtech Foundation is guided by a core vision: Giving hope and
               sharing love to humanity. We strive to positively influence our

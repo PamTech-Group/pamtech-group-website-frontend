@@ -71,7 +71,7 @@ const Autoparts = () => {
             <Text
               fontWeight={500}
               width={{ base: "100%", md: "80%", xl: "60%" }}
-              textAlign="justify"
+              textAlign="left"
               fontSize={textFontSize}
             >
               Get all the genuine OEM parts at the right price and without
@@ -128,7 +128,7 @@ const Autoparts = () => {
           <Text color="#171717" fontSize={headingFontSize} fontWeight={500}>
             Autoparts
           </Text>
-          <Flex flexDirection="column" gap="1.5rem" textAlign="justify">
+          <Flex flexDirection="column" gap="1.5rem" textAlign="left">
             <Text color="textGrey" fontSize={textFontSize}>
               {`Pamtech Autoparts offers a wide selection of quality OEM
               autoparts for vehicle repair, maintenance, servicing, and

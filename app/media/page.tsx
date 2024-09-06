@@ -74,7 +74,7 @@ const Media = () => {
             <Text
               fontWeight={500}
               width={{ base: "100%", md: "70%"}}
-              textAlign="justify"
+              textAlign="left"
               fontSize={textFontSize}
             >
               From content marketing to talent management and media consulting,
@@ -122,7 +122,7 @@ const Media = () => {
           <Text color="#171717" fontSize={headingFontSize} fontWeight={500}>
             Media
           </Text>
-          <Flex flexDirection="column" gap="1.5rem" textAlign="justify">
+          <Flex flexDirection="column" gap="1.5rem" textAlign="left">
             <Text color="textGrey" fontSize={textFontSize}>
               {`Pamtech Media offers a comprehensive suite of services designed to elevate your brand's presence and engagement in the digital landscape. From crafting compelling content marketing strategies to managing and nurturing talent, we tailor our approach to meet your unique needs.`}
             </Text>
