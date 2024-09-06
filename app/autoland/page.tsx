@@ -104,6 +104,7 @@ const Autoland = () => {
             placeItems="center"
             justifyContent="center"
             padding={contentPadding}
+            flexWrap='wrap'
           >
             <Image
               src={land1}

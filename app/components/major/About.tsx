@@ -22,7 +22,7 @@ const About = () => {
     <Flex
       alignItems="center"
       justifyContent="center"
-      minHeight={{ base: "auto", lg: "60svh" }}
+      minHeight={{ base: "auto", lg: "70svh" }}
       position="relative"
       bgImage={{ base: "none", lg: `url(${bg.src})` }}
       bgSize="cover"
@@ -41,7 +41,7 @@ const About = () => {
             ? { lg: "10%", xl: "3%", myxl: '4%', ddxl: "20%", dddxl: "30%" }
             : "auto"
         }
-        mt={isXlScreen ? "auto" : "4rem"}
+        mt={isXlScreen ? "auto" : "2rem"}
       >
         <VStack spacing="1.5rem" align="start">
           <Text

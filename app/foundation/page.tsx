@@ -108,7 +108,7 @@ const Foundation = () => {
           <Flex
             gap=".5rem"
             placeItems="center"
-justifyContent='center'            padding={contentPadding}
+justifyContent='center'     flexWrap='wrap'       padding={contentPadding}
           >
             <Box>
               <Image

@@ -103,7 +103,7 @@ const OilGas = () => {
           <Flex
             gap=".5rem"
             justifyContent="center"
-            
+            flexWrap='wrap'
             padding={contentPadding}
           >
             <Image

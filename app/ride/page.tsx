@@ -105,7 +105,7 @@ const Ride = () => {
           <Flex
             gap=".5rem"
             
-justifyContent='center'            padding={contentPadding}
+justifyContent='center'      flexWrap='wrap'      padding={contentPadding}
           >
             <Image
               src={ride1}
