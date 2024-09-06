@@ -46,7 +46,7 @@ const Dropdown = () => {
         <Flex justify="start" gap="1rem">
           <IconButton
             as="a"
-            href="#"
+            href="https://www.facebook.com/pamtechgroup/"
             aria-label="Facebook"
             icon={<FaFacebook fontSize="1.5rem" />}
             bg="gray.100"
@@ -56,7 +56,7 @@ const Dropdown = () => {
           />
           <IconButton
             as="a"
-            href="#"
+            href="https://www.instagram.com/pamtechgroup"
             aria-label="Instagram"
             icon={<FaInstagram fontSize="1.5rem" />}
             bg="gray.100"
@@ -66,7 +66,7 @@ const Dropdown = () => {
           />
           <IconButton
             as="a"
-            href="#"
+            href="https://www.linkedin.com/company/pamtechgroup/"
             aria-label="LinkedIn"
             icon={<FaLinkedin fontSize="1.5rem" />}
             bg="gray.100"
@@ -76,7 +76,7 @@ const Dropdown = () => {
           />
           <IconButton
             as="a"
-            href="#"
+             href="https://x.com/thepamtechgroup"
             aria-label="Twitter"
             icon={<FaXTwitter fontSize="1.5rem" />}
             bg="gray.100"
@@ -86,7 +86,7 @@ const Dropdown = () => {
           />
           <IconButton
             as="a"
-            href="#"
+             href="https://www.youtube.com/channel/UCjJ-fWJYIhpViYWr97-yWNw"
             aria-label="YouTube"
             icon={<FaYoutube fontSize="1.5rem" />}
             bg="gray.100"

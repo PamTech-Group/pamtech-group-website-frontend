@@ -47,22 +47,20 @@ const Autoland = () => {
           backgroundImage={`url(${landBg.src})`}
           bgSize="cover"
           bgPosition="center"
-          minHeight={{   base:'100vh', md: '65vh', xl: "100vh" }}
-
+          minHeight={{ base: "100vh", md: "65vh", xl: "100vh" }}
           color="#F7F7F7"
         >
           <Nav />
           <Flex
-                     height={{   base:'100vh', md: '65vh', xl: "100vh" }}
-
+            height={{ base: "100vh", md: "65vh", xl: "100vh" }}
             flexDir="column"
             justifyContent="center"
             gap="2rem"
             width={{ base: "100%", md: "70%" }}
             paddingY={{ base: "4rem", md: "0" }}
             pl={{
-              base: 'unset',
-              myxl: '3.5rem'
+              base: "unset",
+              myxl: "3.5rem",
             }}
             data-aos="zoom-in"
           >
@@ -81,17 +79,19 @@ const Autoland = () => {
             <ButtonMain linkHref="autoland" text="Read More" />
           </Flex>
         </Box>
-        <Box  my={{
-            base:'2rem',
-            md: '3rem',
-            myxl: '6rem'
-          }}>
+        <Box
+          my={{
+            base: "2rem",
+            md: "3rem",
+            myxl: "6rem",
+          }}
+        >
           <Heading
-              mb={{
-                base: "1rem",
-                md: "2rem",
-                myxl: "4rem",
-              }}
+            mb={{
+              base: "1rem",
+              md: "2rem",
+              myxl: "4rem",
+            }}
             textAlign="center"
             fontSize={headingFontSize}
             fontWeight={500}
@@ -99,10 +99,10 @@ const Autoland = () => {
           >
             Brand Showcase
           </Heading>
-          <SimpleGrid
+          <Flex
             gap=".5rem"
             placeItems="center"
-            columns={{base:1, lg:2, xl:3}}
+            justifyContent="center"
             padding={contentPadding}
           >
             <Image
@@ -123,10 +123,10 @@ const Autoland = () => {
               style={{ maxWidth: "100%", height: "auto" }}
               data-aos="zoom-in"
             />
-          </SimpleGrid>
+          </Flex>
         </Box>
         <VStack
-        id="autoland"
+          id="autoland"
           align="left"
           my={{
             base: "1rem",

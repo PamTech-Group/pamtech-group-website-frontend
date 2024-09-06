@@ -102,11 +102,10 @@ const Ride = () => {
           >
             Brand Showcase
           </Heading>
-          <SimpleGrid
+          <Flex
             gap=".5rem"
-            placeItems="center"
-            columns={{base:1, lg:2, xl:3}}
-            padding={contentPadding}
+            
+justifyContent='center'            padding={contentPadding}
           >
             <Image
               src={ride1}
@@ -123,7 +122,7 @@ const Ride = () => {
               alt="ride1"
               style={{ maxWidth: "100%", height: "auto" }}  data-aos="zoom-in"
             />
-          </SimpleGrid>
+          </Flex>
         </Box>
         <VStack
           id="ride"

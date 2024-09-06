@@ -111,7 +111,7 @@ const Footer = () => {
           </Flex>
         </SimpleGrid>
       </Box>
-      <Box bgColor="#0F1010"  padding={contentPadding} >
+      <Box bgColor="#0F1010"  padding={contentPadding}             data-aos="zoom-in">
         <Flex
           justify="center"
           align="center"
@@ -123,7 +123,6 @@ const Footer = () => {
             placeItems="center"
             columns={{ base: 2, sm: 3, md: 6 }} // Responsive columns
             spacing={5}
-            data-aos="zoom-in-up" 
           >
             <Link fontSize=".9rem" href="/about">
               ABOUT US

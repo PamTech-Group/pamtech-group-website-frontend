@@ -48,24 +48,22 @@ const Autoparts = () => {
           backgroundImage={`url(${partsBg.src})`}
           bgSize="cover"
           bgPosition="center"
-          minHeight={{   base:'100vh', md: '65vh', xl: "100vh" }}
-
+          minHeight={{ base: "100vh", md: "65vh", xl: "100vh" }}
           color="#F7F7F7"
         >
           <Nav />
           <Flex
-                     height={{   base:'100vh', md: '65vh', xl: "100vh" }}
-
+            height={{ base: "100vh", md: "65vh", xl: "100vh" }}
             flexDir="column"
             justifyContent="center"
             gap="2rem"
             width={{ base: "100%", md: "70%" }}
             paddingY={{ base: "4rem", md: "0" }}
             pl={{
-              base: 'unset',
-              myxl: '3.5rem'
+              base: "unset",
+              myxl: "3.5rem",
             }}
-             data-aos="zoom-in"
+            data-aos="zoom-in"
           >
             <Heading fontSize={headingFontSize} fontWeight={500}>
               Pamtech Autoparts
@@ -82,11 +80,13 @@ const Autoparts = () => {
             <ButtonMain linkHref="#autoparts" text="Read More" />
           </Flex>
         </Box>
-        <Box  my={{
-            base:'2rem',
-            md: '3rem',
-            myxl: '6rem'
-          }}>
+        <Box
+          my={{
+            base: "2rem",
+            md: "3rem",
+            myxl: "6rem",
+          }}
+        >
           <Heading
             mb={{
               base: "1rem",
@@ -100,10 +100,10 @@ const Autoparts = () => {
           >
             Brand Showcase
           </Heading>
-          <SimpleGrid
+          <Flex
             gap=".5rem"
             placeItems="center"
-            columns={{base:1, lg:2, xl:3}}
+            justifyContent="center"
             flexWrap="wrap"
             padding={contentPadding}
           >
@@ -118,7 +118,6 @@ const Autoparts = () => {
               alt="parts2"
               style={{ maxWidth: "100%", height: "auto" }}
               data-aos="zoom-in"
-
             />
             <Image
               src={parts3}
@@ -126,10 +125,10 @@ const Autoparts = () => {
               style={{ maxWidth: "100%", height: "auto" }}
               data-aos="zoom-in"
             />
-          </SimpleGrid>
+          </Flex>
         </Box>
         <VStack
-        id="autoparts"
+          id="autoparts"
           align="left"
           my={{
             base: "1rem",
@@ -137,8 +136,8 @@ const Autoparts = () => {
             myxl: "4rem",
           }}
           padding={contentPadding}
-          width={{ base: "100%", md: "75%", }}
-            data-aos="zoom-in-right"
+          width={{ base: "100%", md: "75%" }}
+          data-aos="zoom-in-right"
         >
           <Text color="#171717" fontSize={headingFontSize} fontWeight={500}>
             Autoparts

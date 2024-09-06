@@ -105,11 +105,10 @@ const Foundation = () => {
           >
             Brand Showcase
           </Heading>
-          <SimpleGrid
+          <Flex
             gap=".5rem"
             placeItems="center"
-            columns={{ base: 1, lg: 2, xl: 3 }}
-            padding={contentPadding}
+justifyContent='center'            padding={contentPadding}
           >
             <Box>
               <Image
@@ -140,7 +139,7 @@ const Foundation = () => {
                 data-aos="zoom-in"
               />
             </Box>
-          </SimpleGrid>
+          </Flex>
         </Box>
         <VStack
           id="foundation"

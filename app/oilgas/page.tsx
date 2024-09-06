@@ -100,10 +100,10 @@ const OilGas = () => {
           >
             Brand Showcase
           </Heading>
-          <SimpleGrid
+          <Flex
             gap=".5rem"
-            placeItems="center"
-            columns={{base:1, lg:2, xl:3}}
+            justifyContent="center"
+            
             padding={contentPadding}
           >
             <Image
@@ -122,7 +122,7 @@ const OilGas = () => {
               alt="ride1"
               style={{ maxWidth: "100%", height: "auto" }}   data-aos="zoom-in"
             />
-          </SimpleGrid>
+          </Flex>
         </Box>
         <VStack
           align="left"

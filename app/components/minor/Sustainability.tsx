@@ -114,7 +114,7 @@ const Sustainability = () => {
             base: 'left',
             lg: 'center',
           }} fontWeight={400} fontSize={textFontSize}>
-            7 Sustainability Pillars
+           Our 7 Sustainability Pillars
           </Text>
           <SimpleGrid columns={gridColumns} rowGap="5" columnGap={2}>
             {sustainabilityPillars.map((pillar, i) => (

@@ -134,11 +134,15 @@ const Solution = () => {
         >
           {/* Text Section */}
           <Box
-            padding="2.5rem 3rem"
+            padding={{
+              base: "1rem",
+              md: '2rem',
+              myxl: "2.5rem 3rem",
+            }}
             bg="rgba(100, 94, 94, .1)"
             width={{
               base: "100%",
-              lg: "70%",
+              xl: "50%",
             }}
           >
             <Heading fontSize="2xl" color="primaryOrange" mb="1rem" data-aos="zoom-in-up" >
@@ -153,7 +157,7 @@ const Solution = () => {
             <UnorderedList
               my="2rem"
               spacing="1rem"
-              fontWeight={500}
+              fontWeight={400}
               fontSize={textFontSize}
               data-aos="zoom-in-right" 
             >
@@ -263,7 +267,7 @@ const Solution = () => {
             <Heading fontSize="2xl" color="primaryOrange" mb="1rem">
               Autoland
             </Heading>
-            <Text mb="1.5rem" fontSize={textFontSize}>
+            <Text mb="1.5rem" fontSize={textFontSize} fontWeight={400}>
               Autoland is changing the game in vehicle purchasing, providing a
               streamlined and user-friendly experience for customers.
             </Text>
@@ -293,6 +297,7 @@ const Solution = () => {
               color="textGrey"
               spacing="1rem"
               fontSize={textFontSize}
+              fontWeight={400}
             >
               {" "}
               <ListItem>
@@ -337,7 +342,7 @@ const Solution = () => {
             <Heading fontSize="2xl" color="primaryOrange" mb="1rem">
               Autoparts
             </Heading>
-            <Text mb="1.5rem" fontSize={textFontSize}>
+            <Text mb="1.5rem" fontSize={textFontSize} fontWeight={400}>
               Experience a new way to shop for auto parts with Pamtech
               Autoparts, designed to make finding and buying parts easy,
               convenient, and enjoyable
@@ -368,6 +373,7 @@ const Solution = () => {
               color="textGrey"
               spacing="1rem"
               fontSize={textFontSize}
+              fontWeight={400}
             >
               {" "}
               <ListItem>

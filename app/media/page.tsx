@@ -103,16 +103,16 @@ const Media = () => {
           >
             Brand Showcase
           </Heading>
-          <SimpleGrid
+          <Flex
             gap=".5rem"
-            placeItems="center"
-            columns={{base:1, lg:2, xl:3}}
+            justifyContent={{base: 'center',}}
+          flexWrap='wrap'
             padding={contentPadding}
           >
             <Image src={media1} alt="ride1"  data-aos='zoom-in' />
             <Image src={media2} alt="ride1" data-aos='zoom-in' />
             <Image src={media3} alt="ride1"  data-aos='zoom-in'/>
-          </SimpleGrid>
+          </Flex>
         </Box>
         <VStack
           align="left"

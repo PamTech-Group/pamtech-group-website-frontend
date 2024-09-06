@@ -117,9 +117,12 @@ const Socials = () => {
           gap={4}
         >
           {/* Large image that spans 2 rows and 2 columns on larger screens */}
-          <GridItem data-aos="zoom-in" rowSpan={{ base: 1, md: 2 }} colSpan={{ base: 1, md: 2 }}>
+          <GridItem
+            data-aos="zoom-in"
+            rowSpan={{ base: 1, md: 2 }}
+            colSpan={{ base: 1, md: 2 }}
+          >
             <Image
-           
               src={gallery1}
               alt="Gallery Image 1"
               style={{ width: "100%", height: "auto", objectFit: "cover" }}
@@ -159,7 +162,7 @@ const Socials = () => {
           and engage with our vibrant community.
         </Text>
       </VStack>
-    
+
       <Box
         my={{
           base: "1rem",
@@ -178,28 +181,10 @@ const Socials = () => {
         >
           {[
             {
-              icon: FaWhatsapp,
-              text: "Whatsapp",
-              color: "#25D366",
-              link: "https://wa.me/+2347007268324",
-            },
-            {
               icon: FaFacebookSquare,
               text: "Facebook",
               color: "#1877F2",
               link: "https://www.facebook.com/pamtechgroup/",
-            },
-            {
-              icon: FaYoutube,
-              text: "Youtube",
-              color: "#FF0000",
-              link: "https://www.youtube.com/channel/UCjJ-fWJYIhpViYWr97-yWNw",
-            },
-            {
-              icon: FaTiktok,
-              text: "Tiktok",
-              color: "#171717",
-              link: "https://www.tiktok.com/@pamtechgroup",
             },
             {
               icon: FaInstagram,
@@ -208,16 +193,35 @@ const Socials = () => {
               link: "https://www.instagram.com/pamtechgroup",
             },
             {
+              icon: FaTiktok,
+              text: "Tiktok",
+              color: "#171717",
+              link: "https://www.tiktok.com/@pamtechgroup",
+            },
+            {
               icon: FaXTwitter,
               text: "X",
               color: "#171717",
               link: "https://x.com/thepamtechgroup",
             },
             {
+              icon: FaYoutube,
+              text: "Youtube",
+              color: "#FF0000",
+              link: "https://www.youtube.com/channel/UCjJ-fWJYIhpViYWr97-yWNw",
+            },
+
+            {
               icon: FaLinkedin,
               text: "Linkedin",
               color: "#0762C8",
               link: "https://www.linkedin.com/company/pamtechgroup/",
+            },
+            {
+              icon: FaWhatsapp,
+              text: "Whatsapp",
+              color: "#25D366",
+              link: "https://wa.me/+2347007268324",
             },
           ].map((social, index) => (
             <Link
