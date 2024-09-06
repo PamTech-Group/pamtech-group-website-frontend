@@ -82,14 +82,16 @@ const Ride = () => {
             <ButtonMain linkHref="#ride" text="Read More" />
           </Flex>
         </Box>
-        <Box  my={{
-            base:'3rem',
-            myxl: '6rem'
-          }}>
+        <Box   my={{
+                base: "1rem",
+                md: "2rem",
+                myxl: "4rem",
+              }}>
           <Heading
-            my={{
-              base:'2rem',
-              myxl: '4rem'
+             mb={{
+              base: "1rem",
+              md: "2rem",
+              myxl: "4rem",
             }}
             textAlign="center"
             fontSize={headingFontSize}
@@ -124,7 +126,11 @@ const Ride = () => {
         <VStack
           id="ride"
           align="left"
-          my="4rem"
+          my={{
+            base: "1rem",
+            md: "2rem",
+            myxl: "4rem",
+          }}
           padding={contentPadding}
           width={{ base: "100%", md: "70%"}}
           data-aos="zoom-in-right" >

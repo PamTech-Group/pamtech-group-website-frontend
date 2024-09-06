@@ -130,7 +130,7 @@ const AboutPage = () => {
                height='0%'
                 mt={{
                   base: '1rem',
-                  xl: '1rem'
+                  xl: '1.5rem'
                 }}
               >
                 <Image
@@ -151,8 +151,9 @@ const AboutPage = () => {
         padding={contentPadding}
         color="textGrey"
         my={{
-          base: '2rem',
-          myxl: '4rem'
+          base: "1rem",
+          md: "2rem",
+          myxl: "4rem",
         }}
         justifyContent="space-around"
         alignItems="center"
@@ -175,10 +176,11 @@ const AboutPage = () => {
         </Box>
       </Flex>
 
-      <Box padding={contentPadding} color="textGrey" my={{
-          base: '2rem',
-          myxl: '4rem'
-        }}>
+      <Box padding={contentPadding} color="textGrey"   my={{
+            base: "1rem",
+            md: "2rem",
+            myxl: "4rem",
+          }}>
         {/* Vision and Mission Section */}
         <Flex
           direction={{ base: "column", md: "row" }}
@@ -231,10 +233,11 @@ const AboutPage = () => {
         </Flex>
 
         {/* Core Values Section */}
-        <Box textAlign="center"  my={{
-          base: '2rem',
-          myxl: '4rem'
-        }}>
+        <Box textAlign="center"    my={{
+            base: "1rem",
+            md: "2rem",
+            myxl: "4rem",
+          }}>
           <Heading fontSize={headingFontSize} fontWeight={500}>
             Core Values
           </Heading>
@@ -298,7 +301,10 @@ const AboutPage = () => {
         </SimpleGrid>
 
         <Box
-          mt="6rem"
+          mt={{
+            base: '3rem',
+            lg: '6rem'
+          }}
           borderRadius="md"
           bgColor="#00030C"
           padding="2.5rem 3rem"
@@ -306,7 +312,9 @@ const AboutPage = () => {
           height="100%"
           data-aos="zoom-in-up"
         >
-          <Heading my="2rem" fontSize={headingFontSize}>Our History</Heading>
+          <Heading my={{
+            base:'1rem', md: '2rem'
+          }} fontSize={headingFontSize}>Our History</Heading>
           <Flex justifyContent="space-between" gap="3rem" flexDirection={{ base: "column", md: "row" }}>
             <Flex flexDirection="column" gap="2rem" height="100%">
               <Text fontSize={textFontSize}>

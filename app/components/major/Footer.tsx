@@ -96,6 +96,7 @@ const Footer = () => {
                   href="https://apps.apple.com/us/app/petrol-padi/id6476345449?platform=iphone"
                   leftIcon={<GrApple fontSize="1.5rem" />}
                   bgColor="#0e0e0e"
+                  colorScheme="gray"
                   variant="solid"
                   fontSize={buttonFontSize}
                 >

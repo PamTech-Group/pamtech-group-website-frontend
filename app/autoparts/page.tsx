@@ -80,9 +80,17 @@ const Autoparts = () => {
             <ButtonMain linkHref="#autoparts" text="Read More" />
           </Flex>
         </Box>
-        <Box my="6rem">
+        <Box  my={{
+            base:'2rem',
+            md: '3rem',
+            myxl: '6rem'
+          }}>
           <Heading
-            mb="4rem"
+            mb={{
+              base: "1rem",
+              md: "2rem",
+              myxl: "4rem",
+            }}
             textAlign="center"
             fontSize={headingFontSize}
             fontWeight={500}
@@ -121,7 +129,11 @@ const Autoparts = () => {
         <VStack
         id="autoparts"
           align="left"
-          my="4rem"
+          my={{
+            base: "1rem",
+            md: "2rem",
+            myxl: "4rem",
+          }}
           padding={contentPadding}
           width={{ base: "100%", md: "70%", lg: "70%" }}
         >

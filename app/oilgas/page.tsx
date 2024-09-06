@@ -82,13 +82,15 @@ const OilGas = () => {
         </Box>
         <Box
           my={{
-            base: "3rem",
-            myxl: "6rem",
+            base: "1rem",
+            md: "2rem",
+            myxl: "4rem",
           }}
         >
           <Heading
-            my={{
-              base: "2rem",
+            mb={{
+              base: "1rem",
+              md: "2rem",
               myxl: "4rem",
             }}
             textAlign="center"
@@ -123,7 +125,11 @@ const OilGas = () => {
         </Box>
         <VStack
           align="left"
-          my="4rem"
+          my={{
+            base: "1rem",
+            md: "2rem",
+            myxl: "4rem",
+          }}
           padding={contentPadding}
           width={{ base: "100%", md: "70%" }}
           id="oil-gas"

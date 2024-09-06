@@ -87,7 +87,7 @@ const Privacy = () => {
             material changes. If you have any questions or concerns about this
             Privacy Policy or our data practices, please contact us.
           </Text>
-          <Box textAlign="justify" fontSize={textFontSize}>
+          <Box textAlign="left" fontSize={textFontSize}>
             Pamtech Group <br />
             Website <Link href="pamtechgroup.com">pamtechgroup.com</Link> <br />
             Email:{" "}

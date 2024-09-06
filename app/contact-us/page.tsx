@@ -121,7 +121,8 @@ const ContactPage = () => {
         <VStack
           align="left"
           mb={{
-            base: "2rem",
+            base: "1rem",
+            md: "2rem",
             myxl: "4rem",
           }}
           width={{ base: "100%", md: "70%" }}

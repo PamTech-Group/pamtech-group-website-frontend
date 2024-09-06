@@ -120,8 +120,9 @@ const Solution = () => {
         {/* Petrol Padi Section */}
         <Flex
           my={{
-            base: "2rem",
-            xl: "4rem",
+            base: "1rem",
+            md: "2rem",
+            myxl: "4rem",
           }}
           bg="white"
           borderRadius="lg"
@@ -137,7 +138,7 @@ const Solution = () => {
             bg="rgba(100, 94, 94, .1)"
             width={{
               base: "100%",
-              xl: "50%",
+              lg: "70%",
             }}
           >
             <Heading fontSize="2xl" color="primaryOrange" mb="1rem">
@@ -196,8 +197,10 @@ const Solution = () => {
             {/* App Store and Google Play Buttons */}
             <Flex gap="1rem" flexDirection={{ base: "column", sm: "row" }}>
               <Button
+              as="a"
+                  href="https://play.google.com/store/apps/details?id=com.petroconnect.petro_connect"
                 bgColor="#0e0e0e"
-                colorScheme="gray"
+               _hover={{bgColor: 'primaryOrange'}}
                 leftIcon={<BiLogoPlayStore fontSize="1.5rem" />}
                 variant="solid"
                 fontSize={buttonFontSize}
@@ -205,8 +208,11 @@ const Solution = () => {
                 Google Play
               </Button>
               <Button
+              as="a"
+                  href="https://apps.apple.com/us/app/petrol-padi/id6476345449?platform=iphone"
                 leftIcon={<GrApple fontSize="1.5rem" />}
                 bgColor="#0e0e0e"
+                _hover={{bgColor: 'primaryOrange'}}
                 variant="solid"
                 fontSize={buttonFontSize}
               >
@@ -235,8 +241,9 @@ const Solution = () => {
 
         {/* Autoland Section */}
         <Flex
-          my={{
-            base: "2rem",
+           my={{
+            base: "1rem",
+            md: "2rem",
             myxl: "4rem",
           }}
           padding="2rem"
@@ -308,8 +315,9 @@ const Solution = () => {
           </Flex>
         </Flex>
         <Flex
-          my={{
-            base: "2rem",
+           my={{
+            base: "1rem",
+            md: "2rem",
             myxl: "4rem",
           }}
           padding="2rem"

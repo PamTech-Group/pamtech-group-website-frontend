@@ -141,7 +141,8 @@ const Socials = () => {
       <VStack
         align="left"
         my={{
-          base: "2rem",
+          base: "1rem",
+          md: "2rem",
           myxl: "4rem",
         }}
         padding={`2rem ${contentPadding}`}
@@ -161,7 +162,8 @@ const Socials = () => {
     
       <Box
         my={{
-          base: "2rem",
+          base: "1rem",
+          md: "2rem",
           myxl: "4rem",
         }}
         padding={`2rem ${contentPadding}`}

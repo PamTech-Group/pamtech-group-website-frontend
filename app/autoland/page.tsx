@@ -80,14 +80,16 @@ const Autoland = () => {
           </Flex>
         </Box>
         <Box  my={{
-            base:'3rem',
+            base:'2rem',
+            md: '3rem',
             myxl: '6rem'
           }}>
           <Heading
-            my={{
-              base:'2rem',
-              myxl: '4rem'
-            }}
+              mb={{
+                base: "1rem",
+                md: "2rem",
+                myxl: "4rem",
+              }}
             textAlign="center"
             fontSize={headingFontSize}
             fontWeight={500}
@@ -124,7 +126,11 @@ const Autoland = () => {
         <VStack
         id="autoland"
           align="left"
-          my="4rem"
+          my={{
+            base: "1rem",
+            md: "2rem",
+            myxl: "4rem",
+          }}
           padding={contentPadding}
           width={{ base: "100%", md: "70%" }}
           data-aos="zoom-in-right"

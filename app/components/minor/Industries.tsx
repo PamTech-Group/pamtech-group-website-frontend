@@ -65,52 +65,63 @@ const Industries = () => {
   return (
     <>
       {/* Industries Section */}
-      <VStack align="left" my={{
-        base: "2rem",
-        myxl: '4rem'
-      }} padding={contentPadding} width={{ base: "100%", md: "80%", xl: "60%" }}>
+      <VStack
+        align="left"
+        my={{
+          base: "1rem",
+          md: "2rem",
+          myxl: "4rem",
+        }}
+        padding={contentPadding}
+        width={{ base: "100%", md: "80%", xl: "60%" }}
+      >
         <Text fontWeight={500} fontSize={textFontSize} color="primaryOrange">
           Industries We Serve
         </Text>
-        <Text color="#171717"fontSize={headingFontSize} fontWeight={500}>
+        <Text color="#171717" fontSize={headingFontSize} fontWeight={500}>
           Industries that trust our services
         </Text>
         <Text color="textGrey" fontSize={textFontSize}>
-        Our deep expertise across various fields allows us to deliver top-quality services and products that drive efficiency, innovation, and sustainable growth.
-
+          Our deep expertise across various fields allows us to deliver
+          top-quality services and products that drive efficiency, innovation,
+          and sustainable growth.
         </Text>
       </VStack>
       {/* Cards*/}
-      <Flex padding={contentPadding} >
+      <Flex padding={contentPadding}>
         <Marquee gradientWidth={50}>
           {industries.map((industry) => (
             <Flex
               key={industry.title}
               width={cardWidth}
-                height={cardHeight}// Set a fixed height for the card
+              height={cardHeight} // Set a fixed height for the card
               mx="1rem"
               borderRadius="lg"
               flexDirection="column"
               justifyContent="space-between" // Distribute space evenly
               bgColor="rgba(241, 241, 248, .4)"
-              outline="1px solid rgba(141, 139, 139, .4)"   overflow="hidden">
+              outline="1px solid rgba(141, 139, 139, .4)"
+              overflow="hidden"
+            >
               <Flex
                 flexDirection="column"
                 padding="1rem 1.5rem"
                 gap="1rem"
                 flexGrow={1} // Allow the text content to grow and shrink as needed
-                overflow="hidden" 
+                overflow="hidden"
               >
-                <Text color="#171717" fontWeight={500} fontSize={{ base: "1.2rem", md: "1.5rem" }}>
+                <Text
+                  color="#171717"
+                  fontWeight={500}
+                  fontSize={{ base: "1.2rem", md: "1.5rem" }}
+                >
                   {industry.title}
                 </Text>
                 <Text color="textGrey" fontSize={textFontSize} noOfLines={5}>
-
                   {industry.description}
                 </Text>
               </Flex>
               <Box mt="auto">
-              
                 <Image src={industry.image} alt={industry.title} />
               </Box>
             </Flex>

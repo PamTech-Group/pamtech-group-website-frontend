@@ -83,13 +83,18 @@ const Foundation = () => {
           </Flex>
         </Box>
         <Box
-          my={{
-            base: "3rem",
-            myxl: "6rem",
-          }}
+        my={{
+          base:'2rem',
+          md: '3rem',
+          myxl: '6rem'
+        }}
         >
           <Heading
-            mb="4rem"
+            mb={{
+              base: "1rem",
+              md: "2rem",
+              myxl: "4rem",
+            }}
             textAlign="center"
             fontSize={headingFontSize}
             fontWeight={500}
@@ -138,7 +143,8 @@ const Foundation = () => {
           id="foundation"
           align="left"
           my={{
-            base: "2rem",
+            base: "1rem",
+            md: "2rem",
             myxl: "4rem",
           }}
           padding={contentPadding}

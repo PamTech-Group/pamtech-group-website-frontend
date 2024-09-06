@@ -129,7 +129,7 @@ const Growth = () => {
                 myxl: "60%",
               }}
             >
-              <Heading fontSize={headingFontSize} fontWeight={500} data-aos="zoom-in-right">
+              <Heading fontSize={headingFontSize} fontWeight={500}>
                 Identifying Opportunities, <br />
                 creating value
               </Heading>
@@ -149,7 +149,8 @@ const Growth = () => {
         color="textGrey"
         padding={contentPadding}
         my={{
-          base: "2rem",
+          base: "1rem",
+          md: "2rem",
           myxl: "4rem",
         }}
       >
@@ -231,7 +232,8 @@ const Growth = () => {
       <VStack
         align="left"
         my={{
-          base: "2rem",
+          base: "1rem",
+          md: "2rem",
           myxl: "4rem",
         }}
         padding={contentPadding}
@@ -250,8 +252,9 @@ const Growth = () => {
         </Text>
       </VStack>
       <Flex
-        my={{
-          base: "2rem",
+         my={{
+          base: "1rem",
+          md: "2rem",
           myxl: "4rem",
         }}
         gap="2rem"

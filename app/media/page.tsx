@@ -84,12 +84,17 @@ const Media = () => {
             <ButtonMain linkHref="#media" text="Read More" />
           </Flex>
         </Box>
-        <Box  my={{
-            base:'2rem',
-            myxl: '4rem'
-          }}>
+        <Box   my={{
+                base: "1rem",
+                md: "2rem",
+                myxl: "4rem",
+              }}>
           <Heading
-            mb="4rem"
+             mb={{
+              base: "1rem",
+              md: "2rem",
+              myxl: "4rem",
+            }}
             textAlign="center"
             fontSize={headingFontSize}
             fontWeight={500}
@@ -111,8 +116,9 @@ const Media = () => {
         <VStack
           align="left"
           my={{
-            base:'2rem',
-            myxl: '4rem'
+            base: "1rem",
+            md: "2rem",
+            myxl: "4rem",
           }}
           padding={contentPadding}
           width={{ base: "100%", md: "70%" }}
