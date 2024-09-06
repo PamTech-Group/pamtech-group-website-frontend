@@ -27,37 +27,37 @@ const carouselData = [
     bg: bg,
     heading: "Excellence is a way of life at Pamtech Group",
     text: "We serve humanity with a diverse portfolio in oil and gas, media, and automotive industries.",
-    link: "#services"
+    link: "#services",
   },
   {
     bg: bg2,
     heading: "Oil & Gas",
     text: "With our unadulterated and petroleum products, you will experience zero downtime and low maintenance costs for your equipment and facilities.",
-  link: '/oilgas'
+    link: "/oilgas",
   },
   {
     bg: bg3,
     heading: "Autoland",
     text: "Pamtech Autoland is your one-stop solution for quality auto repairs and maintenance.",
- link: '/autoland'
+    link: "/autoland",
   },
   {
     bg: bg4,
     heading: "Autoparts",
     text: "Get all the genuine OEM parts at the right price and without stress.",
- link: '/autoparts'
+    link: "/autoparts",
   },
   {
     bg: bg5,
     heading: "Media",
     text: "From content marketing to talent management and media consulting, we help brands connect with their audience and grow their presence online.",
-  link: '/media'
+    link: "/media",
   },
   {
     bg: bg6,
     heading: "Luxury Ride",
     text: "Experience luxury and comfort with Pamtech Luxury Ride. We offer a fleet of premium vehicles for your personal or corporate needs, ensuring a stylish ride every time.",
- link: '/ride'
+    link: "/ride",
   },
 ];
 interface SlideContentProps {
@@ -68,7 +68,12 @@ interface SlideContentProps {
 }
 
 // Reusable component for the slide content
-const SlideContent: React.FC<SlideContentProps> = ({ bg, heading, text, link }) => {
+const SlideContent: React.FC<SlideContentProps> = ({
+  bg,
+  heading,
+  text,
+  link,
+}) => {
   const headingFontSize = useBreakpointValue({
     base: "2rem",
     md: "2.5rem",
@@ -98,22 +103,21 @@ const SlideContent: React.FC<SlideContentProps> = ({ bg, heading, text, link }) 
         bgSize="cover"
         bgPosition="center"
         height={{
-          base:'100vh',
-          md: '65vh',
-          xl: '100vh'
+          base: "100vh",
+          md: "65vh",
+          xl: "100vh",
         }}
         color="#F7F7F7"
       >
         <Flex
           mt={{ base: "2rem", md: "3rem" }}
           height={{
-            base: '100%',
-            xl: '100%'
+            base: "100%",
+            xl: "100%",
           }}
-
           pl={{
-            base: 'unset',
-            myxl: '3.5rem'
+            base: "unset",
+            myxl: "3.5rem",
           }}
           flexDir="column"
           justifyContent="center"
@@ -137,7 +141,7 @@ const SlideContent: React.FC<SlideContentProps> = ({ bg, heading, text, link }) 
               base: "center",
               lg: "left",
             }}
-            width={{ base: "100%", }}
+            width={{ base: "100%" }}
             fontSize={textFontSize}
           >
             {text}
