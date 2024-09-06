@@ -110,8 +110,8 @@ const Services = () => {
           md: "2.5rem",
           lg: '14rem',
           // xl:'12rem',
-          myxl: '8rem',
-          ddxl: "10rem",
+          // myxl: '14rem',
+          dxl: "8rem",
         }}
         mb={{
           base: "2rem",
