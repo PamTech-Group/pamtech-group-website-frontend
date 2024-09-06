@@ -49,15 +49,12 @@ const Foundation = () => {
           backgroundImage={`url(${foundationBg.src})`}
           bgSize="cover"
           bgPosition="center"
-          minHeight={{   base:'100vh', md: '65vh', xl: "100vh" }}
-
-
+          minHeight={{ base: "100vh", md: "65vh", xl: "100vh" }}
           color="#F7F7F7"
         >
           <Nav />
           <Flex
-                     height={{   base:'100vh', md: '65vh', xl: "100vh" }}
-
+            height={{ base: "100vh", md: "65vh", xl: "100vh" }}
             flexDir="column"
             justifyContent="center"
             gap="2rem"
@@ -67,8 +64,7 @@ const Foundation = () => {
               base: "unset",
               myxl: "3.5rem",
             }}
-          
-  data-aos="zoom-in"
+            data-aos="zoom-in"
           >
             <Heading fontSize={headingFontSize} fontWeight={500}>
               Pamtech Foundation
@@ -86,11 +82,11 @@ const Foundation = () => {
           </Flex>
         </Box>
         <Box
-        my={{
-          base:'2rem',
-          md: '3rem',
-          myxl: '6rem'
-        }}
+          my={{
+            base: "2rem",
+            md: "3rem",
+            myxl: "6rem",
+          }}
         >
           <Heading
             mb={{
@@ -108,7 +104,9 @@ const Foundation = () => {
           <Flex
             gap=".5rem"
             placeItems="center"
-justifyContent='center'     flexWrap='wrap'       padding={contentPadding}
+            justifyContent="center"
+            flexWrap="wrap"
+            padding={contentPadding}
           >
             <Box>
               <Image
