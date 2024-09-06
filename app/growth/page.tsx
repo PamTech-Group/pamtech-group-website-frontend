@@ -34,7 +34,7 @@ const BlogCard = ({ image, date, title }: any) => (
     <Card
       bgColor="#fde8e7"
       as="a"
-      width={{ base: "90%", sm: "80%", md: "24rem" }}
+      width={{ base: "100%", sm: "100%", md: "24rem" }}
       height="100%"
       mx="auto"
       mb="4rem"
@@ -68,7 +68,7 @@ const BlogCard = ({ image, date, title }: any) => (
 );
 const Growth = () => {
   const contentPadding = useBreakpointValue({
-    base: "2rem 1rem",
+    base: ".5rem",
     sm: "2rem 2rem",
     md: "2rem 4rem",
     lg: "2rem 6rem",
@@ -171,6 +171,10 @@ const Growth = () => {
         ))}
       </SimpleGrid>
       <Box
+      display={{
+        base: 'none',
+        xl: 'block'
+      }}
         mb={{
           base: "1.5rem",
           myxl: "4rem",
@@ -198,7 +202,7 @@ const Growth = () => {
           marginBottom={{ base: "1rem", md: "0" }}
           data-aos="zoom-in-right"
         >
-          Why you should partner with pamtech group
+          Why you should partner with Pamtech Group
         </Heading>
         <Flex flexDirection="column" gap="1.5rem" data-aos="zoom-in-left">
           <Text>
@@ -252,6 +256,7 @@ const Growth = () => {
         </Text>
       </VStack>
       <Flex
+      width='100%'
          my={{
           base: "1rem",
           md: "2rem",

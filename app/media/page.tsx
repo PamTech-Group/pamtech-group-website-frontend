@@ -50,12 +50,14 @@ const Media = () => {
           backdropFilter="brightness(0%)"
           bgSize="cover"
           bgPosition="center"
-          minHeight={{ base: "auto", md: "100vh" }}
+          minHeight={{   base:'100vh', md: '65vh', xl: "100vh" }}
+
           color="#F7F7F7"
         >
           <Nav />
           <Flex
-            height={{ base: "auto", md: "calc(100vh - 80px)" }}
+                    height={{   base:'100vh', md: '65vh', xl: "100vh" }}
+
             flexDir="column"
             gap="1rem"
             justifyContent="center"
@@ -73,7 +75,7 @@ const Media = () => {
             </Heading>
             <Text
               fontWeight={500}
-              width={{ base: "100%", md: "70%"}}
+              width={{ base: "100%", md: "80%"}}
               textAlign="left"
               fontSize={textFontSize}
             >
@@ -121,7 +123,7 @@ const Media = () => {
             myxl: "4rem",
           }}
           padding={contentPadding}
-          width={{ base: "100%", md: "70%" }}
+          width={{ base: "100%", md: "80%" }}
           id="media"
           data-aos="zoom-in-right"
         >

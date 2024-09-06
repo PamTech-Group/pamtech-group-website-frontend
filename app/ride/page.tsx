@@ -48,16 +48,18 @@ const Ride = () => {
           backgroundImage={`url(${rideBg.src})`}
           bgSize="cover"
           bgPosition="center"
-          minHeight={{ base: "auto", md: "100vh" }}
+          minHeight={{   base:'100vh', md: '65vh', xl: "100vh" }}
+
           color="#F7F7F7"
         >
           <Nav />
           <Flex
-            height={{ base: "auto", md: "calc(100vh - 80px)" }}
+                    height={{   base:'100vh', md: '65vh', xl: "100vh" }}
+
             flexDir="column"
             justifyContent="center"
             gap="2rem"
-            width={{ base: "100%", md: "70%" }}
+            width={{ base: "100%", md: "80%" }}
             paddingY={{ base: "4rem", md: "0" }}
             pl={{
               base: 'unset',
@@ -132,7 +134,7 @@ const Ride = () => {
             myxl: "4rem",
           }}
           padding={contentPadding}
-          width={{ base: "100%", md: "70%"}}
+          width={{ base: "100%", md: "80%"}}
           data-aos="zoom-in-right" >
           <Text color="#171717" fontSize={headingFontSize} fontWeight={500}>
             Luxury Ride

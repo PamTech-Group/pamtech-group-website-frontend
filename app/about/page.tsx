@@ -155,7 +155,7 @@ const AboutPage = () => {
           md: "2rem",
           myxl: "4rem",
         }}
-        justifyContent="space-around"
+        justifyContent="space-between"
         alignItems="center"
         flexDirection={{ base: "column", md: "row" }}
         gap={{ base: "2rem", md: "0" }}
@@ -310,12 +310,12 @@ const AboutPage = () => {
           padding="2.5rem 3rem"
           color="#F1F1F1"
           height="100%"
-          data-aos="zoom-in-up"
+          
         >
-          <Heading my={{
+          <Heading data-aos="zoom-in-up" my={{
             base:'1rem', md: '2rem'
           }} fontSize={headingFontSize}>Our History</Heading>
-          <Flex justifyContent="space-between" gap="3rem" flexDirection={{ base: "column", md: "row" }}>
+          <SimpleGrid columns={{base:1, lg: 2}} spacing={10} flexDirection={{ base: "column", md: "row" }} data-aos="zoom-in-up">
             <Flex flexDirection="column" gap="2rem" height="100%">
               <Text fontSize={textFontSize}>
             {`In 2016, Pamtech Group was founded with a mission to render committed service to humanity starting with petroleum distribution in the downstream sector of the oil and gas industry. The company's reputation for reliability and integrity quickly established us among key industry players, leading to expanded operations and investments in infrastructure and technology.`}
@@ -333,7 +333,7 @@ const AboutPage = () => {
                 Looking ahead, we remain dedicated to our mission of empowering success and prosperity for all, constantly seeking new ways to deliver value and drive positive change in the communities we serve.
               </Text>
             </Flex>
-          </Flex>
+          </SimpleGrid>
         </Box>
       </Box>
 

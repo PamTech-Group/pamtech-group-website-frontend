@@ -95,7 +95,7 @@ const Sustainability = () => {
         lg: 'row'
       }} width="100%" alignItems="center" justifyContent="space-between" data-aos="zoom-in">
         <Flex width={textWidth} flexDirection="column" gap="2rem" >
-          <Text fontWeight={400}  fontSize={textFontSize}>
+          <Text fontWeight={400}  fontSize={textFontSize} mb='-1rem'>
             Sustainability
           </Text>
           <Text fontWeight={500} fontSize={headingFontSize}>

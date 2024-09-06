@@ -130,7 +130,7 @@ const Solution = () => {
           flexDirection={{ base: "column", xl: "row" }}
           wrap="wrap"
           justifyContent={{}}
-          data-aos="zoom-in"
+     
         >
           {/* Text Section */}
           <Box
@@ -141,10 +141,10 @@ const Solution = () => {
               lg: "70%",
             }}
           >
-            <Heading fontSize="2xl" color="primaryOrange" mb="1rem">
+            <Heading fontSize="2xl" color="primaryOrange" mb="1rem" data-aos="zoom-in-up" >
               Petrol Padi
             </Heading>
-            <Text mb="1.5rem" fontWeight={500} fontSize={textFontSize}>
+            <Text mb="1.5rem" fontWeight={500} fontSize={textFontSize} data-aos="zoom-in-up" >
               Petrol Padi is a mobile app that simplifies fuel access in
               Nigeria. It offers real-time fuel prices and enables seamless
               ordering and delivery, making it convenient for both oil marketers
@@ -155,6 +155,7 @@ const Solution = () => {
               spacing="1rem"
               fontWeight={500}
               fontSize={textFontSize}
+              data-aos="zoom-in-right" 
             >
               <ListItem>
                 Petrol Padi is a mobile app that lets you easily check fuel
@@ -195,7 +196,7 @@ const Solution = () => {
             </UnorderedList>
 
             {/* App Store and Google Play Buttons */}
-            <Flex gap="1rem" flexDirection={{ base: "column", sm: "row" }}>
+            <Flex gap="1rem" flexDirection={{ base: "column", sm: "row" }}data-aos="zoom-in-up" >
               <Button
               as="a"
                   href="https://play.google.com/store/apps/details?id=com.petroconnect.petro_connect"
@@ -230,6 +231,7 @@ const Solution = () => {
             width="100%"
             textAlign="center"
             bgColor="primaryOrange"
+            data-aos="zoom-in-left" 
           >
             <Image
               src={esolution}
@@ -254,10 +256,10 @@ const Solution = () => {
           alignItems="center"
           flexDirection={{ base: "column", xl: "row" }}
           wrap="wrap"
-          data-aos="zoom-in"
+         
         >
           {/* Text Section */}
-          <Box flex="1">
+          <Box flex="1"   data-aos="zoom-in-right">
             <Heading fontSize="2xl" color="primaryOrange" mb="1rem">
               Autoland
             </Heading>
@@ -286,7 +288,7 @@ const Solution = () => {
           </Box>
 
           {/* Placeholder for phone mockup image or extra content */}
-          <Flex flex="1">
+          <Flex flex="1"   data-aos="zoom-in-left">
             <UnorderedList
               color="textGrey"
               spacing="1rem"
@@ -328,10 +330,10 @@ const Solution = () => {
           alignItems="center"
           flexDirection={{ base: "column", xl: "row" }}
           wrap="wrap"
-          data-aos="zoom-in"
+        
         >
           {/* Text Section */}
-          <Box flex="1">
+          <Box flex="1"   data-aos="zoom-in-right">
             <Heading fontSize="2xl" color="primaryOrange" mb="1rem">
               Autoparts
             </Heading>
@@ -361,7 +363,7 @@ const Solution = () => {
           </Box>
 
           {/* Placeholder for phone mockup image or extra content */}
-          <Flex flex="1">
+          <Flex flex="1"   data-aos="zoom-in-left">
             <UnorderedList
               color="textGrey"
               spacing="1rem"

@@ -39,7 +39,7 @@ const OilGas = () => {
     md: "1.1rem",
     lg: "1.2rem",
   });
-
+ 
   return (
     <>
       <Box bgColor="#FFFFFF">
@@ -48,7 +48,7 @@ const OilGas = () => {
           backgroundImage={`url(${gasBg.src})`}
           bgSize="cover"
           bgPosition="center"
-          minHeight={{ base: "auto", md: "100vh" }}
+          minHeight={{   base:'100vh', md: '65vh', xl: "100vh" }}
           color="#F7F7F7"
         >
           <Nav />
@@ -57,7 +57,7 @@ const OilGas = () => {
               base: "3rem",
               md: "0rem",
             }}
-            height={{ base: "auto", md: "calc(100vh - 80px)" }}
+            height={{ base: "100vh", md: '65vh', xl: "100vh" }}
             flexDir="column"
             justifyContent="center"
             gap="2rem"
@@ -110,16 +110,17 @@ const OilGas = () => {
               src={oilgas1}
               alt="ride1"
               style={{ maxWidth: "100%", height: "auto" }}
+                data-aos="zoom-in"
             />
             <Image
               src={oilgas2}
               alt="ride1"
-              style={{ maxWidth: "100%", height: "auto" }}
+              style={{ maxWidth: "100%", height: "auto" }}   data-aos="zoom-in"
             />
             <Image
               src={oilgas3}
               alt="ride1"
-              style={{ maxWidth: "100%", height: "auto" }}
+              style={{ maxWidth: "100%", height: "auto" }}   data-aos="zoom-in"
             />
           </SimpleGrid>
         </Box>
@@ -131,7 +132,7 @@ const OilGas = () => {
             myxl: "4rem",
           }}
           padding={contentPadding}
-          width={{ base: "100%", md: "70%" }}
+          width={{ base: "100%", md: "80%"  }}
           id="oil-gas"
            data-aos="zoom-in-right"
         >

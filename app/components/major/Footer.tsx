@@ -46,7 +46,7 @@ const Footer = () => {
 
   return (
     <>
-      <Box bgColor='primaryOrange' data-aos="zoom-in-up"  padding={contentPadding} paddingBottom="0">
+      <Box bgColor='primaryOrange'  padding={contentPadding} paddingBottom="0">
         <SimpleGrid
           spacing={8}
           alignItems="center"
@@ -60,8 +60,9 @@ const Footer = () => {
               justifyContent="center"
               gap="2rem"
               textAlign={textAlign}
+              data-aos="zoom-in-right" 
             >
-              <Text fontWeight={700} fontSize="1rem">
+              <Text fontWeight={700} fontSize="1rem" >
                 DOWNLOAD NOW!
               </Text>
               <Text
@@ -105,12 +106,12 @@ const Footer = () => {
               </Flex>
             </Flex>
           </Box>
-          <Flex alignItems="center" justifyContent="center">
+          <Flex data-aos="zoom-in-left"  alignItems="center" justifyContent="center">
             <Image  src={phone} alt="phone image" style={{height: '50%'}} />
           </Flex>
         </SimpleGrid>
       </Box>
-      <Box bgColor="#0F1010"  padding={contentPadding} data-aos="zoom-in-up">
+      <Box bgColor="#0F1010"  padding={contentPadding} >
         <Flex
           justify="center"
           align="center"
@@ -122,6 +123,7 @@ const Footer = () => {
             placeItems="center"
             columns={{ base: 2, sm: 3, md: 6 }} // Responsive columns
             spacing={5}
+            data-aos="zoom-in-up" 
           >
             <Link fontSize=".9rem" href="/about">
               ABOUT US
