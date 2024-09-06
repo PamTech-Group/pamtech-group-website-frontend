@@ -22,7 +22,7 @@ const About = () => {
     <Flex
       alignItems="center"
       justifyContent="center"
-      minHeight={{ base: "auto", lg: "70svh" }}
+      minHeight={{ base: "auto", lg: "60svh" }}
       position="relative"
       bgImage={{ base: "none", lg: `url(${bg.src})` }}
       bgSize="cover"
