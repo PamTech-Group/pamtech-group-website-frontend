@@ -155,10 +155,11 @@ const AboutPage = () => {
           md: "2rem",
           myxl: "4rem",
         }}
-        justifyContent="space-between"
+        justifyContent={{ base: "center", lg: "space-between" }}
         alignItems="center"
+        flexWrap='wrap'
         flexDirection={{ base: "column", md: "row" }}
-        gap={{ base: "2rem", md: "0" }}
+        gap={{ base: "2rem", lg: "0" }}
       >
         <Flex justifyContent={{
           base: 'center',
@@ -166,7 +167,7 @@ const AboutPage = () => {
         }}  >
           <Image data-aos="zoom-in-right" src={pamtech} alt="pamtech way" style={{ width: "100%", height: "auto" }} />
         </Flex>
-        <Box  data-aos="zoom-in-left" width={{ base: "100%", md: "65%" }}>
+        <Box  data-aos="zoom-in-left" width={{ base: "100%", lg: "65%" }}>
           <Text fontWeight={500} fontSize={textFontSize}>
             Our culture is built on the biblical cornerstones and
             principles of doing business in accordance with the ways
