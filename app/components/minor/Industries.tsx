@@ -23,7 +23,7 @@ const Industries = () => {
   });
   const textFontSize = useBreakpointValue({ base: "1rem", md: "1.2rem" });
   const cardWidth = useBreakpointValue({ base: "18rem", md: "20rem" });
-  const cardHeight = useBreakpointValue({ base: "22rem", md: "24rem" });
+  const cardHeight = useBreakpointValue({ base: "24rem", md: "26rem" });
   const industries = [
     {
       image: oilandGas,
