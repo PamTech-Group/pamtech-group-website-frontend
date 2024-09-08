@@ -16,6 +16,7 @@ const theme = extendTheme({
     lg: "60em",    // 960px
     xl: "68.75em", // 1100px
     myxl: "76.25em", // 1220px
+    // myxxl: "75.85em", // 1310px
     dxl: "87.5em", // 1400px
     ddxl: "106.25em", // 1700px
     dddxl: "125em", // 2000px
