@@ -11,10 +11,10 @@ import you from "../../../public/you.webp";
 const Industries = () => {
   const contentPadding = useBreakpointValue({
     base: "1rem",
-    sm: "1.5rem",
-    md: "2rem 4rem",
-    lg: "2rem 6rem",
-    xl: "2rem 8rem",
+   
+    md: "1rem 3rem",
+    lg: "1rem 6rem",
+    xl: "1rem 8rem",
   });
   const headingFontSize = useBreakpointValue({
     base: "1.5rem",
@@ -70,7 +70,6 @@ const Industries = () => {
         my={{
           base: "1rem",
           md: "2rem",
-          myxl: "4rem",
         }}
         padding={contentPadding}
         width={{ base: "100%", md: "80%", xl: "60%" }}

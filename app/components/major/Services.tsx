@@ -87,7 +87,7 @@ const Services = () => {
   const contentPadding = useBreakpointValue({
     base: "1rem",
     sm: "1.5rem",
-    md: "2rem 4rem",
+    md: "2rem 3rem",
     lg: "2rem 6rem",
     xl: "2rem 8rem",
   });
@@ -114,8 +114,8 @@ const Services = () => {
           dxl: "8rem",
         }}
         mb={{
-          base: "2rem",
-          myxl: "4rem",
+          base: "1rem",
+          myxl: "2rem",
         }}
         id="services"
       >
@@ -125,7 +125,7 @@ const Services = () => {
           templateColumns={{
             base: "repeat(2, 1fr)",
             md: "repeat(4, 1fr)",
-            xl: "repeat(6, 1fr)",
+            myxl: "repeat(6, 1fr)", // can change back to xl if precious complains.
           }} // Responsive grid
           gap={{ base: 4, md: 6, lg: 10 }} // Responsive gap
           padding={contentPadding}
@@ -166,8 +166,8 @@ const Services = () => {
           align="left"
           my={{
             base: "1rem",
-            md: "2rem",
-            myxl: "4rem",
+            md: "1rem",
+           
           }}
           padding={contentPadding}
           width={descriptionWidth}
@@ -191,10 +191,11 @@ const Services = () => {
             <Flex
               my={{
                 base: "1rem",
-                myxl: "4rem",
+               
+               
               }}
               gap={5}
-              padding={5}
+             
             >
               {images.map((image) => (
                 <Box

@@ -21,9 +21,9 @@ import theme from "@/app/theme";
 import { FaXTwitter } from "react-icons/fa6";
 const Footer = () => {
   const contentPadding = useBreakpointValue({
-    base: "2rem 1rem",
-    sm: "2rem 1.5rem",
-    md: "2rem 4rem",
+    base: "1rem",
+    sm: "1.5rem",
+    md: "2rem 3rem",
     lg: "2rem 6rem",
     xl: "2rem 8rem",
   });
@@ -49,7 +49,8 @@ const Footer = () => {
       <Box bgColor='primaryOrange'  padding={contentPadding} paddingBottom="0">
         <SimpleGrid
           spacing={8}
-          alignItems="center"
+         placeItems='center'
+          
           columns={{ base: 1, md: 2 }}
         
         >
@@ -107,7 +108,7 @@ const Footer = () => {
             </Flex>
           </Box>
           <Flex data-aos="zoom-in-left"  alignItems="center" justifyContent="center">
-            <Image  src={phone} alt="phone image" style={{height: '50%'}} />
+            <Image  src={phone} alt="phone image" style={{height: '100%'}} />
           </Flex>
         </SimpleGrid>
       </Box>

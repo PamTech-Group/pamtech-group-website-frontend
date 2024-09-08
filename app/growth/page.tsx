@@ -26,7 +26,7 @@ const yearContent = {
   "2021":
     "As part of our growth strategy, Pamtech Autoland, a state-of-the-art facility for car maintenance and repairs was established in Owerri, Imo State to address the challenges of car owners in accessing reliable maintenance and repair services.",
   "2022":
-    "The Pamtech Autoparts Plaza, a reliable source for genuine motor spare parts was built to solve the problems of trust in the automobile spare parts industry by providing car owners with OEM standard parts.",
+    "The Pamtech Autoparts Plaza, a reliable source for genuine motor spare parts was built to solve the problems of trust in the automobile spare parts industry by providing car owners with OEM standard parts. Our products are held at high esteem and are available to everyone who wants the best.",
   "2023": `With the desire to live up to our mantra - “committed service to humanity”, we ventured into the social media and luxury ride space, providing educative and entertaining content as well as luxury ride services to our community through the establishment of the Pamtech Media and Pamtech Luxury Ride.`,
 };
 const BlogCard = ({ image, date, title }: any) => (
@@ -151,8 +151,7 @@ const Growth = () => {
         padding={contentPadding}
         my={{
           base: "1rem",
-          md: "2rem",
-          myxl: "4rem",
+          md: "1.5rem",
         }}
       >
         {Object.entries(yearContent).map(([year, text]) => (
@@ -171,7 +170,7 @@ const Growth = () => {
           </Flex>
         ))}
       </SimpleGrid>
-      <Box
+      {/* <Box
       display={{
         base: 'none',
         xl: 'block'
@@ -188,7 +187,7 @@ const Growth = () => {
         }}
         bgColor="#F7F7F7"
         outline=".2px solid rgba(51, 51, 51, 0.2)"
-      />
+      /> */}
       <SimpleGrid
         columns={{ base: 1, xl: 2 }}
         padding={contentPadding}
@@ -238,8 +237,7 @@ const Growth = () => {
         align="left"
         my={{
           base: "1rem",
-          md: "2rem",
-          myxl: "4rem",
+          md: "1.5rem",
         }}
         padding={contentPadding}
         width={{ base: "100%", lg: "70%" }}
@@ -258,18 +256,17 @@ const Growth = () => {
       </VStack>
       <Flex
       width='100%'
-         my={{
-          base: "1rem",
-          md: "2rem",
-          myxl: "4rem",
-        }}
+      my={{
+        base: "1rem",
+        md: "1.5rem",
+      }}
         gap="2rem"
         padding={contentPadding}
         wrap="wrap"
         justifyContent="center"
       >
       
-      <BlogCard image={'https://res.cloudinary.com/dye76dtzn/image/upload/v1724322976/blog_images/lpkv2mewrchsdbtpfhes.jpg'} date="August 31st, 2023" title="Pamtech CEO Chidomere Accepted Into Forbes Business Council" />
+       <BlogCard image={'https://res.cloudinary.com/dye76dtzn/image/upload/v1724322976/blog_images/lpkv2mewrchsdbtpfhes.jpg'} date="August 31st, 2023" title="Pamtech CEO Chidomere Accepted Into Forbes Business Council" />
         <BlogCard image={'https://res.cloudinary.com/dye76dtzn/image/upload/v1725462401/blog_images/l0vyrlnqcdlaakqxuu5a.png'} date="May 31st, 2024" title="Pamtech Autoland is Coming to Port Harcourt Soon: A New Destination for Auto Enthusiasts" />
         <BlogCard image={'https://res.cloudinary.com/dye76dtzn/image/upload/v1725461904/blog_images/klbcnxi5fbswneuntcck.png'} date="December 20th, 2022" title="Pamtech Group Unveils Game-Changing Auto-Parts E-Commerce Platform" />
         <BlogCard image={'https://res.cloudinary.com/dye76dtzn/image/upload/v1725461614/blog_images/npctb8qm5bez19f0b5yi.png'} date="August 31st, 2023" title="Petrol Padi App Featured on Tech Cabal: A Game-Changer in Fuel Retail" />

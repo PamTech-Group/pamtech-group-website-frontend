@@ -119,11 +119,10 @@ const Solution = () => {
       <Box color=" textGrey" padding={contentPadding} fontWeight={500}>
         {/* Petrol Padi Section */}
         <Flex
-          my={{
-            base: "1rem",
-            md: "2rem",
-            myxl: "4rem",
-          }}
+            my={{
+              base: "1rem",
+              md: "1.5rem",
+            }}
           bg="white"
           borderRadius="lg"
           boxShadow="md"
@@ -247,11 +246,10 @@ const Solution = () => {
 
         {/* Autoland Section */}
         <Flex
-           my={{
-            base: "1rem",
-            md: "2rem",
-            myxl: "4rem",
-          }}
+             my={{
+              base: "1rem",
+              md: "1.5rem",
+            }}
           padding="2rem"
           bg="rgba(100, 94, 94, .1)"
           borderRadius="lg"
@@ -291,7 +289,7 @@ const Solution = () => {
             </Box>
           </Box>
 
-          {/* Placeholder for phone mockup image or extra content */}
+         
           <Flex flex="1"   data-aos="zoom-in-left">
             <UnorderedList
               color="textGrey"
@@ -324,8 +322,7 @@ const Solution = () => {
         <Flex
            my={{
             base: "1rem",
-            md: "2rem",
-            myxl: "4rem",
+            md: "1.5rem",
           }}
           padding="2rem"
           bg="rgba(100, 94, 94, .1)"

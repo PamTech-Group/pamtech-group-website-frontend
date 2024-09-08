@@ -120,10 +120,9 @@ const ContactPage = () => {
       <Box padding={contentPadding} color="textGrey">
         <VStack
           align="left"
-          mb={{
+          my={{
             base: "1rem",
-            md: "2rem",
-            myxl: "4rem",
+            md: "1.5rem",
           }}
           width={{ base: "100%", md: "70%" }}
           data-aos="zoom-in-right"

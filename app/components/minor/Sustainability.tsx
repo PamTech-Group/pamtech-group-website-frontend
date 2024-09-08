@@ -79,10 +79,9 @@ const Sustainability = () => {
 
   return (
     <Flex
-      mt={{
-        base: '2rem',
-        myxl: '4rem'
-      }}
+      mt= '2rem'
+       
+    
       padding={contentPadding}
       gap="2rem"
       bgImage={`url(${bg3.src})`}

@@ -82,18 +82,16 @@ const Autoparts = () => {
           </Flex>
         </Box>
         <Box
-          my={{
-            base: "2rem",
-            md: "3rem",
-            myxl: "6rem",
-          }}
+            my={{
+              base: "1rem",
+              md: "1.5rem",
+            }}
         >
           <Heading
-            mb={{
-              base: "1rem",
-              md: "2rem",
-              myxl: "4rem",
-            }}
+              my={{
+                base: "1rem",
+                md: "1.5rem",
+              }}
             textAlign="center"
             fontSize={headingFontSize}
             fontWeight={500}
@@ -133,8 +131,7 @@ const Autoparts = () => {
           align="left"
           my={{
             base: "1rem",
-            md: "2rem",
-            myxl: "4rem",
+            md: "1.5rem",
           }}
           padding={contentPadding}
           width={{ base: "100%", md: "75%" }}

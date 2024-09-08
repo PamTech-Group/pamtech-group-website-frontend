@@ -63,11 +63,10 @@ const AboutPage = () => {
   const contentPadding = useBreakpointValue({
     base: "1rem",
     sm: "1.5rem",
-    md: "2rem 4rem",
+    md: "2rem 3rem",
     lg: "2rem 6rem",
     xl: "2rem 8rem",
   });
-
   const headingFontSize = useBreakpointValue({ base: "2rem", md: "2.5rem", lg: "3rem" });
   const textFontSize = useBreakpointValue({ base: "1rem", md: "1.1rem", lg: "1.2rem" });
    const imageHeight = useBreakpointValue({ base: 'auto', md: 300, lg: 400 });
@@ -153,7 +152,7 @@ const AboutPage = () => {
         my={{
           base: "1rem",
           md: "2rem",
-          myxl: "4rem",
+          
         }}
         justifyContent={{ base: "center", lg: "space-between" }}
         alignItems="center"
@@ -179,8 +178,8 @@ const AboutPage = () => {
 
       <Box padding={contentPadding} color="textGrey"   my={{
             base: "1rem",
-            md: "2rem",
-            myxl: "4rem",
+            md: "1.5rem",
+          
           }}>
         {/* Vision and Mission Section */}
         <Flex
@@ -188,7 +187,7 @@ const AboutPage = () => {
           gap="2rem"
           justifyContent="space-between"
           alignItems="center"
-          marginBottom="6rem"
+          marginBottom="3rem"
         >
           {/* Vision Card */}
           <Box
@@ -236,8 +235,8 @@ const AboutPage = () => {
         {/* Core Values Section */}
         <Box textAlign="center"    my={{
             base: "1rem",
-            md: "2rem",
-            myxl: "4rem",
+            md: "1.5rem",
+           
           }}>
           <Heading fontSize={headingFontSize} fontWeight={500}>
             Core Values
@@ -304,7 +303,7 @@ const AboutPage = () => {
         <Box
           mt={{
             base: '3rem',
-            lg: '6rem'
+            // lg: '6rem'
           }}
           borderRadius="md"
           bgColor="#00030C"
