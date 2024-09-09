@@ -266,8 +266,8 @@ const Solution = () => {
               Autoland
             </Heading>
             <Text mb="1.5rem" fontSize={textFontSize} fontWeight={400}>
-              Autoland is changing the game in vehicle purchasing, providing a
-              streamlined and user-friendly experience for customers.
+            The Autoland mobile app is your all-in-one solution 
+            for effortless vehicle maintenance
             </Text>
 
             {/* Coming Soon Button */}
@@ -342,7 +342,7 @@ const Solution = () => {
             <Text mb="1.5rem" fontSize={textFontSize} fontWeight={400}>
               Experience a new way to shop for auto parts with Pamtech
               Autoparts, designed to make finding and buying parts easy,
-              convenient, and enjoyable
+              convenient, and enjoyable.
             </Text>
 
             {/* Coming Soon Button */}

@@ -154,26 +154,26 @@ const AboutPage = () => {
           md: "2rem",
           
         }}
-        justifyContent={{ base: "center", lg: "space-between" }}
+        justifyContent={{ base: "center", }}
         alignItems="center"
         flexWrap='wrap'
         flexDirection={{ base: "column", md: "row" }}
-        gap={{ base: "2rem", lg: "0" }}
+        gap={{ base: "2rem", }}
       >
         <Flex justifyContent={{
           base: 'center',
-          md: 'initial'
+          lg: 'initial'
         }}  >
           <Image data-aos="zoom-in-right" src={pamtech} alt="pamtech way" style={{ width: "100%", height: "auto" }} />
         </Flex>
-        <Box  data-aos="zoom-in-left" width={{ base: "100%", lg: "65%" }}>
+        <Flex  justifyContent='center' data-aos="zoom-in-left" width={{ base: "100%", md: "65%" }}>
           <Text fontWeight={500} fontSize={textFontSize}>
             Our culture is built on the biblical cornerstones and
             principles of doing business in accordance with the ways
             of God. We strive to be a beacon of light; bringing value
             and prosperity to everyone we encounter.
           </Text>
-        </Box>
+        </Flex>
       </Flex>
 
       <Box padding={contentPadding} color="textGrey"   my={{
