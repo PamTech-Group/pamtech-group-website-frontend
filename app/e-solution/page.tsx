@@ -267,7 +267,7 @@ const Solution = () => {
             </Heading>
             <Text mb="1.5rem" fontSize={textFontSize} fontWeight={400}>
             The Autoland mobile app is your all-in-one solution 
-            for effortless vehicle maintenance
+            for effortless vehicle maintenance.
             </Text>
 
             {/* Coming Soon Button */}

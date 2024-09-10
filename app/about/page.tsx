@@ -154,7 +154,7 @@ const AboutPage = () => {
           md: "2rem",
           
         }}
-        justifyContent={{ base: "center", }}
+        justifyContent={{ base: "center", xl: 'space-between' }}
         alignItems="center"
         flexWrap='wrap'
         flexDirection={{ base: "column", md: "row" }}
