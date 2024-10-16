@@ -207,7 +207,7 @@ const Services = () => {
                   bgPosition="center"
                   height={{ base: "400px", lg: "450px" }}
                   width={{ base: "275px", lg: "300px" }}
-                  my={5}
+                  mx={5}
                   display="flex"
                   flexDirection="column"
                   justifyContent="flex-end"
