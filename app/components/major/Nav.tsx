@@ -62,12 +62,8 @@ const Nav = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
- 
-  return (
-   
 
-   
-    
+  return (
     <Box
       position="fixed"
       top={0}
@@ -243,7 +239,7 @@ const Nav = () => {
                     <Link href="/autoland">
                       <MenuItem bg="rgba(20, 20, 20, 0.9)">Autoland</MenuItem>
                     </Link>
-                    <Link href="/autoparts">
+                    <Link href="https://pamtechautoparts.com/">
                       <MenuItem bg="rgba(20, 20, 20, 0.9)">Autoparts</MenuItem>
                     </Link>
                     <Link href="/ride">
@@ -291,7 +287,6 @@ const Nav = () => {
         }
       `}</style>
     </Box>
-
   );
 };
 

@@ -45,7 +45,7 @@ const carouselData = [
     bg: bg4,
     heading: "Autoparts",
     text: "Get all the genuine OEM parts at the right price and without stress.",
-    link: "/autoparts",
+    link: "https://pamtechautoparts.com/",
   },
   {
     bg: bg5,
@@ -102,8 +102,7 @@ const SlideContent: React.FC<SlideContentProps> = ({
         backgroundImage={`url(${bg.src})`}
         bgSize="cover"
         bgPosition="center"
-        height={{ base: "100vh", md: "80vh", myxl:'100vh' }}
-
+        height={{ base: "100vh", md: "80vh", myxl: "100vh" }}
         color="#F7F7F7"
       >
         <Flex

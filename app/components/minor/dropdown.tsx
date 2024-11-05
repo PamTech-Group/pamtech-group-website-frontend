@@ -9,12 +9,7 @@ import {
 } from "@chakra-ui/react";
 import Link from "next/link";
 import { BiChevronRight } from "react-icons/bi";
-import {
-  FaFacebook,
-  FaInstagram,
-  FaLinkedin,
-  FaYoutube,
-} from "react-icons/fa";
+import { FaFacebook, FaInstagram, FaLinkedin, FaYoutube } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 
 const Dropdown = () => {
@@ -25,7 +20,8 @@ const Dropdown = () => {
       padding="2rem"
       borderRadius="md"
       justify="space-between"
-      width="80svw">
+      width="80svw"
+    >
       {/* Left Section */}
       <Flex
         flexDir="column"
@@ -33,7 +29,8 @@ const Dropdown = () => {
         padding="1.5rem"
         width="50%"
         gap="1rem"
-        borderRadius="md">
+        borderRadius="md"
+      >
         <Text fontSize="2rem" fontWeight="bold" color="#171717">
           Our Businesses
         </Text>
@@ -76,7 +73,7 @@ const Dropdown = () => {
           />
           <IconButton
             as="a"
-             href="https://x.com/thepamtechgroup"
+            href="https://x.com/thepamtechgroup"
             aria-label="Twitter"
             icon={<FaXTwitter fontSize="1.5rem" />}
             bg="gray.100"
@@ -86,7 +83,7 @@ const Dropdown = () => {
           />
           <IconButton
             as="a"
-             href="https://www.youtube.com/channel/UCjJ-fWJYIhpViYWr97-yWNw"
+            href="https://www.youtube.com/channel/UCjJ-fWJYIhpViYWr97-yWNw"
             aria-label="YouTube"
             icon={<FaYoutube fontSize="1.5rem" />}
             bg="gray.100"
@@ -103,7 +100,7 @@ const Dropdown = () => {
           {[
             { name: "Oil and Gas", href: "/oilgas" },
             { name: "Autoland", href: "/autoland" },
-            { name: "Autoparts", href: "/autoparts" },
+            { name: "Autoparts", href: "https://pamtechautoparts.com/" },
             { name: "Luxury Ride", href: "/ride" },
             { name: "Media", href: "/media" },
             { name: "Foundation", href: "/foundation" },
@@ -118,13 +115,15 @@ const Dropdown = () => {
               _hover={{
                 transform: "translateX(10px)", // Shift text and icon to the right
                 color: "primaryOrange", // Change text color on hover
-              }}>
+              }}
+            >
               <Link className="business-nav" href={item.href}>
                 <Flex
                   justify="space-between"
                   align="center"
                   width="100%"
-                  transition="all 0.3s ease">
+                  transition="all 0.3s ease"
+                >
                   <Text
                     fontSize="1.2rem"
                     color="#171717"
@@ -132,7 +131,8 @@ const Dropdown = () => {
                     transition="color 0.3s ease" // Transition text color smoothly
                     _hover={{
                       color: "primaryOrange", // Hover color for text
-                    }}>
+                    }}
+                  >
                     {item.name}
                   </Text>
                   <ListIcon

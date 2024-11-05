@@ -48,8 +48,7 @@ const Autoparts = () => {
           backgroundImage={`url(${partsBg.src})`}
           bgSize="cover"
           bgPosition="center"
-          height={{ base: "100vh", md: "80vh", myxl:'100vh' }}
-
+          height={{ base: "100vh", md: "80vh", myxl: "100vh" }}
           color="#F7F7F7"
         >
           <Nav />
@@ -78,20 +77,23 @@ const Autoparts = () => {
               Get all the genuine OEM parts at the right price and without
               stress. 
             </Text>
-            <ButtonMain linkHref="#autoparts" text="Read More" />
+            <ButtonMain
+              linkHref="https://pamtechautoparts.com/"
+              text="Read More"
+            />
           </Flex>
         </Box>
         <Box
+          my={{
+            base: "1rem",
+            md: "1.5rem",
+          }}
+        >
+          <Heading
             my={{
               base: "1rem",
               md: "1.5rem",
             }}
-        >
-          <Heading
-              my={{
-                base: "1rem",
-                md: "1.5rem",
-              }}
             textAlign="center"
             fontSize={headingFontSize}
             fontWeight={500}
