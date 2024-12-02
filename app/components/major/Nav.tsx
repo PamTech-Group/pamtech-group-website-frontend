@@ -150,6 +150,9 @@ const Nav = () => {
           <Link className="scaler" href="/e-solution">
             e-Solutions
           </Link>
+          <Link className="scaler" href="/careers">
+            Careers
+          </Link>
         </HStack>
 
         {/* Mobile Menu Button */}
@@ -260,6 +263,9 @@ const Nav = () => {
                 </Link>
                 <Link href="/e-solution" onClick={onMobileMenuClose}>
                   e-Solutions
+                </Link>
+                <Link href="/careers" onClick={onMobileMenuClose}>
+                  Careers
                 </Link>
                 <Link href="/contact-us" onClick={onMobileMenuClose}>
                   Contact us

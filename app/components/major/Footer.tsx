@@ -2,23 +2,17 @@ import {
   Box,
   Button,
   Flex,
-  IconButton,
   SimpleGrid,
   Text,
-  VStack,
-  Icon,
   useBreakpointValue,
   ResponsiveValue,
 } from "@chakra-ui/react";
-import { BiChevronRight, BiLogoPlayStore } from "react-icons/bi";
-import { FaFacebook, FaInstagram, FaLinkedin, FaYoutube } from "react-icons/fa";
-import logo from "../../../public/logo.webp";
-import { IoCall } from "react-icons/io5";
+import { BiLogoPlayStore } from "react-icons/bi";
+
 import { GrApple } from "react-icons/gr";
 import phone from "../../../public/phoneSolution.webp";
 import { Image, Link } from "@chakra-ui/next-js";
-import theme from "@/app/theme";
-import { FaXTwitter } from "react-icons/fa6";
+
 const Footer = () => {
   const contentPadding = useBreakpointValue({
     base: "1rem",
@@ -46,13 +40,11 @@ const Footer = () => {
 
   return (
     <>
-      <Box bgColor='primaryOrange'  padding={contentPadding} paddingBottom="0">
+      <Box bgColor="primaryOrange" padding={contentPadding} paddingBottom="0">
         <SimpleGrid
           spacing={8}
-         placeItems='center'
-          
+          placeItems="center"
           columns={{ base: 1, md: 2 }}
-        
         >
           <Box>
             <Flex
@@ -61,9 +53,9 @@ const Footer = () => {
               justifyContent="center"
               gap="2rem"
               textAlign={textAlign}
-              data-aos="zoom-in-right" 
+              data-aos="zoom-in-right"
             >
-              <Text fontWeight={700} fontSize="1rem" >
+              <Text fontWeight={700} fontSize="1rem">
                 DOWNLOAD NOW!
               </Text>
               <Text
@@ -107,23 +99,27 @@ const Footer = () => {
               </Flex>
             </Flex>
           </Box>
-          <Flex data-aos="zoom-in-left"  alignItems="center" justifyContent="center">
-            <Image  src={phone} alt="phone image" style={{height: '100%'}} />
+          <Flex
+            data-aos="zoom-in-left"
+            alignItems="center"
+            justifyContent="center"
+          >
+            <Image src={phone} alt="phone image" style={{ height: "100%" }} />
           </Flex>
         </SimpleGrid>
       </Box>
-      <Box bgColor="#0F1010"  padding={contentPadding}>
+      <Box bgColor="#0F1010" padding={contentPadding}>
         <Flex
           justify="center"
           align="center"
           flexDirection="column" // Responsive direction
           gap="1rem"
-          py='1.5rem'
+          py="1.5rem"
         >
           <SimpleGrid
             placeItems="center"
-            columns={{ base: 2, sm: 3, md: 6 }} // Responsive columns
-            spacing={5}
+            columns={{ base: 2, sm: 3, md: 7 }}
+            spacing={3}
           >
             <Link fontSize=".9rem" href="/about">
               ABOUT US
@@ -131,7 +127,7 @@ const Footer = () => {
             <Link fontSize=".9rem" href="/growth">
               OUR GROWTH
             </Link>
-            {/* <Link fontSize='.9rem' href="/philanthropy"></Link> */}
+
             <Link fontSize=".9rem" href="/e-solution">
               e-SOLUTIONS
             </Link>
@@ -140,6 +136,9 @@ const Footer = () => {
             </Link>
             <Link fontSize=".9rem" href="/contact-us">
               CONTACT US
+            </Link>
+            <Link fontSize=".9rem" href="/careers">
+              CAREERS
             </Link>
             <Link fontSize=".9rem" href="/blog">
               BLOG
