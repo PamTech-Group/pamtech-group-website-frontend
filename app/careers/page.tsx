@@ -74,6 +74,8 @@ const CareersHero = () => {
                 breakthrough success.
               </Text>
               <Button
+                as="a"
+                href="#form"
                 mt={4}
                 size="md"
                 color="#333"

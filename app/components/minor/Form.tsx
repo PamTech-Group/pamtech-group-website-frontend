@@ -105,7 +105,7 @@ const JobApplicationForm = () => {
   };
 
   return (
-    <Box bg="blue.900" py={16}>
+    <Box bg="blue.900" py={16} id="form">
       <Container maxW="container.xl">
         <VStack spacing={8} align="left">
           <Heading as="h2" size="xl" color="white">
