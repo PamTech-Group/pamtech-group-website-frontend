@@ -51,12 +51,12 @@ const TeamCulture = () => {
         driven by passion, innovation, and mutual respect.`}
           </Text>
 
-          <SimpleGrid columns={[1, null, 3]} spacing={8}>
+          <SimpleGrid columns={[1, null, 1, 2, 3]} spacing={8}>
             {culturalHighlights.map((highlight, index) => (
               <Box
                 key={index}
                 bg="white"
-                borderRadius="50px"
+                borderRadius="20px"
                 overflow="hidden"
                 boxShadow="lg"
                 transition="all 0.3s"

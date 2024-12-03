@@ -50,13 +50,13 @@ const EmployeeTestimonials = () => {
             What Our Team Says
           </Heading>
 
-          <SimpleGrid columns={[1, null, 3]} spacing={8}>
+          <SimpleGrid columns={[1, null, null, 3]} spacing={8}>
             {testimonials.map((testimonial, index) => (
               <Box
                 key={index}
                 bg="gray.50"
                 p={6}
-                borderRadius="50px"
+                borderRadius="20px"
                 position="relative"
                 boxShadow="md"
                 transition="all 0.3s"
@@ -92,10 +92,10 @@ const EmployeeTestimonials = () => {
                       mb={2}
                     />
                     <VStack spacing={0} align="center">
-                      <Heading size="sm" color="gray.700">
+                      <Heading textAlign="center" size="sm" color="gray.700">
                         {testimonial.name}
                       </Heading>
-                      <Text color="gray.500" fontSize="sm">
+                      <Text textAlign="center" color="gray.500" fontSize="sm">
                         {testimonial.role}
                       </Text>
                     </VStack>

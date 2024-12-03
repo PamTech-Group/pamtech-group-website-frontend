@@ -68,14 +68,14 @@ const CoreValues = () => {
           >
             Our Core Values
           </Heading>
-          <SimpleGrid columns={[1, null, 3]} spacing={8}>
+          <SimpleGrid columns={[1, null, 3, 3, 5]} spacing={8}>
             {values.map((value, index) => (
               <Card
                 key={index}
                 variant="elevated"
                 bg="white"
                 boxShadow="xl"
-                borderRadius="50px"
+                borderRadius="20px"
                 transition="all 0.3s"
                 _hover={{
                   transform: "translateY(-10px)",
@@ -85,12 +85,12 @@ const CoreValues = () => {
                 <CardBody>
                   <VStack spacing={4} align="center">
                     <Icon as={value.icon} w={12} h={12} color={value.color} />
-                    <Heading size="lg" color="gray.700">
+                    <Heading size="sm" textAlign="center" color="gray.700">
                       {value.title}
                     </Heading>
-                    <Text textAlign="center" color="gray.600">
+                    {/* <Text textAlign="left" color="gray.600">
                       {value.description}
-                    </Text>
+                    </Text> */}
                   </VStack>
                 </CardBody>
               </Card>
