@@ -10,6 +10,9 @@ import {
   Flex,
   useToast,
   Select,
+  Textarea,
+  FormControl,
+  FormLabel,
 } from "@chakra-ui/react";
 import axios from "axios";
 const JobApplicationForm = () => {
@@ -77,6 +80,7 @@ const JobApplicationForm = () => {
           description: "Your application has been submitted.",
           status: "success",
           duration: 3000,
+          position: "top-right",
           isClosable: true,
         });
         setFormData({
@@ -117,67 +121,79 @@ const JobApplicationForm = () => {
             the Auto-Club family.
           </Text>
           <form onSubmit={handleSubmit}>
-            <Flex
-              my={4}
-              gap="2rem"
-              flexDirection={{ base: "column", lg: "row" }}
-            >
-              <Input
-                name="fullName"
-                placeholder="Enter Your Full Name"
-                bg="whiteAlpha.100"
-                border="1px solid"
-                borderColor="whiteAlpha.300"
-                color="white"
-                _placeholder={{ color: "whiteAlpha.500" }}
-                value={formData.fullName}
-                onChange={handleInputChange}
-              />
-              <Input
-                name="email"
-                placeholder="Enter Your Email"
-                bg="whiteAlpha.100"
-                border="1px solid"
-                borderColor="whiteAlpha.300"
-                color="white"
-                _placeholder={{ color: "whiteAlpha.500" }}
-                value={formData.email}
-                onChange={handleInputChange}
-              />
-            </Flex>
-            <Flex
-              my={4}
-              gap="2rem"
-              flexDirection={{ base: "column", lg: "row" }}
-            >
-              <Input
-                name="phoneNumber"
-                placeholder="Enter Your Phone Number"
-                bg="whiteAlpha.100"
-                border="1px solid"
-                borderColor="whiteAlpha.300"
-                color="white"
-                _placeholder={{ color: "whiteAlpha.500" }}
-                value={formData.phoneNumber}
-                onChange={handleInputChange}
-              />
-              <Input
-                name="description"
-                placeholder="Description"
-                bg="whiteAlpha.100"
-                border="1px solid"
-                borderColor="whiteAlpha.300"
-                color="white"
-                _placeholder={{ color: "whiteAlpha.500" }}
-                value={formData.description}
-                onChange={handleInputChange}
-              />
-            </Flex>
-            <Flex
-              my={4}
-              gap="2rem"
-              flexDirection={{ base: "column", lg: "row" }}
-            >
+            <Flex my={4} gap="2rem" flexDirection="column">
+              <FormControl>
+                <FormLabel color="white">Fullname</FormLabel>
+                <Input
+                  name="fullName"
+                  placeholder="Enter Your Full Name"
+                  bg="whiteAlpha.100"
+                  border="1px solid"
+                  borderColor="whiteAlpha.300"
+                  color="white"
+                  _placeholder={{ color: "whiteAlpha.500" }}
+                  value={formData.fullName}
+                  onChange={handleInputChange}
+                />
+              </FormControl>
+              <FormControl>
+                <FormLabel color="white">Email</FormLabel>
+                <Input
+                  name="email"
+                  placeholder="Enter Your Email"
+                  bg="whiteAlpha.100"
+                  border="1px solid"
+                  borderColor="whiteAlpha.300"
+                  color="white"
+                  _placeholder={{ color: "whiteAlpha.500" }}
+                  value={formData.email}
+                  onChange={handleInputChange}
+                />
+              </FormControl>
+              <FormControl>
+                <FormLabel color="white">Phone Number</FormLabel>
+                <Input
+                  name="phoneNumber"
+                  placeholder="Enter Your Phone Number"
+                  bg="whiteAlpha.100"
+                  border="1px solid"
+                  borderColor="whiteAlpha.300"
+                  color="white"
+                  _placeholder={{ color: "whiteAlpha.500" }}
+                  value={formData.phoneNumber}
+                  onChange={handleInputChange}
+                />
+              </FormControl>
+              <FormControl>
+                <FormLabel color="white">Description</FormLabel>
+                <Textarea
+                  name="description"
+                  placeholder="Which role are you applying for?"
+                  bg="whiteAlpha.100"
+                  border="1px solid"
+                  borderColor="whiteAlpha.300"
+                  color="white"
+                  _placeholder={{ color: "whiteAlpha.500" }}
+                  value={formData.description}
+                  onChange={handleInputChange}
+                />
+              </FormControl>
+              <FormControl>
+                <FormLabel color="white">
+                  Why you want to work with Us
+                </FormLabel>
+                <Textarea
+                  name="why"
+                  placeholder="Why do you want to work with us?"
+                  bg="whiteAlpha.100"
+                  border="1px solid"
+                  borderColor="whiteAlpha.300"
+                  color="white"
+                  _placeholder={{ color: "whiteAlpha.500" }}
+                  value={formData.why}
+                  onChange={handleInputChange}
+                />
+              </FormControl>
               <Select
                 name="about"
                 placeholder="How did you hear about us?"
@@ -198,6 +214,9 @@ const JobApplicationForm = () => {
                 >
                   Word of mouth
                 </option>
+                <option style={{ backgroundColor: "#0D2B57" }} value="staff">
+                  Staff
+                </option>
                 <option style={{ backgroundColor: "#0D2B57" }} value="facebook">
                   Facebook
                 </option>
@@ -205,18 +224,8 @@ const JobApplicationForm = () => {
                   Internet
                 </option>
               </Select>
-              <Input
-                name="why"
-                placeholder="Why do you want to work with us?"
-                bg="whiteAlpha.100"
-                border="1px solid"
-                borderColor="whiteAlpha.300"
-                color="white"
-                _placeholder={{ color: "whiteAlpha.500" }}
-                value={formData.why}
-                onChange={handleInputChange}
-              />
             </Flex>
+
             <Flex justifyContent="center">
               <Button
                 mt="3rem"

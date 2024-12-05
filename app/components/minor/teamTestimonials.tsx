@@ -15,7 +15,7 @@ import { FaQuoteLeft } from "react-icons/fa";
 const EmployeeTestimonials = () => {
   const testimonials = [
     {
-      name: "Somi-lari Luck",
+      name: "Somiari Lucky",
       role: "CEO Pamtech Media",
       quote:
         "This company has given me opportunities to grow beyond my wildest expectations. The support and innovation here are unparalleled.",
